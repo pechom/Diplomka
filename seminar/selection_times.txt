@@ -1,0 +1,8 @@
+pocet atributov: 304
+
+
+ANOVA F-score
+30
+cas: 0:00:00.004993
+
+

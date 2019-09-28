@@ -1,0 +1,14 @@
+anova
+LGBM
+najlepsi priemer: 0.3065140710068246
+najhorsi priemer: 0.20846433044500678
+cas: 0:00:00.029964
+
+
+ANOVA_F-score
+LGBM
+najlepsi priemer: 0.3065140710068246
+najhorsi priemer: 0.20846433044500678
+cas: 0:00:00.025985
+
+

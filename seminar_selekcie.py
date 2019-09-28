@@ -431,7 +431,7 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # disr()
 # chi_square(percentile)
 # MI(percentile)
-f_anova(percentile)
+# f_anova(percentile)
 # trace(treshold)
 # gini(treshold)
 # fisher(treshold)
