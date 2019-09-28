@@ -109,7 +109,6 @@ def merged_sizes(original_file, simple_file, float_file):
     with open(original_file) as f:
         reader = csv.reader(f, delimiter=',')
         header = next(reader)
-        header = next(reader)
         print(len(header))
     with open(simple_file) as f:
         reader = csv.reader(f, delimiter=',')
@@ -148,4 +147,4 @@ def float_hotfix(input_dir, output_dir):  # robim aj pretypovanie na float32
 # merge_features(simple_dir+'*', simple_file)
 # merge_features(float_output_dir+'*', float_file)
 # merged_sizes(original_file, simple_file, float_file)
-standardize(features_dir, standard_dir)
+# standardize(features_dir, standard_dir)

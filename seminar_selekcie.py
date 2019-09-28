@@ -1,56 +1,39 @@
 from skfeature.function.statistical_based import CFS, gini_index
 from skfeature.function.information_theoretical_based import FCBF, MIFS, MRMR, CIFE, JMI, CMIM, DISR
 from skfeature.function.similarity_based import SPEC, fisher_score, reliefF, trace_ratio, lap_score
-import numpy as np
-import csv
 from sklearn.feature_selection import SelectPercentile, chi2, mutual_info_classif, f_classif, SelectFromModel
-import pandas as pd
-from functools import partial
-import lightgbm as lgb
-import datetime
-import xgboost as xgb
-from rgf.sklearn import RGFClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.svm import LinearSVC
+import lightgbm as lgb
+import xgboost as xgb
+from rgf.sklearn import RGFClassifier
 import catboost as cat
 from pyHSICLasso import HSICLasso
+import numpy as np
+import csv
+import pandas as pd
+from functools import partial
+import datetime
 import sys
+import glob
+import os
 
-# feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/3-gram_bin_strings.csv'
-feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/1-gram_freq_hex_opcode.csv'
-standard_feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/standard_3-gram_bin_strings.csv'
-labels_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/clear_labels2_head.csv'
-output_dir = "C:/PycharmProjects/Diplomka/skusobny/selection/"
-sys.stdout = open('C:/PycharmProjects/Diplomka/skusobny/selection_times.txt', 'w')
+feature_path = 'seminar/features.csv'
+standard_feature_path = 'seminar/simple_standard.csv'
+labels_path = 'seminar/clear_labels2_head.csv'
+output_dir = "seminar/selection/"
+intersections_path = 'seminar/intersections.txt'
+sys.stdout = open('seminar/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
-def numpy_load(type):
+def numpy_load():
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-    # standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float32)
-    # data = np.genfromtxt(feature_path, delimiter=',', skip_header=1, dtype=None)
-    if type == "int":
-        data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.int32)
-    if type == "float":
-        data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.float32)
-    # header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
-    # po kazdom citani a pisani pridava quotes ku stringom
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1)
     header = pd.read_csv(feature_path, nrows=1, header=None)
     header = header.to_numpy()[0]
     return data, header, labels
-
-
-def pandas_load():
-    labels = pd.read_csv(labels_path, dtype=np.int8)  # pri sklearn treba mat label.values.ravel()
-    # standard_data = pandas.read_csv(standard_feature_path, dtype=np.float32)
-    data = pd.read_csv(feature_path, skiprows=1, header=None)
-    # ak mam header tak pri niektorych atributoch ma xgboost problemy lebo obsahuju nepovolene znaky, preto mam none
-    header = pd.read_csv(feature_path, nrows=1, header=None)
-    header = header.to_numpy()[0]
-    # with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-    #     print(header)
-    return data, header, labels.values.ravel()
 
 
 def save_to_csv(transformed_data, selected, prefix, path=output_dir):
@@ -61,7 +44,6 @@ def save_to_csv(transformed_data, selected, prefix, path=output_dir):
 
 
 def transform_and_save(selected, prefix, path=output_dir):
-    # transformed_data = np.delete(data, not_selected, axis=1)  # vymazem nevybrane stlpce
     with open(path + prefix + ".csv", "w", newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
@@ -253,30 +235,30 @@ def trace(treshold):
 
 
 # prilis pomale, viac ako sekunda na 188
-# def spec(treshold):
-#     before = datetime.datetime.now()
-#     result = SPEC.spec(data, mode="index")
-#     after = datetime.datetime.now()
-#     print("SPEC")
-#     result = result[:treshold]
-#     print(len(result))
-#     print("cas: " + str(after - before))
-#     print('\n')
-#     if len(result) < len(header):
-#       transform_and_save(result, "SPEC")
-#
-#
-# def relieff(treshold):
-#     before = datetime.datetime.now()
-#     result = reliefF.reliefF(data, labels, mode="index")
-#     after = datetime.datetime.now()
-#     print("relieff")
-#     result = result[:treshold]
-#     print(len(result))
-#     print("cas: " + str(after - before))
-#     print('\n')
-#     if len(result) < len(header):
-#       transform_and_save(result, "ReliefF")
+def spec(treshold):
+    before = datetime.datetime.now()
+    result = SPEC.spec(data, mode="index")
+    after = datetime.datetime.now()
+    print("SPEC")
+    result = result[:treshold]
+    print(len(result))
+    print("cas: " + str(after - before))
+    print('\n')
+    if len(result) < len(header):
+        transform_and_save(result, "SPEC")
+
+
+def relieff(treshold):
+    before = datetime.datetime.now()
+    result = reliefF.reliefF(data, labels, mode="index")
+    after = datetime.datetime.now()
+    print("relieff")
+    result = result[:treshold]
+    print(len(result))
+    print("cas: " + str(after - before))
+    print('\n')
+    if len(result) < len(header):
+        transform_and_save(result, "ReliefF")
 # -------------------------------------
 
 
@@ -341,7 +323,7 @@ def LGBM():
 
 
 def CAT():
-    model = cat.CatBoostClassifier(max_depth=7, n_estimators=10, loss_function='MultiClassOneVsAll', learning_rate=0.2,
+    model = cat.CatBoostClassifier(max_depth=7, n_estimators=100, loss_function='MultiClassOneVsAll', learning_rate=0.2,
                                    task_type='CPU', verbose=False, thread_count=4)
     print("CatBoost")
     model_fit(model, "CatBoost")
@@ -405,12 +387,41 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
-data, header, labels = numpy_load("int")
-print(len(header))
+def intersections(input_path, output_path):
+    files = sorted(glob.glob(input_path))
+    names = []
+    headers = []
+    outputs = []
+    for name in files:
+        with open(name, 'r') as f:
+            reader = csv.reader(f, delimiter=',')
+            header = next(reader)
+            names.append(os.path.basename(f.name)[:-4])
+        header = set(header)
+        headers.append(header)
+    for i in range(len(headers)):
+        best = 0
+        for j in range(len(headers)):
+            if i != j:
+                best = max(best, len(headers[i].intersection(headers[j])))
+        for k in range(len(headers)):
+            if i != k:
+                if len(headers[i].intersection(headers[k])) == best:
+                    outputs.append(
+                        names[i] + " - velkost: " + str(len(headers[i])) + "," + " najlepsi prienik je " + names[
+                            k] + ": " + str(len(headers[i].intersection(headers[k]))) + '\n')
+    with open(output_path, 'w') as out:
+        for output in outputs:
+            out.write(output)
+
+
+data, header, labels = numpy_load()
+print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
 treshold = int(data.shape[1] / 10)  # desatina atributov
-# cfs()
+# cfs()  # prilis pomaly
+
 # fcbf()
 # mifs()
 # mrmr()
@@ -420,7 +431,7 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # disr()
 # chi_square(percentile)
 # MI(percentile)
-# f_anova(percentile)
+f_anova(percentile)
 # trace(treshold)
 # gini(treshold)
 # fisher(treshold)
@@ -433,4 +444,6 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # LSVC()
 # SGD()
 # HSIC_lasso(treshold)
+
+intersections(output_dir+"*")
 sys.stdout.close()
