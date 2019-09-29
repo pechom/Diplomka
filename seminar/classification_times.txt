@@ -1,14 +1,189 @@
-anova
+ANOVA_F-score
 LGBM
 najlepsi priemer: 0.3065140710068246
 najhorsi priemer: 0.20846433044500678
 cas: 0:00:00.029964
 
 
-ANOVA_F-score
+CatBoost
 LGBM
-najlepsi priemer: 0.3065140710068246
+najlepsi priemer: 0.908135879150372
+najhorsi priemer: 0.8751054366996396
+cas: 0:00:00.042976
+
+
+chi-square
+LGBM
+najlepsi priemer: 0.3054788743194541
+najhorsi priemer: 0.20742913375763616
+cas: 0:00:00.029983
+
+
+CIFE
+LGBM
+najlepsi priemer: 0.8957646397259924
+najhorsi priemer: 0.8430654602152187
+cas: 0:00:00.046973
+
+
+CMIM
+LGBM
+najlepsi priemer: 0.926731078904992
+najhorsi priemer: 0.8720062367405362
+cas: 0:00:00.060947
+
+
+DISR
+LGBM
+najlepsi priemer: 0.8328093448866396
+najhorsi priemer: 0.8070061089384761
+cas: 0:00:00.034980
+
+
+FCBF
+LGBM
+najlepsi priemer: 0.7936444035477852
+najhorsi priemer: 0.780180456508959
+cas: 0:00:00.032982
+
+
+Fisher
+LGBM
+najlepsi priemer: 0.25712496485443337
 najhorsi priemer: 0.20846433044500678
-cas: 0:00:00.025985
+cas: 0:00:00.030982
+
+
+Gini
+LGBM
+najlepsi priemer: 0.550066457071288
+najhorsi priemer: 0.5366280704444956
+cas: 0:00:00.039976
+
+
+HSIC_Lasso
+LGBM
+najlepsi priemer: 0.8090828924162258
+najhorsi priemer: 0.7946220893080796
+cas: 0:00:00.031982
+
+
+JMI
+LGBM
+najlepsi priemer: 0.8389949645988293
+najhorsi priemer: 0.8193581780538303
+cas: 0:00:00.044974
+
+
+Laplacian
+LGBM
+najlepsi priemer: 0.044372875290749736
+najhorsi priemer: 0.044372875290749736
+cas: 0:00:00.029983
+
+
+LGBM gain
+LGBM
+najlepsi priemer: 0.9184622856120441
+najhorsi priemer: 0.8823390333052169
+cas: 0:00:00.036979
+
+
+LGBM split
+LGBM
+najlepsi priemer: 0.9215806558801728
+najhorsi priemer: 0.8844158167829665
+cas: 0:00:00.053966
+
+
+MIFS
+LGBM
+najlepsi priemer: 0.8740702400122691
+najhorsi priemer: 0.862746977481277
+cas: 0:00:00.033981
+
+
+MRMR
+LGBM
+najlepsi priemer: 0.9236382690488971
+najhorsi priemer: 0.8689006466784245
+cas: 0:00:00.068941
+
+
+mutual_info
+LGBM
+najlepsi priemer: 0.7884492498019068
+najhorsi priemer: 0.7771132070648978
+cas: 0:00:00.033980
+
+
+RFC
+LGBM
+najlepsi priemer: 0.8947102727295964
+najhorsi priemer: 0.8740638499092606
+cas: 0:00:00.054967
+
+
+RGF
+LGBM
+najlepsi priemer: 0.8978222528947166
+najhorsi priemer: 0.880300590445518
+cas: 0:00:00.035978
+
+
+SGD_elasticnet
+LGBM
+najlepsi priemer: 0.9184750658180609
+najhorsi priemer: 0.8678782301970708
+cas: 0:00:00.072957
+
+
+SGD_L1
+LGBM
+najlepsi priemer: 0.9153694757559492
+najhorsi priemer: 0.8709518697441403
+cas: 0:00:00.068960
+
+
+SGD_L2
+LGBM
+najlepsi priemer: 0.9164110625463282
+najhorsi priemer: 0.8730286532218899
+cas: 0:00:00.067961
+
+
+SVC_L1
+LGBM
+najlepsi priemer: 0.9267438591110089
+najhorsi priemer: 0.8730350433248983
+cas: 0:00:00.043974
+
+
+SVC_L2
+LGBM
+najlepsi priemer: 0.9267438591110089
+najhorsi priemer: 0.8647726401349589
+cas: 0:00:00.046972
+
+
+Trace_ratio
+LGBM
+najlepsi priemer: 0.6222810111699001
+najhorsi priemer: 0.6202042276921504
+cas: 0:00:00.032981
+
+
+XGBoost gain
+LGBM
+najlepsi priemer: 0.8844158167829665
+najhorsi priemer: 0.848273394167114
+cas: 0:00:00.044975
+
+
+XGBoost total cover
+LGBM
+najlepsi priemer: 0.9246670756332592
+najhorsi priemer: 0.8647790302379674
+cas: 0:00:00.041976
 
 

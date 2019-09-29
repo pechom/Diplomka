@@ -107,7 +107,8 @@ def cife():
 
 def jmi():
     before = datetime.datetime.now()
-    result = JMI.jmi(data, labels, mode="index")
+    result = JMI.jmi(data, labels, mode="index", n_selected_features=treshold)
+    # algoritmus ma treshold ale pri testoch ho nedosiahol
     after = datetime.datetime.now()
     print("JMI")
     print(len(result))
@@ -131,7 +132,8 @@ def cmim():
 
 def disr():
     before = datetime.datetime.now()
-    result = DISR.disr(data, labels, mode="index")
+    result = DISR.disr(data, labels, mode="index", n_selected_features=treshold)
+    # algoritmus ma treshold ale pri testoch ho nedosiahol
     after = datetime.datetime.now()
     print("DISR")
     print(len(result))
