@@ -1,0 +1,11 @@
+#!/bin/bash
+
+prah=6.66
+while read p; do
+  entropia=$(echo "$p" | awk '{print $2}')
+  subor=$(echo "$p" | awk '{print $1}')
+  if [ 1 -eq "$(echo "${entropia} >= ${prah}" | bc)" ] 
+    then
+         echo "$subor" >> high
+    fi
+done <entropy

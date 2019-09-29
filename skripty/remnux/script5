@@ -1,0 +1,30 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+kaspersky=$(ls -f . | wc -l)
+microsoft=$(ls -f . | wc -l)
+mcafee=$(ls -f . | wc -l)
+eset=$(ls -f . | wc -l)
+bitdefender=$(ls -f . | wc -l)
+malwarebytes=$(ls -f . | wc -l)
+for i in *; do
+   temp1=$(grep '"Kaspersky"' "$i" | wc -l)
+   kaspersky=$((kaspersky-temp1))
+   temp2=$(grep '"Microsoft"' "$i" | wc -l)
+   microsoft=$((microsoft-temp2))
+   temp3=$(grep '"McAfee"' "$i" | wc -l)
+   mcafee=$((mcafee-temp3))
+   temp4=$(grep '"ESET-NOD32"' "$i" | wc -l)
+   eset=$((eset-temp4))
+   temp5=$(grep '"BitDefender"' "$i" | wc -l)
+   bitdefender=$((bitdefender-temp5))
+   temp6=$(grep '"Malwarebytes"' "$i" | wc -l)
+   malwarebytes=$((malwarebytes-temp6))
+done
+
+echo "Kaspersky: " "$kaspersky"
+echo "Microsoft: " "$microsoft"
+echo "McAfee: " "$mcafee"
+echo "Eset: " "$eset"
+echo "BitDefender: " "$bitdefender"
+echo "Malwarebytes: " "$malwarebytes"

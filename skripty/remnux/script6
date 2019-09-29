@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+
+for i in *; do
+   avs=$(grep 'exiftool' "$i" | grep 'imports' | grep 'sections' | wc -l)
+   if [ "$avs" -lt 1 ]
+    then
+         rm "$i"
+    fi
+done

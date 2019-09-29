@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/dataset2/
+
+for i in *; do
+    strings -n 5 -a "$i" > /home/remnux/Downloads/malware/strings/"$i"
+done

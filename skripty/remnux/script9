@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/dataset2/
+
+for i in *; do
+    hexdump -v -e '1/1 "%02X"' "$i" > /home/remnux/Downloads/malware/hex_oneline/"$i"
+done

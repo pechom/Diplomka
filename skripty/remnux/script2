@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+
+for i in *; do
+   falses=$(grep -o '"Kaspersky": {"detected": false\|"McAfee": {"detected": false\|"ESET-NOD32": {"detected": false\|"BitDefender": {"detected": false' "$i" | wc -l)   
+   if [ "$falses" -gt 0 ]
+    then
+         rm "$i"
+    fi
+done
+
+
+

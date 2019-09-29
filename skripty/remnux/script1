@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/hex/
+
+for i in *; do
+    if grep -qxFe "$i" /home/remnux/Downloads/malware/empty; then
+         rm "$i"
+    fi
+done

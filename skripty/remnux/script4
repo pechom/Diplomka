@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+
+for i in *; do
+   mic=$(grep '"ESET-NOD32": {"detected": ' "$i" | wc -l)
+   kas=$(grep '"Kaspersky": {"detected": ' "$i" | wc -l)
+   mca=$(grep '"McAfee": {"detected": ' "$i" | wc -l)
+   bit=$(grep '"BitDefender": {"detected": ' "$i" | wc -l)
+   if [ "$mic" -lt 1 ] || [ "$kas" -lt 1 ] || [ "$mca" -lt 1 ] || [ "$bit" -lt 1 ]
+    then
+         rm "$i" 
+    fi
+done

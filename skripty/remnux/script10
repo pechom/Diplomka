@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/dataset2/
+
+for i in *; do
+    objdump -D "$i" > /home/remnux/Downloads/malware/disassembled/"$i"
+done

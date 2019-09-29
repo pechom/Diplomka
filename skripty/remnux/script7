@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+
+for i in *; do
+   packed=$(grep -i 'packe\|obfuscat\|encrypt' "$i" | wc -l)  
+   if [ "$packed" -gt 0 ]
+    then
+         rm "$i"
+    fi
+done
