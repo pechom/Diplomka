@@ -29,9 +29,11 @@ def LGBM(data, label):
 
 labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.float)
+print("vsetky data: " + str(len(data[0])))
+LGBM(data, labels)
 files = glob.glob(selected_dir)
 for file in files:
     data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float)
-    print(os.path.basename(file)[:-4])
+    print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
     LGBM(data, labels)
 sys.stdout.close()
