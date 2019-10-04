@@ -1,41 +1,13 @@
-ANOVA_F-score - velkost: 30, najlepsi prienik je MRMR: 30
-CIFE - velkost: 92, najlepsi prienik je MRMR: 92
-CMIM - velkost: 206, najlepsi prienik je MRMR: 206
-CatBoost - velkost: 72, najlepsi prienik je MRMR: 71
-DISR - velkost: 30, najlepsi prienik je MRMR: 30
-FCBF - velkost: 13, najlepsi prienik je CMIM: 13
-FCBF - velkost: 13, najlepsi prienik je MRMR: 13
-Fisher - velkost: 30, najlepsi prienik je MRMR: 30
-Gini - velkost: 30, najlepsi prienik je MRMR: 30
-HSIC_Lasso - velkost: 14, najlepsi prienik je CMIM: 14
-HSIC_Lasso - velkost: 14, najlepsi prienik je MRMR: 14
-HSIC_Lasso - velkost: 14, najlepsi prienik je RFC: 14
-JMI - velkost: 30, najlepsi prienik je MRMR: 30
-LGBM gain - velkost: 45, najlepsi prienik je CMIM: 45
-LGBM gain - velkost: 45, najlepsi prienik je MRMR: 45
-LGBM split - velkost: 89, najlepsi prienik je CMIM: 89
-LGBM split - velkost: 89, najlepsi prienik je MRMR: 89
-Laplacian - velkost: 30, najlepsi prienik je CIFE: 8
-Laplacian - velkost: 30, najlepsi prienik je MRMR: 8
-MIFS - velkost: 17, najlepsi prienik je CMIM: 17
-MIFS - velkost: 17, najlepsi prienik je MRMR: 17
-MIFS - velkost: 17, najlepsi prienik je SVC_L2: 17
-MRMR - velkost: 253, najlepsi prienik je CMIM: 206
-RFC - velkost: 100, najlepsi prienik je MRMR: 100
-RGF - velkost: 31, najlepsi prienik je CMIM: 31
-RGF - velkost: 31, najlepsi prienik je MRMR: 31
-SGD_L1 - velkost: 146, najlepsi prienik je MRMR: 146
-SGD_L2 - velkost: 132, najlepsi prienik je MRMR: 132
-SGD_elasticnet - velkost: 133, najlepsi prienik je MRMR: 133
-SVC_L1 - velkost: 93, najlepsi prienik je MRMR: 93
-SVC_L2 - velkost: 118, najlepsi prienik je MRMR: 118
-Trace_ratio - velkost: 30, najlepsi prienik je MRMR: 30
-Trace_ratio - velkost: 30, najlepsi prienik je RFC: 30
-Trace_ratio - velkost: 30, najlepsi prienik je SGD_L1: 30
-XGBoost gain - velkost: 50, najlepsi prienik je CMIM: 50
-XGBoost gain - velkost: 50, najlepsi prienik je MRMR: 50
-XGBoost total cover - velkost: 68, najlepsi prienik je CMIM: 68
-XGBoost total cover - velkost: 68, najlepsi prienik je MRMR: 68
-chi-square - velkost: 31, najlepsi prienik je MRMR: 31
-mutual_info - velkost: 30, najlepsi prienik je MRMR: 30
-mutual_info - velkost: 30, najlepsi prienik je SGD_L1: 30
+ANOVA_F-score - velkost: 11, najlepsi prienik je Fisher: 10
+Fisher - velkost: 10, najlepsi prienik je ANOVA_F-score: 10
+Laplacian - velkost: 10, najlepsi prienik je ReliefF: 6
+Laplacian - velkost: 10, najlepsi prienik je chi-square: 6
+Laplacian - velkost: 10, najlepsi prienik je mutual_info: 6
+ReliefF - velkost: 10, najlepsi prienik je mutual_info: 10
+SPEC - velkost: 10, najlepsi prienik je ANOVA_F-score: 4
+Trace_ratio - velkost: 10, najlepsi prienik je ReliefF: 5
+Trace_ratio - velkost: 10, najlepsi prienik je chi-square: 5
+Trace_ratio - velkost: 10, najlepsi prienik je mutual_info: 5
+chi-square - velkost: 11, najlepsi prienik je mutual_info: 10
+mutual_info - velkost: 11, najlepsi prienik je ReliefF: 10
+mutual_info - velkost: 11, najlepsi prienik je chi-square: 10

@@ -3,6 +3,7 @@ from skfeature.function.similarity_based import SPEC, fisher_score, reliefF, tra
 import datetime
 import pandas as pd
 import numpy as np
+import glob
 
 # feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/3-gram_bin_strings.csv'
 # standard_feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/standard_3-gram_bin_strings.csv'
@@ -65,3 +66,19 @@ import numpy as np
 # gini(treshold)
 # fisher(treshold)
 # lap(treshold)
+
+# pole = np.array([[0.1, 0.01], [0.005, 0.00004], [0.0007, 210.0], [25.0, 48.0], [0.001, 0.002]])
+# # print(pole)
+# for i in range(5):
+#     pole[i, :] = np.around(pole[i, :])
+#     print(pole[i, :])
+
+
+# print(pole)
+# print(np.around(pole))
+# print(np.array(pole*np.power(10, 3), dtype=np.int))
+
+# input_path='C:/PycharmProjects/Diplomka/seminar/simple.csv'
+# files = glob.glob(input_path)
+# for name in files:
+#     print(name)

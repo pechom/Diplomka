@@ -20,7 +20,6 @@ import glob
 import os
 
 feature_path = 'seminar/features.csv'
-standard_feature_path = 'seminar/simple_standard.csv'
 labels_path = 'seminar/clear_labels2_head.csv'
 output_dir = "seminar/selection/"
 intersections_path = 'seminar/intersections.txt'
@@ -389,41 +388,13 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
-def intersections(input_path, output_path):
-    files = sorted(glob.glob(input_path))
-    names = []
-    headers = []
-    outputs = []
-    for name in files:
-        with open(name, 'r') as f:
-            reader = csv.reader(f, delimiter=',')
-            header = next(reader)
-            names.append(os.path.basename(f.name)[:-4])
-        header = set(header)
-        headers.append(header)
-    for i in range(len(headers)):
-        best = 0
-        for j in range(len(headers)):
-            if i != j:
-                best = max(best, len(headers[i].intersection(headers[j])))
-        for k in range(len(headers)):
-            if i != k:
-                if len(headers[i].intersection(headers[k])) == best:
-                    outputs.append(
-                        names[i] + " - velkost: " + str(len(headers[i])) + "," + " najlepsi prienik je " + names[
-                            k] + ": " + str(len(headers[i].intersection(headers[k]))) + '\n')
-    with open(output_path, 'w') as out:
-        for output in outputs:
-            out.write(output)
-
-
 data, header, labels = numpy_load()
 print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
 treshold = int(data.shape[1] / 10)  # desatina atributov
-# cfs()  # prilis pomaly
 
+cfs()  # prilis pomaly
 fcbf()
 mifs()
 mrmr()
@@ -431,6 +402,7 @@ cife()
 jmi()
 cmim()
 disr()
+
 chi_square(percentile)
 MI(percentile)
 f_anova(percentile)
@@ -438,6 +410,9 @@ trace(treshold)
 gini(treshold)
 fisher(treshold)
 lap(treshold)
+spec(treshold)
+relieff(treshold)
+
 xgboost()
 LGBM()
 CAT()
@@ -447,5 +422,4 @@ LSVC()
 SGD()
 HSIC_lasso(treshold)
 
-intersections(output_dir+"*", intersections_path)
 sys.stdout.close()

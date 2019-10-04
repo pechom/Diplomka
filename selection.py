@@ -26,16 +26,11 @@ sys.stdout = open('C:/PycharmProjects/Diplomka/skusobny/selection_times.txt', 'w
 np.set_printoptions(threshold=np.inf)
 
 
-def numpy_load(type):
+def numpy_load():
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-    # standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float32)
-    # data = np.genfromtxt(feature_path, delimiter=',', skip_header=1, dtype=None)
-    if type == "int":
-        data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.int32)
-    if type == "float":
-        data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.float32)
-    # header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint32)
     # po kazdom citani a pisani pridava quotes ku stringom
+    # header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
     header = pd.read_csv(feature_path, nrows=1, header=None)
     header = header.to_numpy()[0]
     return data, header, labels
@@ -62,7 +57,7 @@ def save_to_csv(transformed_data, selected, prefix, path=output_dir):
 
 def transform_and_save(selected, prefix, path=output_dir):
     # transformed_data = np.delete(data, not_selected, axis=1)  # vymazem nevybrane stlpce
-    with open(path + prefix + ".csv", "w", newline='') as csv_file:
+    with open(path + prefix + ".csv", "w", newline='') as csv_file:  # zapisem len vybrane
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
         writer.writerows(data[:, selected])
@@ -108,7 +103,7 @@ def cife():
 def jmi():
     before = datetime.datetime.now()
     result = JMI.jmi(data, labels, mode="index", n_selected_features=treshold)
-    # algoritmus ma treshold ale pri testoch ho nedosiahol
+    # algoritmus ma treshold ale pri testoch ho nedosiahol a vyberal vsetky hodnoty
     after = datetime.datetime.now()
     print("JMI")
     print(len(result))
@@ -133,7 +128,7 @@ def cmim():
 def disr():
     before = datetime.datetime.now()
     result = DISR.disr(data, labels, mode="index", n_selected_features=treshold)
-    # algoritmus ma treshold ale pri testoch ho nedosiahol
+    # algoritmus ma treshold ale pri testoch ho nedosiahol a vyberal vsetky hodnoty
     after = datetime.datetime.now()
     print("DISR")
     print(len(result))
@@ -230,7 +225,7 @@ def fisher(treshold):
 
 def lap(treshold):
     before = datetime.datetime.now()
-    result = lap_score.lap_score(data.copy(), mode="index")  # prepisuje vstup
+    result = lap_score.lap_score(data.copy(), mode="index")  # prepisuje vstup, preto ho kopirujem
     after = datetime.datetime.now()
     print("Laplacian")
     result = result[:treshold]
@@ -254,31 +249,31 @@ def trace(treshold):
         transform_and_save(result, "Trace_ratio")
 
 
-# prilis pomale, viac ako sekunda na 188
-# def spec(treshold):
-#     before = datetime.datetime.now()
-#     result = SPEC.spec(data, mode="index")
-#     after = datetime.datetime.now()
-#     print("SPEC")
-#     result = result[:treshold]
-#     print(len(result))
-#     print("cas: " + str(after - before))
-#     print('\n')
-#     if len(result) < len(header):
-#       transform_and_save(result, "SPEC")
-#
-#
-# def relieff(treshold):
-#     before = datetime.datetime.now()
-#     result = reliefF.reliefF(data, labels, mode="index")
-#     after = datetime.datetime.now()
-#     print("relieff")
-#     result = result[:treshold]
-#     print(len(result))
-#     print("cas: " + str(after - before))
-#     print('\n')
-#     if len(result) < len(header):
-#       transform_and_save(result, "ReliefF")
+# prilis pomale na prvotnu selekciu, viac ako sekunda na 188
+def spec(treshold):
+    before = datetime.datetime.now()
+    result = SPEC.spec(data, mode="index")
+    after = datetime.datetime.now()
+    print("SPEC")
+    result = result[:treshold]
+    print(len(result))
+    print("cas: " + str(after - before))
+    print('\n')
+    if len(result) < len(header):
+        transform_and_save(result, "SPEC")
+
+
+def relieff(treshold):
+    before = datetime.datetime.now()
+    result = reliefF.reliefF(data, labels, mode="index")
+    after = datetime.datetime.now()
+    print("relieff")
+    result = result[:treshold]
+    print(len(result))
+    print("cas: " + str(after - before))
+    print('\n')
+    if len(result) < len(header):
+        transform_and_save(result, "ReliefF")
 # -------------------------------------
 
 
@@ -343,7 +338,7 @@ def LGBM():
 
 
 def CAT():
-    model = cat.CatBoostClassifier(max_depth=7, n_estimators=10, loss_function='MultiClassOneVsAll', learning_rate=0.2,
+    model = cat.CatBoostClassifier(max_depth=7, n_estimators=100, loss_function='MultiClassOneVsAll', learning_rate=0.2,
                                    task_type='CPU', verbose=False, thread_count=4)
     print("CatBoost")
     model_fit(model, "CatBoost")
@@ -407,32 +402,36 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
-data, header, labels = numpy_load("int")
-print(len(header))
+data, header, labels = numpy_load()
+print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
 treshold = int(data.shape[1] / 10)  # desatina atributov
-# cfs()
-# fcbf()
-# mifs()
-# mrmr()
-# cife()
-# jmi()
-# cmim()
-# disr()
-# chi_square(percentile)
-# MI(percentile)
-# f_anova(percentile)
-# trace(treshold)
-# gini(treshold)
-# fisher(treshold)
-# lap(treshold)
-# xgboost()
-# LGBM()
-# CAT()
-# RGF()
-# RFC()
-# LSVC()
-# SGD()
-# HSIC_lasso(treshold)
+cfs()
+fcbf()
+mifs()
+mrmr()
+cife()
+jmi()
+cmim()
+disr()
+
+chi_square(percentile)
+MI(percentile)
+f_anova(percentile)
+trace(treshold)
+gini(treshold)
+fisher(treshold)
+lap(treshold)
+spec(treshold)
+relieff(treshold)
+
+xgboost()
+LGBM()
+CAT()
+RGF()
+RFC()
+LSVC()
+SGD()
+HSIC_lasso(treshold)
 sys.stdout.close()

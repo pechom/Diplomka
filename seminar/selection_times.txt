@@ -1,139 +1,48 @@
-pocet atributov: 304
-
-
-FCBF
-13
-cas: 0:00:04.536396
-
-
-MIFS
-17
-cas: 0:00:16.504523
-
-
-mRMR
-253
-cas: 0:02:34.857109
-
-
-CIFE
-92
-cas: 0:01:21.216371
-
-
-JMI
-30
-cas: 0:00:29.133273
-
-
-CMIM
-206
-cas: 0:02:21.975503
-
-
-DISR
-30
-cas: 0:01:15.945416
+pocet atributov: 102
 
 
 Chi-square
-31
-cas: 0:00:00.002999
+11
+cas: 0:00:00.055312
 
 
 Mutual information
-30
-cas: 0:00:00.243877
+11
+cas: 0:00:00.112103
 
 
 ANOVA F-score
-30
-cas: 0:00:00.005015
+11
+cas: 0:00:00.002016
 
 
 Trace ratio
-30
-cas: 0:00:00.127945
+10
+cas: 0:00:00.124812
 
 
 Gini
-30
-cas: 0:00:00.099943
+10
+cas: 0:00:03.554948
 
 
 Fisher
-30
-cas: 0:00:00.099945
+10
+cas: 0:00:00.131045
 
 
 Laplacian
-30
-cas: 0:00:00.115934
+10
+cas: 0:00:00.149427
 
 
-XGBoost gain
-50
-cas: 0:00:02.824009
+SPEC
+10
+cas: 0:00:01.178003
 
 
-XGBoost total cover
-68
-cas: 0:00:02.251707
+relieff
+10
+cas: 0:00:04.905193
 
 
-LGBM split
-89
-cas: 0:00:00.698599
-
-
-LGBM gain
-45
-cas: 0:00:00.690603
-
-
-CatBoost
-72
-cas: 0:00:18.426451
-
-
-RGF
-31
-cas: 0:00:01.905755
-
-
-RFC
-100
-cas: 0:00:00.846514
-
-
-SVC L1
-93
-cas: 0:00:00.330825
-
-
-SVC L2
-118
-cas: 0:00:00.065962
-
-
-SGD SVC L1
-146
-cas: 0:00:00.104927
-
-
-SGD SVC, L2
-132
-cas: 0:00:00.104945
-
-
-SGD SVC, elasticnet
-133
-cas: 0:00:00.104431
-
-
-Block HSIC Lasso B = 19.
-M set to 1.
-Using Gaussian kernel for the features, Delta kernel for the outcomes.
-HSIC Lasso
-14
-cas: 0:00:03.042235
