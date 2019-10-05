@@ -31,8 +31,8 @@ def panda_load():
 
 
 def numpy_load(labels_path, feature_path):
-    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint32)
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     return data, labels
 
 
@@ -207,8 +207,8 @@ def SVM(data, label):
     cv_fit(svm, 5, data, label)
 
 
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint32)
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("vsetky data: " + str(len(data[0])))
 print('\n')
 xgboost(data, labels)
@@ -219,16 +219,16 @@ CAT(data, labels)
 RGF(data, labels)
 RFC(data, labels)
 
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float)
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
 LSVC(standard_data, labels)
 SGD(standard_data, labels)
 SVM(standard_data, labels)
 
 files = glob.glob(selected_dir)
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
 for file in files:
-    data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint32)
+    data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
     print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
     xgboost(data, labels)
     hist_xgboost(data, labels)
@@ -241,10 +241,10 @@ for file in files:
     print('\n')
 
 preprocessing.standardize(selected_dir, standard_selected_dir)
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
 files = glob.glob(standard_selected_dir+'*')
 for file in files:
-    standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float)
+    standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
     print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
     LSVC(standard_data, labels)
     SGD(standard_data, labels)

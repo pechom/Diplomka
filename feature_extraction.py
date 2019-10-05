@@ -64,16 +64,12 @@ def entropy(string):
     return entropy
 
 
-def features_to_csv(header, data, name, prefix):
+def features_to_csv(header, data, name):
     if not (len(data) == 0):
-        for i in range(len(header)):
-            header[i] = prefix + header[
-                i]  # davam prefixy aby som vedel odlisit rovnake polozky v roznych skupinach atributov
         with open("features/" + name + ".csv", "w", newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
             writer.writerow(header)
             writer.writerows(data)
-            # writer.writerows(np.array(data, dtype=np.half))
         print("finalna dlzka " + str(len(header)))
     else:
         print("finalna dlzka" + " 0")
@@ -810,82 +806,108 @@ def create_disassembled_features(path):
 # ------------------------------------------
 
 # header, features = create_export_features(reports_path)
-# features_to_csv(header, features, "export", "export_")
+# header = ["export"]*len(features[0])
+# features_to_csv(header, features, "export")
 #
 # header, features = create_import_libs_features(reports_path)
-# features_to_csv(header, features, "import_libs", "import_lib_")
+# header = ["import_libs"]*len(features[0])
+# features_to_csv(header, features, "import_libs")
 #
 # header, features = create_import_func_features(reports_path)
-# features_to_csv(header, features, "import_funcs", "import_func_")
+# header = ["import_funcs"]*len(features[0])
+# features_to_csv(header, features, "import_funcs")
 #
 # header, features = create_metadata_features(reports_path)
-# features_to_csv(header, features, "metadata", "metadata_")
+# header = ["metadata"]*len(features[0])
+# features_to_csv(header, features, "metadata")
 #
 # header, features = create_overlay_features(reports_path)
-# features_to_csv(header, features, "overlay", "overlay_")
+# header = ["overlay"]*len(features[0])
+# features_to_csv(header, features, "overlay")
 #
 # header, features = create_section_features(reports_path)
-# features_to_csv(header, features, "sections", "sections_")
+# header = ["sections"]*len(features[0])
+# features_to_csv(header, features, "sections")
 #
 # header, features = create_resource_features(reports_path)
-# features_to_csv(header, features, "resources", "resources_")
+# header = ["resources"]*len(features[0])
+# features_to_csv(header, features, "resources")
 
 # header, features = create_string_features(string_path)
-# features_to_csv(header, features, "strings", "strings_")
+# header = ["strings"]*len(features[0])
+# features_to_csv(header, features, "strings")
 
 # header, features = create_byte_entropy_histogram_features(hex_path, step=512, window=2048)
-# features_to_csv(header, features, "byte_entropy_histogram", "histogram_")
+# header = ["byte_entropy_histogram"]*len(features[0])
+# features_to_csv(header, features, "byte_entropy_histogram")
 #
 # header, features = create_sizes_features(reports_path, full_hex_path,disassembled_path)
-# features_to_csv(header, features, "sizes", "sizes_")
+# header = ["sizes"]*len(features[0])
+# features_to_csv(header, features, "sizes")
 #
 # header, features = create_entropy_feature(entropy_file)
-# features_to_csv(header, features, "file_entropy", "")
+# header = ["file_entropy"]*len(features[0])
+# features_to_csv(header, features, "file_entropy")
 
 # header, features = create_instruction_features(opcodes_path, dis_hex_path, registers_path)
-# features_to_csv(header, features, "instructions", "instructions_")
+# header = ["instructions"]*len(features[0])
+# features_to_csv(header, features, "instructions")
 #
 # header, features = create_disassembled_features(disassembled_path)
-# features_to_csv(header, features, "disassembled", "disassembled_")
+# header = ["disassembled"]*len(features[0])
+# features_to_csv(header, features, "disassembled")
 #
 # for i in range(1, 4):
 #     bin_header, bin_features, freq_header, freq_features = create_word_n_grams(string_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_strings", str(i) + "-gram_bin_strings")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_strings", str(i) + "-gram_freq_strings")
+#     bin_header = [str(i) + "-gram_bin_strings"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_freq_strings"]*len(freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_strings")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_strings")
 #
 # for i in range(1, 3):
 #     bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = create_hex_grams(
 #         hex_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_hex", str(i) + "-gram_bin_hex_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_hex", str(i) + "-gram_freq_hex_")
-#     features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_freq_hex_normal",
-#     str(i) + "-gram_freq_hex_normal_")
+#     bin_header = [str(i) + "-gram_bin_hex"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_freq_hex"]*len(freq_features[0])
+#     normal_freq_header = [str(i) + "-gram_normal_freq_hex"]*len(normal_freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_hex")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_hex")
+#     features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_hex")
 
 # for i in range(1, 3):
 #     bin_header, bin_features, freq_header, freq_features = create_char_n_grams(string_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_char_bin_strings", str(i) + "-gram_char_bin_strings_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings",
-#     str(i) + "-gram_char_freq_strings_")
+#     bin_header = [str(i) + "-gram_char_bin_strings"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_char_freq_strings"]*len(freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_char_bin_strings")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings")
 #
 # for i in range(1, 2):
 #     bin_header, bin_features, freq_header, freq_features = create_word_n_grams(dis_hex_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_hex_opcode", str(i) + "-gram_hex_opcode_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_hex_opcode", str(i) + "-gram_freq_hex_opcode_")
+#     bin_header = [str(i) + "-gram_hex_opcode"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_opcode_freq_hex"]*len(freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_hex_opcode")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_opcode_freq_hex")
 #
 # for i in range(1, 4):
 #     bin_header, bin_features, freq_header, freq_features = create_word_n_grams(opcodes_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_opcodes", str(i) + "-gram_opcodes_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcodes", str(i) + "-gram_freq_opcodes_")
+#     bin_header = [str(i) + "-gram_opcodes"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_freq_opcodes"]*len(freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_opcodes")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcodes")
 #
 # for i in range(1, 4):
 #     bin_header, bin_features, freq_header, freq_features = create_word_n_grams(registers_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_reg", str(i) + "-gram_reg_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_reg", str(i) + "-gram_freq_reg_")
+#     bin_header = [str(i) + "-gram_reg"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_freq_reg"]*len(freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_reg")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_reg")
 #
 # for i in range(1, 3):
 #     bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = create_hex_grams(
 #         dis_hex_path, i)
-#     features_to_csv(bin_header, bin_features, str(i) + "-gram_dis_hex", str(i) + "-gram_dis_hex_")
-#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_dis_hex", str(i) + "-gram_freq_dis_hex_")
-#     features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_freq_dis_hex_normal",
-#                     str(i) + "-gram_freq_dis_hex_normal_")
+#     bin_header = [str(i) + "-gram_dis_hex"]*len(bin_features[0])
+#     freq_header = [str(i) + "-gram_freq_dis_hex"]*len(freq_features[0])
+#     normal_freq_header = [str(i) + "-gram_normal_freq_dis_hex"]*len(normal_freq_features[0])
+#     features_to_csv(bin_header, bin_features, str(i) + "-gram_dis_hex")
+#     features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_dis_hex")
+#     features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_dis_hex",)

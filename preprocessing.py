@@ -10,7 +10,7 @@ original_path = 'C:/PycharmProjects/Diplomka/features/original/*'
 normal_dir = 'C:/PycharmProjects/Diplomka/features/normal/'
 standard_dir = 'C:/PycharmProjects/Diplomka/features/standard/'
 simple_dir = 'C:/PycharmProjects/Diplomka/features/simple/'
-new_dir = 'C:/PycharmProjects/Diplomka/skusobny/features/new/'
+new_dir = 'C:/PycharmProjects/Diplomka/features/new/'
 float_input_dir = 'C:/PycharmProjects/Diplomka/features/tofloat/*'
 float_output_dir = 'C:/PycharmProjects/Diplomka/features/float/'
 simple_file = 'C:/PycharmProjects/Diplomka/features/simple.csv'
@@ -25,13 +25,11 @@ features_dir = 'C:/PycharmProjects/Diplomka/features/*'
 def normalize(input_path, normal_path):
     files = glob.glob(input_path)
     for name in files:
-        print(name)
         with open(name) as f:
             reader = csv.reader(f, delimiter=',')
             header = next(reader)
             data = list(reader)
-        with open(normal_path + os.path.basename(f.name), "w",
-                  newline='') as csv_file:
+        with open(normal_path + os.path.basename(f.name), "w", newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
             writer.writerow(header)
             scaler = MinMaxScaler(feature_range=(-1, 1), copy=True)
@@ -48,8 +46,7 @@ def standardize(input_path, standard_path):
                 reader = csv.reader(f, delimiter=',')
                 header = next(reader)
                 data = list(reader)
-            with open(standard_path + os.path.basename(f.name), "w",
-                      newline='') as csv_file:
+            with open(standard_path + os.path.basename(f.name), "w", newline='') as csv_file:
                 writer = csv.writer(csv_file, delimiter=',')
                 writer.writerow(header)
                 scaler = StandardScaler(copy=True)
@@ -166,11 +163,28 @@ def discretize(input_file, new_file, decimals):
     with open(new_file, "w", newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header)
-        data = np.array(data, dtype=np.float)
+        data = np.array(data, dtype=np.float64)
         for i in range(len(max_decimals)):
             data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
             data[:, i] = data[:, i]*np.power(10, max_decimals[i])
-        writer.writerows(data.astype(np.uint))
+        writer.writerows(data.astype(np.uint64))
+
+
+def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atributu podla mena suboru
+    files = glob.glob(input_dir)
+    for name in files:
+        data = np.loadtxt(name, delimiter=',', skiprows=1, dtype=np.uint64)
+        if type(data[0]) is not np.uint64:
+            header = [os.path.basename(name)[:-4]]*len(data[0])
+        else:  # niektore skupiny maju len jeden atribut
+            header = [os.path.basename(name)[:-4]]
+        with open(output_dir + os.path.basename(name), "w", newline='') as csv_file:
+            writer = csv.writer(csv_file, delimiter=',')
+            writer.writerow(header)
+            if type(data[0]) is not np.uint64:
+                writer.writerows(data)
+            else:
+                writer.writerows([i] for i in data)
 
 
 # float_hotfix(float_input_dir, float_output_dir)  # najprv odddelim float atributy
@@ -184,4 +198,6 @@ def discretize(input_file, new_file, decimals):
 # merged_sizes(original_file, simple_file, float_file)
 # na konci vsetky atributy standardizujem, predtym vymazem povodne subory, ostanu len zmergovane !!!
 # standardize(features_dir, standard_dir)
-standardize()
+
+# prefix_hotfix(original_path, new_dir)
+# prefix_hotfix(simple_dir + "*", new_dir)

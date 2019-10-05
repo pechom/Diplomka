@@ -1,0 +1,12 @@
+vsetky data: 5723
+LGBM
+najlepsi priemer: 0.9875928813886616
+najhorsi priemer: 0.9513058382594638
+finalny priemer: 0.9875928813886616
+cas: 0:08:36.287338
+
+    param = {"max_depth": 8, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1}
+    before = datetime.datetime.now()
+    result = lgb.cv(param, dtrain, num_boost_round=60, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+

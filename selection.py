@@ -17,18 +17,16 @@ import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
 
-# feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/3-gram_bin_strings.csv'
-feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/1-gram_freq_hex_opcode.csv'
-standard_feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/standard_3-gram_bin_strings.csv'
+feature_path = 'seminar/simple_discrete.csv'
 labels_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/clear_labels2_head.csv'
-output_dir = "C:/PycharmProjects/Diplomka/skusobny/selection/"
-sys.stdout = open('C:/PycharmProjects/Diplomka/skusobny/selection_times.txt', 'w')
+output_dir = "seminar/selection/"
+sys.stdout = open('seminar/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
 def numpy_load():
-    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint32)
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     # po kazdom citani a pisani pridava quotes ku stringom
     # header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
     header = pd.read_csv(feature_path, nrows=1, header=None)
@@ -407,15 +405,15 @@ print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
 treshold = int(data.shape[1] / 10)  # desatina atributov
-cfs()
-fcbf()
-mifs()
-mrmr()
-cife()
-jmi()
-cmim()
-disr()
-
+# cfs()
+# fcbf()
+# mifs()
+# mrmr()
+# cife()
+# jmi()
+# cmim()
+# disr()
+#
 chi_square(percentile)
 MI(percentile)
 f_anova(percentile)
@@ -423,15 +421,15 @@ trace(treshold)
 gini(treshold)
 fisher(treshold)
 lap(treshold)
-spec(treshold)
-relieff(treshold)
+# spec(treshold)
+# relieff(treshold)
 
-xgboost()
-LGBM()
-CAT()
-RGF()
-RFC()
-LSVC()
-SGD()
-HSIC_lasso(treshold)
+# xgboost()
+# LGBM()
+# CAT()
+# RGF()
+# RFC()
+# LSVC()
+# SGD()
+# HSIC_lasso(treshold)
 sys.stdout.close()

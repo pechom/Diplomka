@@ -1,48 +1,38 @@
-pocet atributov: 102
+pocet atributov: 5755
 
 
 Chi-square
-11
-cas: 0:00:00.055312
+576
+cas: 0:00:00.295073
 
 
 Mutual information
-11
-cas: 0:00:00.112103
+576
+cas: 0:00:04.900168
 
 
 ANOVA F-score
-11
-cas: 0:00:00.002016
+576
+cas: 0:00:00.091242
 
 
 Trace ratio
-10
-cas: 0:00:00.124812
+575
+cas: 0:00:03.719878
 
 
 Gini
-10
-cas: 0:00:03.554948
+575
+cas: 0:02:09.951365
 
 
 Fisher
-10
-cas: 0:00:00.131045
+575
+cas: 0:00:00.600655
 
 
 Laplacian
-10
-cas: 0:00:00.149427
-
-
-SPEC
-10
-cas: 0:00:01.178003
-
-
-relieff
-10
-cas: 0:00:04.905193
+575
+cas: 0:00:03.325073
 
 
