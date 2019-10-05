@@ -3,7 +3,7 @@ from skfeature.function.information_theoretical_based import FCBF, MIFS, MRMR, C
 from skfeature.function.similarity_based import SPEC, fisher_score, reliefF, trace_ratio, lap_score
 import numpy as np
 import csv
-from sklearn.feature_selection import SelectPercentile, chi2, mutual_info_classif, f_classif, SelectFromModel
+from sklearn.feature_selection import SelectKBest, chi2, mutual_info_classif, f_classif, SelectFromModel
 import pandas as pd
 from functools import partial
 import lightgbm as lgb
@@ -61,7 +61,7 @@ def transform_and_save(selected, prefix, path=output_dir):
         writer.writerows(data[:, selected])
 
 
-def cfs():
+def cfs():  # extremne pomaly
     # http://featureselection.asu.edu/html/skfeature.function.statistical_based.CFS.html
     before = datetime.datetime.now()
     result = CFS.cfs(data, labels, mode="index")
@@ -76,7 +76,7 @@ def cfs():
 
 def mrmr():
     before = datetime.datetime.now()
-    result = MRMR.mrmr(data, labels, mode="index")
+    result = MRMR.mrmr(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("mRMR")
     print(len(result))
@@ -88,7 +88,7 @@ def mrmr():
 
 def cife():
     before = datetime.datetime.now()
-    result = CIFE.cife(data, labels, mode="index")
+    result = CIFE.cife(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("CIFE")
     print(len(result))
@@ -113,7 +113,7 @@ def jmi():
 
 def cmim():
     before = datetime.datetime.now()
-    result = CMIM.cmim(data, labels, mode="index")
+    result = CMIM.cmim(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("CMIM")
     print(len(result))
@@ -140,7 +140,7 @@ def disr():
 def fcbf():
     # http://featureselection.asu.edu/html/skfeature.function.information_theoretical_based.FCBF.html
     before = datetime.datetime.now()
-    result = FCBF.fcbf(data, labels, mode="index")
+    result = FCBF.fcbf(data, labels, mode="index")  # treshold je delta
     after = datetime.datetime.now()
     print("FCBF")
     print(len(result))
@@ -152,7 +152,7 @@ def fcbf():
 
 def mifs():
     before = datetime.datetime.now()
-    result = MIFS.mifs(data, labels, mode="index")
+    result = MIFS.mifs(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("MIFS")
     print(len(result))
@@ -178,19 +178,19 @@ def fit(selector, prefix):
 
 
 def chi_square(percentile):
-    sel = SelectPercentile(chi2, percentile=percentile)
+    sel = SelectKBest(chi2, k=treshold)
     print("Chi-square")
     fit(sel, "chi-square")
 
 
 def MI(percentile):
-    sel = SelectPercentile(score_func=partial(mutual_info_classif, discrete_features=True), percentile=percentile)
+    sel = SelectKBest(score_func=partial(mutual_info_classif, discrete_features=True), k=treshold)
     print("Mutual information")
     fit(sel, "mutual_info")
 
 
 def f_anova(percentile):
-    sel = SelectPercentile(f_classif, percentile=percentile)
+    sel = SelectKBest(f_classif, k=treshold)
     print("ANOVA F-score")
     fit(sel, "ANOVA_F-score")
 
@@ -236,10 +236,10 @@ def lap(treshold):
 
 def trace(treshold):
     before = datetime.datetime.now()
-    result = trace_ratio.trace_ratio(data, labels, mode="index")
+    result = trace_ratio.trace_ratio(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("Trace ratio")
-    result = result[:treshold]
+    # result = result[:treshold]
     print(len(result))
     print("cas: " + str(after - before))
     print('\n')
@@ -276,7 +276,7 @@ def relieff(treshold):
 
 
 def model_selection_mean(model, prefix):
-    selection = SelectFromModel(model, threshold='mean', prefit=True)
+    selection = SelectFromModel(model, threshold='mean', prefit=True, max_features=treshold)
     new_data = selection.transform(data)
     selected = selection.get_support(True)
     print(len(selected))
@@ -285,7 +285,7 @@ def model_selection_mean(model, prefix):
 
 
 def model_selection_median(model, prefix):
-    selection = SelectFromModel(model, threshold='median', prefit=True)
+    selection = SelectFromModel(model, threshold='median', prefit=True, max_features=treshold)
     new_data = selection.transform(data)
     selected = selection.get_support(True)
     print(len(selected))
@@ -414,13 +414,13 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # cmim()
 # disr()
 #
-chi_square(percentile)
-MI(percentile)
-f_anova(percentile)
-trace(treshold)
-gini(treshold)
-fisher(treshold)
-lap(treshold)
+# chi_square(treshold)
+# MI(treshold)
+# f_anova(treshold)
+# trace(treshold)
+# gini(treshold)
+# fisher(treshold)
+# lap(treshold)
 # spec(treshold)
 # relieff(treshold)
 
