@@ -10,14 +10,17 @@ original_path = 'C:/PycharmProjects/Diplomka/features/original/*'
 normal_dir = 'C:/PycharmProjects/Diplomka/features/normal/'
 standard_dir = 'C:/PycharmProjects/Diplomka/features/standard/'
 simple_dir = 'C:/PycharmProjects/Diplomka/features/simple/'
+very_simple_dir = 'C:/PycharmProjects/Diplomka/features/very_simple/'
 new_dir = 'C:/PycharmProjects/Diplomka/features/new/'
 float_input_dir = 'C:/PycharmProjects/Diplomka/features/tofloat/*'
 float_output_dir = 'C:/PycharmProjects/Diplomka/features/float/'
 simple_file = 'C:/PycharmProjects/Diplomka/features/simple.csv'
+very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
 original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
 float_file = 'C:/PycharmProjects/Diplomka/features/float.csv'
 discrete_file = 'C:/PycharmProjects/Diplomka/features/discrete.csv'
 simple_discrete_file = 'C:/PycharmProjects/Diplomka/features/simple_discrete.csv'
+very_simple_discrete_file = 'C:/PycharmProjects/Diplomka/features/very_simple_discrete.csv'
 original_discrete_file = 'C:/PycharmProjects/Diplomka/features/original_discrete.csv'
 features_dir = 'C:/PycharmProjects/Diplomka/features/*'
 
@@ -55,15 +58,14 @@ def standardize(input_path, standard_path):
                 writer.writerows(standard_data)
 
 
-def divide(input_path, simple_path):  # jednoduche atributy sa skopiruju do ineho priecinka
+def divide_simple(input_path, simple_path, treshold):  # jednoduche atributy sa skopiruju do ineho priecinka
     files = glob.glob(input_path)
     for name in files:
         with open(name) as f:
             reader = csv.reader(f, delimiter=',')
             header = next(reader)
-            if len(header) < 1000:
+            if len(header) <= treshold:
                 data = list(reader)
-                f.close()
                 with open(simple_path + os.path.basename(f.name), "w", newline='') as csv_file:
                     writer = csv.writer(csv_file, delimiter=',')
                     writer.writerow(header)
@@ -107,16 +109,8 @@ def merge_feature_files(file_to_merge_1, file_to_merge_2, output_file):
         writer.writerows(alldata)
 
 
-def merged_sizes(original_file, simple_file, float_file):
-    with open(original_file) as f:
-        reader = csv.reader(f, delimiter=',')
-        header = next(reader)
-        print(len(header))
-    with open(simple_file) as f:
-        reader = csv.reader(f, delimiter=',')
-        header = next(reader)
-        print(len(header))
-    with open(float_file) as f:
+def feature_size(file):
+    with open(file) as f:
         reader = csv.reader(f, delimiter=',')
         header = next(reader)
         print(len(header))
@@ -188,16 +182,28 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
 
 
 # float_hotfix(float_input_dir, float_output_dir)  # najprv odddelim float atributy
-# divide(original_path, simple_dir)  # potom odddelim jednoduche
+# divide_simple(original_path, simple_dir, 1000)  # potom odddelim jednoduche
+# divide_simple(original_path, very_simple_dir, 100)  # potom odddelim velmi jednoduche
 # merge_features_from_dir(simple_dir+'*', simple_file)
 # merge_features_from_dir(original_path, original_file)
+# merge_features_from_dir(very_simple_dir+'*', very_simple_file)
 # merge_features_from_dir(float_output_dir+'*', float_file)
 # discretize(float_file, discrete_file, 5)  # diskretizujem float a ulozim ho do original
 # merge_feature_files(discrete_file, simple_file, simple_discrete_file)  # zmergujem discrete a simple
+# merge_feature_files(discrete_file, very_simple_file, very_simple_discrete_file)
 # merge_feature_files(discrete_file, original_file, original_discrete_file)  # zmergujem discrete a original
-# merged_sizes(original_file, simple_file, float_file)
+# for name in [original_file, simple_file, very_simple_file]:
+#     feature_size(name)
 # na konci vsetky atributy standardizujem, predtym vymazem povodne subory, ostanu len zmergovane !!!
 # standardize(features_dir, standard_dir)
 
+# prefix hotfix
 # prefix_hotfix(original_path, new_dir)
 # prefix_hotfix(simple_dir + "*", new_dir)
+# prefix_hotfix(very_simple_dir + "*", new_dir)
+# merge_features_from_dir(simple_dir+'*', simple_file)
+# merge_features_from_dir(original_path, original_file)
+# merge_features_from_dir(very_simple_dir+'*', very_simple_file)
+# merge_feature_files(discrete_file, simple_file, simple_discrete_file)  # zmergujem discrete a simple
+# merge_feature_files(discrete_file, very_simple_file, very_simple_discrete_file)
+# merge_feature_files(discrete_file, original_file, original_discrete_file)  # zmergujem discrete a original

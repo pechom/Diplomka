@@ -78,8 +78,3 @@ import csv
 # print(pole)
 # print(np.around(pole))
 # print(np.array(pole*np.power(10, 3), dtype=np.int))
-
-# input_path='C:/PycharmProjects/Diplomka/seminar/simple.csv'
-# files = glob.glob(input_path)
-# for name in files:
-#     print(name)

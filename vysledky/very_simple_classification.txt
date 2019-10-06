@@ -4,6 +4,6 @@ najlepsi priemer: 0.9812873990681418
 index najlepsieho: 51
 najhorsi priemer: 0.915983355517731
 finalny priemer: 0.9812762008598551
-cas: 0:00:28.438579
+cas: 0:00:29.723583
 
 
