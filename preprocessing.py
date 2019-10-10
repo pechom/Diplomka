@@ -37,7 +37,6 @@ def normalize(input_path, normal_path):
             writer.writerow(header)
             scaler = MinMaxScaler(feature_range=(-1, 1), copy=True)
             normal_data = scaler.fit_transform(data)
-            # normal_data = np.array(scaler.fit_transform(data), dtype=np.half)  # aby som nemal prilis velku presnost
             writer.writerows(normal_data)
 
 

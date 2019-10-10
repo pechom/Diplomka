@@ -46,9 +46,9 @@ def xgboost(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
-             'learning_rate': 0.2, 'n_jobs': -1}
+             'learning_rate': 0.2, 'n_jobs': -1}  # vyskusaj num_parallel_tree
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=20, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
     xgb_print(result, before, after)
@@ -59,7 +59,7 @@ def hist_xgboost(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'tree_method': 'hist'}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=20, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost hist")
     xgb_print(result, before, after)
@@ -71,7 +71,7 @@ def linear_xgb(data, label):  # implicitna selekcia atributov
              'learning_rate': 0.2, 'n_jobs': -1, 'booster': 'gblinear',
              'feature_selector': 'thrifty', 'updater': 'coord_descent'}
     before = datetime.datetime.now()
-    cvresult = xgb.cv(param, dtrain, num_boost_round=20, nfold=10, metrics=['merror'], stratified=True)
+    cvresult = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True)
     after = datetime.datetime.now()
     print("linear XGBoost")
     xgb_print(cvresult, before, after)
@@ -93,7 +93,7 @@ def LGBM(data, label):
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=20, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM")
     print("najlepsi priemer: " + str(1 - min(result['multi_error-mean'])))
@@ -111,7 +111,7 @@ def CAT(data, label):
         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
         "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 4, "verbose_eval": False}
     before = datetime.datetime.now()
-    results = cat.cv(pool=pool, params=params, num_boost_round=20, fold_count=10, shuffle=True, stratified=True,
+    results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
                      verbose=False)
     after = datetime.datetime.now()
     print("CatBoost")
@@ -164,18 +164,18 @@ def RFC(data, label):
     cv_fit(rfc, 10, data, label)
 
 
-def SGD(data, label):
-    sgd = SGDClassifier(
-        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=True, verbose=0,
-        n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-    print("linear SGD SVC")
-    # multi_cv_fit(sgd, 5, 20, data, label)
-    cv_fit(sgd, 10, data, label)
+# def SGD(data, label):
+#     sgd = SGDClassifier(
+#         loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=True, verbose=0,
+#         n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+#     print("linear SGD SVC")
+#     # multi_cv_fit(sgd, 5, 20, data, label)
+#     cv_fit(sgd, 10, data, label)
 
 
 def LSVC(data, label):
     svc = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
-                    fit_intercept=True, verbose=0, max_iter=1000)
+                    fit_intercept=False, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
     print("linear SVC [liblinear]")

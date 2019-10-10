@@ -304,21 +304,22 @@ def model_fit(model, prefix):
 
 
 def xgboost():
+    # ak budu prve tri pomale tak dam n_estimators na 50
     model_gain = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                   n_jobs=-1, n_estimators=100, importance_type='gain')
+                                   n_jobs=-1, n_estimators=100, importance_type='gain', num_class=10)  # 'total_gain'
     model_cover = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                    n_jobs=-1, n_estimators=100, importance_type='total_cover')
+                                    n_jobs=-1, n_estimators=100, importance_type='weight', num_class=10)
     print("XGBoost gain")
     model_fit(model_gain, "XGBoost gain")
-    print("XGBoost total cover")
-    model_fit(model_cover, "XGBoost total cover")
+    print("XGBoost split")
+    model_fit(model_cover, "XGBoost split")
 
 
 def LGBM():
     model_split = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
-                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split')
+                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split',  num_class=10)
     model_gain = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
-                                    n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain')
+                                    n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',  num_class=10)
     print("LGBM split")
     model_fit(model_split, "LGBM split")
     print("LGBM gain")
@@ -327,7 +328,7 @@ def LGBM():
 
 def CAT():
     model = cat.CatBoostClassifier(max_depth=7, n_estimators=100, loss_function='MultiClassOneVsAll', learning_rate=0.2,
-                                   task_type='CPU', verbose=False, thread_count=4)
+                                   task_type='CPU', verbose=False, thread_count=4, classes_count=10)
     print("CatBoost")
     model_fit(model, "CatBoost")
 
@@ -340,7 +341,7 @@ def RGF():
 
 
 def RFC():
-    model = RandomForestClassifier(n_estimators=1000, max_depth=7, min_samples_leaf=1, max_leaf_nodes=100,
+    model = RandomForestClassifier(n_estimators=1000, max_depth=7, min_samples_leaf=10, max_leaf_nodes=100,
                                    bootstrap=True, n_jobs=-1, warm_start=False)
     print("RFC")
     model_fit(model, "RFC")
@@ -348,9 +349,9 @@ def RFC():
 
 def LSVC():
     model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
-                         fit_intercept=True, verbose=0, max_iter=1000)
+                         fit_intercept=False, verbose=0, max_iter=1000)
     model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
-                         fit_intercept=True, verbose=0, max_iter=1000)
+                         fit_intercept=False, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
     print("SVC L1")
@@ -359,20 +360,20 @@ def LSVC():
     model_fit(model_l2, "SVC_L2")
 
 
-def SGD():
-    model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
-                             shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-    model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
-                             shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-    model_elastic = SGDClassifier(loss='hinge', penalty='elasticnet', alpha=0.0001, l1_ratio=0.15, max_iter=1000,
-                                  tol=0.001, shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0,
-                                  power_t=0.5)
-    print("SGD SVC L1")
-    model_fit(model_l1, "SGD_L1")
-    print("SGD SVC, L2")
-    model_fit(model_l2, "SGD_L2")
-    print("SGD SVC, elasticnet")
-    model_fit(model_elastic, "SGD_elasticnet")
+# def SGD():
+#     model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+#                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+#     model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+#                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+#     model_elastic = SGDClassifier(loss='hinge', penalty='elasticnet', alpha=0.0001, l1_ratio=0.15, max_iter=1000,
+#                                   tol=0.001, shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0,
+#                                   power_t=0.5)
+#     print("SGD SVC L1")
+#     model_fit(model_l1, "SGD_L1")
+#     print("SGD SVC, L2")
+#     model_fit(model_l2, "SGD_L2")
+#     print("SGD SVC, elasticnet")
+#     model_fit(model_elastic, "SGD_elasticnet")
 
 
 def HSIC_lasso(treshold):
