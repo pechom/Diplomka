@@ -174,7 +174,7 @@ def SGD(data, label):
 
 
 def LSVC(data, label):
-    svc = LinearSVC(penalty='l2', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
+    svc = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                     fit_intercept=True, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True

@@ -247,7 +247,6 @@ def trace(treshold):
         transform_and_save(result, "Trace_ratio")
 
 
-# prilis pomale na prvotnu selekciu, viac ako sekunda na 188
 def spec(treshold):
     before = datetime.datetime.now()
     result = SPEC.spec(data, mode="index")
@@ -275,17 +274,8 @@ def relieff(treshold):
 # -------------------------------------
 
 
-def model_selection_mean(model, prefix):
-    selection = SelectFromModel(model, threshold='mean', prefit=True, max_features=treshold)
-    new_data = selection.transform(data)
-    selected = selection.get_support(True)
-    print(len(selected))
-    if len(selected) < len(header):
-        save_to_csv(new_data, selected, prefix)
-
-
-def model_selection_median(model, prefix):
-    selection = SelectFromModel(model, threshold='median', prefit=True, max_features=treshold)
+def model_selection_treshold(model, prefix):
+    selection = SelectFromModel(model, threshold=-np.inf, prefit=True, max_features=treshold)
     new_data = selection.transform(data)
     selected = selection.get_support(True)
     print(len(selected))
@@ -306,7 +296,7 @@ def model_fit(model, prefix):
     before = datetime.datetime.now()
     model.fit(data, labels)
     after = datetime.datetime.now()
-    model_selection_mean(model, prefix)
+    model_selection_treshold(model, prefix)
     # model_selection_median(model, prefix)
     # model_selection_zero(model, prefix)  # len pre L1 a elasticnet SVM
     print("cas: " + str(after - before))
@@ -357,9 +347,9 @@ def RFC():
 
 
 def LSVC():
-    model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
+    model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=True, verbose=0, max_iter=1000)
-    model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
+    model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=True, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
