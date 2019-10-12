@@ -5,6 +5,8 @@ import pandas as pd
 import numpy as np
 import glob
 import csv
+import os
+import shutil
 
 # feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/3-gram_bin_strings.csv'
 # standard_feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/standard_3-gram_bin_strings.csv'
@@ -78,3 +80,12 @@ import csv
 # print(pole)
 # print(np.around(pole))
 # print(np.array(pole*np.power(10, 3), dtype=np.int))
+# features='C:/PycharmProjects/Diplomka/skuska/features/*'
+# discrete='C:/PycharmProjects/Diplomka/skuska/discrete/'
+# original = 'C:/PycharmProjects/Diplomka/skuska/features/original/*'
+#
+# # shutil.rmtree(features[:-1])
+# os.renames(discrete[:-1], original[:-2])
+
+# very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
+# print(set(np.loadtxt(very_simple_file, delimiter=',', max_rows=1, dtype="str")))

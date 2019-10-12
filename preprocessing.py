@@ -5,24 +5,18 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 import numpy as np
 import pandas as pd
 import sys
+import os
+import shutil
 
 original_path = 'C:/PycharmProjects/Diplomka/features/original/*'
-normal_dir = 'C:/PycharmProjects/Diplomka/features/normal/'
 standard_dir = 'C:/PycharmProjects/Diplomka/features/standard/'
 simple_dir = 'C:/PycharmProjects/Diplomka/features/simple/'
 very_simple_dir = 'C:/PycharmProjects/Diplomka/features/very_simple/'
-new_dir = 'C:/PycharmProjects/Diplomka/features/new/'
-float_input_dir = 'C:/PycharmProjects/Diplomka/features/tofloat/*'
-float_output_dir = 'C:/PycharmProjects/Diplomka/features/float/'
 simple_file = 'C:/PycharmProjects/Diplomka/features/simple.csv'
 very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
 original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
-float_file = 'C:/PycharmProjects/Diplomka/features/float.csv'
-discrete_file = 'C:/PycharmProjects/Diplomka/features/discrete.csv'
-simple_discrete_file = 'C:/PycharmProjects/Diplomka/features/simple_discrete.csv'
-very_simple_discrete_file = 'C:/PycharmProjects/Diplomka/features/very_simple_discrete.csv'
-original_discrete_file = 'C:/PycharmProjects/Diplomka/features/original_discrete.csv'
 features_dir = 'C:/PycharmProjects/Diplomka/features/*'
+discrete_dir = 'C:/PycharmProjects/Diplomka/discrete/'
 
 
 def normalize(input_path, normal_path):
@@ -69,11 +63,6 @@ def divide_simple(input_path, simple_path, treshold):  # jednoduche atributy sa 
                     writer = csv.writer(csv_file, delimiter=',')
                     writer.writerow(header)
                     writer.writerows(data)
-        # else:
-        #     with open(complex_path + os.path.basename(f.name), "w", newline='') as csv_file:
-        #         writer = csv.writer(csv_file, delimiter=',')
-        #         writer.writerow(header)
-        #         writer.writerows(data)
 
 
 def merge_features_from_dir(input_path, output_file):  # zluci atributy z priecinka do jedneho
@@ -115,10 +104,8 @@ def feature_size(file):
         print(len(header))
 
 
-def float_hotfix(input_dir, output_dir):  # robim aj pretypovanie na float32
+def float_hotfix(input_dir, output_dir):
     # oddelenie float atributov
-    # robim pre disassembled, instructions, overlay, strings, sections, potom aj normal grams ak bude treba
-    # pred zmergovanim float pridam cele sizes a file_entropy
     files = glob.glob(input_dir)
     float_frame = pd.DataFrame()
     column_loc = 0
@@ -138,29 +125,34 @@ def float_hotfix(input_dir, output_dir):  # robim aj pretypovanie na float32
     float_frame.to_csv(output_dir + "float.csv", header=True, index=False)
 
 
-def discretize(input_file, new_file, decimals):
+def discretize(input_path, output_dir, decimals):
     # obmedzi pocet cislic za desatinnou ciarkou - x, vynasobi 10^x a pretypuje na int
-    with open(input_file) as f:
-        reader = csv.reader(f, delimiter=',')
-        header = next(reader)
-        data = list(reader)
-    max_decimals = [0]*len(header)  # max pocet desat. cislic v string tvare atributov
-    for line in data:
-        for i in range(len(line)):
-            max_decimals[i] = max(max_decimals[i], (len(line[i]) - line[i].index('.') - 1))
-    for i in range(len(max_decimals)):
-        if max_decimals[i] == 1:
-            max_decimals[i] = 0  # len jedno cislo ignorujem, casto to je len nula
-        if max_decimals[i] > decimals:
-            max_decimals[i] = decimals
-    with open(new_file, "w", newline='') as csv_file:
-        writer = csv.writer(csv_file, delimiter=',')
-        writer.writerow(header)
-        data = np.array(data, dtype=np.float64)
+    files = glob.glob(input_path)
+    for feature_file in files:
+        with open(feature_file) as f:
+            reader = csv.reader(f, delimiter=',')
+            header = next(reader)
+            data = list(reader)
+        max_decimals = [0]*len(header)  # max pocet desat. cislic v string tvare atributov
+        for line in data:
+            for i in range(len(line)):
+                float_position = line[i].find('.')
+                if float_position != -1:  # pri celych cislach necham nulu
+                    max_decimals[i] = max(max_decimals[i], (len(line[i]) - float_position - 1))
+        #         absolutna lebo find da -1 ked nenajde
         for i in range(len(max_decimals)):
-            data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
-            data[:, i] = data[:, i]*np.power(10, max_decimals[i])
-        writer.writerows(data.astype(np.uint64))
+            if max_decimals[i] <= 1:
+                max_decimals[i] = 0  # len jedno cislo ignorujem, casto to je len nula
+            if max_decimals[i] > decimals:
+                max_decimals[i] = decimals
+        with open(output_dir + os.path.basename(feature_file), "w", newline='') as csv_file:
+            writer = csv.writer(csv_file, delimiter=',')
+            writer.writerow(header)
+            data = np.array(data, dtype=np.float64)
+            for i in range(len(max_decimals)):
+                data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
+                data[:, i] = data[:, i]*np.power(10, max_decimals[i])
+            writer.writerows(data.astype(np.uint64))
 
 
 def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atributu podla mena suboru
@@ -180,29 +172,23 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
                 writer.writerows([i] for i in data)
 
 
-# float_hotfix(float_input_dir, float_output_dir)  # najprv odddelim float atributy
+# -------------------------------------------------------
+# discretize(features_dir, discrete_dir, 5)  # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
+# shutil.rmtree(features_dir[:-1])
+# os.rename(discrete_dir, features_dir[:-1])
+# os.renames(discrete_dir[:-1], original_path[:-2])
+# os.mkdir(simple_dir)
+# os.mkdir(very_simple_dir)
 # divide_simple(original_path, simple_dir, 1000)  # potom odddelim jednoduche
-# divide_simple(original_path, very_simple_dir, 100)  # potom odddelim velmi jednoduche
+# divide_simple(original_path, very_simple_dir, 100)  # odddelim velmi jednoduche
 # merge_features_from_dir(simple_dir+'*', simple_file)
 # merge_features_from_dir(original_path, original_file)
 # merge_features_from_dir(very_simple_dir+'*', very_simple_file)
-# merge_features_from_dir(float_output_dir+'*', float_file)
-# discretize(float_file, discrete_file, 5)  # diskretizujem float a ulozim ho do original
-# merge_feature_files(discrete_file, simple_file, simple_discrete_file)  # zmergujem discrete a simple
-# merge_feature_files(discrete_file, very_simple_file, very_simple_discrete_file)
-# merge_feature_files(discrete_file, original_file, original_discrete_file)  # zmergujem discrete a original
 # for name in [original_file, simple_file, very_simple_file]:
 #     feature_size(name)
-# na konci vsetky atributy standardizujem, predtym vymazem povodne subory, ostanu len zmergovane !!!
+# shutil.rmtree(original_path[:-1])
+# shutil.rmtree(simple_dir)
+# shutil.rmtree(very_simple_dir)
+# os.mkdir(standard_dir)
+# na konci vsetky atributy standardizujem, predtym vymazem povodne subory, ostanu len zmergovane
 # standardize(features_dir, standard_dir)
-
-# prefix hotfix
-# prefix_hotfix(original_path, new_dir)
-# prefix_hotfix(simple_dir + "*", new_dir)
-# prefix_hotfix(very_simple_dir + "*", new_dir)
-# merge_features_from_dir(simple_dir+'*', simple_file)
-# merge_features_from_dir(original_path, original_file)
-# merge_features_from_dir(very_simple_dir+'*', very_simple_file)
-# merge_feature_files(discrete_file, simple_file, simple_discrete_file)  # zmergujem discrete a simple
-# merge_feature_files(discrete_file, very_simple_file, very_simple_discrete_file)
-# merge_feature_files(discrete_file, original_file, original_discrete_file)  # zmergujem discrete a original

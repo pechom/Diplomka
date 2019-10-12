@@ -1,0 +1,11 @@
+Microsoft-Kaspersky 
+{'Trojan', 'Backdoor', 'Sality', 'Upatre', 'Win32', 'Worm', 'Virut', 'Vobfus', 'Virus', 'Neshta'}
+
+Microsoft-McAfee
+{'Virut', 'Chir', 'Trojan', 'Sality', 'Upatre', 'Autorun'}
+
+Kaspersky-McAfee
+{'Virut', 'Upatre', 'Sality', 'Trojan', 'Downloader'}
+
+Vsetky 3
+{'Sality', 'Trojan', 'Upatre', 'Virut'}

@@ -6,6 +6,10 @@ import csv
 import collections
 import pprint
 
+path_labeling = 'C:/PycharmProjects/Diplomka/reports/*'
+path_distribution = 'subory/labels2.csv'
+# input = open("subory/3_same_with_packed,obfuscated.txt", "r")
+
 
 def labeling(input, path):  # vytvori csv subor v ktorom budu mena vzoriek a ich triedy
     classes = input.read().splitlines()
@@ -96,13 +100,9 @@ def only_classes_csv(path_distribution):
             writer.writerow(line['trieda'])
 
 
-path_labeling = 'C:/PycharmProjects/Diplomka/reports/*'
-path_distribution = 'subory/labels2.csv'
-# input = open("subory/3_same_with_packed,obfuscated.txt", "r")
-
 # labeling(input, path_labeling)
 # class_distribution(path_distribution)
 # normal_distribution(path_distribution, path_labeling)
-# class_distribution('subory/labels2.csv')
+# class_distribution(path_distribution)
 # rename_classes_to_numbers(path_distribution)
 # only_classes_csv(path_distribution)

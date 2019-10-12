@@ -1,0 +1,29 @@
+casy pre 188 a 92089 atribútov
+
+ANOVA F-score
+cas: 0:00:00.002021
+cas: 0:00:00.734576
+
+Chi-square
+cas: 0:00:00.022460
+cas: 0:00:03.284102
+
+Fisher
+cas: 0:00:00.093930
+cas: 0:00:10.177100
+
+Laplacian
+cas: 0:00:00.147914
+cas: 0:00:53.121343
+
+Mutual information
+cas: 0:00:00.222220
+cas: 0:01:14.428011
+
+Gini
+cas: 0:00:00.065980
+cas: 0:02:43.459546
+
+Trace racio
+cas: 0:00:00.126910
+MemoryError

@@ -1,0 +1,6 @@
+Malwarebytes:  38499 + 3128 = 41627
+Microsoft:  18951 + 215 = 19166
+Kaspersky:  10145 + 366 = 10551
+Eset:  6008 + 39 = 6047
+BitDefender:  5097 + 1009 = 6106
+McAfee:  4628 + 203 = 4831

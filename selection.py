@@ -18,6 +18,7 @@ from pyHSICLasso import HSICLasso
 import sys
 
 feature_path = 'seminar/simple_discrete.csv'
+standard_feature_path = ''
 labels_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/clear_labels2_head.csv'
 output_dir = "seminar/selection/"
 sys.stdout = open('seminar/selection_times.txt', 'w')
@@ -391,11 +392,15 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
-data, header, labels = numpy_load()
-print("pocet atributov: " + str(len(header)))
-print('\n')
-percentile = 10
-treshold = int(data.shape[1] / 10)  # desatina atributov
+# labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# header = pd.read_csv(feature_path, nrows=1, header=None)
+# header = header.to_numpy()[0]
+#
+# print("pocet atributov: " + str(len(header)))
+# print('\n')
+# percentile = 10
+# treshold = int(data.shape[1] / 10)  # desatina atributov
 # cfs()
 # fcbf()
 # mifs()
@@ -420,7 +425,9 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # CAT()
 # RGF()
 # RFC()
-# LSVC()
-# SGD()
 # HSIC_lasso(treshold)
+
+# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# LSVC()
+
 sys.stdout.close()

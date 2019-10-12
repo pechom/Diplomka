@@ -1,0 +1,40 @@
+Kudj
+Cutwail
+FDGO
+Emotet
+FGNI
+Downloader
+VBObfus
+GenericATG
+Trojan
+HWorld
+GenericRXEF
+GenericRXBM
+Generic Downloader
+Artemis
+Upatre
+FOZU
+GenericRXAA
+HLLP
+41472
+PWSZbot
+Rontokbro
+gen@MM
+Generic BackDoor
+FAAI
+Virut
+Autorun
+BackDoor
+Sality
+Chir
+b@MM
+Generic StartPage
+GenericRXEG
+Generic VB
+Pykse
+worm
+FACV
+FBWV
+GenericRXBD
+FBRM
+FACH

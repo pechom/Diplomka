@@ -1,0 +1,13 @@
+Fisher score - najlepšie atribúty majú po rozdelení na skupiny podľa tried podobné hodnoty ale ich priemery sa lišia od celkového priemeru a variancia v skupine je nízka (kontroluje, či možno rozdeliť atribút podľa triedy na rôzne skupiny)
+
+Laplacian score - podobné ako fisher score
+
+Trace ratio - využíva Fisher/Laplacian, ale nájde globálne dobré riešenie 
+
+ANOVA F-score - skóre podľa toho, či sa variancie priemerov skupín atribútu rozdelených podľa tried líšiaS
+
+Gini index - miera disperzie/homogenity atribútu medzi triedami
+
+Mutual information - závislosť atribútu a triedy
+
+Chi-square - distribúcia atribútu vzhľadom na triedu (či je závislá od triedy)

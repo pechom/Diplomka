@@ -1,0 +1,10 @@
+worm
+upatre
+wannacry
+downloader
+ransom
+startpage
+sality
+zbot
+backdoor
+trojan

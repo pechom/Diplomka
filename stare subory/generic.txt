@@ -1,0 +1,10 @@
+worm
+trojan
+ransom
+backdoor
+startpage
+hacktool
+downloader
+adware
+dropper
+crypt

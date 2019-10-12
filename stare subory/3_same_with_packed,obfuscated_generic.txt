@@ -1,0 +1,16 @@
+adware
+ransom
+worm
+dropper
+wannacry
+sality
+expiro
+backdoor
+downloader
+zbot
+startpage
+dealply
+trojan
+locky
+linkury
+upatre
