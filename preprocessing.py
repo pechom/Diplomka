@@ -1,9 +1,9 @@
 import glob
-import os
 import csv
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 import numpy as np
 import pandas as pd
+import collections
 import sys
 import os
 import shutil
@@ -47,7 +47,6 @@ def standardize(input_path, standard_path):
                 writer.writerow(header)
                 scaler = StandardScaler(copy=True)
                 standard_data = scaler.fit_transform(data)
-                # standard_data = np.array(scaler.fit_transform(data), dtype=np.float32)
                 writer.writerows(standard_data)
 
 
@@ -101,6 +100,9 @@ def feature_size(file):
     with open(file) as f:
         reader = csv.reader(f, delimiter=',')
         header = next(reader)
+        counter = collections.Counter(header)
+        print(os.path.basename(file)[:-4])
+        print(counter)
         print(len(header))
 
 

@@ -1,4 +1,4 @@
-vsetky data: 735
+vsetky data: 766
 LGBM
 najlepsi priemer: 0.9812873990681418
 index najlepsieho: 51

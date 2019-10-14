@@ -10,17 +10,17 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.svm import SVC, LinearSVC
 import catboost as cat
 import sys
+import statistics
 import glob
 import os
 import preprocessing
 
-# feature_path = 'seminar/features.csv'
-feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/sections.csv'
-standard_feature_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/standard_sections.csv'
-labels_path = 'seminar/clear_labels2_head.csv'
+feature_path = 'features/simple.csv'
+standard_feature_path = 'features/standard/simple.csv'
+labels_path = 'subory/clear_labels2_head.csv'
 selected_dir = 'seminar/selection/*'  # kde sa ulozili skupiny atributov po selekcii
-standard_selected_dir = 'seminar/standard/'
-sys.stdout = open('seminar/classification_times.txt', 'w')
+standard_selected_dir = 'features/selection/'
+sys.stdout = open('vysledky/classification_times.txt', 'w')
 
 
 def panda_load():
@@ -46,11 +46,23 @@ def xgboost(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
-             'learning_rate': 0.2, 'n_jobs': -1}  # vyskusaj num_parallel_tree
+             'learning_rate': 0.2, 'n_jobs': -1}
     before = datetime.datetime.now()
     result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
+    xgb_print(result, before, after)
+
+
+def xgboost_rf(data, label):
+    # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
+    dtrain = xgb.DMatrix(data, label=label)
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+             'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 10}
+    before = datetime.datetime.now()
+    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    after = datetime.datetime.now()
+    print("XGBoost forest")
     xgb_print(result, before, after)
 
 
@@ -91,11 +103,40 @@ def LGBM(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1}
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM")
+    LGBM_print(result, before, after)
+
+
+def LGBM_rf(data, label):
+    # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
+    dtrain = lgb.Dataset(data=data, label=label)
+    param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'rf',
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             'bagging_fraction': 0.9, 'bagging_freq': 10, 'num_trees': 1000}
+    before = datetime.datetime.now()
+    result = lgb.cv(param, dtrain, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    after = datetime.datetime.now()
+    print("LGBM forest")
+    LGBM_print(result, before, after)
+
+
+def LGBM_goss(data, label):
+    # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
+    dtrain = lgb.Dataset(data=data, label=label)
+    param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'goss',
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1}
+    before = datetime.datetime.now()
+    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    after = datetime.datetime.now()
+    print("LGBM GOSS")
+    LGBM_print(result, before, after)
+
+
+def LGBM_print(result, before, after):
     print("najlepsi priemer: " + str(1 - min(result['multi_error-mean'])))
     print("index najlepsieho: " + str(result['multi_error-mean'].index(min(result['multi_error-mean']))))
     print("najhorsi priemer: " + str(1 - max(result['multi_error-mean'])))
@@ -104,24 +145,24 @@ def LGBM(data, label):
     print('\n')
 
 
-def CAT(data, label):
-    # velmi pomaly, ale najlepsie vysledky
-    pool = cat.Pool(data, label, has_header=False)
-    params = {
-        "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
-        "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 4, "verbose_eval": False}
-    before = datetime.datetime.now()
-    results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
-                     verbose=False)
-    after = datetime.datetime.now()
-    print("CatBoost")
-    print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
-    print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
-                                                                min(results['test-MultiClassOneVsAll-mean'])].index[0]))
-    print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
-    print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
-    print("cas: " + str(after - before))
-    print('\n')
+# def CAT(data, label):
+#     # velmi pomaly, ale najlepsie vysledky
+#     pool = cat.Pool(data, label, has_header=False)
+#     params = {
+#         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
+#         "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 4, "verbose_eval": False}
+#     before = datetime.datetime.now()
+#     results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
+#                      verbose=False)
+#     after = datetime.datetime.now()
+#     print("CatBoost")
+#     print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
+#     print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
+#                                                                 min(results['test-MultiClassOneVsAll-mean'])].index[0]))
+#     print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
+#     print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
+#     print("cas: " + str(after - before))
+#     print('\n')
 
 
 def multi_cv_fit(model, n_splits, n_repeats, data, label):
@@ -141,14 +182,13 @@ def cv_fit(model, n_splits, data, label):
     scores = cross_val_score(model, data, label, scoring='accuracy',
                              cv=StratifiedKFold(n_splits=n_splits, random_state=1))
     after = datetime.datetime.now()
-    print("najlepsi vysledok: " + str(max(scores)))
-    print("najhorsi vysledok: " + str(min(scores)))
-    print(scores)
+    # print("najlepsi vysledok: " + str(max(scores)))
+    # print("najhorsi vysledok: " + str(min(scores)))
+    print("priemerny vysledok: " + str(statistics.mean(scores)))
     print("cas: " + str(after - before))
     print('\n')
 
 
-# velmi pomaly, slabsie vysledky
 def RGF(data, label):
     rgf = RGFClassifier(max_leaf=80, algorithm="RGF_Sib", verbose=False, n_jobs=-1, min_samples_leaf=10,
                         learning_rate=0.2)
@@ -204,25 +244,30 @@ def SVM(data, label):
               max_iter=1000, decision_function_shape='ovr', gamma='scale')
     print("sigmoid SVC")
     # multi_cv_fit(svm, 5, 20, data, label)
-    cv_fit(svm, 5, data, label)
+    cv_fit(svm, 10, data, label)
 
 
-# labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-# print("vsetky data: " + str(len(data[0])))
-# print('\n')
-# xgboost(data, labels)
-# hist_xgboost(data, labels)
-# linear_xgb(data, labels)
-# LGBM(data, labels)
-# CAT(data, labels)
-# RGF(data, labels)
-# RFC(data, labels)
-#
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+print("vsetky data: " + str(len(data[0])))
+print('\n')
+
+# CAT(data, labels) # nepouzivam, pomaly
+
+xgboost(data, labels)
+hist_xgboost(data, labels)
+linear_xgb(data, labels)
+xgboost_rf(data, labels)
+LGBM_rf(data, labels)
+LGBM_goss(data, labels)
+LGBM(data, labels)
+RGF(data, labels)
+RFC(data, labels)
+
 # # labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-# LSVC(standard_data, labels)
-# SVM(standard_data, labels)
+standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+LSVC(standard_data, labels)
+SVM(standard_data, labels)
 #
 # files = glob.glob(selected_dir)
 # # labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)

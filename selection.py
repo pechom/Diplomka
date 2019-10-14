@@ -17,11 +17,11 @@ import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
 
-feature_path = 'seminar/simple_discrete.csv'
-standard_feature_path = ''
-labels_path = 'C:/PycharmProjects/Diplomka/skusobny/classification/clear_labels2_head.csv'
-output_dir = "seminar/selection/"
-sys.stdout = open('seminar/selection_times.txt', 'w')
+feature_path = 'features/very_simple.csv'
+standard_feature_path = 'features/standard/simple.csv'
+labels_path = 'subory/clear_labels2_head.csv'
+output_dir = 'features/selection/'
+sys.stdout = open('vysledky/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
@@ -141,7 +141,7 @@ def disr():
 def fcbf():
     # http://featureselection.asu.edu/html/skfeature.function.information_theoretical_based.FCBF.html
     before = datetime.datetime.now()
-    result = FCBF.fcbf(data, labels, mode="index")  # treshold je delta
+    result = FCBF.fcbf(data, labels, mode="index", delta=0)  # treshold je delta
     after = datetime.datetime.now()
     print("FCBF")
     print(len(result))
@@ -349,7 +349,7 @@ def RFC():
 
 
 def LSVC():
-    model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
+    model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=False, verbose=0, max_iter=1000)
     model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=False, verbose=0, max_iter=1000)
@@ -381,7 +381,7 @@ def HSIC_lasso(treshold):
     hsic = HSICLasso()
     hsic.input(data, labels)
     before = datetime.datetime.now()
-    hsic.classification(treshold, B=19, M=1)
+    hsic.classification(treshold, B=0, M=1)
     # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek
     after = datetime.datetime.now()
     print("HSIC Lasso")
@@ -392,16 +392,19 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
-# labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-# header = pd.read_csv(feature_path, nrows=1, header=None)
-# header = header.to_numpy()[0]
-#
-# print("pocet atributov: " + str(len(header)))
-# print('\n')
-# percentile = 10
-# treshold = int(data.shape[1] / 10)  # desatina atributov
-# cfs()
+labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+header = pd.read_csv(feature_path, nrows=1, header=None)
+header = header.to_numpy()[0]
+
+print("pocet atributov: " + str(len(header)))
+print('\n')
+percentile = 10
+treshold = int(data.shape[1] / 10)  # desatina atributov
+
+# cfs()  # nepouzivaj, velmi pomaly
+# trace(treshold)  # nepouzivaj, pamätovo narocny
+
 # fcbf()
 # mifs()
 # mrmr()
@@ -413,13 +416,12 @@ def HSIC_lasso(treshold):
 # chi_square(treshold)
 # MI(treshold)
 # f_anova(treshold)
-# trace(treshold)
 # gini(treshold)
 # fisher(treshold)
 # lap(treshold)
 # spec(treshold)
 # relieff(treshold)
-
+#
 # xgboost()
 # LGBM()
 # CAT()
@@ -427,7 +429,7 @@ def HSIC_lasso(treshold):
 # RFC()
 # HSIC_lasso(treshold)
 
-# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
 # LSVC()
 
 sys.stdout.close()

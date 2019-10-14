@@ -1,12 +1,19 @@
-vsetky data: 5723
+vsetky data: 5576
 LGBM
 najlepsi priemer: 0.9875928813886616
 najhorsi priemer: 0.9513058382594638
 finalny priemer: 0.9875928813886616
 cas: 0:08:36.287338
 
-    param = {"max_depth": 8, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1}
-    before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=60, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
 
+LGBM GOSS
+najlepsi priemer: 0.9875499399187485
+index najlepsieho: 13
+najhorsi priemer: 0.9524139665896119
+finalny priemer: 0.9865617551711653
+cas: 0:01:26.433711
+
+
+RGF
+priemerny vysledok: 0.9876343225199409
+cas: 0:02:28.123717
