@@ -1,0 +1,8 @@
+pocet atributov: 766
+
+
+ANOVA F-score
+76
+cas: 0:00:00
+
+

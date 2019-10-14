@@ -1,0 +1,24 @@
+vsetky data: 5567
+
+
+LGBM GOSS
+najlepsi priemer: 0.989677119339161
+index najlepsieho: 69
+najhorsi priemer: 0.9524139665896119
+finalny priemer: 0.98866701832906
+cas: 0:01:48.742467
+
+
+LGBM
+najlepsi priemer: 0.9886141806070494
+index najlepsieho: 70
+najhorsi priemer: 0.9524139665896119
+finalny priemer: 0.986551448018001
+cas: 0:02:30.969022
+
+
+RGF
+priemerny vysledok: 0.9876343225199409
+cas: 0:02:29.217663
+
+
