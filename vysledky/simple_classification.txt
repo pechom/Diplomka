@@ -7,11 +7,11 @@ cas: 0:08:36.287338
 
 
 LGBM GOSS
-najlepsi priemer: 0.9875499399187485
-index najlepsieho: 13
+najlepsi priemer: 0.989677119339161
+index najlepsieho: 69
 najhorsi priemer: 0.9524139665896119
-finalny priemer: 0.9865617551711653
-cas: 0:01:26.433711
+finalny priemer: 0.98866701832906
+cas: 0:01:48.742467
 
 
 RGF
