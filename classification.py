@@ -18,9 +18,8 @@ import preprocessing
 feature_path = 'features/simple.csv'
 standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
-selected_dir = 'seminar/selection/*'  # kde sa ulozili skupiny atributov po selekcii
-standard_selected_dir = 'features/selection/'
-sys.stdout = open('vysledky/classification_times.txt', 'w')
+selected_dir = 'features/selection5567/*'  # kde sa ulozili skupiny atributov po selekcii
+standard_selected_dir = 'features/selection_standard/'
 
 
 def panda_load():
@@ -145,24 +144,24 @@ def LGBM_print(result, before, after):
     print('\n')
 
 
-# def CAT(data, label):
-#     # velmi pomaly, ale najlepsie vysledky
-#     pool = cat.Pool(data, label, has_header=False)
-#     params = {
-#         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
-#         "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 4, "verbose_eval": False}
-#     before = datetime.datetime.now()
-#     results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
-#                      verbose=False)
-#     after = datetime.datetime.now()
-#     print("CatBoost")
-#     print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
-#     print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
-#                                                                 min(results['test-MultiClassOneVsAll-mean'])].index[0]))
-#     print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
-#     print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
-#     print("cas: " + str(after - before))
-#     print('\n')
+def CAT(data, label):
+    # velmi pomaly
+    pool = cat.Pool(data, label, has_header=False)
+    params = {
+        "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
+        "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
+    before = datetime.datetime.now()
+    results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
+                     verbose=False)
+    after = datetime.datetime.now()
+    print("CatBoost")
+    print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
+    print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
+                                                                min(results['test-MultiClassOneVsAll-mean'])].index[0]))
+    print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
+    print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
+    print("cas: " + str(after - before))
+    print('\n')
 
 
 def multi_cv_fit(model, n_splits, n_repeats, data, label):
@@ -204,13 +203,13 @@ def RFC(data, label):
     cv_fit(rfc, 10, data, label)
 
 
-# def SGD(data, label):
-#     sgd = SGDClassifier(
-#         loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=True, verbose=0,
-#         n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-#     print("linear SGD SVC")
-#     # multi_cv_fit(sgd, 5, 20, data, label)
-#     cv_fit(sgd, 10, data, label)
+def SGD(data, label):
+    sgd = SGDClassifier(
+        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=True, verbose=0,
+        n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+    print("linear SGD SVC")
+    # multi_cv_fit(sgd, 5, 20, data, label)
+    cv_fit(sgd, 10, data, label)
 
 
 def LSVC(data, label):
@@ -225,74 +224,66 @@ def LSVC(data, label):
 
 def SVM(data, label):
     svm = SVC(C=1.0, kernel='rbf', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=1000, decision_function_shape='ovr', gamma='scale')
+              max_iter=10000, decision_function_shape='ovr', gamma='scale')
     print("RBF SVC")
     # multi_cv_fit(svm, 5, 20, data, label)
     cv_fit(svm, 10, data, label)
     svm = SVC(C=1.0, kernel='linear', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=1000, decision_function_shape='ovr')
+              max_iter=10000, decision_function_shape='ovr')
     print("linear SVC [libsvm]")
     # multi_cv_fit(svm, 5, 20, data, label)
     cv_fit(svm, 10, data, label)
-    # maju velmi zle vysledky, aj na normalizovanych datach:
-    svm = SVC(C=1.0, kernel='poly', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=1000, decision_function_shape='ovr', gamma='scale')
-    print("polynom SVC")
+    # polynomy maju velmi zle vysledky, aj na normalizovanych datach:
+    # svm = SVC(C=1.0, kernel='poly', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
+    #           max_iter=1000, decision_function_shape='ovr', gamma='scale')
+    # print("polynom SVC")
     # multi_cv_fit(svm, 5, 20, data, label)
-    cv_fit(svm, 10, data, label)
+    # cv_fit(svm, 10, data, label)
     svm = SVC(C=1.0, kernel='sigmoid', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=1000, decision_function_shape='ovr', gamma='scale')
+              max_iter=10000, decision_function_shape='ovr', gamma='scale')
     print("sigmoid SVC")
     # multi_cv_fit(svm, 5, 20, data, label)
     cv_fit(svm, 10, data, label)
 
 
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-print("vsetky data: " + str(len(data[0])))
-print('\n')
+def run_methods():
+    sys.stdout = open('vysledky/classification_times.txt', 'w')
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    print("vsetky data: " + str(len(data[0])))
+    print('\n')
+    xgboost(data, labels)
+    LGBM_goss(data, labels)
+    LGBM(data, labels)
+    RGF(data, labels)
+    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    SVM(standard_data, labels)
 
-# CAT(data, labels) # nepouzivam, pomaly
 
-xgboost(data, labels)
-hist_xgboost(data, labels)
-linear_xgb(data, labels)
-xgboost_rf(data, labels)
-LGBM_rf(data, labels)
-LGBM_goss(data, labels)
-LGBM(data, labels)
-RGF(data, labels)
-RFC(data, labels)
+def check_selections():
+    sys.stdout = open('vysledky/classification_selected.txt', 'w')
+    files = glob.glob(selected_dir)
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    for file in files:
+        data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
+        print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
+        xgboost(data, labels)
+        LGBM_goss(data, labels)
+        LGBM(data, labels)
+        RGF(data, labels)
+        print("------------------------------------------------------------")
+        print('\n')
+    preprocessing.standardize(selected_dir, standard_selected_dir)
+    files = glob.glob(standard_selected_dir+'*')
+    for file in files:
+        standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
+        print(os.path.basename(file)[:-4] + ": " + str(len(standard_data[0])))
+        SVM(standard_data, labels)
+        print("------------------------------------------------------------")
+        print('\n')
+    for file in files:
+        os.remove(file)
 
-# # labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-LSVC(standard_data, labels)
-SVM(standard_data, labels)
-#
-# files = glob.glob(selected_dir)
-# # labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# for file in files:
-#     data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
-#     print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
-#     xgboost(data, labels)
-#     hist_xgboost(data, labels)
-#     linear_xgb(data, labels)
-#     LGBM(data, labels)
-#     CAT(data, labels)
-#     RGF(data, labels)
-#     RFC(data, labels)
-#     print("------------------------------------------------------------")
-#     print('\n')
-#
-# preprocessing.standardize(selected_dir, standard_selected_dir)
-# # labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# files = glob.glob(standard_selected_dir+'*')
-# for file in files:
-#     standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
-#     print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
-#     LSVC(standard_data, labels)
-#     SVM(standard_data, labels)
-#     print("------------------------------------------------------------")
-#     print('\n')
 
+check_selections()
 sys.stdout.close()

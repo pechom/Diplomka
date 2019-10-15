@@ -21,6 +21,7 @@ feature_path = 'features/very_simple.csv'
 standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
+
 sys.stdout = open('vysledky/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
@@ -329,7 +330,7 @@ def LGBM():
 
 def CAT():
     model = cat.CatBoostClassifier(max_depth=7, n_estimators=100, loss_function='MultiClassOneVsAll', learning_rate=0.2,
-                                   task_type='CPU', verbose=False, thread_count=4, classes_count=10)
+                                   task_type='CPU', verbose=False, thread_count=6, classes_count=10)
     print("CatBoost")
     model_fit(model, "CatBoost")
 
@@ -361,20 +362,20 @@ def LSVC():
     model_fit(model_l2, "SVC_L2")
 
 
-# def SGD():
-#     model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
-#                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-#     model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
-#                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-#     model_elastic = SGDClassifier(loss='hinge', penalty='elasticnet', alpha=0.0001, l1_ratio=0.15, max_iter=1000,
-#                                   tol=0.001, shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0,
-#                                   power_t=0.5)
-#     print("SGD SVC L1")
-#     model_fit(model_l1, "SGD_L1")
-#     print("SGD SVC, L2")
-#     model_fit(model_l2, "SGD_L2")
-#     print("SGD SVC, elasticnet")
-#     model_fit(model_elastic, "SGD_elasticnet")
+def SGD():
+    model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+                             shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+    model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+                             shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+    model_elastic = SGDClassifier(loss='hinge', penalty='elasticnet', alpha=0.0001, l1_ratio=0.15, max_iter=1000,
+                                  tol=0.001, shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0,
+                                  power_t=0.5)
+    print("SGD SVC L1")
+    model_fit(model_l1, "SGD_L1")
+    print("SGD SVC, L2")
+    model_fit(model_l2, "SGD_L2")
+    print("SGD SVC, elasticnet")
+    model_fit(model_elastic, "SGD_elasticnet")
 
 
 def HSIC_lasso(treshold):
@@ -382,7 +383,7 @@ def HSIC_lasso(treshold):
     hsic.input(data, labels)
     before = datetime.datetime.now()
     hsic.classification(treshold, B=0, M=1)
-    # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek
+    # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0
     after = datetime.datetime.now()
     print("HSIC Lasso")
     selected = hsic.get_index()
@@ -401,9 +402,6 @@ print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
 treshold = int(data.shape[1] / 10)  # desatina atributov
-
-# cfs()  # nepouzivaj, velmi pomaly
-# trace(treshold)  # nepouzivaj, pamätovo narocny
 
 # fcbf()
 # mifs()
@@ -429,6 +427,7 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # RFC()
 # HSIC_lasso(treshold)
 
+# output_dir = 'features/selection_standard/'
 # data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
 # LSVC()
 
