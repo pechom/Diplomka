@@ -45,9 +45,9 @@ def xgboost(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
-             'learning_rate': 0.2, 'n_jobs': -1}
+             'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
     xgb_print(result, before, after)
@@ -59,7 +59,7 @@ def xgboost_rf(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 10}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost forest")
     xgb_print(result, before, after)
@@ -70,7 +70,7 @@ def hist_xgboost(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'tree_method': 'hist'}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost hist")
     xgb_print(result, before, after)
@@ -82,10 +82,22 @@ def linear_xgb(data, label):  # implicitna selekcia atributov
              'learning_rate': 0.2, 'n_jobs': -1, 'booster': 'gblinear',
              'feature_selector': 'thrifty', 'updater': 'coord_descent'}
     before = datetime.datetime.now()
-    cvresult = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True)
+    cvresult = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True)
     after = datetime.datetime.now()
     print("linear XGBoost")
     xgb_print(cvresult, before, after)
+
+
+def xgboost_dart(data, label):
+    dtrain = xgb.DMatrix(data, label=label)
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+             'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10, 'booster': 'dart',
+             'rate_drop': 0.1, 'skip_drop': 0.5}
+    before = datetime.datetime.now()
+    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    after = datetime.datetime.now()
+    print("XGBoost")
+    xgb_print(result, before, after)
 
 
 def xgb_print(result, before, after):
@@ -102,9 +114,10 @@ def LGBM(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1}
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             'min_data_in_bin': 3, 'max_bin': 255}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM")
     LGBM_print(result, before, after)
@@ -127,11 +140,25 @@ def LGBM_goss(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'goss',
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1}
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             'min_data_in_bin': 3, 'max_bin': 255}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM GOSS")
+    LGBM_print(result, before, after)
+
+
+def LGBM_dart(data, label):
+    # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
+    dtrain = lgb.Dataset(data=data, label=label)
+    param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'dart',
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             'min_data_in_bin': 3, 'max_bin': 255, 'xgboost_dart_mode': False}
+    before = datetime.datetime.now()
+    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    after = datetime.datetime.now()
+    print("LGBM dart")
     LGBM_print(result, before, after)
 
 
@@ -151,7 +178,7 @@ def CAT(data, label):
         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
         "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
     before = datetime.datetime.now()
-    results = cat.cv(pool=pool, params=params, num_boost_round=50, fold_count=10, shuffle=True, stratified=True,
+    results = cat.cv(pool=pool, params=params, num_boost_round=100, fold_count=10, shuffle=True, stratified=True,
                      verbose=False)
     after = datetime.datetime.now()
     print("CatBoost")
@@ -222,26 +249,10 @@ def LSVC(data, label):
     cv_fit(svc, 10, data, label)
 
 
-def SVM(data, label):
-    svm = SVC(C=1.0, kernel='rbf', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
+def SVM(data, label, kernel, message):
+    svm = SVC(C=1.0, kernel=kernel, shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
               max_iter=10000, decision_function_shape='ovr', gamma='scale')
-    print("RBF SVC")
-    # multi_cv_fit(svm, 5, 20, data, label)
-    cv_fit(svm, 10, data, label)
-    svm = SVC(C=1.0, kernel='linear', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=10000, decision_function_shape='ovr')
-    print("linear SVC [libsvm]")
-    # multi_cv_fit(svm, 5, 20, data, label)
-    cv_fit(svm, 10, data, label)
-    # polynomy maju velmi zle vysledky, aj na normalizovanych datach:
-    # svm = SVC(C=1.0, kernel='poly', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-    #           max_iter=1000, decision_function_shape='ovr', gamma='scale')
-    # print("polynom SVC")
-    # multi_cv_fit(svm, 5, 20, data, label)
-    # cv_fit(svm, 10, data, label)
-    svm = SVC(C=1.0, kernel='sigmoid', shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=10000, decision_function_shape='ovr', gamma='scale')
-    print("sigmoid SVC")
+    print(message)
     # multi_cv_fit(svm, 5, 20, data, label)
     cv_fit(svm, 10, data, label)
 
@@ -257,7 +268,9 @@ def run_methods():
     LGBM(data, labels)
     RGF(data, labels)
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    SVM(standard_data, labels)
+    SVM(standard_data, labels, 'rbf', "RBF SVC")
+    SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
+    SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
 
 
 def check_selections():
@@ -278,12 +291,14 @@ def check_selections():
     for file in files:
         standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
         print(os.path.basename(file)[:-4] + ": " + str(len(standard_data[0])))
-        SVM(standard_data, labels)
+        SVM(standard_data, labels, 'rbf', "RBF SVC")
+        SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
+        SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
         print("------------------------------------------------------------")
         print('\n')
     for file in files:
         os.remove(file)
 
 
-check_selections()
+run_methods()
 sys.stdout.close()

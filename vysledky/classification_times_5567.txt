@@ -2,11 +2,11 @@ vsetky data: 5567
 
 
 XGBoost
-najlepsi priemer: 0.9812996
-index najlepsieho: 37
-najhorsi priemer: 0.9605989
-finalny priemer: 0.980247
-cas: 0:01:41.300703
+najlepsi priemer: 0.9823727
+index najlepsieho: 24
+najhorsi priemer: 0.8989247
+finalny priemer: 0.982319
+cas: 0:02:18.766311
 
 
 XGBoost hist

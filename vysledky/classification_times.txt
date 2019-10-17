@@ -1,23 +1,15 @@
-vsetky data: 5567
-
-
-RFC
-priemerny vysledok: 0.9577404267613339
-cas: 0:02:14.321360
-
-
 RBF SVC
 priemerny vysledok: 0.9588783729772306
-cas: 0:00:27.546675
+cas: 0:00:27.627106
 
 
 linear SVC [libsvm]
 priemerny vysledok: 0.9814481052454853
-cas: 0:00:17.687370
+cas: 0:00:17.751353
 
 
 sigmoid SVC
 priemerny vysledok: 0.9578877558552563
-cas: 0:00:18.890488
+cas: 0:00:18.986186
 
 
