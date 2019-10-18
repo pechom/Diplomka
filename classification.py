@@ -115,7 +115,7 @@ def LGBM(data, label):
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
-             'min_data_in_bin': 3, 'max_bin': 255}
+             'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
@@ -141,7 +141,7 @@ def LGBM_goss(data, label):
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'goss',
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
-             'min_data_in_bin': 3, 'max_bin': 255}
+             'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
@@ -286,8 +286,20 @@ def check_selections():
         RGF(data, labels)
         print("------------------------------------------------------------")
         print('\n')
+
+    files = glob.glob(standard_selected_dir + '*')
+    for file in files:
+        data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
+        print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
+        xgboost(data, labels)
+        LGBM_goss(data, labels)
+        LGBM(data, labels)
+        RGF(data, labels)
+        print("------------------------------------------------------------")
+        print('\n')
+
     preprocessing.standardize(selected_dir, standard_selected_dir)
-    files = glob.glob(standard_selected_dir+'*')
+    files = glob.glob(standard_selected_dir + '*')
     for file in files:
         standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
         print(os.path.basename(file)[:-4] + ": " + str(len(standard_data[0])))
@@ -300,5 +312,5 @@ def check_selections():
         os.remove(file)
 
 
-run_methods()
+check_selections()
 sys.stdout.close()

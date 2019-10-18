@@ -724,6 +724,72 @@ cas: 0:00:12.312411
 ------------------------------------------------------------
 
 
+SVC_L1: 76
+XGBoost
+najlepsi priemer: 0.9627243
+index najlepsieho: 82
+najhorsi priemer: 0.8461518
+finalny priemer: 0.9596733
+cas: 0:00:03.332905
+
+
+LGBM GOSS
+najlepsi priemer: 0.9731644713195542
+index najlepsieho: 50
+najhorsi priemer: 0.9049693948077218
+finalny priemer: 0.968942746795478
+cas: 0:00:03.428356
+
+
+LGBM
+najlepsi priemer: 0.9710695153148237
+index najlepsieho: 68
+najhorsi priemer: 0.9049693948077218
+finalny priemer: 0.9710695153148237
+cas: 0:00:04.034093
+
+
+RGF
+priemerny vysledok: 0.9578134127717947
+cas: 0:00:11.719643
+
+
+------------------------------------------------------------
+
+
+SVC_L2: 76
+XGBoost
+najlepsi priemer: 0.9585756
+index najlepsieho: 43
+najhorsi priemer: 0.8229955
+finalny priemer: 0.9564923
+cas: 0:00:03.297126
+
+
+LGBM GOSS
+najlepsi priemer: 0.9720258875477916
+index najlepsieho: 64
+najhorsi priemer: 0.9078190700270301
+finalny priemer: 0.9710054793845264
+cas: 0:00:03.937800
+
+
+LGBM
+najlepsi priemer: 0.9668808911253749
+index najlepsieho: 52
+najhorsi priemer: 0.9078190700270301
+finalny priemer: 0.9658282595464275
+cas: 0:00:04.750362
+
+
+RGF
+priemerny vysledok: 0.9639895763923425
+cas: 0:00:11.797775
+
+
+------------------------------------------------------------
+
+
 Trace_ratio: 76
 XGBoost
 najlepsi priemer: 0.9710056
