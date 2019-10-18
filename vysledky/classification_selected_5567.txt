@@ -393,6 +393,38 @@ cas: 0:00:32.362953
 ------------------------------------------------------------
 
 
+SVC_L1: 556
+XGBoost
+najlepsi priemer: 0.9813843
+index najlepsieho: 25
+najhorsi priemer: 0.9090971999999999
+finalny priemer: 0.9803742
+cas: 0:00:08.268782
+
+
+LGBM GOSS
+najlepsi priemer: 0.9865731517618969
+index najlepsieho: 33
+najhorsi priemer: 0.956697691434484
+finalny priemer: 0.9865731517618969
+cas: 0:00:05.587989
+
+
+LGBM
+najlepsi priemer: 0.9856055813206421
+index najlepsieho: 40
+najhorsi priemer: 0.956697691434484
+finalny priemer: 0.9856055813206421
+cas: 0:00:08.235003
+
+
+RGF
+priemerny vysledok: 0.9845730980301449
+cas: 0:00:31.208541
+
+
+------------------------------------------------------------
+
 XGBoost gain: 556
 XGBoost
 najlepsi priemer: 0.9833394
@@ -686,6 +718,24 @@ cas: 0:00:03.515591
 
 ------------------------------------------------------------
 
+
+SVC_L1: 556
+RBF SVC
+priemerny vysledok: 0.9752384021168892
+cas: 0:00:02.402275
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9928027906603211
+cas: 0:00:01.437610
+
+
+sigmoid SVC
+priemerny vysledok: 0.9866678415162534
+cas: 0:00:01.421984
+
+
+------------------------------------------------------------
 
 XGBoost gain: 556
 RBF SVC

@@ -50,7 +50,7 @@ def xgboost(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=50, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
     xgb_print(result, before, after)
@@ -146,7 +146,7 @@ def LGBM_goss(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM GOSS")
     LGBM_print(result, before, after)
@@ -315,5 +315,7 @@ def check_selections():
         os.remove(file)
 
 
-check_selections()
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    check_selections()
 sys.stdout.close()
