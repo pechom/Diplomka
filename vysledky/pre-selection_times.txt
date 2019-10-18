@@ -1,45 +1,76 @@
-casy pre 188 a 92089 a 219712 atribútov
+casy pre 92089 a 219712 atribútov
 
 ANOVA F-score
-cas: 0:00:00.002021
 cas: 0:00:00.734576
 cas: 0:00:01.992285
 
 Chi-square
-cas: 0:00:00.022460
 cas: 0:00:03.284102
 cas: 0:00:09.696525
 
 Fisher
-cas: 0:00:00.093930
 cas: 0:00:10.177100
 cas: 0:00:46.026594
 
 Laplacian
-cas: 0:00:00.147914
 cas: 0:00:53.121343
 cas: 0:02:20.089080
 
 Mutual information
-cas: 0:00:00.222220
 cas: 0:01:14.428011
 cas: 0:03:04.818075
 
 Gini
-cas: 0:00:00.065980
 cas: 0:02:43.459546
 cas: 0:05:43.477294
 
 Trace racio
-cas: 0:00:00.126910
 MemoryError
 
 SPEC
-x
 cas: 0:10:37.180426
 cas: 0:25:34.831449
 
 ReliefF
-x
 cas: 0:01:43.808378
 cas: 0:05:19.870018
+
+FCBF
+cas: 0:40:55.049493
+x
+
+XGBoost gain
+cas: 0:03:36.735262
+cas: 0:08:32.710946
+
+XGBoost split
+cas: 0:03:45.392173
+cas: 0:08:42.524209
+
+LGBM split
+cas: 0:02:06.183084
+cas: 0:06:55.625434
+
+LGBM gain
+cas: 0:01:49.789610
+cas: 0:06:43.079250
+
+CatBoost
+cas: 0:43:12.096784
+x
+
+RGF
+cas: 0:03:13.714803
+cas: 0:20:01.780701
+
+RFC
+cas: 0:00:03.484634
+cas: 0:00:06.203598
+
+SVC L1
+cas: 0:00:45.862873
+cas: 0:01:37.421294
+
+SVC L2
+cas: 0:39:47.336249
+x

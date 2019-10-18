@@ -17,7 +17,7 @@ import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
 
-feature_path = 'features/very_simple.csv'
+feature_path = 'features/simple.csv'
 standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
@@ -48,16 +48,16 @@ def pandas_load():
     return data, header, labels.values.ravel()
 
 
-def save_to_csv(transformed_data, selected, prefix, path=output_dir):
-    with open(path + prefix + ".csv", "w", newline='') as csv_file:
+def save_to_csv(transformed_data, selected, prefix):
+    with open(output_dir + prefix + ".csv", "w", newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
         writer.writerows(transformed_data)
 
 
-def transform_and_save(selected, prefix, path=output_dir):
+def transform_and_save(selected, prefix):
     # transformed_data = np.delete(data, not_selected, axis=1)  # vymazem nevybrane stlpce
-    with open(path + prefix + ".csv", "w", newline='') as csv_file:  # zapisem len vybrane
+    with open(output_dir + prefix + ".csv", "w", newline='') as csv_file:  # zapisem len vybrane
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
         writer.writerows(data[:, selected])
@@ -349,15 +349,18 @@ def RFC():
     model_fit(model, "RFC")
 
 
-def LSVC():
+def LSVC_l1():
     model_l1 = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
-                         fit_intercept=False, verbose=0, max_iter=1000)
-    model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=False, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
     print("SVC L1")
     model_fit(model_l1, "SVC_L1")
+
+
+def LSVC_l2():
+    model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
+                         fit_intercept=False, verbose=0, max_iter=1000)
     print("SVC L2")
     model_fit(model_l2, "SVC_L2")
 
@@ -384,6 +387,7 @@ def HSIC_lasso(treshold):
     before = datetime.datetime.now()
     hsic.classification(treshold, B=0, M=1)
     # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0
+    # ked pouzijem block lasso tak mi nevychadza pocet atributov (ani bez pouzitia treshold)
     after = datetime.datetime.now()
     print("HSIC Lasso")
     selected = hsic.get_index()
@@ -429,6 +433,6 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 
 # output_dir = 'features/selection_standard/'
 # data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-# LSVC()
+# LSVC_l1()
 
 sys.stdout.close()
