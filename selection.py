@@ -12,13 +12,13 @@ import xgboost as xgb
 from rgf.sklearn import RGFClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
-from sklearn.svm import LinearSVC
+from sklearn.svm import SVC, LinearSVC
 import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
 
-feature_path = 'features/simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
+feature_path = 'features/original.csv'
+standard_feature_path = 'features/standard/original.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
 
@@ -179,19 +179,19 @@ def fit(selector, prefix):
         save_to_csv(new_data, selected, prefix)
 
 
-def chi_square(percentile):
+def chi_square(treshold):
     sel = SelectKBest(chi2, k=treshold)
     print("Chi-square")
     fit(sel, "chi-square")
 
 
-def MI(percentile):
+def MI(treshold):
     sel = SelectKBest(score_func=partial(mutual_info_classif, discrete_features=True), k=treshold)
     print("Mutual information")
     fit(sel, "mutual_info")
 
 
-def f_anova(percentile):
+def f_anova(treshold):
     sel = SelectKBest(f_classif, k=treshold)
     print("ANOVA F-score")
     fit(sel, "ANOVA_F-score")
@@ -336,7 +336,7 @@ def CAT():
 
 
 def RGF():
-    model = RGFClassifier(max_leaf=100, algorithm="RGF_Sib", verbose=False, n_jobs=-1, min_samples_leaf=10,
+    model = RGFClassifier(max_leaf=1000, algorithm="RGF_Opt", verbose=False, n_jobs=-1, min_samples_leaf=10,
                           learning_rate=0.2)
     print("RGF")
     model_fit(model, "RGF")
@@ -358,6 +358,13 @@ def LSVC_l1():
     model_fit(model_l1, "SVC_L1")
 
 
+def SVM():
+    svm = SVC(C=1.0, kernel="linear", shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
+              max_iter=10000, decision_function_shape='ovr', gamma='scale')
+    print("SVM linear")
+    model_fit(svm, "SVM")
+
+
 def LSVC_l2():
     model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=False, verbose=0, max_iter=1000)
@@ -365,19 +372,25 @@ def LSVC_l2():
     model_fit(model_l2, "SVC_L2")
 
 
-def SGD():
-    model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+def SGD_l1():
+    model_l1 = SGDClassifier(loss='hinge', penalty='l1', alpha=0.0001, max_iter=1000, tol=0.001,
                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-    model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001,
+    print("SGD L1")
+    model_fit(model_l1, "SGD_L1")
+
+
+def SGD_l2():
+    model_l2 = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, max_iter=1000, tol=0.001,
                              shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
+    print("SGD L2")
+    model_fit(model_l2, "SGD_L2")
+
+
+def SGD_elastic():
     model_elastic = SGDClassifier(loss='hinge', penalty='elasticnet', alpha=0.0001, l1_ratio=0.15, max_iter=1000,
                                   tol=0.001, shuffle=True, verbose=0, n_jobs=-1, learning_rate='optimal', eta0=0.0,
                                   power_t=0.5)
-    print("SGD SVC L1")
-    model_fit(model_l1, "SGD_L1")
-    print("SGD SVC, L2")
-    model_fit(model_l2, "SGD_L2")
-    print("SGD SVC, elasticnet")
+    print("SGD elasticnet")
     model_fit(model_elastic, "SGD_elasticnet")
 
 
@@ -385,9 +398,8 @@ def HSIC_lasso(treshold):
     hsic = HSICLasso()
     hsic.input(data, labels)
     before = datetime.datetime.now()
-    hsic.classification(treshold, B=0, M=1)
-    # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0
-    # ked pouzijem block lasso tak mi nevychadza pocet atributov (ani bez pouzitia treshold)
+    hsic.classification(treshold, B=17, M=1)
+    # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0, M=1
     after = datetime.datetime.now()
     print("HSIC Lasso")
     selected = hsic.get_index()
@@ -398,15 +410,19 @@ def HSIC_lasso(treshold):
 
 
 labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# data = data[:, :220000]
 header = pd.read_csv(feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
+# header = header[:220000]
 
 print("pocet atributov: " + str(len(header)))
 print('\n')
 percentile = 10
-treshold = int(data.shape[1] / 10)  # desatina atributov
+# treshold = int(data.shape[1] / 10)  # desatina atributov
+treshold = 1000
 
+# na malo dat
 # fcbf()
 # mifs()
 # mrmr()
@@ -414,7 +430,12 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # jmi()
 # cmim()
 # disr()
-#
+# trace(treshold)
+# HSIC_lasso(treshold)
+# CAT()
+# RGF()
+
+# na vela dat
 # chi_square(treshold)
 # MI(treshold)
 # f_anova(treshold)
@@ -423,16 +444,19 @@ treshold = int(data.shape[1] / 10)  # desatina atributov
 # lap(treshold)
 # spec(treshold)
 # relieff(treshold)
-#
 # xgboost()
 # LGBM()
-# CAT()
-# RGF()
 # RFC()
-# HSIC_lasso(treshold)
 
-# output_dir = 'features/selection_standard/'
-# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-# LSVC_l1()
+output_dir = 'features/selection_standard/'
+data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+# data = data[:, :220000]
+LSVC_l1()
+SGD_l1()
+SGD_l2()
+SGD_elastic()
+SVM()
 
+# na malo dat
+# LSVC_l2()
 sys.stdout.close()

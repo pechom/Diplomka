@@ -120,7 +120,7 @@ def LGBM(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=50, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM")
     LGBM_print(result, before, after)
@@ -218,11 +218,11 @@ def cv_fit(model, n_splits, data, label):
     print('\n')
 
 
-def RGF(data, label):
-    rgf = RGFClassifier(max_leaf=80, algorithm="RGF_Sib", verbose=False, n_jobs=-1, min_samples_leaf=10,
-                        learning_rate=0.2)
+def RGF(data, label, method):
+    rgf = RGFClassifier(max_leaf=1000, algorithm=method, verbose=False, n_jobs=-1, min_samples_leaf=10,
+                        learning_rate=0.2)  # max_leaf je globalne pre cely les co je defaultne 50 stromov
     # multi_cv_fit(rgf, 5, 20)
-    print("RGF")
+    print(method)
     cv_fit(rgf, 10, data, label)
 
 
@@ -235,9 +235,9 @@ def RFC(data, label):
 
 def SGD(data, label):
     sgd = SGDClassifier(
-        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=True, verbose=0,
+        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=False, verbose=0,
         n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
-    print("linear SGD SVC")
+    print("SGD SVC")
     # multi_cv_fit(sgd, 5, 20, data, label)
     cv_fit(sgd, 10, data, label)
 
@@ -269,11 +269,15 @@ def run_methods():
     xgboost(data, labels)
     LGBM_goss(data, labels)
     LGBM(data, labels)
-    RGF(data, labels)
+    RGF(data, labels, "RGF")
+    RGF(data, labels, "RGF_Opt")
+    RGF(data, labels, "RGF_Sib")
+    RFC(data, labels)
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
     SVM(standard_data, labels, 'rbf', "RBF SVC")
     SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
     SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
+    SGD(standard_data, labels)  # pouzijem pri vsetkych datach lebo je rychle
 
 
 def check_selections():
@@ -286,7 +290,9 @@ def check_selections():
         xgboost(data, labels)
         LGBM_goss(data, labels)
         LGBM(data, labels)
-        RGF(data, labels)
+        RGF(data, labels, "RGF")
+        RGF(data, labels, "RGF_Opt")
+        RGF(data, labels, "RGF_Sib")
         print("------------------------------------------------------------")
         print('\n')
 
@@ -297,7 +303,9 @@ def check_selections():
         xgboost(data, labels)
         LGBM_goss(data, labels)
         LGBM(data, labels)
-        RGF(data, labels)
+        RGF(data, labels, "RGF")
+        RGF(data, labels, "RGF_Opt")
+        RGF(data, labels, "RGF_Sib")
         print("------------------------------------------------------------")
         print('\n')
 
@@ -309,6 +317,7 @@ def check_selections():
         SVM(standard_data, labels, 'rbf', "RBF SVC")
         SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
         SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
+        SGD(standard_data, labels)
         print("------------------------------------------------------------")
         print('\n')
     for file in files:
@@ -317,5 +326,6 @@ def check_selections():
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
-    check_selections()
+    run_methods()
+    # check_selections()
 sys.stdout.close()
