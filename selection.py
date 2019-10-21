@@ -410,11 +410,9 @@ def HSIC_lasso(treshold):
 
 
 labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-# data = data[:, :220000]
 header = pd.read_csv(feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
-# header = header[:220000]
+data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 
 print("pocet atributov: " + str(len(header)))
 print('\n')
@@ -424,39 +422,40 @@ treshold = 1000
 
 # na malo dat
 # fcbf()
-# mifs()
-# mrmr()
-# cife()
-# jmi()
-# cmim()
-# disr()
-# trace(treshold)
-# HSIC_lasso(treshold)
-# CAT()
-# RGF()
+mifs()
+mrmr()
+cife()
+jmi()
+cmim()
+disr()
+trace(treshold)
+HSIC_lasso(treshold)
+CAT()
+RGF()
 
 # na vela dat
-# chi_square(treshold)
-# MI(treshold)
-# f_anova(treshold)
-# gini(treshold)
-# fisher(treshold)
-# lap(treshold)
-# spec(treshold)
-# relieff(treshold)
-# xgboost()
-# LGBM()
-# RFC()
+chi_square(treshold)
+MI(treshold)
+f_anova(treshold)
+gini(treshold)
+fisher(treshold)
+lap(treshold)
+spec(treshold)
+relieff(treshold)
+xgboost()
+LGBM()
+RFC()
 
 output_dir = 'features/selection_standard/'
+header = pd.read_csv(standard_feature_path, nrows=1, header=None)
+header = header.to_numpy()[0]
 data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-# data = data[:, :220000]
 LSVC_l1()
 SGD_l1()
 SGD_l2()
 SGD_elastic()
 SVM()
-
 # na malo dat
-# LSVC_l2()
+LSVC_l2()
+
 sys.stdout.close()

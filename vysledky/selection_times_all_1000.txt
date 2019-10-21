@@ -1,11 +1,6 @@
 pocet atributov: 486136
 
 
-FCBF
-79
-cas: 5:31:39.259762
-
-
 Chi-square
 1000
 cas: 0:00:02.468936
