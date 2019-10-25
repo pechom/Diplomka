@@ -7,7 +7,8 @@ import collections
 import pprint
 
 path_labeling = 'C:/PycharmProjects/Diplomka/reports/*'
-path_distribution = 'subory/labels2.csv'
+path_distribution = 'subory/labels.csv'
+empty_path = 'subory/empty'
 # input = open("subory/3_same_with_packed,obfuscated.txt", "r")
 
 
@@ -55,7 +56,7 @@ def class_distribution(path):  # zisti kolko vzoriek je v jednotlivych triedach
 def normal_distribution(path_distribution, path_labeling):  # vyhodi vzorky z tried ktore maju neumerne vela vzoriek
     counter = class_distribution(path_distribution)
     files = sorted(glob.glob(path_labeling))
-    with open(path_distribution, mode='r') as csv_file, open('subory/new_labels2.csv', 'w', newline='') as out:
+    with open(path_distribution, mode='r') as csv_file, open('subory/new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
         writer = csv.DictWriter(out, fieldnames=["id", "trieda"])
         writer.writeheader()
@@ -72,10 +73,12 @@ def normal_distribution(path_distribution, path_labeling):  # vyhodi vzorky z tr
     for file in files:
         if os.path.basename(file) not in names:
             os.remove(file)
+    os.remove(path_distribution)
+    os.rename('subory/new_labels.csv', path_distribution)
 
 
 def rename_classes_to_numbers(path_distribution):
-    with open(path_distribution, mode='r') as csv_file, open('subory/new_labels2.csv', 'w', newline='') as out:
+    with open(path_distribution, mode='r') as csv_file, open('subory/new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
         writer = csv.DictWriter(out, fieldnames=["id", "trieda"])
         writer.writeheader()
@@ -89,20 +92,42 @@ def rename_classes_to_numbers(path_distribution):
         for line in reader:
             line['trieda'] = classes.index(line['trieda'])
             writer.writerow(line)
+    os.remove(path_distribution)
+    os.rename('subory/new_labels.csv', path_distribution)
 
 
 def only_classes_csv(path_distribution):
-    with open(path_distribution, mode='r') as csv_file, open('subory/clear_labels2.csv', 'w', newline='') as out:
+    with open(path_distribution, mode='r') as csv_file, open('subory/classes_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
         writer = csv.writer(out)
         writer.writerow(["class"])
         for line in reader:
             writer.writerow(line['trieda'])
+    os.remove(path_distribution)
+    os.rename('subory/classes_labels.csv', path_distribution)
+
+
+def clear_empty(empty_file, labels_file):  # odstrani polozky ktore pri tvorbe
+    with open(empty_file, mode='r') as empty:
+        to_delete = empty.readlines()
+    with open(labels_file) as labels:
+        to_clean = labels.readlines()
+    with open('subory/clear_labels.csv', mode='w') as out:
+        for label in to_clean:
+            is_empty = 0
+            for empty_label in to_delete:
+                if label.startswith(empty_label[:-1]):  # posledny je koniec riadku
+                    is_empty = 1
+            if not is_empty:
+                out.write(label)
+    os.remove(labels_file)
+    os.rename('subory/clear_labels.csv', labels_file)
 
 
 # labeling(input, path_labeling)
 # class_distribution(path_distribution)
 # normal_distribution(path_distribution, path_labeling)
 # class_distribution(path_distribution)
+# clear_empty(empty_path, path_distribution)
 # rename_classes_to_numbers(path_distribution)
 # only_classes_csv(path_distribution)

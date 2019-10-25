@@ -17,8 +17,8 @@ import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
 
-feature_path = 'features/original.csv'
-standard_feature_path = 'features/standard/original.csv'
+feature_path = 'features/simple.csv'
+standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
 
@@ -66,7 +66,7 @@ def transform_and_save(selected, prefix):
 def cfs():  # extremne pomaly
     # http://featureselection.asu.edu/html/skfeature.function.statistical_based.CFS.html
     before = datetime.datetime.now()
-    result = CFS.cfs(data, labels, mode="index")
+    result = CFS.cfs(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
     print("CFS")
     print(len(result))
@@ -398,13 +398,14 @@ def HSIC_lasso(treshold):
     hsic = HSICLasso()
     hsic.input(data, labels)
     before = datetime.datetime.now()
-    hsic.classification(treshold, B=17, M=1)
+    hsic.classification(treshold, B=0, M=1)
     # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0, M=1
     after = datetime.datetime.now()
     print("HSIC Lasso")
     selected = hsic.get_index()
     print(len(selected))
     print("cas: " + str(after - before))
+    print('\n')
     if len(selected) < len(header):
         transform_and_save(selected, "HSIC_Lasso")
 
@@ -413,39 +414,37 @@ labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
 header = pd.read_csv(feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-
 print("pocet atributov: " + str(len(header)))
 print('\n')
-percentile = 10
-# treshold = int(data.shape[1] / 10)  # desatina atributov
 treshold = 1000
 
-# na malo dat
+
 # fcbf()
-mifs()
-mrmr()
-cife()
-jmi()
-cmim()
-disr()
-trace(treshold)
-HSIC_lasso(treshold)
-CAT()
-RGF()
+# na malo dat
+# mifs()
+# mrmr()
+# cife()
+# jmi()
+# cmim()
+# disr()
+# trace(treshold)
+# HSIC_lasso(treshold)
+# CAT()
+# RGF()
 
 # na vela dat
-chi_square(treshold)
-MI(treshold)
-f_anova(treshold)
-gini(treshold)
-fisher(treshold)
-lap(treshold)
-spec(treshold)
-relieff(treshold)
-xgboost()
-LGBM()
-RFC()
-
+# chi_square(treshold)
+# MI(treshold)
+# f_anova(treshold)
+# gini(treshold)
+# fisher(treshold)
+# lap(treshold)
+# spec(treshold)
+# relieff(treshold)
+# xgboost()
+# LGBM()
+# RFC()
+#
 output_dir = 'features/selection_standard/'
 header = pd.read_csv(standard_feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]

@@ -106,10 +106,10 @@ def xgb_print(result, before, after):
     print('\n')
 
 
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-print("vsetky data: " + str(len(data[0])))
-print('\n')
+# labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+# data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+# print("vsetky data: " + str(len(data[0])))
+# print('\n')
 
 
 # for rate in rates:
@@ -129,4 +129,4 @@ print('\n')
 
 # LGBM_goss(data, labels, 3, 10, 255)
 
-LGBM_dart(data, labels)
+# LGBM_dart(data, labels)
