@@ -16,9 +16,11 @@ from sklearn.svm import SVC, LinearSVC
 import catboost as cat
 from pyHSICLasso import HSICLasso
 import sys
+import glob
+import os
 
-feature_path = 'features/simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
+feature_path = 'features/very_simple.csv'
+standard_feature_path = 'features/standard/very_simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
 
@@ -410,51 +412,75 @@ def HSIC_lasso(treshold):
         transform_and_save(selected, "HSIC_Lasso")
 
 
+def select_best_n(n, input_path, output_path):
+    files = sorted(glob.glob(input_path + "*"))
+    for name in files:
+        with open(name, 'r') as f:
+            reader = csv.reader(f, delimiter=',')
+            header = next(reader)
+            data = list(reader)
+        with open(output_path + os.path.basename(f.name), "w", newline='') as csv_file:  # zapisem len vybrane
+            writer = csv.writer(csv_file, delimiter=',')
+            writer.writerow(header[:n])
+            writer.writerows(data[:][:n])
+
+
+def for_small_data():
+    mifs()
+    mrmr()
+    cife()
+    jmi()
+    cmim()
+    disr()
+    trace(treshold)
+    CAT()
+    RGF()
+
+
+def for_big_data():
+    chi_square(treshold)
+    MI(treshold)
+    f_anova(treshold)
+    gini(treshold)
+    fisher(treshold)
+    lap(treshold)
+    spec(treshold)
+    relieff(treshold)
+    xgboost()
+    LGBM()
+    RFC()
+
+
+def svm_big_data():
+    LSVC_l1()
+    SGD_l1()
+    SGD_l2()
+    SGD_elastic()
+    SVM()
+
+
 labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
 header = pd.read_csv(feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 1000
+treshold = 79
 
-
+# cfs()
 # fcbf()
-# na malo dat
-# mifs()
-# mrmr()
-# cife()
-# jmi()
-# cmim()
-# disr()
-# trace(treshold)
 # HSIC_lasso(treshold)
-# CAT()
-# RGF()
 
-# na vela dat
-# chi_square(treshold)
-# MI(treshold)
-# f_anova(treshold)
-# gini(treshold)
-# fisher(treshold)
-# lap(treshold)
-# spec(treshold)
-# relieff(treshold)
-# xgboost()
-# LGBM()
-# RFC()
+# for_small_data()
+# for_big_data()
 #
 output_dir = 'features/selection_standard/'
 header = pd.read_csv(standard_feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
 data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-LSVC_l1()
-SGD_l1()
-SGD_l2()
-SGD_elastic()
-SVM()
-# na malo dat
-LSVC_l2()
 
+# svm_big_data()
+# LSVC_l2()
+
+# select_best_n(79, output_dir, "features/best_n/")
 sys.stdout.close()

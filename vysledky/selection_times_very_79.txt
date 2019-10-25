@@ -1,0 +1,148 @@
+pocet atributov: 766
+
+
+MIFS
+79
+cas: 0:02:27.781130
+
+
+mRMR
+79
+cas: 0:02:43.057353
+
+
+CIFE
+79
+cas: 0:02:29.123974
+
+
+JMI
+79
+cas: 0:03:16.108026
+
+
+CMIM
+79
+cas: 0:02:37.811414
+
+
+DISR
+79
+cas: 0:08:10.133703
+
+
+Trace ratio
+79
+cas: 0:00:00.124992
+
+
+Block HSIC Lasso
+79
+cas: 0:00:57.452731
+
+
+CatBoost
+79
+cas: 0:00:34.642921
+
+
+RGF
+79
+cas: 0:00:11.062425
+
+
+Chi-square
+79
+cas: 0:00:00.015625
+
+
+Mutual information
+79
+cas: 0:00:00.421872
+
+
+ANOVA F-score
+79
+cas: 0:00:00.015625
+
+
+Gini
+79
+cas: 0:00:07.937445
+
+
+Fisher
+79
+cas: 0:00:00.109368
+
+
+Laplacian
+79
+cas: 0:00:00.374988
+
+
+SPEC
+79
+cas: 0:00:03.703090
+
+
+relieff
+79
+cas: 0:00:06.265590
+
+
+XGBoost gain
+79
+cas: 0:00:02.124977
+
+
+XGBoost split
+79
+cas: 0:00:02.156235
+
+
+LGBM split
+79
+cas: 0:00:01.453114
+
+
+LGBM gain
+79
+cas: 0:00:01.437491
+
+
+RFC
+79
+cas: 0:00:01.140617
+
+
+SVC L1
+79
+cas: 0:00:05.203088
+
+
+SGD L1
+79
+cas: 0:00:00.234373
+
+
+SGD L2
+79
+cas: 0:00:00.124999
+
+
+SGD elasticnet
+79
+cas: 0:00:00.124990
+
+
+SVM linear
+79
+cas: 0:00:00.234033
+
+
+SVC L2
+79
+cas: 0:00:10.421802
+
+
