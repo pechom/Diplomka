@@ -360,13 +360,6 @@ def LSVC_l1():
     model_fit(model_l1, "SVC_L1")
 
 
-def SVM():
-    svm = SVC(C=1.0, kernel="linear", shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=10000, decision_function_shape='ovr', gamma='scale')
-    print("SVM linear")
-    model_fit(svm, "SVM")
-
-
 def LSVC_l2():
     model_l2 = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
                          fit_intercept=False, verbose=0, max_iter=1000)
@@ -394,6 +387,13 @@ def SGD_elastic():
                                   power_t=0.5)
     print("SGD elasticnet")
     model_fit(model_elastic, "SGD_elasticnet")
+
+
+def SVM():
+    svm = SVC(C=1.0, kernel="linear", shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
+              max_iter=1000, decision_function_shape='ovr', gamma='scale')
+    print("SVM linear")
+    model_fit(svm, "SVM")
 
 
 def HSIC_lasso(treshold):

@@ -16,8 +16,8 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
+feature_path = 'features/original.csv'
+standard_feature_path = 'features/standard/original.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
@@ -60,9 +60,9 @@ def xgboost_rf(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
-             'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 10}
+             'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 100}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=1, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost forest")
     xgb_print(result, before, after)
@@ -131,7 +131,7 @@ def LGBM_rf(data, label):
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'rf',
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
-             'bagging_fraction': 0.9, 'bagging_freq': 10, 'num_trees': 1000}
+             'bagging_fraction': 0.9, 'bagging_freq': 10, 'num_trees': 100}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
@@ -243,7 +243,7 @@ def SGD(data, label):
 
 
 def LSVC(data, label):
-    svc = LinearSVC(penalty='l2', loss='squared_hinge', dual=True, tol=0.001, C=1, multi_class='ovr',
+    svc = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
                     fit_intercept=False, verbose=0, max_iter=1000)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
@@ -254,7 +254,7 @@ def LSVC(data, label):
 
 def SVM(data, label, kernel, message):
     svm = SVC(C=1.0, kernel=kernel, shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=10000, decision_function_shape='ovr', gamma='scale')
+              max_iter=1000, decision_function_shape='ovr', gamma='scale')
     print(message)
     # multi_cv_fit(svm, 5, 20, data, label)
     cv_fit(svm, 10, data, label)
@@ -277,7 +277,8 @@ def run_methods():
     SVM(standard_data, labels, 'rbf', "RBF SVC")
     SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
     SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
-    SGD(standard_data, labels)  # pouzijem pri vsetkych datach lebo je rychle
+    SGD(standard_data, labels)
+    LSVC(standard_data, labels)
 
 
 def check_selections():
@@ -318,6 +319,7 @@ def check_selections():
         SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
         SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
         SGD(standard_data, labels)
+        LSVC(standard_data, labels)
         print("------------------------------------------------------------")
         print('\n')
     for file in files:
