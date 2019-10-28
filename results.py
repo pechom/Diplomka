@@ -6,17 +6,16 @@ import csv
 import collections
 import sys
 
-# potom urobim priecinok kde dam najlepsie hodnotene selekcie atributov. na nich budem robit prieniky aj skupiny
-best_features_path = 'seminar/selection/*'
-features_path = 'seminar/selection/*'
-intersections_file = 'seminar/intersections.txt'
-best_groups_output_file = 'seminar/groups.txt'
-simple_file = 'C:/PycharmProjects/Diplomka/features/simple.csv'
-very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
-original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
+best_features_path = 'features/selection/*'
+intersections_file = 'vysledky/intersections.txt'
+best_groups_output_file = 'vysledky/groups.txt'
+simple_file = 'features/simple.csv'
+very_simple_file = 'features/very_simple.csv'
+original_file = 'features/original.csv'
 
 
 def intersections(input_path, output_path):
+    # pocet atributov v ktorych sa prelinaju. Ked som presiel na menovanie skupinami uz to nepouzivam
     files = sorted(glob.glob(input_path))
     names = []
     headers = []
@@ -49,7 +48,7 @@ def best_groups(input_dir, output_file):
     features = set(np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str"))
     simple_features = set(np.loadtxt(simple_file, delimiter=',', max_rows=1, dtype="str"))
     very_simple_features = set(np.loadtxt(very_simple_file, delimiter=',', max_rows=1, dtype="str"))
-    files = glob.glob(input_dir)
+    files = sorted(glob.glob(input_dir))
     with open(output_file, 'w') as out:
         for file in files:
             groups = collections.Counter()
@@ -71,5 +70,6 @@ def best_groups(input_dir, output_file):
             out.write("very simple: " + str(very_simple) + '\n')
             out.write('\n')
 
-# intersections(features_path, intersections_file)
-# best_groups(best_features_path, best_groups_output_file)
+
+# intersections(best_features_path, intersections_file)
+best_groups(best_features_path, best_groups_output_file)
