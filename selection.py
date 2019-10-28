@@ -422,7 +422,8 @@ def select_best_n(n, input_path, output_path):
         with open(output_path + os.path.basename(f.name), "w", newline='') as csv_file:  # zapisem len vybrane
             writer = csv.writer(csv_file, delimiter=',')
             writer.writerow(header[:n])
-            writer.writerows(data[:][:n])
+            for row in data:
+                writer.writerow(row[:n])
 
 
 def for_small_data():
@@ -467,20 +468,20 @@ print("pocet atributov: " + str(len(header)))
 print('\n')
 treshold = 79
 
-# cfs()
-# fcbf()
-# HSIC_lasso(treshold)
-
-# for_small_data()
-# for_big_data()
+cfs()
+fcbf()
+HSIC_lasso(treshold)
 #
+for_small_data()
+for_big_data()
+
 output_dir = 'features/selection_standard/'
 header = pd.read_csv(standard_feature_path, nrows=1, header=None)
 header = header.to_numpy()[0]
 data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+#
+svm_big_data()
+LSVC_l2()
 
-# svm_big_data()
-# LSVC_l2()
-
-# select_best_n(79, output_dir, "features/best_n/")
+select_best_n(79, output_dir, "features/best_n/")
 sys.stdout.close()

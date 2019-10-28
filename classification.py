@@ -16,8 +16,8 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/original.csv'
-standard_feature_path = 'features/standard/original.csv'
+feature_path = 'features/very_simple.csv'
+standard_feature_path = 'features/standard/very_simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
@@ -179,7 +179,7 @@ def CAT(data, label):
     pool = cat.Pool(data, label, has_header=False)
     params = {
         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
-        "learning_rate": 0.2,  "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
+        "learning_rate": 0.2, "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
     before = datetime.datetime.now()
     results = cat.cv(pool=pool, params=params, num_boost_round=100, fold_count=10, shuffle=True, stratified=True,
                      verbose=False)
@@ -187,7 +187,9 @@ def CAT(data, label):
     print("CatBoost")
     print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
     print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
-                                                                min(results['test-MultiClassOneVsAll-mean'])].index[0]))
+                                                                              min(results[
+                                                                                      'test-MultiClassOneVsAll-mean'])].index[
+                                          0]))
     print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
     print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
     print("cas: " + str(after - before))
@@ -271,7 +273,6 @@ def run_methods():
     LGBM(data, labels)
     RGF(data, labels, "RGF")
     RGF(data, labels, "RGF_Opt")
-    RGF(data, labels, "RGF_Sib")
     RFC(data, labels)
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
     SVM(standard_data, labels, 'rbf', "RBF SVC")
@@ -293,7 +294,7 @@ def check_selections():
         LGBM(data, labels)
         RGF(data, labels, "RGF")
         RGF(data, labels, "RGF_Opt")
-        RGF(data, labels, "RGF_Sib")
+        RFC(data, labels)
         print("------------------------------------------------------------")
         print('\n')
 
@@ -306,7 +307,7 @@ def check_selections():
         LGBM(data, labels)
         RGF(data, labels, "RGF")
         RGF(data, labels, "RGF_Opt")
-        RGF(data, labels, "RGF_Sib")
+        RFC(data, labels)
         print("------------------------------------------------------------")
         print('\n')
 
@@ -323,11 +324,13 @@ def check_selections():
         print("------------------------------------------------------------")
         print('\n')
     for file in files:
-        os.remove(file)
+        if not (os.path.basename(file).startswith("SVC") or os.path.basename(file).startswith("SVM") or
+                os.path.basename(file).startswith("SGD")):
+            os.remove(file)
 
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
     run_methods()
-    # check_selections()
+    check_selections()
 sys.stdout.close()
