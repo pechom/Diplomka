@@ -12,29 +12,27 @@ import sys
 import re
 import gc
 
-# path = 'C:/PycharmProjects/Diplomka/skusobny/reports/*'
-reports_path = 'C:/PycharmProjects/Diplomka/reports2/*'
-string_path = 'C:/PycharmProjects/Diplomka/strings/*'
-hex_path = 'C:/PycharmProjects/Diplomka/hex_oneline/*'
-full_hex_path = 'C:/PycharmProjects/Diplomka/hex/*'
-disassembled_path = 'C:/PycharmProjects/Diplomka/disassembled/*'
-entropy_file = 'C:/PycharmProjects/Diplomka/subory/entropy.csv'
-dis_hex_path = 'C:/PycharmProjects/Diplomka/disassembled_divided/hex/*'
-registers_path = 'C:/PycharmProjects/Diplomka/disassembled_divided/registers/*'
-opcodes_path = 'C:/PycharmProjects/Diplomka/disassembled_divided/opcodes/*'
+reports_path = 'reports/*'
+string_path = 'strings/*'
+hex_path = 'hex/*'
+disassembled_path = 'disassembled/*'
+entropy_file = 'subory/entropy.csv'
+dis_hex_path = 'disassembled_divided/hex/*'
+registers_path = 'disassembled_divided/registers/*'
+opcodes_path = 'disassembled_divided/opcodes/*'
 
 
 def document_frequency_selection(counter):
     size = len(counter)
     for name, count in counter.copy().items():
         if size < 100000:
-            if count < 11:  # prah, menej ako 10 percent najmensej triedy - DF, zvysil som pre cross-validation
+            if count < 19:  # prah, menej ako 10 percent najmensej triedy - DF, zvysil som pre cross-validation
                 del counter[name]
         else:
-            if count <= 20:
+            if count <= 25:
                 del counter[name]
             else:
-                if count >= 950:
+                if count >= 1540:
                     del counter[name]
     return counter
 
@@ -800,10 +798,10 @@ def create_disassembled_features(path):
             header.append("number_of_lines")
     return header, features
 
-# divide_disassembled_files(disassembled_path, dis_hex_path, registers_path, opcodes_path) # spusti len raz,
-# ak budem zase spustat extrakciu atributov toto vynecham !!!
-# (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
 
+# spusti len raz, ak budem zase spustat extrakciu atributov toto vynecham !!!
+# (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
+# divide_disassembled_files(disassembled_path, dis_hex_path, registers_path, opcodes_path)
 # ------------------------------------------
 
 
@@ -843,7 +841,7 @@ def create_disassembled_features(path):
 # header = ["byte_entropy_histogram"]*len(features[0])
 # features_to_csv(header, features, "byte_entropy_histogram")
 #
-# header, features = create_sizes_features(reports_path, full_hex_path,disassembled_path)
+# header, features = create_sizes_features(reports_path, hex_path, disassembled_path)
 # header = ["sizes"]*len(features[0])
 # features_to_csv(header, features, "sizes")
 #

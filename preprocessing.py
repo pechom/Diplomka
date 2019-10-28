@@ -177,8 +177,7 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
 # -------------------------------------------------------
 # discretize(features_dir, discrete_dir, 5)  # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
 # shutil.rmtree(features_dir[:-1])
-# os.rename(discrete_dir, features_dir[:-1])
-# os.renames(discrete_dir[:-1], original_path[:-2])
+# os.renames(discrete_dir, original_path[:-2])
 # os.mkdir(simple_dir)
 # os.mkdir(very_simple_dir)
 # divide_simple(original_path, simple_dir, 1000)  # potom odddelim jednoduche
