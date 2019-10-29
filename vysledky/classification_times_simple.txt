@@ -1,0 +1,67 @@
+vsetky data: 5567
+
+
+XGBoost
+najlepsi priemer: 0.9823727
+index najlepsieho: 24
+najhorsi priemer: 0.8989247
+finalny priemer: 0.982319
+cas: 0:02:13.650345
+
+
+LGBM GOSS
+najlepsi priemer: 0.989677119339161
+index najlepsieho: 69
+najhorsi priemer: 0.9524139665896119
+finalny priemer: 0.98866701832906
+cas: 0:01:50.128154
+
+
+LGBM
+najlepsi priemer: 0.9886141806070494
+index najlepsieho: 70
+najhorsi priemer: 0.9524139665896119
+finalny priemer: 0.986551448018001
+cas: 0:02:29.481742
+
+
+RGF
+priemerny vysledok: 0.9856257296090922
+cas: 0:11:06.863656
+
+
+RGF_Opt
+priemerny vysledok: 0.9876562387824586
+cas: 0:14:34.618482
+
+
+RFC
+priemerny vysledok: 0.9598134665035466
+cas: 0:00:25.423783
+
+
+RBF SVC
+priemerny vysledok: 0.9588783729772306
+cas: 0:00:27.536331
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9814481052454853
+cas: 0:00:17.657582
+
+
+sigmoid SVC
+priemerny vysledok: 0.9578877558552563
+cas: 0:00:18.860798
+
+
+SGD SVC
+priemerny vysledok: 0.9763458519105368
+cas: 0:00:01.531356
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9691668103666184
+cas: 0:01:03.333443
+
+
