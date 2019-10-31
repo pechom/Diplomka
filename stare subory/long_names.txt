@@ -1,0 +1,969 @@
+trojan-ransom.win32.wanna.m#ransom-wannacry!5050f47a2b1e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!6edda5a4379f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!dd30e7e7dd84#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!c2ca58f5d40d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a232702039c1#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5487d40c501a#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!246c2781b88f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!1905b6adea11#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!d13e2f924836#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!122622226ba8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!10f262273180#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#w32/virut.n.gen#win32/virut.nbp#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!bcc7e19b7c4f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!70a4f07c3b38#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!409f8ad1044d#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a3b70aa650ba#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ea52ea12859d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!481369bee245#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.zapchast.i#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.g
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7bbc5b449b40#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!edbc7cb93914#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!6208c7bac8f9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!b775f07bb7d4#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f8782639545b#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!f29bdac92fc1#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f9a032dc26aa#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.agent.iyo#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.g
+trojan-ransom.win32.wanna.m#ransom-wannacry!7294559e8252#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!9028d298af26#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!ef527c9dab75#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!5d20f4655faf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury!8aec76a6b499#a variant of win32/trojandropper.addrop.bu#gen:variant.zusy.236660
+trojan-ransom.win32.wanna.m#ransom-wannacry!6c8e4418425a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!24751890c0f8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!07127d139f82#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!36ea6f44f742#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!84d927d55d41#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e11f0c085733#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!93730db845e0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!862acfd3e16b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!01b806c25db5#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!972276a12def#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!64dcbd55a623#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!233a80bae0f9#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!dda19d185d24#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!eeda40b73732#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!6f42208cc9c9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.virut.ce#w32/virut.n.gen#win32/virut.nbp#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5e5c3ef63d90#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!376bc5bf5de0#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!155a972f0b85#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!ec09759b5164#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!b0623648c269#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ce6905de70e0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!ee0b7007f79d#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!5ea123633970#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!a440cc24ac4c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!397856919b7b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!4677f81c5dbf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!93bfecac006e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e5a0851a47ff#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ba5656dcb7a0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!450f3b8f463e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.hm#pup-xcc-dk#a variant of win32/kryptik.fwpi#adware.agent.thv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!562d403c2b26#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!2e67cecd2765#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!b1c8a790bf46#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!4cea8f5ae910#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!1afadb882b4f#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!9b6b0de77c69#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!35ba27a6d3a8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!696684cf31e7#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5fdfbcc54eb3#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of win32/kryptik.fxym#gen:variant.johnnie.24614
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!b9bfc6f1f2a9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!537ca0e1453b#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!0de9c35dd7a3#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!817c41519b75#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!f6e7f9ec7027#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!13e4639dd8e5#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.o#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!e0bbdd7f6d9f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!97467a5fb2bd#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!05cc4366c9e7#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#a variant of win32/chir.a#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!3d3931526b93#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!13d702666bb8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!c77bee0c58af#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#win32/toolbar.linkury.bb potentially unwanted#gen:variant.johnnie.24614
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#win32/toolbar.linkury.bb potentially unwanted#gen:variant.johnnie.24614
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#a variant of win32/chir.a#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.c#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.l
+trojan-ransom.win32.wanna.m#ransom-wannacry!f946e0d2a37a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#a variant of win32/chir.a#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7dcd184083dc#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!45cad075aa70#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!4374a8506ca4#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.aa#w32/virut.gen#win32/virut.q#win32.virtob.3.gen
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!0647ba52f2c2#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+trojan-ransom.win32.wanna.m#ransom-wannacry!6a6b0c8e4fbf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!b078a3c16637#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!3d59a1141c3e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!3b96796b3d2d#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!051baacb3a0c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.virut.q#w32/chir.b@mm#win32/virut.ba#win32.runouce.b@mm
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen#win32/sality.nao#win32.sality.2.oe
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!bd2ac9c3526e#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!7263453dab04#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.neshta.b#artemis!82a3d3ebcc8f#win32/neshta.b#win32.nestha.c
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!ef8cc269c47f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.neshta.b#artemis!17a000011f1a#win32/neshta.b#win32.nestha.c
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.wbna.ipa#downloader-cjx.gen.j#a variant of win32/autorun.vb.tu#gen:variant.vbkrypt.2
+trojan.win32.vbkrypt.wzzv#downloader-cjx.gen.ad#a variant of win32/pronny.cd#gen:heur.conjar.1
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.sality.q#w32/sality.x#win32/sality.naj#win32.sality.m
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.wbna.ipa#vbobfus.g#win32/autorun.vb.adl#gen:variant.vbkrypt.55
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+heur:trojan.win32.generic#pws-zbot-fasg!b691ab2b86e8#win32/filecoder.nan#gen:variant.symmi.19582
+trojan-spy.win32.zbot.side#downloader-fabv!6acdd77b703c#win32/trojandownloader.waski.a#trojan.generickd.1669208
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.31
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+trojan-spy.win32.zbot.qnuf#downloader-fva!7a28b7ecb2f1#win32/trojandownloader.small.aab#trojan.generickd.1369867
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+heur:trojan.win32.generic#pws-zbot-fasg!4a7238cb3ddc#win32/filecoder.nan#gen:variant.symmi.20205
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#pws-zbot-fasg!a4f6cf184f7f#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-ransom.win32.wanna.m#ransom-wannacry!255c2460ef9f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!a73b89313546#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-spy.win32.zbot.tble#downloader-fsh!ee2514b4592f#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+worm.win32.vobfus.dgjb#vbobfus.bc#win32/autorun.vb.anb#gen:variant.vbkrypt.23
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.efip#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.jdj#emotet-fgni!f3e9c906f19e#a variant of win32/injector.bzws#gen:variant.symmi.51750
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.wzzv#downloader-cjx.gen.ad#a variant of win32/pronny.cd#gen:heur.conjar.1
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+worm.win32.vobfus.eflc#vbobfus.bb#win32/autorun.vb.alg#gen:variant.vbkrypt.23
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.55
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.swzo#downloader-fsh!f8d31f1cdbd1#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+trojan-spy.win32.zbot.qnuf#downloader-fva!5f6f58fc513e#win32/trojandownloader.small.aab#trojan.generickd.1369867
+trojan-ransom.win32.wanna.m#ransom-wannacry!4a8314637418#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.wpxk#pws-fbrl#win32/trojandownloader.waski.a#trojan.generickd.1618727
+trojan-spy.win32.zbot.svwy#downloader-fsh!8541bbe2499a#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.868
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!c0dcf5931c8e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.wpxk#pws-fbrl#win32/trojandownloader.waski.a#trojan.generickd.1618727
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+trojan-spy.win32.zbot.svwk#downloader-fsh!1861262b3d4e#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan.win32.vbkrypt.jdj#emotet-fgni!da208f9d0373#a variant of win32/injector.bzws#gen:variant.symmi.51750
+virus.win32.virut.q#w32/chir.b@mm#win32/virut.o#win32.runouce.b@mm
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+trojan-spy.win32.zbot.simd#downloader-fabv#win32/trojandownloader.waski.a#trojan.generickd.1670802
+heur:trojan-downloader.win32.generic#adware-linkury#a variant of msil/trojandownloader.adload.be#trojan.generickd.6126848
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.thiy#pwszbot-fru!057102e48959#win32/trojandownloader.waski.d#trojan.downloader.jqrk
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.wzzv#downloader-cjx.gen.ad#a variant of win32/pronny.cd#gen:heur.conjar.1
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!0497b8b05da9#win32/trojandownloader.small.aab#trojan.generickd.1311868
+trojan-spy.win32.zbot.thog#pwszbot-fru!5a477c85b160#a variant of win32/kryptik.cbuk#trojan.downloader.jqrk
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+trojan-spy.win32.zbot.tble#downloader-fsh!affac67a36ab#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+worm.win32.vobfus.efna#vbobfus.bb#win32/autorun.vb.akz#gen:variant.vbkrypt.23
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+trojan-spy.win32.zbot.wtgq#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1629711
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f1a2e57e6045#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+trojan-spy.win32.zbot.sjqn#downloader-fsh!eeda447cfe97#win32/trojandownloader.waski.a#trojan.generickd.1675536
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.ydkq#rdn/generic pws.y#a variant of win32/injector.dshs#trojan.generickd.12467538
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+trojan-spy.win32.zbot.wqki#downloader-fsh!e74b5c82dc43#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!8cb4780d38be#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.868
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#trojan.generic.7641095
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+trojan-spy.win32.zbot.svwk#downloader-fsh!44d0be4e4c4d#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan-spy.win32.zbot.tble#downloader-fsh!f131aacd26d0#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.jcy#emotet-fgni!aebd21cd5e00#win32/tinba.bj#gen:variant.zusy.139683
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nat#win32.sality.og
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#upatre-facv!1d546fbc49d8#a variant of win32/trojandownloader.small.prl#generic.malware.dld!!.d47ab8e6
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.31
+trojan.win32.vbkrypt.zdft#fareit-fla!ae7a30fe87e5#a variant of win32/injector.dwhu#gen:heur.ponystealer.1
+heur:trojan.win32.generic#upatre-facd!16b12fa31020#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.msil.generic#trojan-fnpv!29e9f967dce4#a variant of msil/kryptik.kpp#trojan.generickd.30394769
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan.win32.vbkrypt.xcxy#genericrxbm-lx!bc64dc221322#a variant of win32/genkryptik.aeud#trojan.agent.vb.ced
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+uds:dangerousobject.multi.generic#artemis!62ac166fd4cd#a variant of msil/psw.coinstealer.bt#gen:variant.razy.255312
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#trojan.generic.7529950
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.jorik.vobfus.egkt#vbobfus.da#win32/autorun.vb.awg#gen:variant.vbkrypt.23
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+trojan-spy.win32.zbot.sjqo#downloader-fsh!30bd17ae9bfd#win32/trojandownloader.waski.a#trojan.spy.zbot.fku
+trojan-clicker.msil.agent.cjfm#rdn/generic.grp#a variant of msil/trojanclicker.agent.nrj#trojan.generickd.12379170
+not-a-virus:adware.win32.cloudscout.hdz#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.256495
+trojan-spy.win32.zbot.svwy#downloader-fsh!845ddf695151#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+worm.win32.vobfus.efhl#vbobfus.bc#win32/autorun.vb.ana#gen:variant.vbkrypt.23
+trojan-downloader.win32.agent.hfdg#upatre-faac!e72caa20a5aa#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.31
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.51356f2d
+virus.win32.neshta.b#w32/hllp.41472#win32/neshta.b#win32.nestha.c
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#backdoor-njrat!ccce1c053558#a variant of msil/bladabindi.as#generic.msil.bladabindi.7f8ba3ad
+trojan.win32.vbkrypt.jbd#emotet-fgni!88aa8981ba59#win32/tinba.bj#gen:variant.zusy.139436
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!2c9c3a50dbeb#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-spy.win32.zbot.siyn#downloader-fsh!e8e5388e69c8#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!470e724082db#a variant of msil/trojandownloader.agent.dvs#trojan.generickd.6124967
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+trojan-spy.win32.zbot.qlvh#downloader-fus!c76b8f17ad75#win32/trojandownloader.small.aab#trojan.downloader.small.abnb
+virus.win32.neshta.b#w32/hllp.41472#win32/neshta.b#win32.nestha.c
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.ybur#emotet-fgni!b77dbe9d6200#a variant of win32/injector.bzks#trojan.crypt.gen.1
+trojan-downloader.win32.upatre.dwgq#genericrxbc-ff!0206a03e2537#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+worm.win32.vobfus.efip#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+trojan.msil.crypt.fbow#artemis!d1a36b9242e6#a variant of msil/kryptik.frj#trojan.generickd.6117309
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.bkvd#upatre-facm!ac8f7992686f#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!00992ea13b4b#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.msil.disfa.bop#artemis!401aab6d6ae8#a variant of msil/bladabindi.as#generic.msil.bladabindi.ec476c36
+trojan-spy.win32.zbot.tdvn#pwszbot-fnc!b5472a11e25c#win32/trojandownloader.waski.a#trojan.generickd.1426259
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-downloader.win32.upatre.dwfh#upatre-fach!f8ff05c2adff#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+heur:trojan.win32.generic#artemis!bda6e7b46db7#a variant of msil/kryptik.bdj#gen:trojan.heur.dnp.dq0@asssb0g
+backdoor.msil.spygate.rft#rdn/generic pws.y#a variant of msil/spy.keylogger.ld#trojan.generickd.12490297
+email-worm.win32.runouce.aa#w32/virut.gen#win32/virut.o#win32.virtob.6.gen
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan.win32.scar.ehcc#generic vb.jc#a variant of win32/ainslot.aa#deepscan:generic.msil.passwordstealera.ceba26ae
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#trojan.generic.7529950
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#trojan.scar.ag
+heur:trojan.msil.generic#genericrxcs-ni!45e85d07f1d7#a variant of msil/kryptik.jjl#trojan.generickd.12381608
+trojan-downloader.win32.upatre.cubu#upatre-face!2314e167f433#a variant of win32/kryptik.dono#trojan.upatre.gen.2
+heur:trojan.win32.generic#upatre-facv!bed849cc01e8#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#genericrxeb-ho!74de0413fbdf#a variant of msil/coinminer.ajp#gen:variant.razy.268294
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.vobfus.efip#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.msil.generic#trojan-fowd!60b6c312afe6#a variant of msil/kryptik.mdq#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#upatre-fach!c22435b30f16#a variant of win32/kryptik.drxq#gen:trojan.ipatre.1
+heur:trojan.win32.generic#upatre-fach!9da7b08fde2f#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!c90da3d3b94d#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.jgz#upatre-faca!fb41f6a34a2c#a variant of win32/kryptik.dhfk#trojan.upatre.gen.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.ybur#emotet-fgni!5ccc8ad83461#a variant of win32/injector.bzks#gen:variant.zusy.260835
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:trojan.win32.generic#upatre-facv!a285c68f8e69#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+heur:trojan.win32.generic#artemis!acb555f1901f#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+heur:trojan.win32.generic#upatre-fach!e196996e4a1f#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+heur:trojan.win32.generic#genericrxcq-sm!ddf30044f745#a variant of msil/tiny.f#gen:variant.razy.158935
+trojan-downloader.win32.agent.hfdg#upatre-faac!b04986fc4070#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#upatre-facv!aecfe45a09f5#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+virus.win32.virut.ce#pws-zbot.gen.cy#win32/virut.nbp#win32.virtob.gen.12
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facd!a0ab24f622ff#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.wqki#downloader-fsh!007d6b87057b#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+heur:trojan.win32.generic#generic.daw#a variant of msil/kryptik.myn#gen:variant.razy.266084
+heur:trojan.win32.generic#upatre-facv!0dc2935743c9#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:trojan.win32.generic#upatre-fach!aa046c085916#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan.win32.vbkrypt.jcy#emotet-fgni!d85ad2e87a9b#win32/tinba.bj#gen:variant.zusy.139683
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+worm.win32.wbna.ipa#vbobfus.g#win32/autorun.vb.adl#gen:variant.vbkrypt.55
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+not-a-virus:adware.win32.cloudscout.hel#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.255400
+trojan-spy.win32.zbot.qsec#downloader-fwt!d144a814a9c5#win32/trojandownloader.small.aab#trojan.generickd.1411747
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+heur:trojan.win32.generic#artemis!b3234ed9d143#a variant of msil/kryptik.lra#trojan.generickd.30377428
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#artemis!03d0d8a0004d#a variant of msil/agent.onv#gen:variant.msilperseus.8267
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#upatre-fach!bc6fbad1fd2b#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.frrs#upatre-fach!b0c5eeffcdc1#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+trojan-spy.win32.zbot.sjyj#downloader-fsh!3600b4440674#win32/trojandownloader.waski.a#trojan.agentwdcr.amb
+heur:trojan.win32.generic#genericrxcb-qm!5c0994ba1e5e#a variant of msil/trojandropper.agent.akh#gen:variant.buzy.156
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.vbkrypt.xgcj#rdn/generic.grp#a variant of win32/injector.dnsl#gen:variant.graftor.379934
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+heur:trojan.win32.generic#upatre-face!a64761b0aef3#a variant of win32/kryptik.dpbi#trojan.upatre.gen.2
+trojan-banker.msil.evital.a#genericrxef-wy!4e10b24ae087#a variant of msil/psw.agent.qjh#gen:variant.razy.268571
+trojan-spy.win32.zbot.tbah#downloader-fsh!f23447315ce4#win32/trojandownloader.waski.a#trojan.generickd.1697113
+heur:trojan.win32.generic#upatre-facm!39a80165fa7f#a variant of win32/kryptik.dlzd#trojan.upatre.gen.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan.msil.disfa.bop#trojan-fign#msil/bladabindi.bc#generic.msil.bladabindi.431fc4db
+heur:trojan.win32.generic#upatre-fach!00d484ebc83f#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+heur:trojan.win32.generic#pws-zbot-fasg!0e82351a272b#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.neshta.b#w32/hllp.41472#win32/neshta.b#win32.nestha.c
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+heur:trojan.win32.generic#downloader-fvf!da978352ff34#win32/trojandownloader.small.aab#trojan.zbot.ibu
+heur:trojan.win32.generic#upatre-fach!5cfb16273f95#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+trojan.msil.disfa.bop#trojan-fign#msil/bladabindi.bc#generic.msil.bladabindi.2e228f1c
+trojan-spy.win32.zbot.rgca#pwszbot-fmo!537f2f8220be#win32/trojandownloader.waski.a#trojan.generickd.1499022
+trojan.win32.vbkrypt.zemi#trojan-fpit!d8787d5c6d5d#a variant of win32/injector.dwnu#trojan.generickd.30397067
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+trojan-downloader.win32.agent.hfdg#upatre-faac!02ba69a1d25e#win32/trojandownloader.waski.f#trojan.generickd.1958089
+worm.win32.vobfus.efpc#vbobfus.bc#win32/autorun.vb.amt#gen:variant.vbkrypt.23
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#rdn/generic.hbg#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan-spy.msil.generic#genericrxag-la!afad34a04a48#a variant of msil/spy.agent.aes#generic.msil.passwordstealera.5f602adb
+heur:trojan.win32.generic#pws-zbot.gen.yg#a variant of msil/spy.agent.bp#generic.malware.gsd.24027d9e
+trojan-spy.win32.zbot.siyn#downloader-fsh!72acd60bea79#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!47eea56417ef#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+heur:trojan.win32.generic#upatre-fach!fad3b935f942#a variant of win32/kryptik.dpaq#trojan.upatre.gen.3
+heur:trojan.win32.generic#backdoor-fdpf!a234f6e26ac4#a variant of msil/bladabindi.bb#gen:heur.msil.krypt.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+heur:trojan.msil.generic#trojan-fowd!827ddb9538ec#a variant of msil/kryptik.mdq#application.bundler.temonde.2.gen
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-downloader.win32.upatre.dmid#downloader-faww!45db4475cf06#win32/trojandownloader.waski.v#trojan.upatre.et
+trojan.msil.agent.fpaz#genericrxdm-bw!f1d2b7eee830#a variant of msil/injector.rqf#gen:variant.msilperseus.84262
+backdoor.msil.bladabindi.p#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.76eefb8e
+trojan-ransom.win32.wanna.m#ransom-wannacry!d935d37ba8ad#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:trojan.win32.generic#trojan-fdwx!d81ae10614eb#a variant of msil/kryptik.qf#gen:variant.sirefef.2287
+heur:trojan-downloader.win32.generic#genericrxef-vv!ef977618f94d#a variant of msil/trojandownloader.tiny.xu#gen:variant.razy.265206
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.msil.disfa.bqd#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.47cad91f
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.ybur#emotet-fgni!b83977ce2290#a variant of win32/injector.bzks#trojan.crypt.gen.1
+heur:trojan-downloader.win32.generic#upatre-faai!a9b8355e9539#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#trojan-fnpv!907e9d7c0aec#a variant of msil/kryptik.kpp#trojan.generickd.40177972
+heur:trojan.win32.generic#trojan-focq!a1e3bc7e3e53#a variant of msil/kryptik.kne#gen:variant.barys.51615
+heur:trojan.win32.generic#upatre-fach!54ce3864bd85#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+trojan.win32.vbkrypt.wzzv#downloader-cjx.gen.ad#a variant of win32/pronny.cd#gen:heur.conjar.1
+heur:trojan.win32.generic#generic pws.fx#a variant of msil/spy.agent.pm#generic.msil.passwordstealera.cad012e7
+heur:trojan.win32.generic#upatre-faed!1d6317ad7c21#a variant of win32/kryptik.edvd#trojan.upatre.gen.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.vobfus.dgwm#downloader-cjx.gen.o#win32/autorun.vb.yk#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#upatre-facd!1c0d275e150d#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bc#generic.msil.bladabindi.ab8a104c
+heur:trojan.win32.generic#trojan-focq!4c91cc0ed3e0#a variant of msil/kryptik.kne#gen:variant.barys.55352
+heur:trojan.win32.generic#upatre-facm!ad7ea2dc50a2#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!f1a795524437#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan.win32.vbkrypt.jgr#emotet-fgni!d6d4f2809edc#a variant of win32/injector.bzuj#gen:variant.symmi.51669
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+trojan-downloader.win32.upatre.dma#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1899981
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+heur:trojan.win32.generic#upatre-fach!d706de9c3ca0#a variant of win32/kryptik.doue#gen:trojan.ipatre.1
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!73542dd28af3#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#downloader-fvf!edcf37c2cadd#win32/trojandownloader.small.aab#trojan.zbot.ibu
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#w32/ngvck.a#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!fedefd191cfd#win32/geksone.b#win32.crytex.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f362d7343e63#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+virus.win32.crytex.1290#artemis!a0c90f37b31a#win32/geksone.b#win32.crytex.a
+not-a-virus:heur:downloader.msil.temonde.gen#pup-xaa-ph!89b88a895574#a variant of msil/agent.age#application.agent.nv
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!a520ff011bff#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-fach!00d9426e29bd#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+virus.win32.crytex.1290#artemis!f19027453922#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-fach!e56808250cae#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.msil.agent.kff#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.24cfb581
+trojan-downloader.win32.upatre.dfp#downloader-fsh#win32/trojandownloader.waski.a#trojan.spy.zbot.fny
+trojan.win32.scar.ehcc#generic vb.jc#a variant of win32/ainslot.aa#deepscan:generic.msil.passwordstealera.ceba26ae
+heur:trojan.win32.generic#upatre-facv!e80bd669d7c2#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+virus.win32.crytex.1290#artemis!078dc308c287#win32/geksone.b#win32.crytex.a
+heur:trojan-downloader.win32.generic#upatre-faai!e48274b6a9c7#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+trojan-spy.win32.zbot.qnuf#downloader-fva!3e905cf6bfc5#win32/trojandownloader.small.aab#trojan.generickd.1369867
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#trojan.generic.7529950
+trojan-spy.win32.zbot.sdna#downloader-fsh!a4f75190b4d1#win32/trojandownloader.waski.a#gen:variant.razy.14831
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+heur:trojan.win32.generic#upatre-fach!051ad8022ce9#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!b799d7ffa9a8#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!ba604889d190#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.qnuf#downloader-fva!0746ef476115#win32/trojandownloader.small.aab#trojan.generickd.1369867
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bh#trojan.agent.bnst
+trojan-spy.win32.zbot.swwd#downloader-fsh!08f7ecc2e4e6#win32/trojandownloader.waski.e#trojan.generickd.1690436
+heur:trojan.win32.generic#pws-zbot-fasg!72f57b1b86f5#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.crytex.1290#artemis!05c072b836d9#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b2858b6b25d8#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!f23d3f3e3f23#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b9932183acac#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.rgca#pwszbot-fmo!f6915ff2ddc6#win32/trojandownloader.waski.a#trojan.generickd.1499022
+heur:trojan.win32.generic#upatre-facm!c1e808d3b5ad#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.msil.generic#artemis!dff07758d526#a variant of msil/kryptik.lra#gen:variant.razy.274136
+trojan-spy.win32.zbot.wqki#downloader-fsh!aa73fd1b84b1#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.vbkrypt.gabi#vbobfus.ba#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!af2b2db3b87d#win32/trojandownloader.small.aab#trojan.generickd.1311868
+virus.win32.crytex.1290#artemis!7f2f8e51fdd3#win32/geksone.b#win32.crytex.a
+trojan-downloader.win32.agent.hfdg#upatre-faac!f35bcb9c9fee#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan-downloader.win32.generic#upatre-faai!8a84ea1ed512#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+trojan.win32.vbkrypt.cixe#pws-spyeye.er#a variant of win32/injector.eyu#gen:heur.manbat.1
+virus.win32.crytex.1290#artemis!e7ffe969e1e2#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.b#w32/hllp.41472#win32/neshta.b#win32.nestha.c
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!a5ab9b991615#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.svwk#downloader-fsh!b7cfd5348d28#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan-spy.win32.zbot.swzk#downloader-fsh!ca058f4c3c92#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+heur:trojan.win32.generic#artemis!e6b670946ac2#a variant of msil/agent.now#gen:variant.barys.2244
+trojan-spy.win32.zbot.svwy#downloader-fsh!271b1eb47c9e#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+virus.win32.crytex.1290#w32/ngvck.a#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!0bd70f51e047#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#downloader-fsh#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!07fa130e9f87#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-facd!567ccede0245#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+virus.win32.crytex.1290#artemis!c428fa66cb5f#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-fach!b65301050982#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+worm.win32.vobfus.efip#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+virus.win32.crytex.1290#artemis!b1c3b42bca15#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!55814dc1ceea#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.crytex.1290#artemis!ac86826f270d#win32/geksone.b#win32.crytex.a
+trojan-downloader.win32.agent.hfdg#upatre-faac!becf7e736955#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-spy.win32.zbot.sjqn#downloader-fsh!8134478405a9#win32/trojandownloader.waski.a#trojan.generickd.1675536
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bh#trojan.agent.bnst
+backdoor.msil.agent.jdt#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.ba344c2c
+not-a-virus:adware.win32.cloudscout.hud#pup-xdn-cg#a variant of msil/adware.cloudguard.d#gen:variant.razy.258053
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.msil.revenge.byn#genericrxeh-fs!129b41787d8a#a variant of msil/kryptik.nfx#gen:variant.strictor.137422
+virus.win32.crytex.1290#artemis!b468bdc750a0#win32/geksone.b#win32.crytex.a
+worm.win32.vobfus.efhl#vbobfus.bc#win32/autorun.vb.ana#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#upatre-facn!bf4de6a57d26#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!e20758bd6cc2#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!c7c23eb720b2#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.qzxr#downloader-ftt!e8d1da1fae55#win32/trojandownloader.small.aab#trojan.generickd.1311021
+virus.win32.crytex.1290#artemis!c74f095d70d9#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!d529f04ca016#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-facn!e322dfa3848c#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facv!bf57db1047a5#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!93a17d7468a0#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+heur:trojan.win32.generic#genericrxbd-ao!3c1e53b0029c#a variant of msil/agent.roc#gen:variant.zusy.227436
+virus.win32.crytex.1290#artemis!e19dd14ff551#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!bbdb11a68afa#win32/trojandownloader.small.aab#trojan.generickd.1311868
+heur:trojan.win32.generic#rdn/generic.grp#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+virus.win32.crytex.1290#w32/ngvck.a#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a738326b994e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.cloudscout.hee#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.255400
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.f#generic.msil.bladabindi.de2b51b4
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!cc890f317a31#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+heur:trojan.win32.generic#downloader-fsh!2fcf8b368c1d#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+virus.win32.crytex.1290#artemis!ca10ffb5000f#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.siyn#downloader-fsh!c51bec72e3b4#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+heur:trojan.win32.generic#backdoor-fdnn!ee786a84ccc6#a variant of msil/bladabindi.bb#generic.msil.bladabindi.95015c4e
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.868
+virus.win32.crytex.1290#artemis!e2b6be8eb15d#win32/geksone.b#win32.crytex.a
+trojan-downloader.win32.upatre.dmid#downloader-faww!16e6db2f471f#win32/trojandownloader.waski.v#trojan.upatre.et
+virus.win32.crytex.1290#artemis!f47bbbb20bf2#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.jbd#emotet-fgni!9193d91dad3a#win32/tinba.bj#gen:variant.zusy.139436
+virus.win32.crytex.1290#artemis!e94841467657#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#genericrxbd-ao!e8107a1d1a45#a variant of msil/agent.roc#gen:variant.zusy.227436
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!b4a6c695e5c9#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!abf77818c5ee#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!a5c2efc5ef7a#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.thiy#pwszbot-fru!d98cf9772e11#win32/trojandownloader.waski.d#trojan.downloader.jqrk
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.vfue#emotet-fgni!e53371592275#win32/tinba.bj#gen:variant.zusy.137920
+heur:trojan.win32.generic#downloader-fsh!13b0820e9367#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!bc9335ff8ff0#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+heur:trojan-downloader.win32.generic#upatre-faai!a29e269381c3#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+heur:trojan.win32.generic#trojan-fjjw!3abca558c75f#a variant of msil/kryptik.gyc#gen:variant.msil.mensa.5
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bc#generic.msil.bladabindi.d81daf5a
+virus.win32.crytex.1290#artemis!a2195df0543e#win32/geksone.b#win32.crytex.a
+trojan.msil.crypt.gjaz#artemis!145cfa2c9aeb#a variant of generik.jycwkbj#gen:heur.msil.androm.9
+virus.win32.crytex.1290#artemis!f14a5ac0a706#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#w32/ngvck.a#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.qtwg#pwszbot-fmo!f2e83d3eb586#win32/trojandownloader.waski.a#trojan.generickd.1422398
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!83cf30169c61#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.qsec#downloader-fwt!29f18af0e928#win32/trojandownloader.small.aab#trojan.generickd.1411747
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#upatre-facv!d65db2cecf53#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan.win32.vbkrypt.izzj#vbobfus.df#a variant of win32/pronny.mj#gen:variant.chinky.7
+heur:trojan.win32.generic#upatre-facn!abdd1156a022#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.31
+virus.win32.crytex.1290#artemis!abad0fa2830c#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!bd0e4dd9e764#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.b#artemis!2c5a1ae64a7f#win32/neshta.b#win32.nestha.c
+heur:trojan.win32.generic#upatre-facn!df6dfd9a0110#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facv!0fda5a3b5192#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+heur:trojan-downloader.win32.generic#genericrxef-vv!3355f8b0248a#a variant of msil/trojandownloader.tiny.xu#gen:variant.razy.265206
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.282f0c84
+heur:trojan.win32.generic#upatre-fach!27f30ee2333f#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+virus.win32.crytex.1290#artemis!c951b3eac946#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#trojan.generic.7529950
+virus.win32.crytex.1290#artemis!accf49b642b8#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-facm!b8f8921cabee#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#generic pws.fx#a variant of msil/spy.agent.pm#generic.msil.passwordstealera.65ad71b1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bh#trojan.agent.bnst
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.swzk#downloader-fsh!dad7b002bf28#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+worm.win32.vobfus.efhl#vbobfus.bc#win32/autorun.vb.ana#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#upatre-facm!e63aa31723be#a variant of win32/kryptik.dlzd#trojan.upatre.gen.3
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+heur:trojan.win32.generic#backdoor-fdnn!f611621ad978#a variant of msil/bladabindi.bb#generic.msil.bladabindi.5972554c
+heur:trojan.win32.generic#dropper-ffa!e5ec453ddb16#a variant of win32/injector.agby#gen:variant.zbot.106
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.scar.ehcc#generic vb.jc#a variant of win32/ainslot.aa#deepscan:generic.msil.passwordstealera.ceba26ae
+trojan-spy.win32.zbot.wudi#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1464781
+trojan-spy.win32.zbot.tbah#downloader-fsh!d731edcd7f83#win32/trojandownloader.waski.a#trojan.generickd.1697113
+trojan.win32.small.cox#pws-zbot.gen.yh#a variant of win32/sality.nbe#trojan.salitystub.f
+trojan-downloader.win32.upatre.ele#upatre-faag!b1c8fa0bd8e6#win32/trojandownloader.waski.a#trojan.generickd.1956791
+virus.win32.crytex.1290#artemis!c103f962c5f6#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.barys.7829
+trojan.msil.crypt.girg#artemis!a833287bd67f#a variant of msil/kryptik.nfo#trojan.generickd.30389621
+trojan-downloader.win32.upatre.frrs#upatre-fach!79dbe51bc7ea#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!080194cce25b#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-fach!ca0bb98d7410#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+trojan-downloader.win32.upatre.frir#upatre-facn!05a7d076a539#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+trojan-downloader.win32.upatre.bkvd#upatre-facm!4253659a7605#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!710264566bc6#a variant of win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.ah#generic.msil.bladabindi.fb18de5e
+trojan-spy.win32.zbot.svfs#downloader-fsh!7eb8276155e3#win32/trojandownloader.waski.a#trojan.generickd.1683057
+virus.win32.crytex.1290#artemis!f3440b76e556#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+backdoor.msil.bladabindi.p#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.7ee3b3d3
+virus.win32.crytex.1290#artemis!0a500b3dee44#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+backdoor.msil.bladabindi.anxe#artemis!2b589be09051#msil/trojandownloader.agent.brw#trojan.generickd.40177711
+virus.win32.crytex.1290#artemis!baec19b12bd4#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!a5a7048075fc#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-fach!fc470c138d74#a variant of win32/kryptik.dpfa#gen:trojan.ipatre.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+heur:trojan.win32.generic#pws-zbot-fasg!09678805a469#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.tble#downloader-fsh!2b8b6f2ce1ce#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!b9c02ee3f25e#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-facv!b9ed00741576#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+not-a-virus:adware.win32.cloudscout.hta#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.258053
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.o#win32.runouce.b@mm
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.55
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.crytex.1290#artemis!a68b731a361b#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#downloader-fsh!1ec148aee559#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.jdm#emotet-fgni!4057e9d59c97#win32/tinba.bj#gen:variant.symmi.51669
+virus.win32.neshta.b#artemis!21776984d361#win32/neshta.b#win32.nestha.c
+uds:dangerousobject.multi.generic#artemis!d8f5151b9c68#a variant of msil/adware.csdimonetize.n#gen:variant.razy.183286
+trojan-downloader.win32.upatre.frrs#upatre-fach!c4b6c7771ec4#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+heur:trojan.win32.generic#rdn/generic pws.y#a variant of msil/spy.agent.ahg#gen:variant.barys.2244
+virus.win32.crytex.1290#artemis!b1434e1ab331#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.rmwh#downloader-fsh#win32/trojandownloader.waski.a#trojan.downloader.jqkn
+virus.win32.crytex.1290#artemis!e5a56c5c8d07#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.simd#downloader-fabv#win32/trojandownloader.waski.a#trojan.generickd.1670802
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+virus.win32.crytex.1290#artemis!f131a4b6e76b#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+heur:trojan.msil.generic#trojan-fowd!e2f75d320459#a variant of msil/kryptik.mdq#application.bundler.temonde.2.gen
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!e9ab85ee9828#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#upatre-facv!f7e5e3a2beae#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#dropper-ffa!b6d539412ffe#win32/trojandropper.gepys.aa#gen:variant.zbot.106
+virus.win32.crytex.1290#artemis!048294f4b904#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b5f8bf31dc7d#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b3b7f37e8e17#win32/geksone.b#win32.crytex.a
+trojan-spy.win32.zbot.side#downloader-fabv!f12ad6465f42#win32/trojandownloader.waski.a#trojan.generickd.1669208
+heur:trojan-downloader.win32.generic#upatre-faai!de7622800b6a#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+heur:trojan.win32.generic#pws-zbot-fasg!ba9b4ddf4c24#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.qsec#downloader-fwt!c21c15519c67#win32/trojandownloader.small.aab#trojan.generickd.1411747
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+virus.win32.crytex.1290#artemis!0f5520b46f28#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b4b45a893286#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!c7791c7ca691#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+not-a-virus:adware.win32.cloudscout.hse#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.258053
+heur:trojan.win32.generic#upatre-fach!12b568c4779a#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan-spy.win32.zbot.wudi#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1464781
+virus.win32.crytex.1290#artemis!c690d843bf11#win32/geksone.b#win32.crytex.a
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.symmi.5242
+heur:trojan.win32.generic#upatre-facm!194e96458ea3#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.ar#generic.msil.bladabindi.6c7d8aec
+virus.win32.crytex.1290#artemis!e864ea0f9add#win32/geksone.b#win32.crytex.a
+trojan-downloader.win32.upatre.dmid#downloader-faww!a5f45f7887bf#win32/trojandownloader.waski.v#trojan.upatre.et
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-ransom.win32.wanna.m#ransom-wannacry!6ffe6a79ce05#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-downloader.win32.upatre.frrs#upatre-fach!b3b89845ed9a#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.dma#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1899981
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.55
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!7bcd3ba31b7d#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!a97413ad6f54#win32/geksone.b#win32.crytex.a
+heur:trojan-downloader.win32.generic#upatre-faai!9f08654e6f23#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+worm.win32.vobfus.efip#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#upatre-facn!90dc777263ad#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!a51df26f1b63#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!ad3525ea3d7b#win32/geksone.b#win32.crytex.a
+trojan-downloader.win32.upatre.frrs#upatre-fach!edee00c7e913#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+trojan.win32.vbkrypt.ybur#emotet-fgni!ac028240c191#a variant of win32/injector.bzks#trojan.crypt.gen.1
+virus.win32.crytex.1290#artemis!e8b39eeeccfb#win32/geksone.b#win32.crytex.a
+heur:trojan-downloader.win32.generic#genericrxef-vv!75559911974e#a variant of msil/trojandownloader.tiny.xu#gen:variant.razy.265206
+virus.win32.crytex.1290#artemis!b00e777393a5#win32/geksone.b#win32.crytex.a
+heur:trojan-psw.win32.generic#genericrxeg-lj!6f6ca09d71d9#a variant of msil/kryptik.lzc#trojan.generickd.30387041
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!c6488661d905#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!c79027c95b1d#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan-spy.win32.zbot.rqyj#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1588483
+heur:trojan.msil.generic#genericrxbe-yg!a72e450e806c#a variant of msil/kryptik.ksf#gen:heur.msil.androm.9
+heur:trojan.win32.generic#artemis!21192ba581fa#a variant of msil/psw.coinstealer.ba#trojan.generickd.6129629
+worm.win32.wbna.ipa#vbobfus.g#win32/autorun.vb.adl#gen:variant.vbkrypt.55
+trojan-downloader.win32.upatre.frir#upatre-facn!a19bfc1c3657#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan.win32.vbkrypt.gabj#vbobfus.bb#win32/autorun.vb.aky#gen:heur.conjar.1
+trojan-downloader.win32.upatre.frir#upatre-facn!859c78c41c20#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!4196d116b832#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.crytex.1290#artemis!3b94b7204353#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!a61b0a39c377#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:trojan.win32.generic#pws-zbot.gen.yg#a variant of msil/spy.agent.bp#generic.malware.gsd.75bf723f
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.crytex.1290#artemis!aa037d6b8205#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.siyn#downloader-fsh!c970fe3d9641#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.drhe#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:trojan.heur.zgy.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!300b8a6e0d43#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!82b831a49a20#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#artemis!5976b84d5238#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!ae1745a24698#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b4e4b4460d09#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!e4c7aba76267#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!eeddcee55877#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-downloader.win32.upatre.emva#upatre-fach!ba9487842650#a variant of win32/kryptik.duao#gen:trojan.ipatre.1
+not-a-virus:adware.win32.cloudscout.hev#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.255400
+trojan-spy.win32.zbot.wqki#downloader-fsh!17e661058007#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+trojan-spy.win32.zbot.side#downloader-fabv!3f7e25e93bf3#win32/trojandownloader.waski.a#trojan.generickd.1669208
+heur:trojan.win32.generic#trojan-fign#msil/bladabindi.bh#trojan.agent.bnst
+heur:trojan.win32.generic#ransomware-gan!68b386a0d31f#a variant of msil/trojandropper.agent.aqj#gen:variant.zusy.233813
+virus.win32.crytex.1290#artemis!e873c8e57b96#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!f39f22578b7d#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+heur:backdoor.msil.generic#artemis!78c529183548#a variant of msil/injector.tmi#trojan.generickd.30394384
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!a91ec9258759#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!8a24de918b2b#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.b#w32/hllp.41472#win32/neshta.b#win32.nestha.c
+virus.win32.crytex.1290#artemis!e47d1e4b3ef3#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.aa#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+not-a-virus:adware.msil.agent.aiqj#artemis!f8d5213bf87d#a variant of msil/adware.dotdo.dd#adware.clicker.1.gen
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+trojan.win32.vbkrypt.wzzv#downloader-cjx.gen.ad#a variant of win32/pronny.cd#gen:heur.conjar.1
+virus.win32.crytex.1290#artemis!c4255c4fac07#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nbu#win32.sality.3
+heur:trojan.win32.generic#genericrxar-zf!078cc0be16ad#a variant of msil/agent.apn#gen:variant.revengerat.2
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+virus.win32.crytex.1290#w32/ngvck.a#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+virus.win32.crytex.1290#artemis!a79485fa86c1#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!e3a99ce59754#win32/geksone.b#win32.crytex.a
+heur:trojan-downloader.win32.generic#upatre-faai!e0af9a49593a#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.38a95e69
+trojan-downloader.win32.upatre.frrs#upatre-fach!ed962416a315#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!8817d4baf3f6#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.crytex.1290#artemis!a8925df309af#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan-spy.win32.zbot.rmwh#downloader-fsh#win32/trojandownloader.waski.a#trojan.downloader.jqkn
+heur:trojan.win32.generic#upatre-fach!ad3d5c7a3b31#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-downloader.win32.upatre.jgz#upatre-faca!fc52436184c2#a variant of win32/kryptik.dhfk#trojan.upatre.gen.3
+heur:trojan.win32.generic#ransomware-ftd!3fb5b48d3d93#a variant of msil/filecoder.z#gen:heur.ransom.hiddentears.1
+virus.win32.crytex.1290#artemis!c62066e5953d#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!b01bdf8da8ed#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!bfcf758a7e7d#win32/geksone.b#win32.crytex.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!bbeef28afdcc#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7ca7485029db#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan.win32.vbkrypt.cdkr#pws-spyeye.ct#a variant of win32/injector.eyu#gen:variant.barys.1992
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.tdvn#pwszbot-fnc!7759892328b8#win32/trojandownloader.waski.a#trojan.generickd.1426259
+trojan-clicker.msil.agent.cneb#artemis!de8e3fb17e45#a variant of generik.jrshlzx#gen:variant.ursu.83938
+virus.win32.crytex.1290#artemis!e49e102bbd8b#win32/geksone.b#win32.crytex.a
+not-a-virus:heur:adware.msil.tpyn.gen#artemis!c87281ae4f0d#a variant of msil/browsefox.g potentially unwanted#gen:variant.razy.224848
+virus.win32.crytex.1290#artemis!b5299ae32690#win32/geksone.b#win32.crytex.a
+virus.win32.neshta.a#w32/generic.delphi.c#win32/neshta.a#win32.neshta.a
+virus.win32.crytex.1290#artemis!ba3d0a303b1b#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/virut.nbp#win32.runouce.b@mm
+heur:trojan.win32.generic#upatre-facv!c855c4e3e407#win32/trojandownloader.small.prl#gen:variant.graftor.469639
+virus.win32.crytex.1290#artemis!01a5d69e8630#win32/geksone.b#win32.crytex.a
+heur:trojan-downloader.win32.generic#genericrxef-vv!5ca2eadc618c#a variant of msil/trojandownloader.tiny.xu#gen:variant.razy.265206
+trojan-spy.win32.zbot.qsec#downloader-fwt!815783aa8ad4#win32/trojandownloader.small.aab#trojan.generickd.1411747
+heur:trojan.msil.generic#genericrxdt-ng!4197ae5f095a#a variant of msil/injector.nik#gen:variant.razy.51030
+heur:trojan-downloader.win32.generic#genericrxef-vv!8a2b840d8263#a variant of msil/trojandownloader.tiny.xu#gen:variant.razy.265206
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.02119010
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.as#generic.msil.bladabindi.3be29a76
+heur:trojan.win32.generic#pup-xbd-zf!1eaa315889dc#a variant of msil/kryptik.iof#application.bundler.temonde.2.gen
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a
+not-a-virus:adware.win32.cloudscout.hdg#pup-xdr-ks#a variant of msil/adware.cloudguard.d#gen:variant.razy.255400
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facm!fd97b5f6802a#a variant of win32/kryptik.dmns#trojan.upatre.gen.3
+virus.win32.crytex.1290#artemis!c8631516c8d5#win32/geksone.b#win32.crytex.a
+email-worm.win32.runouce.b#w32/chir.b@mm#win32/chir.b#win32.runouce.b@mm
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+virus.win32.crytex.1290#artemis!ae39ca854bcd#win32/geksone.b#win32.crytex.a
+virus.win32.crytex.1290#artemis!ae266aee9574#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#pws-zbot-fasg!5c3e606b4fa7#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.crytex.1290#artemis!e9a43496fa61#win32/geksone.b#win32.crytex.a
+heur:trojan.win32.generic#trojan-fign#a variant of msil/bladabindi.ah#generic.msil.bladabindi.58c4cdf7
+heur:trojan-dropper.msil.generic#pup-xdy-aj!75a54d600e9e#a variant of msil/kryptik.lml#gen:variant.razy.252781
+email-worm.win32.runouce.aa#w32/virut.gen.a#win32/virut.q#win32.virtob.4.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+uds:dangerousobject.multi.generic#artemis!28cfcc725795#a variant of msil/psw.coinstealer.bt#gen:variant.razy.255312
+heur:trojan.win32.generic#backdoor-njrat!e5fbcd4f2662#a variant of msil/bladabindi.ah#gen:variant.razy.8195
+virus.win32.neshta.a#w32/hllp.41472.e#win32/neshta.a#win32.neshta.a

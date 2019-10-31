@@ -1,0 +1,78 @@
+not-a-virus:HEUR:AdWare.Win32.Linkury.gen#PUP-XBC-YL#a variant of MSIL/Toolbar.Linkury.AV potentially unwanted#Adware.Linkury.CV
+43
+not-a-virus:AdWare.Win32.Linkury.as#PUP-GUK#a variant of MSIL/Toolbar.Linkury.AY potentially unwanted#Gen:Variant.Adware.MSILPerseus.105102
+15
+Email-Worm.Win32.Runouce.b#W32/Chir.b@MM#Win32/Chir.B#Win32.Runouce.B@mm
+45
+Email-Worm.Win32.Runouce.b#W32/Chir.b@MM#Win32/Virut.O#Win32.Runouce.B@mm
+2
+Email-Worm.Win32.Runouce.b#W32/Chir.b@MM#Win32/Virut.NBP#Win32.Runouce.B@mm
+28
+Email-Worm.Win32.Runouce.aa#W32/Chir.b@MM#Win32/Chir.B#Win32.Runouce.B@mm
+13
+Email-Worm.Win32.Runouce.b#W32/Chir.b@MM#a variant of Win32/Chir.A#Win32.Runouce.B@mm
+3
+not-a-virus:HEUR:AdWare.Win32.Linkury.gen#Adware-Linkury#Win32/Toolbar.Linkury.BB potentially unwanted#Gen:Variant.Johnnie.24614
+2
+Virus.Win32.Neshta.a#W32/HLLP.41472.e#Win32/Neshta.A#Win32.Neshta.A
+85
+Virus.Win32.Sality.gen#W32/Sality.gen.z#Win32/Sality.NBA#Win32.Sality.3
+80
+Trojan.Win32.VBKrypt.cdkr#PWS-Spyeye.ct#a variant of Win32/Injector.EYU#Gen:Variant.Barys.1992
+10
+Trojan.Win32.VBKrypt.wzzv#Downloader-CJX.gen.ad#a variant of Win32/Pronny.CD#Gen:Heur.Conjar.1
+5
+Trojan.Win32.VBKrypt.drhe#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Trojan.Heur.ZGY.5
+7
+Worm.Win32.Vobfus.dehs#W32/Autorun.worm.aaeh#Win32/Sality.NAO#Win32.Sality.2.OE
+11
+Trojan.Win32.VBKrypt.gabj#VBObfus.bb#Win32/AutoRun.VB.AKY#Gen:Heur.Conjar.1
+7
+Worm.Win32.WBNA.ipa#VBObfus.g#Win32/AutoRun.VB.ADL#Gen:Variant.VBKrypt.55
+3
+Worm.Win32.WBNA.ipa#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.VBKrypt.31
+4
+Trojan.Win32.VBKrypt.drhe#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.Symmi.5242
+10
+Worm.Win32.Vobfus.efip#VBObfus.bc#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.VBKrypt.23
+5
+Trojan-Spy.Win32.Zbot.rrdh#Downloader-FSH#Win32/TrojanDownloader.Waski.A#Trojan.Agent.BBXP
+4
+Worm.Win32.WBNA.ipa#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.VBKrypt.55
+3
+HEUR:Trojan.Win32.Generic#PWS-Zbot.gen.aej#Win32/VB.QMS#Gen:Variant.Barys.4372
+4
+Trojan-Spy.Win32.Zbot.wpxk#PWS-FBRL#Win32/TrojanDownloader.Waski.A#Trojan.GenericKD.1618727
+2
+Trojan.Win32.VBKrypt.drhe#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.Barys.868
+3
+Trojan-Spy.Win32.Zbot.rbnd#Downloader-FSH#Win32/TrojanDownloader.Waski.A#Trojan.GenericKD.1462270
+3
+Trojan-Spy.Win32.Zbot.simd#Downloader-FABV#Win32/TrojanDownloader.Waski.A#Trojan.GenericKD.1670802
+2
+Trojan.Win32.VBKrypt.gabi#VBObfus.ba#a variant of Win32/Pronny.AC#Gen:Variant.VBKrypt.23
+6
+Trojan.Win32.VBKrypt.drhe#VBObfus.g#a variant of Win32/AutoRun.VB.AQE#Gen:Variant.Barys.7829
+6
+Virus.Win32.Neshta.a#W32/Generic.Delphi.c#Win32/Neshta.A#Win32.Neshta.A
+6
+Email-Worm.Win32.Runouce.b#W32/Chir.b@MM#Win32/Chir.B#Trojan.Generic.7529950
+4
+Worm.Win32.Vobfus.efhl#VBObfus.bc#Win32/AutoRun.VB.ANA#Gen:Variant.VBKrypt.23
+3
+Virus.Win32.Neshta.b#W32/HLLP.41472#Win32/Neshta.B#Win32.Nestha.C
+5
+Trojan.Win32.Scar.ehcc#Generic VB.jc#a variant of Win32/Ainslot.AA#DeepScan:Generic.MSIL.PasswordStealerA.CEBA26AE
+3
+Trojan.Win32.Small.cox#PWS-Zbot.gen.yh#Win32/Sality.NBA#Trojan.SalityStub.F
+2
+Trojan-Downloader.Win32.Upatre.dma#Downloader-FSH#Win32/TrojanDownloader.Waski.A#Trojan.GenericKD.1899981
+2
+Virus.Win32.Crytex.1290#W32/NGVCK.a#Win32/Geksone.B#Win32.Crytex.A
+5
+HEUR:Trojan.Win32.Generic#Trojan-FIGN#MSIL/Bladabindi.BH#Trojan.Agent.BNST
+4
+Trojan-Spy.Win32.Zbot.wudi#Downloader-FSH#Win32/TrojanDownloader.Waski.A#Trojan.GenericKD.1464781
+2
+Trojan-Spy.Win32.Zbot.rmwh#Downloader-FSH#Win32/TrojanDownloader.Waski.A#Trojan.Downloader.JQKN
+2
