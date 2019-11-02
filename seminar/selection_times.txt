@@ -1,38 +1,26 @@
-pocet atributov: 5755
+pocet atributov: 766
 
 
-Chi-square
-576
-cas: 0:00:00.295073
+LGBM split
+80
+cas: 0:00:02.992265
 
 
-Mutual information
-576
-cas: 0:00:04.900168
+LGBM gain
+80
+cas: 0:00:02.809537
 
 
-ANOVA F-score
-576
-cas: 0:00:00.091242
+Block HSIC Lasso B = 17.
+M set to 3.
+Using Gaussian kernel for the features, Delta kernel for the outcomes.
+HSIC Lasso
+80
+cas: 0:00:14.545340
 
 
-Trace ratio
-575
-cas: 0:00:03.719878
-
-
-Gini
-575
-cas: 0:02:09.951365
-
-
-Fisher
-575
-cas: 0:00:00.600655
-
-
-Laplacian
-575
-cas: 0:00:03.325073
+SVC L1
+80
+cas: 0:00:05.868569
 
 

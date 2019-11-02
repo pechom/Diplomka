@@ -1,9 +1,16 @@
-vsetky data: 735
-LGBM
-najlepsi priemer: 0.9812873990681418
-index najlepsieho: 51
-najhorsi priemer: 0.915983355517731
-finalny priemer: 0.9812762008598551
-cas: 0:00:28.438579
+vsetky data: 766
+
+
+LGBM GOSS
+najlepsi priemer: 0.9823503378002535
+index najlepsieho: 39
+najhorsi priemer: 0.9284654816128544
+finalny priemer: 0.9792891133104575
+cas: 0:00:18.865157
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9505846585529342
+cas: 0:00:02.802609
 
 
