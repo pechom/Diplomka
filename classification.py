@@ -352,5 +352,4 @@ with warnings.catch_warnings():
     warnings.simplefilter("ignore")
     # run_methods()
     # check_selections()
-check_cluster_labels()
 sys.stdout.close()

@@ -48,10 +48,10 @@ def clustering():
     c = collections.Counter(clusterer.labels_)
     pprint.pprint(c.most_common(len(c)))
     print(clusterer.labels_.max())
-    # with open("stare subory/cluster_labels.txt", "w", newline='') as output:
-    #     output.write("class" + '\n')
-    #     for label in clusterer.labels_:
-    #         output.write(str(label)+'\n')
+    with open("stare subory/cluster_labels.txt", "w", newline='') as output:
+        output.write("class" + '\n')
+        for label in clusterer.labels_:
+            output.write(str(label)+'\n')
     # clusterer.condensed_tree_.plot(select_clusters=True)
     # plt.show()
     # plt.savefig('stare subory/dendogram.png')
@@ -59,4 +59,4 @@ def clustering():
 
 # levenshtein_matrix(list1)
 # same_groups(list1)
-clustering()
+# clustering()

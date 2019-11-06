@@ -31,10 +31,7 @@ np.set_printoptions(threshold=np.inf)
 def numpy_load():
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-    # po kazdom citani a pisani pridava quotes ku stringom
-    # header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
-    header = pd.read_csv(feature_path, nrows=1, header=None)
-    header = header.to_numpy()[0]
+    header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
     return data, header, labels
 
 
@@ -45,8 +42,6 @@ def pandas_load():
     # ak mam header tak pri niektorych atributoch ma xgboost problemy lebo obsahuju nepovolene znaky, preto mam none
     header = pd.read_csv(feature_path, nrows=1, header=None)
     header = header.to_numpy()[0]
-    # with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-    #     print(header)
     return data, header, labels.values.ravel()
 
 
@@ -461,27 +456,26 @@ def svm_big_data():
 
 
 labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-header = pd.read_csv(feature_path, nrows=1, header=None)
-header = header.to_numpy()[0]
+header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
 treshold = 79
 
-cfs()
-fcbf()
-HSIC_lasso(treshold)
+LGBM()
+# cfs()
+# fcbf()
+# HSIC_lasso(treshold)
 #
-for_small_data()
-for_big_data()
-
-output_dir = 'features/selection_standard/'
-header = pd.read_csv(standard_feature_path, nrows=1, header=None)
-header = header.to_numpy()[0]
-data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+# for_small_data()
+# for_big_data()
 #
-svm_big_data()
-LSVC_l2()
+# output_dir = 'features/selection_standard/'
+# header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
+# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+#
+# svm_big_data()
+# LSVC_l2()
 
-select_best_n(79, output_dir, "features/best_n/")
+# select_best_n(79, output_dir, "features/best_n/")
 sys.stdout.close()

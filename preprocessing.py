@@ -17,6 +17,11 @@ very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
 original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
 features_dir = 'C:/PycharmProjects/Diplomka/features/*'
 discrete_dir = 'C:/PycharmProjects/Diplomka/discrete/'
+labels_path = 'C:/PycharmProjects/Diplomka/subory/clear_labels2_head.csv'
+cluster_dataset_dir = 'C:/PycharmProjects/Diplomka/features/cluster/'
+cluster_labels_path = "C:/PycharmProjects/Diplomka/stare subory/cluster_labels.txt"
+clear_cluster_labels_path = "C:/PycharmProjects/Diplomka/subory/cluster_labels.csv"
+cluster_standard_dir = "C:/PycharmProjects/Diplomka/features/standard_cluster/"
 
 
 def normalize(input_path, normal_path):
@@ -174,6 +179,29 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
                 writer.writerows([i] for i in data)
 
 
+def create_dataset_from_clusters(input_dir, output_dir, clusters_file, labels_file, new_labels_file, type):
+    cluster_labels = np.loadtxt(clusters_file, delimiter=',', skiprows=1, dtype=np.int8)
+    to_delete = []
+    for i in range(len(cluster_labels)):
+        if cluster_labels[i] == -1:  # outlier
+            to_delete.append(i)
+    labels = np.loadtxt(labels_file, delimiter=',', skiprows=1, dtype=np.uint8)
+    labels = np.delete(labels, to_delete)
+    with open(new_labels_file, "w", newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        writer.writerows(([i] for i in labels))
+    files = glob.glob(input_dir)
+    for file_name in files:
+        if os.path.isfile(file_name):
+            header = np.loadtxt(file_name, delimiter=',', max_rows=1, dtype="str")
+            data = np.loadtxt(file_name, delimiter=',', skiprows=1, dtype=type)
+            data = np.delete(data, to_delete, axis=0)
+            with open(output_dir + os.path.basename(file_name), "w", newline='') as csv_file:
+                writer = csv.writer(csv_file, delimiter=',')
+                writer.writerow(header)
+                writer.writerows(data)
+
+
 # -------------------------------------------------------
 # discretize(features_dir, discrete_dir, 5)  # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
 # shutil.rmtree(features_dir[:-1])
@@ -187,9 +215,21 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
 # merge_features_from_dir(very_simple_dir+'*', very_simple_file)
 # for name in [original_file, simple_file, very_simple_file]:
 #     feature_size(name)
+# vymazem povodne subory, ostanu len zmergovane
 # shutil.rmtree(original_path[:-1])
 # shutil.rmtree(simple_dir)
 # shutil.rmtree(very_simple_dir)
+# vyhodim outliere podla klastrovania, ulozim tento dataset osobitne
+# create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
+#                              labels_path, clear_cluster_labels_path)
 # os.mkdir(standard_dir)
-# na konci vsetky atributy standardizujem, predtym vymazem povodne subory, ostanu len zmergovane
+# na konci vsetky atributy standardizujem
 # standardize(features_dir, standard_dir)
+# standardize(cluster_dataset_dir, cluster_standard_dir)
+
+# robim dodatocne lebo som uz mal urobene vsetko pred tym
+# create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
+#                              labels_path, clear_cluster_labels_path, np.uint64)
+#
+# create_dataset_from_clusters(standard_dir+'*', cluster_standard_dir, cluster_labels_path,
+#                              labels_path, clear_cluster_labels_path, np.float64)

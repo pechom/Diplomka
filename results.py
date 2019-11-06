@@ -5,6 +5,7 @@ import os
 import csv
 import collections
 import sys
+import re
 
 best_features_path = 'features/selection/*'
 intersections_file = 'vysledky/intersections.txt'
@@ -12,6 +13,8 @@ best_groups_output_file = 'vysledky/groups.txt'
 simple_file = 'features/simple.csv'
 very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
+selected_results = 'vysledky/selected/*'
+compact_selected_results = 'vysledky/compact_selected/'
 
 
 def intersections(input_path, output_path):
@@ -71,5 +74,35 @@ def best_groups(input_dir, output_file):
             out.write('\n')
 
 
+def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "selected" vysledkov
+    files = glob.glob(input_dir)
+    results = []
+    for file_name in files:
+        with open(file_name, "r") as result_file:
+            with open(output_dir + os.path.basename(file_name), "w") as output_file:
+                try:
+                    while True:
+                        output_file.write(next(result_file))
+                        next(result_file)
+                        while True:
+                            line = next(result_file)
+                            splitted = re.split('\s', line)
+                            # print(splitted)
+                            results.append(splitted[2])
+                            next_line = "  "
+                            while next_line != '\n':
+                                next_line = next(result_file)  # su tam dve prazdne riadky
+                            next(result_file)
+                            if next(result_file) == "------------------------------------------------------------\n":
+                                break
+                        output_file.write(str(min(results)) + " " + str(max(results)) + '\n')
+                        next(result_file)
+                        next(result_file)
+                        results = []
+                except StopIteration:
+                    continue
+
+
 # intersections(best_features_path, intersections_file)
-best_groups(best_features_path, best_groups_output_file)
+# best_groups(best_features_path, best_groups_output_file)
+# result_processing(selected_results, compact_selected_results)
