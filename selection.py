@@ -222,7 +222,7 @@ def fisher(treshold):
 
 def lap(treshold):
     before = datetime.datetime.now()
-    result = lap_score.lap_score(data.copy(), mode="index")  # prepisuje vstup, preto ho kopirujem
+    result = lap_score.lap_score(data.copy(), labels.copy(), mode="index")  # prepisuje vstup, preto ho kopirujem
     after = datetime.datetime.now()
     print("Laplacian")
     result = result[:treshold]
@@ -460,9 +460,8 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 79
+treshold = 76
 
-LGBM()
 # cfs()
 # fcbf()
 # HSIC_lasso(treshold)
