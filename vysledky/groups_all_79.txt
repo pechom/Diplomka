@@ -18,9 +18,9 @@ very simple: 0
 
 Gini
 pocet vybranych: 79
-[('2-gram_freq_strings', 78), ('1-gram_bin_hex', 1)]
-simple: 1
-very simple: 1
+[('2-gram_freq_strings', 79)]
+simple: 0
+very simple: 0
 
 LGBM gain
 pocet vybranych: 79
@@ -36,9 +36,9 @@ very simple: 4
 
 Laplacian
 pocet vybranych: 79
-[('2-gram_freq_strings', 78), ('1-gram_bin_hex', 1)]
-simple: 1
-very simple: 1
+[('2-gram_freq_strings', 74), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1)]
+simple: 5
+very simple: 5
 
 RFC
 pocet vybranych: 79

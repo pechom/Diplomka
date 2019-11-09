@@ -20,7 +20,7 @@ import glob
 import os
 
 feature_path = 'features/very_simple.csv'
-standard_feature_path = 'features/standard/very_simple.csv'
+standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/clear_labels2_head.csv'
 output_dir = 'features/selection/'
 
@@ -460,11 +460,10 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 85
+treshold = 79
 
-# cfs()
 # fcbf()
-HSIC_lasso(treshold)
+# HSIC_lasso(treshold)
 #
 # for_small_data()
 # for_big_data()

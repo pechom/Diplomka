@@ -36,9 +36,9 @@ very simple: 63
 
 Gini
 pocet vybranych: 1000
-[('1-gram_opcodes', 635), ('1-gram_normal_freq_dis_hex', 203), ('1-gram_normal_freq_hex', 100), ('1-gram_reg', 61), ('1-gram_bin_hex', 1)]
+[('1-gram_freq_opcodes', 340), ('1-gram_bin_strings', 148), ('import_funcs', 91), ('2-gram_bin_strings', 58), ('1-gram_freq_dis_hex', 49), ('1-gram_normal_freq_hex', 48), ('1-gram_freq_hex', 48), ('1-gram_normal_freq_dis_hex', 47), ('1-gram_opcodes', 39), ('sections', 33), ('disassembled', 25), ('1-gram_freq_reg', 25), ('byte_entropy_histogram', 17), ('import_libs', 11), ('1-gram_reg', 7), ('metadata', 4), ('1-gram_char_freq_strings', 3), ('2-gram_char_freq_strings', 2), ('2-gram_char_bin_strings', 2), ('strings', 2), ('resources', 1)]
 simple: 1000
-very simple: 62
+very simple: 90
 
 JMI
 pocet vybranych: 1000
@@ -60,9 +60,9 @@ very simple: 132
 
 Laplacian
 pocet vybranych: 1000
-[('1-gram_opcodes', 640), ('1-gram_normal_freq_dis_hex', 208), ('1-gram_normal_freq_hex', 95), ('1-gram_reg', 55), ('1-gram_bin_hex', 1), ('strings', 1)]
+[('1-gram_opcodes', 639), ('1-gram_normal_freq_dis_hex', 203), ('1-gram_normal_freq_hex', 97), ('1-gram_reg', 55), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1), ('strings', 1)]
 simple: 1000
-very simple: 57
+very simple: 61
 
 MIFS
 pocet vybranych: 1000

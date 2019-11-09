@@ -36,7 +36,7 @@ very simple: 79
 
 Gini
 pocet vybranych: 79
-[('2-gram_char_freq_strings', 47), ('1-gram_reg', 25), ('2-gram_char_bin_strings', 6), ('1-gram_bin_hex', 1)]
+[('sections', 28), ('1-gram_freq_reg', 22), ('import_libs', 11), ('1-gram_reg', 6), ('metadata', 4), ('2-gram_char_freq_strings', 2), ('2-gram_char_bin_strings', 2), ('1-gram_char_freq_strings', 2), ('resources', 1), ('strings', 1)]
 simple: 79
 very simple: 79
 
@@ -66,7 +66,7 @@ very simple: 79
 
 Laplacian
 pocet vybranych: 79
-[('2-gram_char_freq_strings', 42), ('1-gram_reg', 30), ('2-gram_char_bin_strings', 6), ('1-gram_bin_hex', 1)]
+[('2-gram_char_freq_strings', 41), ('1-gram_reg', 27), ('2-gram_char_bin_strings', 6), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1)]
 simple: 79
 very simple: 79
 

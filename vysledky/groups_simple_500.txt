@@ -36,9 +36,9 @@ very simple: 30
 
 Gini
 pocet vybranych: 500
-[('1-gram_opcodes', 456), ('1-gram_reg', 43), ('1-gram_bin_hex', 1)]
+[('1-gram_freq_opcodes', 179), ('1-gram_bin_strings', 84), ('2-gram_bin_strings', 51), ('import_funcs', 40), ('sections', 23), ('1-gram_opcodes', 20), ('1-gram_freq_reg', 17), ('byte_entropy_histogram', 16), ('1-gram_freq_dis_hex', 14), ('1-gram_normal_freq_dis_hex', 12), ('disassembled', 11), ('import_libs', 9), ('1-gram_freq_hex', 7), ('1-gram_normal_freq_hex', 5), ('metadata', 4), ('1-gram_reg', 4), ('resources', 1), ('2-gram_char_freq_strings', 1), ('2-gram_char_bin_strings', 1), ('1-gram_char_freq_strings', 1)]
 simple: 500
-very simple: 44
+very simple: 61
 
 JMI
 pocet vybranych: 500
@@ -60,9 +60,9 @@ very simple: 84
 
 Laplacian
 pocet vybranych: 500
-[('1-gram_opcodes', 456), ('1-gram_reg', 43), ('1-gram_bin_hex', 1)]
+[('1-gram_opcodes', 452), ('1-gram_reg', 43), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1)]
 simple: 500
-very simple: 44
+very simple: 48
 
 MIFS
 pocet vybranych: 500

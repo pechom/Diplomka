@@ -12,9 +12,9 @@ very simple: 6
 
 Gini
 pocet vybranych: 1000
-[('2-gram_freq_strings', 999), ('1-gram_bin_hex', 1)]
-simple: 1
-very simple: 1
+[('2-gram_freq_strings', 379), ('1-gram_freq_strings', 238), ('2-gram_freq_opcodes', 108), ('2-gram_normal_freq_hex', 41), ('2-gram_freq_hex', 41), ('1-gram_bin_strings', 39), ('2-gram_bin_strings', 38), ('import_funcs', 25), ('2-gram_freq_dis_hex', 25), ('2-gram_normal_freq_dis_hex', 25), ('sections', 18), ('2-gram_opcodes', 11), ('import_libs', 7), ('disassembled', 2), ('metadata', 1), ('1-gram_freq_opcodes', 1), ('2-gram_freq_reg', 1)]
+simple: 131
+very simple: 26
 
 LGBM gain
 pocet vybranych: 1000
@@ -30,9 +30,9 @@ very simple: 37
 
 Laplacian
 pocet vybranych: 1000
-[('2-gram_freq_strings', 999), ('1-gram_bin_hex', 1)]
-simple: 1
-very simple: 1
+[('2-gram_freq_strings', 995), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1)]
+simple: 5
+very simple: 5
 
 RFC
 pocet vybranych: 1000

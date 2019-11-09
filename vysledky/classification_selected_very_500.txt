@@ -301,42 +301,42 @@ cas: 0:00:21.064088
 
 Gini: 500
 XGBoost
-najlepsi priemer: 0.9728762
-index najlepsieho: 49
-najhorsi priemer: 0.8994565
-finalny priemer: 0.9728762
-cas: 0:00:13.751025
+najlepsi priemer: 0.9718558
+index najlepsieho: 44
+najhorsi priemer: 0.8943762
+finalny priemer: 0.9708031
+cas: 0:00:14.281151
 
 
 LGBM GOSS
-najlepsi priemer: 0.9823615360085401
-index najlepsieho: 68
-najhorsi priemer: 0.92646877958297
-finalny priemer: 0.9812977062213061
-cas: 0:00:07.547445
+najlepsi priemer: 0.9823503378002535
+index najlepsieho: 39
+najhorsi priemer: 0.9296691907524813
+finalny priemer: 0.9792891133104575
+cas: 0:00:09.062443
 
 
 LGBM
-najlepsi priemer: 0.9792568898947754
-index najlepsieho: 30
-najhorsi priemer: 0.92646877958297
-finalny priemer: 0.9791910718542334
-cas: 0:00:09.719484
+najlepsi priemer: 0.9812658937066908
+index najlepsieho: 73
+najhorsi priemer: 0.9296691907524813
+finalny priemer: 0.9812658937066908
+cas: 0:00:11.939852
 
 
 RGF
-priemerny vysledok: 0.9794375318419472
-cas: 0:00:51.003848
+priemerny vysledok: 0.9825103654410965
+cas: 0:01:10.401970
 
 
 RGF_Opt
-priemerny vysledok: 0.982585119425625
-cas: 0:00:53.925943
+priemerny vysledok: 0.9846053214458269
+cas: 0:01:20.614454
 
 
 RFC
-priemerny vysledok: 0.9474800265753466
-cas: 0:00:20.907827
+priemerny vysledok: 0.9484897025482038
+cas: 0:00:21.359242
 
 
 ------------------------------------------------------------
@@ -387,42 +387,42 @@ cas: 0:00:21.095342
 
 Laplacian: 500
 XGBoost
-najlepsi priemer: 0.9729187
-index najlepsieho: 60
-najhorsi priemer: 0.8983398
-finalny priemer: 0.9729187
-cas: 0:00:13.782277
+najlepsi priemer: 0.9728762
+index najlepsieho: 52
+najhorsi priemer: 0.8983717999999999
+finalny priemer: 0.9728762
+cas: 0:00:13.703029
 
 
 LGBM GOSS
-najlepsi priemer: 0.9822966090231204
-index najlepsieho: 95
-najhorsi priemer: 0.9285286406242064
-finalny priemer: 0.9812865080130194
-cas: 0:00:06.766135
+najlepsi priemer: 0.9802772980580408
+index najlepsieho: 50
+najhorsi priemer: 0.9265538407206627
+finalny priemer: 0.9802772980580408
+cas: 0:00:07.312454
 
 
 LGBM
-najlepsi priemer: 0.9772142914580001
-index najlepsieho: 63
-najhorsi priemer: 0.9285286406242064
-finalny priemer: 0.9772142914580001
-cas: 0:00:08.828792
+najlepsi priemer: 0.9802660998497541
+index najlepsieho: 66
+najhorsi priemer: 0.9265538407206627
+finalny priemer: 0.9802660998497541
+cas: 0:00:09.353084
 
 
 RGF
-priemerny vysledok: 0.979459448104465
-cas: 0:00:51.128857
+priemerny vysledok: 0.9795122858264755
+cas: 0:00:50.401074
 
 
 RGF_Opt
 priemerny vysledok: 0.982585119425625
-cas: 0:00:53.925943
+cas: 0:00:53.062169
 
 
 RFC
-priemerny vysledok: 0.9465131346705924
-cas: 0:00:20.860949
+priemerny vysledok: 0.949542546645773
+cas: 0:00:20.671746
 
 
 ------------------------------------------------------------
@@ -1407,28 +1407,28 @@ cas: 0:00:51.628502
 
 Gini: 500
 RBF SVC
-priemerny vysledok: 0.9176043395931348
-cas: 0:00:02.640817
+priemerny vysledok: 0.9063127849172968
+cas: 0:00:02.562483
 
 
 linear SVC [libsvm]
-priemerny vysledok: 0.9516684241099963
-cas: 0:00:01.406356
+priemerny vysledok: 0.9548267156117282
+cas: 0:00:01.359368
 
 
 sigmoid SVC
-priemerny vysledok: 0.9082892976780965
-cas: 0:00:02.172039
+priemerny vysledok: 0.9113424631428514
+cas: 0:00:02.249986
 
 
 SGD SVC
-priemerny vysledok: 0.9455128606596
-cas: 0:00:01.109855
+priemerny vysledok: 0.9476729137598409
+cas: 0:00:01.109368
 
 
 linear SVC [liblinear]
-priemerny vysledok: 0.9183677822330771
-cas: 0:00:34.908487
+priemerny vysledok: 0.8887565105157177
+cas: 0:00:42.765358
 
 
 ------------------------------------------------------------
@@ -1465,28 +1465,28 @@ cas: 0:00:41.583144
 
 Laplacian: 500
 RBF SVC
-priemerny vysledok: 0.9135110978307202
-cas: 0:00:02.703919
+priemerny vysledok: 0.915594657244719
+cas: 0:00:02.656226
 
 
 linear SVC [libsvm]
-priemerny vysledok: 0.952668217966933
-cas: 0:00:01.392580
+priemerny vysledok: 0.95162589354115
+cas: 0:00:01.406241
 
 
 sigmoid SVC
-priemerny vysledok: 0.8969032657665239
-cas: 0:00:02.218831
+priemerny vysledok: 0.9093316221038795
+cas: 0:00:02.187487
 
 
 SGD SVC
-priemerny vysledok: 0.9476284309706591
-cas: 0:00:01.178427
+priemerny vysledok: 0.9538374555627548
+cas: 0:00:01.094133
 
 
 linear SVC [liblinear]
-priemerny vysledok: 0.9164109234704949
-cas: 0:00:36.087361
+priemerny vysledok: 0.9195374858467774
+cas: 0:00:36.197063
 
 
 ------------------------------------------------------------

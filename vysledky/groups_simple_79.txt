@@ -36,9 +36,9 @@ very simple: 4
 
 Gini
 pocet vybranych: 79
-[('1-gram_opcodes', 78), ('1-gram_bin_hex', 1)]
+[('2-gram_bin_strings', 34), ('1-gram_bin_strings', 25), ('import_funcs', 9), ('sections', 6), ('import_libs', 4), ('metadata', 1)]
 simple: 79
-very simple: 1
+very simple: 11
 
 HSIC_Lasso
 pocet vybranych: 19
@@ -66,9 +66,9 @@ very simple: 26
 
 Laplacian
 pocet vybranych: 79
-[('1-gram_opcodes', 78), ('1-gram_bin_hex', 1)]
+[('1-gram_opcodes', 74), ('sections', 3), ('metadata', 1), ('1-gram_bin_hex', 1)]
 simple: 79
-very simple: 1
+very simple: 5
 
 MIFS
 pocet vybranych: 79

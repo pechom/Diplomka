@@ -36,7 +36,7 @@ very simple: 500
 
 Gini
 pocet vybranych: 500
-[('2-gram_char_freq_strings', 89), ('1-gram_reg', 73), ('1-gram_char_bin_strings', 65), ('1-gram_freq_reg', 51), ('sections', 47), ('import_libs', 37), ('strings', 34), ('1-gram_char_freq_strings', 31), ('1-gram_bin_hex', 21), ('resources', 18), ('metadata', 10), ('sizes', 7), ('2-gram_char_bin_strings', 6), ('instructions', 6), ('overlay', 3), ('export', 1), ('file_entropy', 1)]
+[('1-gram_char_freq_strings', 94), ('1-gram_char_bin_strings', 94), ('1-gram_freq_reg', 84), ('1-gram_reg', 47), ('sections', 43), ('strings', 31), ('import_libs', 25), ('2-gram_char_freq_strings', 17), ('resources', 15), ('1-gram_bin_hex', 11), ('metadata', 9), ('sizes', 7), ('1-gram_dis_hex', 7), ('2-gram_char_bin_strings', 6), ('instructions', 6), ('overlay', 3), ('file_entropy', 1)]
 simple: 500
 very simple: 500
 
@@ -60,7 +60,7 @@ very simple: 500
 
 Laplacian
 pocet vybranych: 500
-[('2-gram_char_freq_strings', 89), ('1-gram_reg', 73), ('1-gram_char_bin_strings', 66), ('1-gram_freq_reg', 55), ('sections', 40), ('import_libs', 37), ('strings', 35), ('1-gram_char_freq_strings', 28), ('1-gram_bin_hex', 26), ('resources', 18), ('metadata', 9), ('sizes', 7), ('2-gram_char_bin_strings', 6), ('instructions', 6), ('overlay', 3), ('export', 1), ('file_entropy', 1)]
+[('2-gram_char_freq_strings', 89), ('1-gram_reg', 73), ('1-gram_char_bin_strings', 66), ('1-gram_freq_reg', 53), ('sections', 43), ('import_libs', 37), ('strings', 35), ('1-gram_char_freq_strings', 28), ('1-gram_bin_hex', 24), ('resources', 18), ('metadata', 10), ('sizes', 7), ('2-gram_char_bin_strings', 6), ('instructions', 6), ('overlay', 3), ('export', 1), ('file_entropy', 1)]
 simple: 500
 very simple: 500
 
