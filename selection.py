@@ -395,7 +395,7 @@ def HSIC_lasso(treshold):
     hsic = HSICLasso()
     hsic.input(data, labels)
     before = datetime.datetime.now()
-    hsic.classification(treshold, B=0, M=1)
+    hsic.classification(num_feat=treshold, B=0, M=1, max_neighbors=10, discrete_x=False)
     # B a M su na postupne nacitanie ak mam velky dataset, B deli pocet vzoriek, pre klasicky algoritmus B=0, M=1
     after = datetime.datetime.now()
     print("HSIC Lasso")
@@ -460,11 +460,11 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 76
+treshold = 85
 
 # cfs()
 # fcbf()
-# HSIC_lasso(treshold)
+HSIC_lasso(treshold)
 #
 # for_small_data()
 # for_big_data()
