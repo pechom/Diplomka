@@ -1,0 +1,23 @@
+vsetky data: 486136
+
+
+RFC
+priemerny vysledok: 0.9564233055032227
+cas: 0:08:32.559302
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9663424401125522
+cas: 0:47:13.115804
+
+
+SGD SVC
+priemerny vysledok: 0.9562766677552851
+cas: 0:08:31.278059
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9651447056464518
+cas: 0:30:15.644923
+
+

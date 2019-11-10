@@ -16,9 +16,9 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
-labels_path = 'subory/clear_labels2_head.csv'
+feature_path = 'features/very_simple.csv'
+standard_feature_path = 'features/standard/very_simple.csv'
+labels_path = 'subory/cluster_labels2.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
 warnings.filterwarnings("ignore")
@@ -263,8 +263,9 @@ def SVM(data, label, kernel, message):
 
 
 def run_methods():
-    sys.stdout = open('vysledky/classification_times.txt', 'w')
+    sys.stdout = open('cluster_vysledky/classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset !!!
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     print("vsetky data: " + str(len(data[0])))
     print('\n')
@@ -282,27 +283,19 @@ def run_methods():
     LSVC(standard_data, labels)
 
 
-def check_cluster_labels():
-    labels = np.loadtxt("stare subory/cluster_labels.txt", delimiter=',', skiprows=1, dtype=np.int8)
+def create_original_labels_for_cluster_dataset():
+    cluster_labels = np.loadtxt("stare subory/cluster_labels.txt", delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
-    for i in range(len(labels)):
-        if labels[i] == -1:
+    for i in range(len(cluster_labels)):
+        if cluster_labels[i] == -1:
             to_delete.append(i)
-    # labels = np.delete(labels, to_delete)
-    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    labels = np.loadtxt('subory/clear_labels2_head.csv', delimiter=',', skiprows=1, dtype=np.uint8)
     labels = np.delete(labels, to_delete)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-    data = np.delete(data, to_delete, axis=0)
-    LGBM(data, labels)
-    LGBM_goss(data, labels)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    standard_data = np.delete(standard_data, to_delete, axis=0)
-    SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
-    LSVC(standard_data, labels)
+    return labels
 
 
 def check_selections():
-    sys.stdout = open('vysledky/classification_selected.txt', 'w')
+    sys.stdout = open('cluster_vysledky/classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     for file in files:
@@ -351,5 +344,5 @@ def check_selections():
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
     # run_methods()
-    # check_selections()
+    check_selections()
 sys.stdout.close()

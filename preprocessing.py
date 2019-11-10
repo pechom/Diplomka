@@ -179,14 +179,13 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
                 writer.writerows([i] for i in data)
 
 
-def create_dataset_from_clusters(input_dir, output_dir, clusters_file, labels_file, new_labels_file, type):
+def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_labels_file, type):
     cluster_labels = np.loadtxt(clusters_file, delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
     for i in range(len(cluster_labels)):
         if cluster_labels[i] == -1:  # outlier
             to_delete.append(i)
-    labels = np.loadtxt(labels_file, delimiter=',', skiprows=1, dtype=np.uint8)
-    labels = np.delete(labels, to_delete)
+    labels = np.delete(cluster_labels, to_delete)
     with open(new_labels_file, "w", newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerows(([i] for i in labels))
@@ -229,7 +228,7 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, labels_fi
 
 # robim dodatocne lebo som uz mal urobene vsetko pred tym
 # create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
-#                              labels_path, clear_cluster_labels_path, np.uint64)
+#                              clear_cluster_labels_path, np.uint64)
 #
 # create_dataset_from_clusters(standard_dir+'*', cluster_standard_dir, cluster_labels_path,
-#                              labels_path, clear_cluster_labels_path, np.float64)
+#                              clear_cluster_labels_path, np.float64)

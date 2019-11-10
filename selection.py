@@ -19,12 +19,12 @@ import sys
 import glob
 import os
 
-feature_path = 'features/very_simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
-labels_path = 'subory/clear_labels2_head.csv'
+feature_path = 'features/original.csv'
+standard_feature_path = 'features/standard/original.csv'
+labels_path = 'subory/cluster_labels2.csv'
 output_dir = 'features/selection/'
 
-sys.stdout = open('vysledky/selection_times.txt', 'w')
+sys.stdout = open('cluster_vysledky/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
@@ -460,19 +460,19 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 79
+treshold = 500
 
 # fcbf()
 # HSIC_lasso(treshold)
 #
 # for_small_data()
-# for_big_data()
+for_big_data()
 #
-# output_dir = 'features/selection_standard/'
-# header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
-# data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+output_dir = 'features/selection_standard/'
+header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
+data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
 #
-# svm_big_data()
+svm_big_data()
 # LSVC_l2()
 
 # select_best_n(79, output_dir, "features/best_n/")
