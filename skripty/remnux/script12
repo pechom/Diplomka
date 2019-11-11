@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for i in ; do
+   trues=$(grep -o true $i  wc -l)  
+   falses=$(grep -o false $i  wc -l)  
+   if [ $falses -gt $trues ]
+    then
+         rm $i
+    fi
+done

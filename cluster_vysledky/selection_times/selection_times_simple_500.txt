@@ -1,0 +1,93 @@
+pocet atributov: 5567
+
+
+Chi-square
+500
+cas: 0:00:00.015633
+
+
+Mutual information
+500
+cas: 0:00:03.187481
+
+
+ANOVA F-score
+500
+cas: 0:00:00.046881
+
+
+Gini
+500
+cas: 0:01:34.304677
+
+
+Fisher
+500
+cas: 0:00:00.296864
+
+
+Laplacian
+500
+cas: 0:00:00.515612
+
+
+SPEC
+500
+cas: 0:00:22.609225
+
+
+relieff
+500
+cas: 0:00:09.015569
+
+
+XGBoost gain
+500
+cas: 0:00:11.484294
+
+
+XGBoost split
+500
+cas: 0:00:11.669535
+
+
+LGBM split
+500
+cas: 0:00:13.078559
+
+
+LGBM gain
+500
+cas: 0:00:13.078043
+
+
+RFC
+500
+cas: 0:00:01.249992
+
+
+SVC L1
+500
+cas: 0:00:05.757138
+
+
+SGD L1
+500
+cas: 0:00:00.429772
+
+
+SGD L2
+500
+cas: 0:00:00.128716
+
+
+SGD elasticnet
+500
+cas: 0:00:00.429580
+
+
+SVM linear
+500
+cas: 0:00:01.515616
+
+

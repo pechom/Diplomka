@@ -1,5 +1,10 @@
 #!/bin/bash
 
+sed -r -i 's/.{32}//' entropy.csv
+sed -i 's/"//g' entropy.csv
+awk -F ',' '{print $1, $NF}' entropy.csv > entropy
+dos2unix entropy
+
 prah=6.66
 while read p; do
   entropia=$(echo "$p" | awk '{print $2}')
