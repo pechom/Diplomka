@@ -1,0 +1,108 @@
+ANOVA_F-score
+pocet vybranych: 1000
+[('2-gram_freq_opcodes', 333), ('2-gram_freq_strings', 303), ('1-gram_freq_strings', 157), ('2-gram_bin_strings', 36), ('2-gram_reg', 33), ('1-gram_bin_strings', 29), ('2-gram_freq_hex', 21), ('2-gram_freq_reg', 21), ('import_funcs', 18), ('2-gram_normal_freq_dis_hex', 12), ('1-gram_opcodes', 11), ('1-gram_freq_opcodes', 7), ('2-gram_opcodes', 7), ('2-gram_freq_dis_hex', 6), ('sections', 2), ('1-gram_reg', 1), ('2-gram_char_bin_strings', 1), ('2-gram_char_freq_strings', 1), ('import_libs', 1)]
+simple: 107
+very simple: 6
+
+Fisher
+pocet vybranych: 1000
+[('2-gram_freq_opcodes', 333), ('2-gram_freq_strings', 303), ('1-gram_freq_strings', 157), ('2-gram_bin_strings', 36), ('2-gram_reg', 33), ('1-gram_bin_strings', 29), ('2-gram_freq_hex', 21), ('2-gram_freq_reg', 21), ('import_funcs', 18), ('2-gram_normal_freq_dis_hex', 12), ('1-gram_opcodes', 11), ('2-gram_opcodes', 7), ('1-gram_freq_opcodes', 7), ('2-gram_freq_dis_hex', 6), ('sections', 2), ('2-gram_char_bin_strings', 1), ('2-gram_char_freq_strings', 1), ('1-gram_reg', 1), ('import_libs', 1)]
+simple: 107
+very simple: 6
+
+Gini
+pocet vybranych: 1000
+[('2-gram_freq_strings', 380), ('1-gram_freq_strings', 235), ('2-gram_freq_opcodes', 102), ('2-gram_freq_hex', 47), ('2-gram_normal_freq_hex', 47), ('2-gram_bin_strings', 39), ('1-gram_bin_strings', 37), ('2-gram_freq_dis_hex', 27), ('2-gram_normal_freq_dis_hex', 27), ('import_funcs', 23), ('2-gram_opcodes', 13), ('sections', 12), ('import_libs', 6), ('disassembled', 2), ('metadata', 1), ('1-gram_freq_opcodes', 1), ('2-gram_freq_reg', 1)]
+simple: 121
+very simple: 19
+
+LGBM gain
+pocet vybranych: 1000
+[('2-gram_freq_hex', 212), ('2-gram_freq_opcodes', 141), ('2-gram_freq_dis_hex', 134), ('2-gram_bin_hex', 107), ('2-gram_normal_freq_hex', 68), ('2-gram_dis_hex', 64), ('byte_entropy_histogram', 40), ('2-gram_freq_reg', 32), ('2-gram_normal_freq_dis_hex', 29), ('1-gram_bin_strings', 26), ('1-gram_freq_dis_hex', 24), ('1-gram_freq_hex', 18), ('1-gram_freq_opcodes', 17), ('1-gram_freq_strings', 14), ('1-gram_normal_freq_dis_hex', 11), ('1-gram_normal_freq_hex', 10), ('sections', 10), ('1-gram_freq_reg', 8), ('disassembled', 6), ('import_funcs', 5), ('import_libs', 5), ('strings', 4), ('2-gram_freq_strings', 3), ('1-gram_bin_hex', 2), ('instructions', 2), ('metadata', 2), ('overlay', 2), ('1-gram_char_freq_strings', 1), ('2-gram_bin_strings', 1), ('2-gram_opcodes', 1), ('sizes', 1)]
+simple: 195
+very simple: 37
+
+LGBM split
+pocet vybranych: 1000
+[('2-gram_freq_dis_hex', 174), ('2-gram_freq_hex', 159), ('2-gram_bin_hex', 148), ('2-gram_freq_opcodes', 131), ('2-gram_dis_hex', 80), ('1-gram_freq_dis_hex', 43), ('byte_entropy_histogram', 36), ('2-gram_freq_reg', 31), ('1-gram_freq_opcodes', 30), ('1-gram_freq_hex', 26), ('1-gram_bin_strings', 22), ('2-gram_normal_freq_hex', 22), ('1-gram_freq_strings', 12), ('1-gram_normal_freq_hex', 10), ('2-gram_normal_freq_dis_hex', 10), ('sections', 10), ('1-gram_freq_reg', 9), ('1-gram_normal_freq_dis_hex', 6), ('import_funcs', 5), ('import_libs', 5), ('1-gram_bin_hex', 4), ('disassembled', 4), ('strings', 4), ('2-gram_bin_strings', 3), ('2-gram_freq_strings', 3), ('metadata', 3), ('1-gram_char_freq_strings', 2), ('instructions', 2), ('overlay', 2), ('sizes', 2), ('file_entropy', 1), ('resources', 1)]
+simple: 230
+very simple: 45
+
+Laplacian
+pocet vybranych: 1000
+[('2-gram_freq_strings', 997), ('sections', 2), ('1-gram_bin_hex', 1)]
+simple: 3
+very simple: 3
+
+RFC
+pocet vybranych: 1000
+[('2-gram_freq_strings', 248), ('1-gram_freq_strings', 165), ('2-gram_freq_hex', 112), ('2-gram_normal_freq_hex', 104), ('2-gram_freq_opcodes', 102), ('2-gram_freq_dis_hex', 56), ('2-gram_normal_freq_dis_hex', 47), ('1-gram_bin_strings', 31), ('2-gram_opcodes', 24), ('2-gram_bin_hex', 22), ('2-gram_bin_strings', 18), ('import_funcs', 18), ('2-gram_freq_reg', 10), ('byte_entropy_histogram', 8), ('sections', 6), ('import_libs', 5), ('1-gram_freq_opcodes', 4), ('1-gram_normal_freq_hex', 4), ('1-gram_freq_dis_hex', 3), ('1-gram_normal_freq_dis_hex', 3), ('1-gram_freq_hex', 2), ('2-gram_dis_hex', 2), ('disassembled', 2), ('metadata', 2), ('1-gram_freq_reg', 1), ('instructions', 1)]
+simple: 108
+very simple: 15
+
+ReliefF
+pocet vybranych: 1000
+[('2-gram_normal_freq_hex', 417), ('1-gram_normal_freq_hex', 256), ('1-gram_normal_freq_dis_hex', 256), ('2-gram_normal_freq_dis_hex', 70), ('sections', 1)]
+simple: 513
+very simple: 1
+
+SGD_L1
+pocet vybranych: 1000
+[('2-gram_freq_opcodes', 197), ('2-gram_freq_strings', 139), ('2-gram_bin_hex', 106), ('1-gram_freq_strings', 104), ('2-gram_freq_hex', 104), ('2-gram_freq_dis_hex', 93), ('2-gram_opcodes', 75), ('1-gram_bin_strings', 41), ('2-gram_normal_freq_hex', 25), ('2-gram_dis_hex', 22), ('2-gram_bin_strings', 19), ('2-gram_reg', 17), ('1-gram_opcodes', 8), ('2-gram_freq_reg', 8), ('2-gram_normal_freq_dis_hex', 8), ('1-gram_dis_hex', 7), ('import_funcs', 7), ('1-gram_bin_hex', 6), ('1-gram_freq_opcodes', 6), ('1-gram_freq_reg', 1), ('1-gram_normal_freq_dis_hex', 1), ('1-gram_reg', 1), ('disassembled', 1), ('import_libs', 1), ('metadata', 1), ('resources', 1), ('sections', 1)]
+simple: 102
+very simple: 19
+
+SGD_L2
+pocet vybranych: 1000
+[('2-gram_freq_opcodes', 220), ('2-gram_freq_strings', 139), ('2-gram_freq_hex', 132), ('2-gram_freq_dis_hex', 114), ('1-gram_freq_strings', 102), ('2-gram_bin_hex', 76), ('2-gram_opcodes', 56), ('1-gram_bin_strings', 37), ('2-gram_bin_strings', 19), ('2-gram_normal_freq_hex', 18), ('2-gram_dis_hex', 14), ('1-gram_dis_hex', 10), ('1-gram_opcodes', 10), ('2-gram_reg', 9), ('1-gram_bin_hex', 8), ('2-gram_freq_reg', 7), ('1-gram_freq_opcodes', 5), ('1-gram_normal_freq_dis_hex', 5), ('2-gram_normal_freq_dis_hex', 5), ('import_funcs', 3), ('1-gram_normal_freq_hex', 2), ('1-gram_reg', 2), ('sizes', 2), ('1-gram_freq_reg', 1), ('disassembled', 1), ('import_libs', 1), ('metadata', 1), ('sections', 1)]
+simple: 108
+very simple: 26
+
+SGD_elasticnet
+pocet vybranych: 1000
+[('2-gram_freq_opcodes', 206), ('2-gram_freq_strings', 139), ('2-gram_freq_hex', 125), ('2-gram_freq_dis_hex', 107), ('1-gram_freq_strings', 105), ('2-gram_bin_hex', 85), ('2-gram_opcodes', 64), ('1-gram_bin_strings', 39), ('2-gram_bin_strings', 19), ('2-gram_normal_freq_hex', 14), ('1-gram_bin_hex', 12), ('1-gram_dis_hex', 11), ('2-gram_reg', 11), ('1-gram_opcodes', 10), ('2-gram_dis_hex', 10), ('2-gram_freq_reg', 9), ('1-gram_normal_freq_dis_hex', 7), ('import_funcs', 6), ('1-gram_freq_opcodes', 5), ('2-gram_normal_freq_dis_hex', 5), ('1-gram_normal_freq_hex', 3), ('1-gram_reg', 2), ('disassembled', 2), ('1-gram_freq_reg', 1), ('import_libs', 1), ('metadata', 1), ('sections', 1)]
+simple: 120
+very simple: 29
+
+SPEC
+pocet vybranych: 1000
+[('2-gram_freq_dis_hex', 999), ('strings', 1)]
+simple: 1
+very simple: 1
+
+SVC_L1
+pocet vybranych: 1000
+[('2-gram_bin_hex', 314), ('2-gram_dis_hex', 113), ('1-gram_freq_strings', 103), ('2-gram_freq_opcodes', 82), ('2-gram_opcodes', 75), ('2-gram_freq_strings', 67), ('2-gram_freq_hex', 41), ('2-gram_reg', 37), ('2-gram_freq_dis_hex', 30), ('2-gram_normal_freq_hex', 29), ('import_funcs', 20), ('2-gram_normal_freq_dis_hex', 15), ('1-gram_bin_strings', 14), ('1-gram_opcodes', 11), ('import_libs', 7), ('1-gram_freq_opcodes', 5), ('2-gram_freq_reg', 5), ('1-gram_bin_hex', 4), ('1-gram_dis_hex', 4), ('1-gram_normal_freq_hex', 4), ('byte_entropy_histogram', 4), ('1-gram_reg', 3), ('2-gram_char_freq_strings', 3), ('1-gram_normal_freq_dis_hex', 2), ('sizes', 2), ('1-gram_freq_reg', 1), ('2-gram_bin_strings', 1), ('export', 1), ('file_entropy', 1), ('resources', 1), ('strings', 1)]
+simple: 89
+very simple: 28
+
+SVM
+pocet vybranych: 1000
+[('1-gram_normal_freq_hex', 201), ('2-gram_normal_freq_hex', 192), ('1-gram_normal_freq_dis_hex', 139), ('2-gram_bin_hex', 114), ('1-gram_opcodes', 74), ('2-gram_opcodes', 61), ('2-gram_reg', 55), ('1-gram_dis_hex', 45), ('1-gram_bin_hex', 44), ('2-gram_dis_hex', 27), ('2-gram_normal_freq_dis_hex', 14), ('import_funcs', 14), ('1-gram_reg', 8), ('2-gram_bin_strings', 5), ('1-gram_bin_strings', 2), ('disassembled', 2), ('2-gram_freq_hex', 1), ('file_entropy', 1), ('import_libs', 1)]
+simple: 536
+very simple: 99
+
+XGBoost gain
+pocet vybranych: 1000
+[('1-gram_bin_strings', 706), ('1-gram_bin_hex', 65), ('2-gram_freq_hex', 59), ('2-gram_freq_opcodes', 37), ('2-gram_bin_hex', 35), ('2-gram_freq_dis_hex', 23), ('2-gram_freq_reg', 12), ('2-gram_dis_hex', 10), ('byte_entropy_histogram', 8), ('1-gram_freq_opcodes', 7), ('1-gram_freq_dis_hex', 6), ('1-gram_freq_hex', 5), ('1-gram_freq_strings', 5), ('disassembled', 4), ('sections', 4), ('1-gram_freq_reg', 2), ('2-gram_bin_strings', 2), ('import_libs', 2), ('metadata', 2), ('1-gram_char_freq_strings', 1), ('2-gram_freq_strings', 1), ('import_funcs', 1), ('instructions', 1), ('overlay', 1), ('strings', 1)]
+simple: 818
+very simple: 79
+
+XGBoost split
+pocet vybranych: 1000
+[('1-gram_bin_strings', 706), ('1-gram_bin_hex', 65), ('2-gram_freq_hex', 59), ('2-gram_freq_opcodes', 37), ('2-gram_bin_hex', 35), ('2-gram_freq_dis_hex', 23), ('2-gram_freq_reg', 12), ('2-gram_dis_hex', 10), ('byte_entropy_histogram', 8), ('1-gram_freq_opcodes', 7), ('1-gram_freq_dis_hex', 6), ('1-gram_freq_hex', 5), ('1-gram_freq_strings', 5), ('disassembled', 4), ('sections', 4), ('1-gram_freq_reg', 2), ('2-gram_bin_strings', 2), ('import_libs', 2), ('metadata', 2), ('1-gram_char_freq_strings', 1), ('2-gram_freq_strings', 1), ('import_funcs', 1), ('instructions', 1), ('overlay', 1), ('strings', 1)]
+simple: 818
+very simple: 79
+
+chi-square
+pocet vybranych: 1000
+[('2-gram_normal_freq_hex', 924), ('byte_entropy_histogram', 30), ('sections', 20), ('metadata', 6), ('sizes', 6), ('instructions', 5), ('overlay', 3), ('strings', 2), ('1-gram_freq_hex', 1), ('1-gram_freq_reg', 1), ('2-gram_freq_hex', 1), ('disassembled', 1)]
+simple: 75
+very simple: 43
+
+mutual_info
+pocet vybranych: 1000
+[('1-gram_freq_hex', 216), ('1-gram_normal_freq_hex', 195), ('1-gram_freq_dis_hex', 170), ('byte_entropy_histogram', 122), ('2-gram_freq_reg', 77), ('1-gram_normal_freq_dis_hex', 46), ('1-gram_freq_opcodes', 38), ('disassembled', 25), ('1-gram_freq_reg', 22), ('2-gram_freq_hex', 20), ('2-gram_normal_freq_hex', 19), ('sections', 9), ('2-gram_freq_opcodes', 7), ('sizes', 7), ('2-gram_freq_dis_hex', 6), ('instructions', 6), ('2-gram_normal_freq_dis_hex', 5), ('strings', 5), ('metadata', 4), ('file_entropy', 1)]
+simple: 866
+very simple: 54
+
