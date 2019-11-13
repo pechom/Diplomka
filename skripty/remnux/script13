@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd /home/remnux/Downloads/malware/reports/
+
+SUM=0
+for i in *; do
+   packed=$(grep -i 'pack\|obfuscat' "$i" | wc -l)  
+   if [ "$packed" -gt 0 ]
+    then
+         ((SUM++))
+    fi
+done
+
+echo "$SUM"

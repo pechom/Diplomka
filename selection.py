@@ -21,10 +21,10 @@ import os
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels2.csv'
+labels_path = 'subory/clear_labels_head.csv'
 output_dir = 'features/selection/'
 
-sys.stdout = open('cluster_vysledky/selection_times.txt', 'w')
+sys.stdout = open('new_vysledky/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
