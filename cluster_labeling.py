@@ -1,12 +1,12 @@
-import Levenshtein
 import numpy as np
 import hdbscan
+import Levenshtein
 import csv
 import collections
 import pprint
 import matplotlib.pyplot as plt
 
-input = open("stare subory/long_names.txt", "r")
+input = open("stare subory/long_names2.txt", "r")
 
 list1 = input.readlines()
 input.close()
@@ -31,7 +31,7 @@ def same_groups(input_list):
 
 def levenshtein_matrix(input_list):
     matrix = np.zeros([len(input_list), len(input_list)], dtype=np.uint32)
-    with open("stare subory/levenshtein_matrix.txt", "w", newline='') as output:
+    with open("stare subory/levenshtein_matrix2.txt", "w", newline='') as output:
         for i in range(len(input_list)):
             for j in range(len(input_list)):
                 matrix[i, j] = Levenshtein.distance(input_list[i], input_list[j])
@@ -40,23 +40,23 @@ def levenshtein_matrix(input_list):
 
 
 def clustering():
-    distance_matrix = np.loadtxt("stare subory/levenshtein_matrix.txt", delimiter=',', dtype=np.float64)
+    distance_matrix = np.loadtxt("stare subory/levenshtein_matrix2.txt", delimiter=',', dtype=np.float64)
     clusterer = hdbscan.HDBSCAN(algorithm='best', alpha=1.0, approx_min_span_tree=True,
                                 gen_min_span_tree=False, leaf_size=40, metric='precomputed',
-                                min_cluster_size=86, min_samples=1, p=None)
+                                min_cluster_size=181, min_samples=1, p=None)
     clusterer.fit(distance_matrix)
     c = collections.Counter(clusterer.labels_)
     pprint.pprint(c.most_common(len(c)))
     print(clusterer.labels_.max())
-    with open("stare subory/cluster_labels.txt", "w", newline='') as output:
+    with open("subory/cluster_labels.txt", "w", newline='') as output:
         output.write("class" + '\n')
         for label in clusterer.labels_:
             output.write(str(label)+'\n')
-    # clusterer.condensed_tree_.plot(select_clusters=True)
-    # plt.show()
-    # plt.savefig('stare subory/dendogram.png')
+    clusterer.condensed_tree_.plot(select_clusters=True)
+    plt.show()
+    plt.savefig('stare subory/dendogram2.png')
 
 
 # levenshtein_matrix(list1)
 # same_groups(list1)
-# clustering()
+clustering()

@@ -1,0 +1,1559 @@
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.m#ransom-wannacry!6edda5a4379f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!509c41ec97bb#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!af1a704a60a5#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!1e028f0209a3#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!dd30e7e7dd84#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!1b21c2374e4a#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!c2ca58f5d40d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a232702039c1#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5a9f91b0a546#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#artemis!e2a4d07f9b1a#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5487d40c501a#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!f7cc67f3eed3#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#artemis!8ebdd0b677b9#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.m#ransom-wannacry!7821967dbb57#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!35167d9abbc8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!246c2781b88f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!1905b6adea11#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!d13e2f924836#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!122622226ba8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!71b32f0c2986#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!ded2db5c2fa5#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!10f262273180#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#w32/virut.n.gen#win32/virut.nbp#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!4fbf97bbcbdf#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#artemis!2e2a8d231114#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!93ec4fc9b097#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!e2e35b2bbd20#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!bcc7e19b7c4f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!33e8522a14e6#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!70a4f07c3b38#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!409f8ad1044d#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!063097f3dd9c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a3b70aa650ba#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!0c0e83a6a5a6#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ea52ea12859d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ac3b0d920321#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!481369bee245#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+uds:dangerousobject.multi.generic#artemis!1cf902e104d7#a variant of msil/injector.nqo#gen:variant.ransom.wannacryptor.36
+trojan-ransom.win32.zapchast.i#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.g
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e32a1d2a8d5d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!3e7351a2ca06#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!6a614701be96#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!64cccc47aec9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7bbc5b449b40#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!edbc7cb93914#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!6208c7bac8f9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!d0cd195146e6#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!d378f331856e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!b775f07bb7d4#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!3715ddcb687d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!dbfaa85cb030#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!98706c2be70e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f8782639545b#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!d2dd0f478464#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!f29bdac92fc1#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!edf5da738b49#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!632fa9da2987#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!50a498a404cf#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f9a032dc26aa#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!921229e0f117#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.agent.iyo#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.g
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!d6fc1208cb9f#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!7294559e8252#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!9028d298af26#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!ffbace29db25#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!45ba11cce3e4#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!ef527c9dab75#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!5d20f4655faf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#artemis!73329e7cd0f4#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury!8aec76a6b499#a variant of win32/trojandropper.addrop.bu#gen:variant.zusy.236660
+not-a-virus:heur:adware.win32.linkury.gen#artemis!8d96c873d4f2#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#artemis!4dc46d595009#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan-ransom.win32.wanna.m#ransom-wannacry!6c8e4418425a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.alwi#ransomware-gco!0bde638b274c#a variant of msil/filecoder.il#trojan.generickd.5508211
+trojan-ransom.win32.wanna.m#ransom-wannacry!24751890c0f8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!0e2393207a89#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!07127d139f82#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!36ea6f44f742#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!532d7c5017cc#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!84d927d55d41#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!cb6debafb215#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!ce6741a0ba71#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!0312a1cdbf0d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!af1f034f2269#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!c01e90a893f1#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+trojan-ransom.win32.wanna.m#ransom-wannacry!7261fb10d518#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e11f0c085733#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!79a567e4aadc#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#artemis!707140c894eb#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!694fc8a78d8c#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!93730db845e0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!862acfd3e16b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!01b806c25db5#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!972276a12def#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!1fae3ba83a5f#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!64dcbd55a623#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!233a80bae0f9#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!58d919d2aa80#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!dda19d185d24#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!c2c839da5d62#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!8abd5b96648e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!21a5eacbd941#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!06906a9a6594#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!1f484ed49586#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!eeda40b73732#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+not-a-virus:heur:adware.win32.linkury.gen#artemis!d39f4461b046#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!6f42208cc9c9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!44ef4b07cbc4#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+virus.win32.virut.ce#w32/virut.n.gen#win32/virut.nbp#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5e5c3ef63d90#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!af4d72cd3138#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!05a00c320754#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!5d19165cbcf3#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!8896c0b68c84#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+trojan-ransom.win32.wanna.m#ransom-wannacry!376bc5bf5de0#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!b798dd50f44f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!bf61768d0dea#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!155a972f0b85#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!ec09759b5164#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!8213c832f8ad#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#pup-guk#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:adware.win32.linkury.fr#artemis!06c9ec94871c#a variant of win32/toolbar.linkury.ao potentially unwanted#gen:variant.adware.linkury.15
+trojan-ransom.win32.wanna.m#ransom-wannacry!b0623648c269#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!b133b7a2c37e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!e76e61dc97d0#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ce6905de70e0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!48505e1036ef#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.m#ransom-wannacry!3bbe81bfc395#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!770cfa45569b#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!ee0b7007f79d#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan-ransom.win32.wanna.m#ransom-wannacry!5ea123633970#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!a440cc24ac4c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!397856919b7b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.m#ransom-wannacry!4677f81c5dbf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!a27e97cc57bc#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!d2b34b0faa55#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!93bfecac006e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e5a0851a47ff#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ba5656dcb7a0#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!26807f6e421a#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!450f3b8f463e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.linkury.hm#pup-xcc-dk#a variant of win32/kryptik.fwpi#adware.agent.thv
+trojan-ransom.win32.wanna.m#ransom-wannacry!2b44c69dc76a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!562d403c2b26#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#artemis!650634f7841a#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+not-a-virus:heur:downloader.win32.generic#adware-linkury#a variant of win32/kryptik.fhgo#adware.downloader.by
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#artemis!bbdab8a18d4e#a variant of win32/packed.nsismod.ak suspicious#gen:variant.adware.linkury.13
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!2e67cecd2765#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.m#ransom-wannacry!b1c8a790bf46#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.m#ransom-wannacry!4cea8f5ae910#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!1afadb882b4f#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!2159cd0437b8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!98fda3bc87ae#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ffc9252988d5#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!78c82a90ed96#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!9b6b0de77c69#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!8f0df2651963#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!86f35a891a41#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!35ba27a6d3a8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!696684cf31e7#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!0c29c9309e9c#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!e924288fccfa#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bu#trojan.scriptkd.3787
+trojan-ransom.win32.wanna.m#ransom-wannacry!bb52913132f4#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5fdfbcc54eb3#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#artemis!d4bf1195545f#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#artemis!b7c861a93395#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of win32/kryptik.fxym#gen:variant.johnnie.24614
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!fa5a032ade0b#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!78f4850a4ebb#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.wanna.m#ransom-wannacry!e64c8b3a7060#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.cryptor.aok#ransom-locky!da4f7c7a9854#win32/filecoder.locky.l#trojan.ransom.locky.dm
+trojan-ransom.win32.wanna.m#ransom-wannacry!b9bfc6f1f2a9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!63e988a9a288#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan.win32.deshacop.cep#artemis!0bd5e76d91f6#win32/filecoder.locky.b#trojan.generickd.3156626
+trojan-ransom.win32.locky.xej#artemis!2729fc49c14a#a variant of win32/kryptik.fnit#trojan.generickd.4220102
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!77c0173c71e4#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.locky.aaos#rdn/generic.hbg#a variant of win32/injector.dsci#trojan.ransom.buk
+trojan-ransom.win32.locky.xwf#rdn/ransom#win32/filecoder.locky.l#trojan.agent.cmgk
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.locky.hj#ransomware-locky!605e3f083bce#a variant of win32/kryptik.epxh#gen:heur.locky.1
+trojan-ransom.win32.locky.yr#rdn/generic.tfr#a variant of win32/kryptik.exmu#trojan.generickd.3239662
+trojan-ransom.win32.locky.qe#ransomware-fet!ebffe6161177#a variant of win32/kryptik.eszz#trojan.generickd.3133207
+trojan-ransom.win32.locky.aasq#rdn/generic.grp#a variant of win32/kryptik.fxex#trojan.generickd.12440190
+trojan-ransom.win32.locky.xuv#ransomware-gdh!fe1cbc72c53a#a variant of win32/kryptik.fvqw#trojan.generickd.12153856
+trojan-ransom.win32.locky.xen#generic.abb#win32/filecoder.locky.c#trojan.generickd.4223500
+trojan.win32.crypt.egb#ransomware-fhb!acdd3885276e#win32/filecoder.locky.a#gen:heur.locky.1
+heur:trojan.win32.generic#genericrxad-vv!dfbcb56267bd#win32/filecoder.locky.c#gen:variant.zusy.200018
+trojan.win32.reconyc.ffqc#rdn/ransom#win32/filecoder.locky.a#trojan.generickd.3055612
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!537ca0e1453b#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#ransomware-fhi!18143d3e1616#win32/filecoder.locky.b#trojan.generickd.3144867
+trojan-ransom.win32.locky.aac#ransomware-fld!b86d81259e15#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+not-a-virus:heur:webtoolbar.win32.generic#artemis!937b78f1fa2a#a variant of win32/toolbar.linkury.bb potentially unwanted#gen:variant.adware.linkury.cerbu.1
+trojan-ransom.win32.locky.che#rdn/generic.grp#a variant of win32/kryptik.fhkd#gen:variant.graftor.308465
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!05d9e333033a#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.locky.aac#ransomware-fld!a8440cd960a6#win32/filecoder.locky.c#gen:variant.razy.59033
+trojan-ransom.win32.locky.xnc#artemis!903312c8cfbb#a variant of generik.heyrecc#trojan.generickd.4442044
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!25d9d8833ab4#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!0de9c35dd7a3#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!35072cf7061d#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+heur:trojan.win32.generic#genericrxae-iv!f5083a1c8e65#a variant of win32/filecoder.locky.c#generic.ransom.locky.a2703cf9
+trojan-ransom.win32.locky.xvq#locky-corrupt!ba80256f80ef#win32/filecoder.locky.l#trojan.ransom.cerberkd.12185568
+trojan-ransom.win32.cryptor.aku#packed-ql!8cb80882a3c8#win32/filecoder.locky.l#trojan.generickd.5923463
+trojan-ransom.win32.locky.yr#genericrxaa-xp!e9b88b1bf812#a variant of win32/kryptik.exps#gen:trojan.brresmon.gen.1
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan.win32.deshacop.byv#ransomware-fhi!7e6b483cb1bf#win32/filecoder.locky.b#trojan.generickd.3116270
+trojan.win32.waldek.ipj#ransomware-fhi!ec01a2206c31#win32/filecoder.locky.b#gen:variant.symmi.62241
+trojan-ransom.win32.wanna.m#ransom-wannacry!d7313706c7fb#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#generic.aty#win32/filecoder.locky.c#gen:variant.razy.116557
+heur:trojan.win32.generic#rdn/ransom#a variant of win32/filecoder.locky.h#gen:variant.symmi.21211
+trojan.win32.vbkrypt.vxnt#genericr-gua!e1e5f693979c#win32/filecoder.locky.b#trojan.generickd.3133449
+trojan.win32.waldek.ies#generic.yd#win32/filecoder.locky.b#trojan.generickd.3131800
+trojan-ransom.win32.wanna.m#ransom-wannacry!5a5eb01d007b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.yt#ransomware-fku!b261196c8f28#win32/filecoder.locky.b#trojan.generickd.3242914
+uds:dangerousobject.multi.generic#artemis!83ffbf19c6a2#win32/filecoder.locky.b#trojan.generickd.3158859
+trojan-ransom.win32.locky.xep#rdn/ransom-fcd#a variant of win32/kryptik.fqmi#trojan.generickd.4225669
+trojan-ransom.win32.locky.sr#ransomware-fjb!dfc8776cc88f#a variant of win32/kryptik.evwx#trojan.generickd.3185807
+not-a-virus:heur:adware.win32.linkury.gen#artemis!181e68f6f981#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+trojan-ransom.win32.locky.at#ransomware-locky!3251ed702129#a variant of win32/kryptik.eopq#trojan.generickd.3055084
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!817c41519b75#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.linkury.gen#artemis!0059d5770290#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!f6e7f9ec7027#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+not-a-virus:heur:adware.win32.linkury.gen#artemis!1a75715fc972#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+uds:dangerousobject.multi.generic#ransomware-fjb!c9cbbb6364f5#win32/filecoder.locky.b#gen:variant.razy.50188
+trojan-ransom.win32.locky.ik#generic.yk#win32/filecoder.locky.a#trojan.generickd.3107509
+trojan-ransom.win32.locky.ma#ransomware-fhb!5e6ab8acc372#a variant of win32/kryptik.erzl#trojan.generickd.3115501
+trojan.win32.waldek.imy#ransomware-fhi!deaa2618c7c0#win32/filecoder.locky.b#gen:variant.symmi.62241
+trojan-ransom.win32.locky.aac#ransomware-fld!a01d60682ad5#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+trojan-ransom.win32.locky.xth#rdn/generic.grp#a variant of win32/kryptik.fpxc#trojan.generickd.5502096
+trojan-ransom.win32.locky.aat#generic.xu#a variant of win32/kryptik.eyib#trojan.downloader.jsyk
+trojan-ransom.win32.locky.e#ransomware-locky#a variant of win32/filecoder.locky.a#trojan.inject.bay
+heur:trojan.win32.generic#artemis!06af45f9c8a0#a variant of win32/filecoder.locky.h#gen:variant.symmi.21211
+trojan-ransom.win32.agent.ips#generic.ys#win32/filecoder.locky.b#trojan.downloader.jswv
+trojan-ransom.win32.locky.xvs#rdn/generic.hbg#win32/filecoder.locky.l#trojan.generickd.5873588
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.locky.wqb#rdn/ransom#a variant of win32/kryptik.flmh#trojan.generickd.3883783
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan.win32.reconyc.ffng#vawtrak-fbi!816e415bcf90#win32/filecoder.locky.a#gen:variant.razy.18233
+trojan-ransom.win32.wanna.m#ransom-wannacry!b0f142e0a348#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.scatter.nw#rdn/generic.cf#win32/filecoder.locky.c#trojan.generickd.3865311
+trojan-ransom.win32.locky.axc#rdn/ransom#win32/filecoder.locky.c#gen:variant.ransom.locky.10
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kd potentially unwanted#trojan.generickdz.38629
+heur:trojan.win32.generic#generic.adu#win32/filecoder.locky.c#gen:variant.graftor.294542
+trojan-ransom.win32.locky.zq#rdn/ransomware-fld#a variant of win32/kryptik.exyb#trojan.agent.btkf
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.dealply.bogzd#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#trojan.generic.21932630
+trojan-ransom.win32.agent.abgh#ransomware-gby!720f074df0f2#a variant of win32/kryptik.fvvq#trojan.ransom.locky.da
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!13e4639dd8e5#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.m#ransom-wannacry!e0bbdd7f6d9f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.aat#rdn/generic.tfr#a variant of win32/kryptik.eyib#trojan.downloader.jsyk
+not-a-virus:heur:adware.win32.generic#artemis!bfbd600a4876#a variant of win32/dealply.qv potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.bgsaf#pup-fpd#a variant of win32/dealply.jv.gen potentially unwanted#gen:variant.application.bundler.dealply.464
+not-a-virus:heur:adware.win32.dealply.gen#artemis!5b7759a0ad46#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!b60f2e712884#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!c323656d9bea#a variant of win32/dealply.fk.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.zbu#artemis!9ec54de4d36c#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!97467a5fb2bd#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.generic#artemis!b771bfab61ca#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!05cc4366c9e7#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.generic#artemis!339bc5a3f28e#a variant of win32/dealply.ko.gen potentially unwanted#trojan.generickd.6130043
+not-a-virus:heur:adware.win32.dealply.gen#pup-fov#a variant of win32/dealply.ed potentially unwanted#gen:variant.application.bundler.dealply.52
+trojan-ransom.win32.locky.d#rdn/ransom#win32/filecoder.locky.a#trojan.agent.bqlm
+not-a-virus:heur:adware.win32.generic#artemis!07d0bda3d4df#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#rdn/ransom#win32/filecoder.locky.a#trojan.generickd.3102145
+not-a-virus:heur:adware.win32.generic#artemis!00eba854fa25#a variant of win32/dealply.md.gen potentially unwanted#gen:variant.adware.symmi.71077
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!3d3931526b93#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.oj potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.ave#rdn/ransom#win32/filecoder.locky.c#trojan.generic.17843064
+trojan-ransom.win32.wanna.m#ransom-wannacry!13d702666bb8#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.bo#ransomware-locky#win32/filecoder.locky.a#trojan.generickd.3068119
+not-a-virus:heur:adware.win32.generic#artemis!f250c9a374e5#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!837708b98015#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+heur:trojan.win32.generic#rdn/ransom#a variant of win32/filecoder.locky.h#trojan.ransom.locky.ct
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.ea potentially unwanted#gen:variant.application.bundler.dealply.52
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!e10cfcc89212#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.linkury.as#artemis!e61c350e8ab9#a variant of msil/toolbar.linkury.ay potentially unwanted#trojan.scriptkd.3978
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.zzj#ransom-locky!3974626f6807#win32/filecoder.locky.m#trojan.generickd.12409395
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!c77bee0c58af#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#win32/toolbar.linkury.bb potentially unwanted#gen:variant.johnnie.24614
+not-a-virus:adware.win32.dealply.cdzge#artemis!b24eae32cda0#win32/installcore.gen.a potentially unwanted#application.bundler.aos
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.pg potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.brq#ransomware-frv!a20e54a1678f#a variant of win32/kryptik.ffwn#gen:variant.ransom.locky.27
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#artemis!01f5b9ea34a9#a variant of win32/dealply.ko.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.m#ransom-wannacry!72a2582fe358#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.ke.gen potentially unwanted#gen:variant.application.bundler.dealply.464
+not-a-virus:adware.win32.dealply.ciwtx#artemis!4e116985cf41#a variant of win32/dealply.md.gen potentially unwanted#gen:variant.adware.symmi.71077
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#win32/toolbar.linkury.bb potentially unwanted#gen:variant.johnnie.24614
+not-a-virus:heur:adware.win32.dealply.gen#artemis!6f36a8ba4641#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.aswoc#adware-dealply#a variant of win32/dealply.jx.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.ea potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.brj#pup-ffy#a variant of win32/dealply.ai potentially unwanted#trojan.generickd.5307325
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#win32/trojandropper.addrop.bt#trojan.scriptkd.3787
+uds:dangerousobject.multi.generic#ransomware-frv!3cf78310b534#win32/filecoder.locky.c#gen:variant.graftor.298453
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.csl#artemis!ef3e66188f20#nsis/injector.ht#trojan.generickd.3633915
+not-a-virus:heur:adware.win32.generic#artemis!b06cf95ae572#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!e765e314a67b#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.m#ransom-wannacry!76c218be8d3a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.dealply.deivz#artemis!835fed751920#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.cryptor.ald#locky-corrupt!11b119448178#win32/filecoder.locky.l#trojan.ranserkd.5916683
+trojan-ransom.win32.wanna.c#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.l
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-ransom.win32.locky.aac#ransomware-fld!475bd8f697f7#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+trojan-ransom.win32.wanna.m#ransom-wannacry!f946e0d2a37a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan.win32.yakes.rzom#rdn/ransom#win32/filecoder.locky.c#gen:variant.graftor.323876
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!dd8faaa2c455#a variant of win32/dealply.bb potentially unwanted#gen:variant.application.bundler.dealply.123
+trojan-ransom.win32.locky.hv#generic.yk#win32/filecoder.locky.a#trojan.generickd.3106076
+not-a-virus:adware.win32.dealply.cxsxi#pup-fpd#a variant of win32/dealply.nz potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.aac#ransomware-fld!0e6b4ed07579#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win32.expiro.ar#w32/expiro.gen.p#win32/expiro.nbu#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.generic#artemis!253070ced5c4#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+not-a-virus:adware.win32.dealply.brvmy#pup-fpd#a variant of win32/dealply.mz potentially unwanted#gen:variant.strictor.142728
+virus.win32.expiro.rc#artemis!6fe063902d56#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.locky.wtx#ransomware-locky.g#win32/filecoder.locky.c#trojan.generickd.3945990
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:webtoolbar.win32.generic#artemis!c97e099f7fe3#a variant of win32/toolbar.linkury.bb potentially unwanted#gen:variant.adware.linkury.cerbu.1
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!7748ad727438#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.aabf#rdn/ransom#a variant of win32/kryptik.fxeg#trojan.generickd.12414726
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!ff46391a5c36#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.generic#artemis!11691fce02ae#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!cc8905b43a40#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7dcd184083dc#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+not-a-virus:heur:adware.win32.generic#artemis!bd0427629fa9#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#artemis!b01c349b6b2b#win32/filecoder.locky.c#trojan.ranserkd.3433193
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!511e14f1863d#a variant of win32/dealply.pe potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.aac#ransomware-fld!e2c46d7bf335#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!623ff28b24bb#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.expiro.rc#artemis!85fc6040b0f1#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.dealply.gen#artemis!fc15486ca84b#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!d2496f8b9f1e#a variant of win32/dealply.fn potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.xmy#artemis!8b193d1d8d6c#a variant of generik.kfqtfgm#trojan.generickd.4437521
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!45cad075aa70#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:adware.win32.dealply.bzxla#adware-dealply#a variant of win32/dealply.jv.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!0a63679cf011#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.waldek.ici#rdn/generic.tfr#win32/filecoder.locky.b#gen:variant.locky.7
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.locky.yr#genericrxaa-xp!a2ed997fcc56#a variant of win32/kryptik.exps#gen:variant.razy.56370
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-ransom.win32.locky.brt#ransomware-frv!a68d717b54d2#a variant of win32/kryptik.ffwn#gen:variant.ransom.locky.27
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.ke.gen potentially unwanted#gen:variant.application.bundler.dealply.464
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!4374a8506ca4#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.generic#artemis!6b925d440b53#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.generic#artemis!dade076baeb8#a variant of win32/dealply.oe.gen potentially unwanted#gen:variant.symmi.75338
+trojan-ransom.win32.wanna.m#ransom-wannacry!cfd8c9858e9a#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.aac#rdn/ransomware-fld#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+not-a-virus:heur:adware.win32.generic#artemis!1d0c3eedb61f#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.wmv#artemis!32719cc209a6#nsis/injector.ls#trojan.generickd.3803720
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.eo.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.yr#ransomware-fjb!d42e9b4eb7e3#a variant of win32/kryptik.exla#trojan.downloader.jsxs
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:adware.win32.dealply.cbipy#pup-fpd#a variant of win32/dealply.jv.gen potentially unwanted#gen:variant.application.bundler.dealply.464
+not-a-virus:heur:adware.win32.generic#artemis!99f8b208f6b8#a variant of win32/dealply.ma.gen potentially unwanted#gen:variant.application.bundler.dealply.455
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!8a993a4ae498#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.abeb#rdn/generic.hra#win32/filecoder.locky.m#trojan.generickd.6100905
+not-a-virus:heur:adware.win32.generic#artemis!17e076057107#a variant of win32/dealply.fn potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.reconyc.fgjw#artemis!c1fab28d4422#win32/filecoder.locky.a#trojan.generickd.3076891
+trojan-ransom.win32.wanna.m#ransom-wannacry!0156edf6d8d3#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#ransomware-ghr!dda37961870c#win32/filecoder.locky.m#trojan.generickd.6104564
+virus.win32.expiro.ao#w32/expiro.gen.o#win32/expiro.nbi#win32.expiro.gen.2
+not-a-virus:heur:adware.win32.generic#artemis!de2f95f6a7cf#a variant of win32/dealply.nk.gen potentially unwanted#gen:variant.application.bundler.dealply.455
+virus.win32.expiro.rc#artemis!c9139f43fccc#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.expiro.aq#w32/expiro.gen.o#win32/expiro.nbp#win32.expiro.gen.2
+trojan-ransom.win32.locky.yr#genericrxaa-xq!04deec7f6bb4#a variant of win32/kryptik.exmu#backdoor.agent.abvi
+not-a-virus:adware.win32.dealply.bscjp#pup-fpd#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#generic.xu#win32/filecoder.locky.c#trojan.generickdz.35839
+trojan-ransom.win32.wanna.m#ransom-wannacry!625c6d53c2a5#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.jd#ransomware-fhi!b684f9f2a49b#a variant of win32/kryptik.errw#trojan.generickd.3119174
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.locky.btm#artemis!5fbdf0685221#a variant of win32/packed.nsis.t#trojan.generickd.3552586
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.jx.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#pup-fmd#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.oy.gen potentially unwanted#trojan.generickd.6038615
+trojan.win32.waldek.kfm#artemis!4c0a51eeef77#win32/filecoder.locky.b#trojan.generickd.3157625
+trojan.nsis.cayu.me#artemis!d2fd1dc97d8d#win32/filecoder.locky.c#adware.generickd.3804109
+not-a-virus:adware.win32.dealply.bcuod#artemis!e9e8d6ff9908#a variant of win32/dealply.ki potentially unwanted#adware.generic.1804904
+virus.win32.expiro.rc#artemis!8b0fcf02cafa#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!0647ba52f2c2#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+trojan-ransom.win32.wanna.m#ransom-wannacry!6a6b0c8e4fbf#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.linkury.gen#artemis!eef52d39c571#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:adware.win32.dealply.heur#artemis!edb2be823946#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.rj potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.xeg#artemis!d973c0b99ef0#a variant of nsis/injector.sg#trojan.generickd.4220449
+trojan-ransom.win32.locky.xj#ransomware-fjb!7e93e391c2e2#a variant of win32/kryptik.exla#trojan.downloader.jsxs
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!b078a3c16637#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:adware.win32.dealply.decbh#artemis!396ae1ff1b24#a variant of win32/dealply.qv potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.zs#ransomware-fld!1978c47ef77f#a variant of win32/kryptik.exyb#trojan.ransom.awf
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-ransom.win32.wanna.m#ransom-wannacry!3d59a1141c3e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#ransomware-locky#a variant of win32/kryptik.eptg#trojan.teslacrypt.gen.4
+trojan-ransom.win32.locky.btv#artemis!810c01191115#a variant of win32/packed.nsis.t#trojan.nsis.androm.6
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.aez#ransomware-fly!a18f096ca721#a variant of win32/kryptik.eylq#trojan.cryptolocker.ej
+trojan-ransom.win32.locky.es#ransomware-fgd!30c8f7bfab3f#a variant of win32/kryptik.ereh#trojan.generickd.3094946
+trojan-ransom.win32.wanna.m#ransom-wannacry!3b96796b3d2d#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#artemis!a4c04a5491fe#a variant of win32/dealply.ot potentially unwanted#gen:variant.application.bundler.dealply.455
+not-a-virus:heur:adware.win32.generic#pup-xaq-tb#a variant of win32/dealply.dy potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.pd#rdn/ransomware-fet#a variant of win32/kryptik.essx#gen:variant.razy.35659
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+heur:trojan.win32.generic#downloader-fsh!0f760e301371#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+trojan-ransom.win32.wanna.m#ransom-wannacry!051baacb3a0c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#pup-fpd#a variant of win32/dealply.jw.gen potentially unwanted#gen:variant.application.bundler.dealply.464
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-dropper.win32.agent.ihap#pws-zbot-am!be348582c80c#a variant of win32/kryptik.biwi#gen:variant.razy.7217
+trojan-ransom.win32.cryptodef.aaxw#artemis!b7d0266b8273#a variant of win32/injector.cmnu#gen:variant.zbot.196
+trojan-ransom.win32.locky.jf#gamarue-fdr!0901f46aef3a#win32/filecoder.locky.a#trojan.generic.15931904
+trojan-downloader.win32.small.jzm#pws-zbot.gen.ak#win32/trojandownloader.small.obc#trojan.spy.zbot.cb
+heur:trojan.win32.generic#pws-zbot-fago!31ee79bc6099#a variant of win32/kryptik.ayfm#trojan.lethic.gen.11
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-spy.win32.zbot.tcew#downloader-facz!b6b58a7f9d70#win32/trojandownloader.waski.b#trojan.agent.bdcb
+not-a-virus:adware.win32.dealply.czotq#adware-dealply#a variant of win32/dealply.nq.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-spy.win32.zbot.tble#downloader-fsh!f1e437e8d176#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+heur:trojan.win32.generic#adware-dealply#a variant of win32/dealply.ma.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.dealply.gen#pup-fov#a variant of win32/dealply.ca potentially unwanted#gen:variant.application.bundler.dealply.1
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+heur:trojan.win32.generic#downloader-fsh!c688c1628477#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#trojan-fobe!3d0899647f5b#win32/filecoder.natas.a#gen:variant.zbot.191
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.at#win32.expiro.gen.3
+heur:trojan.win32.generic#pws-zbot.gen.yg#a variant of msil/spy.agent.bp#generic.malware.gsd.86c4bc5c
+not-a-virus:heur:adware.win32.dealply.gen#pup-fpd#a variant of win32/dealply.jx.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.vbpm#generic-favy!036dcd3e9df2#win32/filecoder.co#trojan.generickd.2184297
+heur:trojan.win32.generic#rdn/generic.tfr#a variant of win32/kryptik.erli#gen:variant.locky.7
+not-a-virus:heur:adware.win32.generic#artemis!58d8aa5cbcb0#a variant of win32/dealply.km.gen potentially unwanted#trojan.generickd.5601697
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!bd2ac9c3526e#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!7263453dab04#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan.win32.vilsel.cyli#genericr-fvh!992cb62274c6#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#pwszbot-faej!b81e30428b1a#win32/spy.zbot.aau#gen:heur.msil.androm.1
+trojan-spy.win32.zbot.robz#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1571035
+heur:trojan.win32.generic#pws-zbot-fasg!5b4d502fa66d#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!1454c78b38ee#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:adware.win32.dealply.heur#artemis!def4f31b3b07#win32/installcore.gen.a potentially unwanted#application.bundler.apu
+virus.win32.nimnul.a#pws-zbot.gen.pq#win32/ramnit.a#win32.ramnit.dam
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#dropper-ffa!d88c69b7fd9f#a variant of win32/injector.agdg#gen:variant.zbot.106
+not-a-virus:adware.win32.dealply.ceaph#rdn/generic.grp#a variant of win32/dealply.en.gen potentially unwanted#gen:variant.symmi.76714
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-spy.win32.zbot.xipi#trojan-fkdl!8e5a9b2b64fc#win32/spy.zbot.yw#gen:variant.zusy.209987
+virus.win32.expiro.o#w32/expiro#win32/expiro.k#win32.kakavex.r
+trojan-ransom.win32.wanna.m#ransom-wannacry!ef8cc269c47f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.dealply.gen#artemis!459bdaa96f65#a variant of win32/dealply.pe potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!a705e59c894e#win32/trojandownloader.small.aab#trojan.generickd.1311868
+not-a-virus:heur:adware.win32.generic#artemis!d0d23a130e90#a variant of win32/dealply.qk potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.siyn#downloader-fsh!3234840df4f2#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.ec potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.so#rdn/generic.mem#win32/filecoder.locky.b#gen:variant.razy.44880
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan.win32.shipup.bqh#pws-zbot-fatg!472271e0cdb9#a variant of win32/kryptik.axyq#trojan.lethic.gen.11
+trojan.win32.shipup.bok#pws-zbot-fatw!27f39e510ca2#a variant of win32/kryptik.axid#gen:variant.kazy.156795
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.re potentially unwanted#gen:variant.application.bundler.dealply.464
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+trojan-ransom.win32.cryptodef.aawj#rdn/spybot.bfr#win32/filecoder.co#gen:variant.zbot.196
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.jx.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!75be16a9160b#a variant of win32/dealply.qk potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.bruxg#artemis!21907cd488c0#a variant of win32/dealply.ma.gen potentially unwanted#gen:variant.application.bundler.dealply.455
+trojan.win32.shipup.bok#pws-zbot-fatw!af95d9b25ccf#a variant of win32/kryptik.axid#gen:variant.kazy.156795
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.o#w32/expiro#win32/expiro.k#win32.kakavex.r
+trojan-spy.win32.zbot.vbqr#generic-favy!b24e70dc35f2#win32/filecoder.co#trojan.generickd.2184300
+trojan-spy.win32.zbot.sjzh#downloader-fsh!d29e2dd70b96#win32/trojandownloader.waski.b#trojan.agent.bczd
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!3246b0cb53ab#win32/trojandownloader.small.aab#trojan.generickd.1311868
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#artemis!ee379b44e179#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-fach!0eb033254965#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan-ransom.win32.locky.xec#artemis!8b2298fa8d85#win32/filecoder.locky.c#gen:variant.ransom.cerber.75
+trojan-ransom.win32.wanna.m#ransom-wannacry!c18efac56280#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jv.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!852f2a7a9bcd#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+not-a-virus:heur:adware.win32.generic#artemis!da5b11f0a316#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.cubu#upatre-face!f12a05e7542b#a variant of win32/kryptik.dono#trojan.upatre.gen.2
+heur:trojan.win32.generic#upatre-fach!04052f266c7c#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!d7df0f31cae3#a variant of win32/dealply.mj potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!f1ff5ac076e6#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!ba4d6b83b09f#win32/trojandownloader.small.aab#trojan.generickd.1311868
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+heur:trojan.win32.generic#pws-zbot-fago!0c56595a8b9d#a variant of win32/kryptik.aygj#trojan.lethic.gen.11
+trojan.win32.waldek.jvt#artemis!f01d2a99d2dc#win32/filecoder.locky.b#trojan.generickd.3153841
+not-a-virus:heur:adware.win32.generic#artemis!a54a61b953cf#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.xfz#rdn/ransom#win32/filecoder.locky.c#application.generickd.4561907
+trojan-downloader.win32.upatre.dwgq#genericrxbc-ff!e61c11b0edd7#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.8
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+heur:trojan.win32.generic#pws-zbot-fago!40a258c889c3#a variant of win32/kryptik.ayck#gen:variant.razy.158617
+heur:trojan.win32.generic#pws-zbot.gen.gj#a variant of win32/kryptik.pdt#gen:variant.tdss.65
+trojan-ransom.win32.locky.wte#generic.aux#win32/filecoder.locky.c#gen:variant.razy.114680
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!b8f856cdaef3#win32/trojandownloader.small.aab#trojan.generickd.1311868
+not-a-virus:heur:adware.win32.dealply.gen#artemis!7be2772f099e#a variant of win32/dealply.ax potentially unwanted#trojan.generickd.4532814
+not-a-virus:heur:adware.win32.linkury.gen#artemis!f643cfeaf5ab#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.locky.aat#rdn/generic.grp#a variant of win32/kryptik.eyib#trojan.downloader.jsyk
+heur:trojan.msil.tpyn.chu#pup-xaa-dp#a variant of msil/toolbar.linkury.af potentially unwanted#gen:variant.zusy.187833
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!615c3466006d#win32/trojandownloader.small.aab#trojan.generickd.1311868
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.generic#artemis!1698c8d0860e#a variant of win32/dealply.mj potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kd potentially unwanted#trojan.generickd.4180428
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.nq.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.agent.hfdg#upatre-faac!8d78c8ef0ff6#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#upatre-facv!fde3956123de#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+heur:trojan.win32.generic#upatre-facv!cea4011ace0c#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+heur:trojan-downloader.win32.generic#upatre-faai!aa5d2ee354fa#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+uds:dangerousobject.multi.generic#rdn/ransomware-ftj#a variant of win32/kryptik.fgkz#gen:variant.ransom.locky.27
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#pws-zbot-fasg!f211f5b26522#win32/filecoder.nan#gen:variant.symmi.20205
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.locky.ceh#rdn/generic.hbg#a variant of win32/kryptik.fgwk#gen:variant.ransom.locky.27
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:adware.nsis.mediamagnet.su#artemis!ccac072a3672#win32/filecoder.locky.c#adware.generickd.3801361
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#pws-zbot-ffr!d0f0cb55c278#a variant of win32/kryptik.baqj#gen:variant.symmi.20559
+trojan-ransom.win32.locky.fm#generic.yk#win32/filecoder.locky.a#trojan.generickd.3099037
+virus.win32.expiro.aq#w32/expiro.gen.o#win32/expiro.nbq#win32.expiro.gen.2
+trojan-spy.win32.zbot.side#downloader-fabv!aebec8900ab5#win32/trojandownloader.waski.a#trojan.generickd.1669208
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-downloader.win32.upatre.dmid#downloader-faww!e732b44aecb2#win32/trojandownloader.waski.v#trojan.upatre.et
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.52
+virus.win32.expiro.rc#artemis!d8eaf78871af#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#artemis!32307540a841#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#pws-zbot-fasg!b691ab2b86e8#win32/filecoder.nan#gen:variant.symmi.19582
+virus.win32.expiro.o#w32/expiro#win32/expiro.k#win32.kakavex.r
+trojan-spy.win32.zbot.side#downloader-fabv!6acdd77b703c#win32/trojandownloader.waski.a#trojan.generickd.1669208
+trojan.win32.shipup.bnl#pws-zbot-faqw!a0a8cf90cc33#win32/agent.unq#gen:variant.kazy.152813
+heur:trojan.win32.generic#upatre-fack!b5de045d5e43#a variant of win32/kryptik.dllq#gen:trojan.ipatre.1
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.rj potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-downloader.win32.agent.hfdg#upatre-faac!ede6ab3215f0#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-ransom.win32.cryptor.agf#rdn/ransom#win32/filecoder.locky.l#trojan.generickd.5917873
+trojan-spy.win32.zbot.vbqo#generic-fawc!afcc2e54a18c#win32/filecoder.co#gen:variant.zusy.128473
+trojan-ransom.win32.wanna.m#ransom-wannacry!8b0590637fe5#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.qnuf#downloader-fva!7a28b7ecb2f1#win32/trojandownloader.small.aab#trojan.generickd.1369867
+not-a-virus:heur:adware.win32.generic#pup-fmd#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#upatre-fach!8332ee8503c0#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.expiro.rc#artemis!d6ae090f440b#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#upatre-facn!4924059eb654#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!c0b3cad0ad49#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#pws-zbot-fasg!4a7238cb3ddc#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-downloader.win32.upatre.bla#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1863631
+virus.win32.expiro.o#w32/expiro#win32/expiro.k#win32.kakavex.r
+not-a-virus:adware.win32.dealply.ciccr#artemis!a31376e18be5#a variant of win32/dealply.ky.gen potentially unwanted#gen:variant.application.bundler.dealply.725
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+heur:trojan.win32.generic#dropper-ffa!eb5d3169d574#a variant of win32/injector.agdg#gen:variant.zbot.106
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#upatre-facv!fdb8d1296bdd#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+heur:trojan.win32.generic#pws-zbot-faqw!fe932e581d5e#a variant of win32/kryptik.awzk#gen:variant.razy.15451
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#upatre-fach!c1d6cf1d8a86#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!dd9b165ed496#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+heur:trojan.win32.generic#pws-zbot-fasg!a4f6cf184f7f#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-ransom.win32.wanna.m#ransom-wannacry!255c2460ef9f#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!a73b89313546#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#upatre-facd!3a2fdf407b1e#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+not-a-virus:heur:adware.win32.dealply.gen#pup-fpd#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.wvj#artemis!3115cad1c015#a variant of win32/kryptik.flyx#trojan.generickd.3948286
+heur:trojan-downloader.win32.generic#upatre-faai!ca0c49f8086d#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+heur:trojan.win32.generic#upatre-facn!9b2adada5966#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!1142c26ecf9c#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan-downloader.win32.generic#upatre-faai!0b751f30a106#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+trojan-spy.win32.zbot.tble#downloader-fsh!ee2514b4592f#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bu#trojan.scriptkd.3787
+heur:trojan.win32.generic#upatre-facd!e9c292fa093c#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan.win32.yakes.pjxt#rdn/ransom#win32/filecoder.locky.b#trojan.generickd.3118845
+trojan-downloader.win32.upatre.cdzp#upatre-fach!c21f249a61b0#a variant of win32/kryptik.dnjd#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!e1a9f9188c1d#a variant of win32/kryptik.dnjd#trojan.upatre.gen.3
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+heur:trojan.win32.generic#artemis!b10411cccb50#win32/filecoder.locky.a#trojan.generickd.3089995
+heur:trojan.win32.generic#upatre-facv!807f6416e58d#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan.win32.bublik.burd#downloader-fsh!be1eada3c1f2#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+heur:trojan.win32.generic#rdn/ransom#win32/filecoder.locky.c#trojan.generickd.3629104
+virus.win32.expiro.rc#artemis!e6c528ce9445#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#upatre-fach!ab9d2ff93377#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!00c8cec82e5a#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-fach!b89272372e83#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facv!be0f5b7e7668#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+trojan.win32.vbkrypt.vxnt#genericr-gua!f5b2ab0af763#win32/filecoder.locky.b#trojan.generickd.3135987
+trojan-downloader.win32.agent.hfdg#upatre-faac!b2bdc05707ff#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:adware.win32.dealply.bgfci#adware-dealply#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#pup-fpd#a variant of win32/dealply.jx.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.swzo#downloader-fsh!f8d31f1cdbd1#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.jw.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+heur:trojan-downloader.win32.generic#upatre-faai!f017252eddc6#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+trojan-spy.win32.zbot.qnuf#downloader-fva!5f6f58fc513e#win32/trojandownloader.small.aab#trojan.generickd.1369867
+trojan-ransom.win32.wanna.m#ransom-wannacry!4a8314637418#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#artemis!e99d086db781#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.wpxk#pws-fbrl#win32/trojandownloader.waski.a#trojan.generickd.1618727
+not-a-virus:heur:adware.win32.generic#artemis!878cf3b278f0#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#artemis!00b8681bdf65#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#pup-fov#a variant of win32/dealply.eb potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-spy.win32.zbot.svwy#downloader-fsh!8541bbe2499a#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+heur:trojan.win32.generic#pws-zbot-fago!ce64dbe8445a#a variant of win32/kryptik.axzk#trojan.ransom.cerber.1
+heur:trojan.win32.generic#upatre-fach!e7271f941bf2#a variant of win32/kryptik.dpjz#gen:trojan.ipatre.1
+trojan-downloader.win32.upatre.cubu#upatre-face!0bd49420b7cd#a variant of win32/kryptik.dono#trojan.upatre.gen.2
+not-a-virus:heur:adware.win32.dealply.gen#artemis!f985650aebd5#a variant of win32/installcore.aly potentially unwanted#application.bundler.aas
+trojan-spy.win32.zbot.vbrz#generic-favy!5377bf44faa5#a variant of win32/injector.bvdn#gen:variant.zusy.128968
+heur:trojan.win32.generic#upatre-facv!b58bc4ecc673#win32/trojandownloader.small.prl#gen:variant.graftor.469639
+heur:trojan.win32.generic#upatre-fach!a9c5b4e7b312#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!a866928cd04e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#pws-zbot.gen.hv#a variant of win32/kryptik.aaxr#gen:variant.kazy.56462
+trojan-ransom.win32.wanna.m#ransom-wannacry!c0dcf5931c8e#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.wpxk#pws-fbrl#win32/trojandownloader.waski.a#trojan.generickd.1618727
+not-a-virus:heur:adware.win32.dealply.gen#pup-fpd#a variant of win32/dealply.mp potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.ele#upatre-faag!ada04797dcd6#win32/trojandownloader.waski.a#trojan.generickd.1956791
+not-a-virus:heur:adware.win32.generic#artemis!94a2c1aabc0a#a variant of win32/dealply.ra potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-fach!0f0bdee8e353#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+trojan-ransom.win32.locky.emc#rdn/ransom#a variant of win32/kryptik.fxex#trojan.agent.cnqj
+not-a-virus:heur:adware.win32.generic#artemis!098a1eed6861#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#pws-zbot.gen.ks#win32/dorkbot.b#gen:heur.androm.1
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#trojan.generickd.4894172
+heur:trojan.win32.generic#upatre-fach!e4b21672f111#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+trojan-spy.win32.zbot.svwk#downloader-fsh!1861262b3d4e#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan-downloader.win32.upatre.bhp#downloader-fsh#win32/trojandownloader.waski.a#trojan.upatre.c
+trojan-ransom.win32.wanna.m#ransom-wannacry!74de00128b15#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-spy.win32.zbot.simd#downloader-fabv#win32/trojandownloader.waski.a#trojan.generickd.1670802
+heur:trojan-downloader.win32.generic#adware-linkury#a variant of msil/trojandownloader.adload.be#trojan.generickd.6126848
+trojan-ransom.win32.locky.br#rdn/generic.mem#a variant of win32/kryptik.ephy#trojan.generickd.3069254
+trojan.win32.agent.neuckk#rdn/ransom#win32/filecoder.locky.a#trojan.generickd.3083926
+virus.win32.nimnul.a#pws-zbot.gen.pq#win32/ramnit.a#win32.ramnit.dam
+trojan-spy.win32.zbot.thiy#pwszbot-fru!057102e48959#win32/trojandownloader.waski.d#trojan.downloader.jqrk
+not-a-virus:adware.win32.dealply.czszq#adware-dealply#a variant of win32/dealply.nx potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-fach!bb8e191a224c#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+trojan.win32.shipup.bph#pws-zbot-fatg!5910aeee5adb#a variant of win32/kryptik.axpn#trojan.ransom.cerber.1
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.locky.zh#rdn/generic.grp#a variant of win32/kryptik.extt#trojan.ransom.awb
+not-a-virus:heur:adware.win32.generic#artemis!ab2e1f75a097#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-facv!cb2c06822c80#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!0497b8b05da9#win32/trojandownloader.small.aab#trojan.generickd.1311868
+heur:trojan.win32.generic#upatre-facv!06519c25f7d1#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+heur:trojan.win32.generic#upatre-fach!c8790a0191bf#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+trojan-spy.win32.zbot.thog#pwszbot-fru!5a477c85b160#a variant of win32/kryptik.cbuk#trojan.downloader.jqrk
+trojan-ransom.win32.cryptor.adj#generic.adc#win32/filecoder.locky.l#trojan.generickd.12209170
+trojan-downloader.win32.agent.hfdg#upatre-faac!a538a75e2767#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#dropper-ffa!d827ee51bd04#win32/trojandropper.gepys.aa#gen:variant.zbot.106
+heur:trojan.win32.generic#upatre-fach!aa4f95572a92#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan-ransom.win32.locky.zs#ransomware-fld!32dc6307a420#a variant of win32/kryptik.exyb#trojan.ransom.awf
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+not-a-virus:heur:adware.win32.generic#artemis!a9a851fb8f36#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.tble#downloader-fsh!affac67a36ab#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+trojan-ransom.win32.crypmod.yag#artemis!d6ef7b7cb18b#win32/filecoder.locky.c#trojan.generickd.3490268
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.fe.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-dropper.win32.agent.ihap#pws-zbot-am!98915ddb06b1#a variant of win32/kryptik.biwi#gen:variant.razy.7217
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+heur:trojan.win32.generic#downloader-fawu!dba278f0b7d1#a variant of win32/kryptik.doza#trojan.upatre.gen.5
+not-a-virus:heur:adware.win32.dealply.gen#artemis!ba781394dd1c#a variant of win32/dealply.dq potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-spy.win32.zbot.vbqo#generic-favy!3d31111a69c1#win32/filecoder.co#gen:variant.zusy.128473
+trojan.win32.waldek.hlb#ransomware-fhi!1e1c683e3d96#win32/filecoder.locky.b#trojan.generickd.3114192
+trojan-downloader.win32.upatre.frrs#upatre-fach!ca45019494c7#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#upatre-fach!4673687f4b00#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.dmid#downloader-faww!d4770344f537#win32/trojandownloader.waski.v#trojan.upatre.et
+trojan-ransom.win32.locky.wpb#rdn/ransom#nsis/injector.mr#trojan.generickd.4253773
+heur:trojan.win32.generic#upatre-facv!ca3e0c430153#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan-ransom.win32.wanna.m#ransom-wannacry!0c694193ceac#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#artemis!2422f498c3ef#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.gy#generic.yk#win32/filecoder.locky.a#trojan.generickd.3103930
+heur:trojan.win32.generic#genericr-evw!67229376c35b#win32/spy.zbot.aao#gen:variant.zusy.167377
+trojan-spy.win32.zbot.wtgq#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1629711
+trojan-ransom.win32.locky.aac#ransomware-fld!23bade6a6d9b#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f1a2e57e6045#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+heur:trojan.win32.generic#upatre-fach!f07432028a78#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+not-a-virus:heur:adware.win32.linkury.gen#artemis!0c4b13470bd2#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#upatre-fach!2c761a39b75d#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!c435136242bc#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.rj potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.aafu#ransomware-ggh!1476c0c65fd0#a variant of win32/kryptik.fxeg#gen:variant.razy.220182
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-spy.win32.zbot.sjqn#downloader-fsh!eeda447cfe97#win32/trojandownloader.waski.a#trojan.generickd.1675536
+heur:trojan.win32.generic#upatre-fach!b29cf943c21b#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!d38e588358f2#a variant of win32/dealply.ca potentially unwanted#gen:variant.application.bundler.dealply.915
+not-a-virus:heur:adware.win32.generic#artemis!5dcd3907a9b9#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+uds:dangerousobject.multi.generic#ransomware-fko!762c89de5160#win32/filecoder.locky.b#trojan.agent.btiu
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+trojan-spy.win32.zbot.wqki#downloader-fsh!e74b5c82dc43#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!8cb4780d38be#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan.win32.waldek.hkg#ransomware-fhi!f417b107339b#win32/filecoder.locky.b#trojan.generickd.3119198
+trojan-ransom.win32.wanna.m#ransom-wannacry!64cab32de8b2#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#upatre-facv!07750e882afc#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan-downloader.win32.generic#upatre-faai!c200d7cf4c1c#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-downloader.win32.upatre.fwty#upatre-fach!b57b0935209e#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!d83932ef5ec2#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#trojan.generic.7641095
+trojan-ransom.win32.locky.vy#ransomware-fjb!7c057f18a5c1#a variant of win32/kryptik.exla#trojan.script.dfw
+trojan-spy.win32.zbot.svwk#downloader-fsh!44d0be4e4c4d#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan-spy.win32.zbot.tble#downloader-fsh!f131aacd26d0#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+not-a-virus:heur:adware.win32.generic#artemis!beac660ff198#a variant of win32/dealply.lb.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+virus.win32.nimnul.a#pws-zbot.gen.pq#win32/ramnit.a#win32.ramnit.dam
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-downloader.win32.agent.hfdg#upatre-faac!e2ad796e733c#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#upatre-facv!1c4b16725e9f#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan-ransom.win32.locky.wqe#rdn/pwszbot-fawz#a variant of win32/injector.dirl#gen:variant.ransom.locky.140
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan.win32.shipup.bnl#pws-zbot-faqw!c647ab3508a8#a variant of win32/kryptik.awlw#gen:variant.kazy.152813
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+heur:trojan.win32.generic#upatre-facv!1d546fbc49d8#a variant of win32/trojandownloader.small.prl#generic.malware.dld!!.d47ab8e6
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:adware.win32.dealply.ceiyw#rdn/generic pup.x#a variant of win32/dealply.en.gen potentially unwanted#trojan.generickd.12398443
+backdoor.win32.darkkomet.alkk#pws-zbot.gen.aru#a variant of win32/injector.zch#gen:variant.symmi.82551
+trojan-ransom.win32.locky.vpd#artemis!f5e85738755a#a variant of win32/packed.nsis.ac#trojan.ranserkd.3683853
+heur:trojan.win32.generic#upatre-facd!16b12fa31020#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-ransom.win32.locky.cxh#artemis!bd915aff29e5#nsis/injector.ij#trojan.ranserkd.3655683
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#artemis!bf631ae16659#a variant of win32/dealply.fd.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!e7bd8649954e#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#pws-zbot-fanv!1fae808e1435#a variant of win32/kryptik.bfgf#gen:variant.razy.8036
+not-a-virus:heur:risktool.win32.magentkill.12950581.gen#artemis!eb93647999b5#a variant of win32/dealply.oy.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+trojan-ransom.win32.locky.yr#ransomware-fjb!a410d6085714#a variant of win32/kryptik.exla#trojan.downloader.jsxu
+trojan-spy.win32.zbot.sjqo#downloader-fsh!30bd17ae9bfd#win32/trojandownloader.waski.a#trojan.spy.zbot.fku
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-spy.win32.zbot.svwy#downloader-fsh!845ddf695151#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+trojan-downloader.win32.agent.hfdg#upatre-faac!e72caa20a5aa#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.wso#ransomware-locky!6102b8c1c328#win32/filecoder.locky.c#gen:variant.razy.114576
+not-a-virus:heur:adware.win32.generic#artemis!0003315a51c5#a variant of win32/dealply.qk potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#artemis!23c190fa8300#a variant of win32/expiro.cg#trojan.androm.gen.1
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!2c9c3a50dbeb#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+not-a-virus:heur:adware.win32.generic#artemis!8f75bec65950#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.siyn#downloader-fsh!e8e5388e69c8#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+trojan-ransom.win32.locky.aac#ransomware-fld!afd40dca3355#win32/filecoder.locky.c#trojan.locky.aw
+trojan-spy.win32.zbot.qlvh#downloader-fus!c76b8f17ad75#win32/trojandownloader.small.aab#trojan.downloader.small.abnb
+trojan-ransom.win32.locky.accz#rdn/ransom#win32/filecoder.locky.m#trojan.generickd.6153461
+trojan-downloader.win32.upatre.dwgq#genericrxbc-ff!0206a03e2537#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.dy potentially unwanted#gen:variant.application.bundler.dealply.84
+not-a-virus:heur:adware.win32.generic#artemis!d200189f2619#a variant of win32/dealply.qk potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.aac#ransomware-fld!d74d9cedc91f#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+trojan.win32.waldek.hky#ransomware-fhi!40991b499ed2#win32/filecoder.locky.b#gen:variant.locky.7
+not-a-virus:heur:adware.win32.generic#artemis!96d17ec40658#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.fsysna.cwqj#ransomware-locky!80132a037cbe#a variant of win32/kryptik.eopq#trojan.generickd.3054857
+trojan-downloader.win32.upatre.bkvd#upatre-facm!ac8f7992686f#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!00992ea13b4b#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+heur:trojan.win32.generic#pws-zbot.gen.ks#a variant of win32/injector.akoy#gen:heur.androm.1
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+not-a-virus:heur:adware.win32.generic#pup-fpd#a variant of win32/dealply.oi potentially unwanted#adware.generic.1901202
+trojan-ransom.win32.locky.wsu#trojan-fkpl!58253455766f#a variant of win32/kryptik.fluo#gen:variant.zusy.214504
+trojan-spy.win32.zbot.tdvn#pwszbot-fnc!b5472a11e25c#win32/trojandownloader.waski.a#trojan.generickd.1426259
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.jq potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#pws-zbot-fago!0f7deba0907d#a variant of win32/kryptik.ayck#trojan.ransom.cerber.1
+trojan-ransom.win32.locky.il#generic.yk#win32/filecoder.locky.a#trojan.locky.j
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#pup-xcx-mf#a variant of win32/dealply.ma.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.dwfh#upatre-fach!f8ff05c2adff#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!0c7dec17bab6#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.lb.gen potentially unwanted#gen:variant.application.symmi.75731
+trojan-ransom.win32.locky.acfl#rdn/generic.grp#a variant of generik.irrohkn#trojan.generickd.12570728
+not-a-virus:heur:adware.win32.linkury.gen#artemis!c9714794e752#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!f18d81d8fc96#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.expiro.rc#artemis!ea68600a21c5#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#trojan.scar.ag
+trojan-downloader.win32.upatre.cubu#upatre-face!2314e167f433#a variant of win32/kryptik.dono#trojan.upatre.gen.2
+heur:trojan.win32.generic#upatre-facv!bed849cc01e8#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!e657cc702aab#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+trojan-ransom.win32.locky.aceq#ransomware-giq!deed16eadb1a#win32/filecoder.locky.m#trojan.generickd.6166038
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.generic#artemis!8523dd83bcb6#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.m#ransom-wannacry!ed453e058582#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#upatre-fach!c22435b30f16#a variant of win32/kryptik.drxq#gen:trojan.ipatre.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!9da7b08fde2f#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!c90da3d3b94d#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.jgz#upatre-faca!fb41f6a34a2c#a variant of win32/kryptik.dhfk#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!aebd0371c444#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+heur:trojan.win32.generic#upatre-facv!a285c68f8e69#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+heur:trojan.win32.generic#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+heur:trojan.win32.generic#upatre-fach!e196996e4a1f#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!a222b37238e3#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.wanna.m#ransom-wannacry!a6ee6fc4782d#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-downloader.win32.agent.hfdg#upatre-faac!b04986fc4070#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#upatre-facv!aecfe45a09f5#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+virus.win32.virut.ce#pws-zbot.gen.cy#win32/virut.nbp#win32.virtob.gen.12
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#artemis!52f0929ebcf3#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facd!a0ab24f622ff#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.wqki#downloader-fsh!007d6b87057b#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+trojan.win32.shipup.bok#pws-zbot-fatw!83421c25f1e8#a variant of win32/kryptik.axid#gen:variant.kazy.156795
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.rj potentially unwanted#gen:variant.application.bundler.dealply.84
+heur:trojan.win32.generic#upatre-facv!0dc2935743c9#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+heur:trojan.win32.generic#upatre-fach!aa046c085916#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.xj#ransomware-fjb!749b20cf2ddd#a variant of win32/kryptik.exla#trojan.downloader.jsxs
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+heur:trojan.win32.generic#pws-zbot-ffr!26c9ee35bcf1#a variant of win32/kryptik.baqj#gen:variant.symmi.20559
+not-a-virus:heur:adware.win32.generic#artemis!3d54b4bc3111#a variant of win32/dealply.fn potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.qsec#downloader-fwt!d144a814a9c5#win32/trojandownloader.small.aab#trojan.generickd.1411747
+not-a-virus:adware.win32.dealply.arosm#adware-dealply#a variant of win32/dealply.nb potentially unwanted#application.bundler.dealply.2.gen
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+not-a-virus:heur:adware.win32.dealply.gen#rdn/generic.hra#a variant of win32/dealply.eb potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan-ransom.win32.locky.co#generic.xo#win32/filecoder.locky.a#trojan.generickd.3079321
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.lh.gen potentially unwanted#trojan.generickd.6019012
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!bc6fbad1fd2b#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.frrs#upatre-fach!b0c5eeffcdc1#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+trojan-spy.win32.zbot.sjyj#downloader-fsh!3600b4440674#win32/trojandownloader.waski.a#trojan.agentwdcr.amb
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.small.cpd#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#upatre-face!a64761b0aef3#a variant of win32/kryptik.dpbi#trojan.upatre.gen.2
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+trojan-spy.win32.zbot.tbah#downloader-fsh!f23447315ce4#win32/trojandownloader.waski.a#trojan.generickd.1697113
+heur:trojan.win32.generic#upatre-facm!39a80165fa7f#a variant of win32/kryptik.dlzd#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!055180c4dfe8#a variant of win32/dealply.jf.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-psw.win32.tepfer.gen#pws-zbot.gen.atz#a variant of win32/psw.fareit.a#gen:variant.razy.93601
+virus.win32.expiro.ns#artemis!da6559096e26#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.generic#artemis!60ae3275ac64#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.awq#ransomware-fqg!150b2d20ec39#a variant of win32/kryptik.fcwf#gen:variant.barys.54952
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#adware-dealply!b884cfe875e1#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.xtx#genericr-ken!b12804accbee#a variant of win32/injector.cylx#gen:variant.razy.56101
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.anz#rdn/ransom#a variant of win32/injector.dcae#trojan.ranserkd.3404555
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+heur:trojan.win32.generic#upatre-fach!00d484ebc83f#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+heur:trojan.win32.generic#pws-zbot-fasg!0e82351a272b#win32/filecoder.nan#gen:variant.symmi.20205
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.rc#artemis!95c83a058c1a#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#pws-zbot-fago!3e4df674f414#a variant of win32/kryptik.ayck#trojan.ransom.cerber.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+heur:trojan.win32.generic#downloader-fvf!da978352ff34#win32/trojandownloader.small.aab#trojan.zbot.ibu
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!322f61d506f4#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-fach!5cfb16273f95#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+virus.win32.expiro.rc#artemis!eac1a9616e56#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-ransom.win32.agent.abgm#locky-corrupt!2b03a96c49a0#win32/filecoder.locky.l#trojan.ransom.bti
+trojan-spy.win32.zbot.rgca#pwszbot-fmo!537f2f8220be#win32/trojandownloader.waski.a#trojan.generickd.1499022
+trojan-downloader.win32.agent.hfdg#upatre-faac!02ba69a1d25e#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+backdoor.win32.darkkomet.alkk#pws-zbot.gen.aru#a variant of win32/injector.zch#gen:variant.symmi.82551
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#pws-zbot.gen.yg#a variant of msil/spy.agent.bp#generic.malware.gsd.24027d9e
+trojan-spy.win32.zbot.siyn#downloader-fsh!72acd60bea79#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!3f1b44d4a621#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!47eea56417ef#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+heur:trojan.win32.generic#upatre-fach!fad3b935f942#a variant of win32/kryptik.dpaq#trojan.upatre.gen.3
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.generic#artemis!8b265eff2d73#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+heur:trojan.win32.generic#pws-zbot-fago!9e3e8629422c#a variant of win32/kryptik.aygj#trojan.lethic.gen.11
+not-a-virus:heur:adware.win32.generic#artemis!afc3acd052ad#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.upatre.dmid#downloader-faww!45db4475cf06#win32/trojandownloader.waski.v#trojan.upatre.et
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!d935d37ba8ad#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.expiro.aq#w32/expiro.gen.o#win32/expiro.nbp#win32.expiro.gen.2
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+trojan-ransom.win32.locky.aac#ransomware-fld!aff7a6252210#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.dealply.bqhrc#adware-dealply#a variant of win32/dealply.kc.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.f#rdn/generic.mem#a variant of win32/injector.cslj#trojan.generickd.3049038
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+trojan-ransom.win32.locky.bc#rdn/generic.mem#a variant of win32/kryptik.epdy#trojan.generickd.4794733
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.dealply.gen#pup-fpd#a variant of win32/dealply.rh potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.nimnul.a#pws-zbot.gen.pq#win32/ramnit.a#win32.ramnit.dam
+trojan-ransom.win32.locky.aac#ransomware-fld!b758b67ca26b#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+trojan-spy.win32.zbot.swgr#trojan-fbxp!d76c4541e6b1#win32/trojandownloader.waski.e#trojan.dropper.wof
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+heur:trojan.win32.generic#dropper-ffa!42f18cc02172#a variant of win32/injector.agdg#gen:variant.zbot.106
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!995fff1651fe#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan-downloader.win32.generic#upatre-faai!a9b8355e9539#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+heur:trojan.win32.generic#upatre-fach!54ce3864bd85#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+not-a-virus:heur:adware.win32.generic#artemis!97b91c614262#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#upatre-faed!1d6317ad7c21#a variant of win32/kryptik.edvd#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facd!1c0d275e150d#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-ransom.win32.locky.emc#rdn/ransom#a variant of win32/genkryptik.ayab#trojan.agent.cnqj
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facm!ad7ea2dc50a2#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.linkury.as#trojan-fjcc!f1a795524437#a variant of msil/toolbar.linkury.ay potentially unwanted#gen:variant.adware.msilperseus.105102
+trojan.win32.small.cpd#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#ransomware-fhi!dca7ae08c0e8#win32/filecoder.locky.b#gen:variant.lockyt.1
+heur:trojan.script.generic#artemis!72954c41b4c7#a variant of win32/spy.zbot.yw#trojan.agent.bdtf
+trojan-spy.win32.zbot.rrdh#downloader-fsh#win32/trojandownloader.waski.a#trojan.agent.bbxp
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.dma#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1899981
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#dropper-ffa!b8e21a31078c#a variant of win32/injector.agey#gen:variant.zbot.106
+heur:trojan.win32.generic#upatre-fach!d706de9c3ca0#a variant of win32/kryptik.doue#gen:trojan.ipatre.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!24c7871ae269#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!be34ceb99ab4#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#artemis!143d17b19449#a variant of win32/dealply.jf.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-ransom.win32.locky.rz#rdn/generic.tfr#a variant of win32/kryptik.evwx#trojan.generickd.3185053
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+trojan-ransom.win32.locky.qg#ransomware-fet!de36c3320310#a variant of win32/kryptik.eszz#trojan.generickd.3133391
+heur:trojan.win32.generic#downloader-fvf!edcf37c2cadd#win32/trojandownloader.small.aab#trojan.zbot.ibu
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!afd020c84382#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.generic#artemis!a6769ded1101#a variant of win32/dealply.km.gen potentially unwanted#trojan.generickd.6127286
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!f362d7343e63#a variant of win32/trojandropper.addrop.bv#gen:variant.zusy.236660
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.xcy#ransomware-locky.g#a variant of win32/kryptik.fncz#trojan.generickd.4184347
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!00d9426e29bd#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+heur:trojan.win32.generic#upatre-fach!e56808250cae#a variant of win32/kryptik.dqwk#trojan.upatre.gen.3
+heur:trojan.win32.generic#ransomware-fvv!844f623e73bf#a variant of win32/kryptik.fieq#gen:variant.ransom.locky.28
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.yjxp#genericr-ddi!49b788267b1c#a variant of win32/injector.bwkh#gen:variant.razy.192685
+trojan-downloader.win32.upatre.dfp#downloader-fsh#win32/trojandownloader.waski.a#trojan.spy.zbot.fny
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#upatre-facv!e80bd669d7c2#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+heur:trojan-downloader.win32.generic#upatre-faai!e48274b6a9c7#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.zbu#ransom-o#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.locky.zi#ransomware-flb!77eab884418c#a variant of win32/kryptik.exuu#trojan.agent.btjt
+trojan-spy.win32.zbot.qnuf#downloader-fva!3e905cf6bfc5#win32/trojandownloader.small.aab#trojan.generickd.1369867
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.dealply.ddzcn#artemis!01da1e605c65#win32/installcore.gen.a potentially unwanted#adware.generickd.30392781
+not-a-virus:adware.win32.dealply.cyepy#artemis!bdb075fba6ae#a variant of win32/dealply.ma.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-spy.win32.zbot.sdna#downloader-fsh!a4f75190b4d1#win32/trojandownloader.waski.a#gen:variant.razy.14831
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+heur:trojan.win32.generic#upatre-fach!051ad8022ce9#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!b03c77785be8#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.qnuf#downloader-fva!0746ef476115#win32/trojandownloader.small.aab#trojan.generickd.1369867
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jw.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.anv#rdn/ransom#a variant of win32/injector.dcdb#gen:variant.midie.31046
+trojan-spy.win32.zbot.swwd#downloader-fsh!08f7ecc2e4e6#win32/trojandownloader.waski.e#trojan.generickd.1690436
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!97cc61612378#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+heur:trojan.win32.generic#pws-zbot-fasg!72f57b1b86f5#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-ransom.win32.locky.wtk#artemis!1c28b76e23b1#win32/filecoder.locky.c#trojan.generickd.3944345
+trojan-spy.win32.zbot.uisx#generic-faus!e25c65d235ef#a variant of win32/injector.bnsz#gen:variant.graftor.158956
+trojan-spy.win32.zbot.rgca#pwszbot-fmo!f6915ff2ddc6#win32/trojandownloader.waski.a#trojan.generickd.1499022
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:adware.win32.dealply.ddapr#artemis!47158b705e48#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+not-a-virus:heur:adware.win32.generic#artemis!1fdcdd01f7b2#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+heur:trojan.win32.generic#upatre-facm!c1e808d3b5ad#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.gdxy#generic.ayq#win32/spy.zbot.acz#trojan.generickd.6011314
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!d54d0a3d6056#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-spy.win32.zbot.wqki#downloader-fsh!aa73fd1b84b1#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+heur:trojan.win32.generic#pws-zbot-fago!da3847f97f3c#a variant of win32/kryptik.aygj#trojan.lethic.gen.11
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+trojan-ransom.win32.locky.a#ransomware-locky#a variant of win32/filecoder.locky.a#generic.ransom.wcryg.2a39c0d0
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!af2b2db3b87d#win32/trojandownloader.small.aab#trojan.generickd.1311868
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!f35bcb9c9fee#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#pws-zbot-fago!0597318949a3#a variant of win32/kryptik.ayck#trojan.ransom.cerber.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan-downloader.win32.generic#upatre-faai!8a84ea1ed512#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+trojan-downloader.win32.agent.hfdg#upatre-faac!b8a72f11b96c#win32/trojandownloader.waski.f#trojan.generickd.1958089
+uds:dangerousobject.multi.generic#rdn/generic.grp#a variant of win32/kryptik.fgod#gen:variant.ransom.locky.27
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.svwk#downloader-fsh!b7cfd5348d28#win32/trojandownloader.waski.a#trojan.generickd.1686188
+trojan-spy.win32.zbot.swzk#downloader-fsh!ca058f4c3c92#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+trojan-spy.win32.zbot.svwy#downloader-fsh!271b1eb47c9e#win32/trojandownloader.waski.e#trojan.agentwdcr.baq
+heur:trojan.win32.generic#downloader-fsh#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facd!567ccede0245#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+trojan-downloader.win32.agent.hfdg#upatre-faac!e1ebcb4a5787#win32/trojandownloader.waski.f#trojan.generickd.1958089
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+trojan-ransom.win32.shade.lfz#ransomware-locky.g#nsis/injector.lm#trojan.generickd.3799434
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!b65301050982#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+virus.win32.expiro.nt#w32/expiro.gen.ra#win32/expiro.bd#win32.expiro.gen.3
+trojan-ransom.win32.cryptodef.aaya#rdn/spybot.bfr#win32/filecoder.co#gen:variant.zbot.196
+trojan-ransom.win32.wanna.m#ransom-wannacry!55814dc1ceea#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.scatter.nh#generic.aul#win32/filecoder.locky.c#gen:variant.razy.113691
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+trojan-downloader.win32.agent.hfdg#upatre-faac!becf7e736955#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-spy.win32.zbot.sjqn#downloader-fsh!8134478405a9#win32/trojandownloader.waski.a#trojan.generickd.1675536
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.dq potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.expiro.rc#artemis!d83f4c9d1353#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:heur:adware.win32.generic#artemis!70becf26dcba#a variant of win32/dealply.rk potentially unwanted#gen:variant.application.bundler.dealply.84
+not-a-virus:heur:adware.win32.generic#artemis!855b43ee980e#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!ef7634724da4#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan.win32.waldek.inz#rdn/ransom#win32/filecoder.locky.b#trojan.generickd.3137214
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan-ransom.win32.locky.zxj#ransom-locky!1e0e21e94e73#a variant of win32/kryptik.fwyv#gen:variant.graftor.412557
+heur:trojan.win32.generic#upatre-facn!bf4de6a57d26#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.jr potentially unwanted#trojan.generickd.12473194
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.qzxr#downloader-ftt!e8d1da1fae55#win32/trojandownloader.small.aab#trojan.generickd.1311021
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facn!e322dfa3848c#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facv!bf57db1047a5#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!93a17d7468a0#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+trojan-ransom.win32.locky.cqv#artemis!ba5a6500cfba#a variant of win32/kryptik.fikl#gen:variant.ransom.locky.28
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-spy.win32.zbot.qyrd#pwszbot-fia!bbdb11a68afa#win32/trojandownloader.small.aab#trojan.generickd.1311868
+heur:trojan.win32.generic#pws-zbot-fago!a52d7951edea#a variant of win32/kryptik.axzk#trojan.ransom.cerber.1
+trojan-ransom.win32.locky.bc#ransomware-locky!021c87b90ee8#a variant of win32/kryptik.ephy#trojan.generickd.4794733
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!a738326b994e#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!cc890f317a31#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+packed.win32.krap.hm#pws-zbot.gen.pq#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#downloader-fsh!2fcf8b368c1d#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+trojan-spy.win32.zbot.siyn#downloader-fsh!c51bec72e3b4#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.dmid#downloader-faww!16e6db2f471f#win32/trojandownloader.waski.v#trojan.upatre.et
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.52
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5707a501084b#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.locky.aavw#ransomware-ghe!8f06d86848d5#win32/filecoder.locky.m#trojan.ransom.locky.dt
+not-a-virus:webtoolbar.win64.linkury.t#adware-linkury#a variant of win32/trojandropper.addrop.bv#trojan.scriptkd.3787
+trojan-ransom.win32.locky.abax#ransomware-ghe!c0c6c5957c43#a variant of win32/kryptik.fxlw#gen:variant.razy.220707
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+trojan-ransom.win32.locky.cwp#generic.zv#win32/filecoder.locky.c#trojan.generickd.3649869
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.thiy#pwszbot-fru!d98cf9772e11#win32/trojandownloader.waski.d#trojan.downloader.jqrk
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#downloader-fsh!13b0820e9367#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#upatre-fach!bc9335ff8ff0#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!6e904cd354bd#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan-downloader.win32.generic#upatre-faai!a29e269381c3#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+heur:trojan.win32.generic#dropper-ffa!e82ed251189f#a variant of win32/kryptik.bahk#gen:variant.zbot.106
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.jq potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.inject.evea#pws-zbot.gen.aru#a variant of win32/injector.xsh#gen:variant.symmi.7176
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.qtwg#pwszbot-fmo!f2e83d3eb586#win32/trojandownloader.waski.a#trojan.generickd.1422398
+trojan-spy.win32.zbot.qsec#downloader-fwt!29f18af0e928#win32/trojandownloader.small.aab#trojan.generickd.1411747
+heur:trojan.win32.generic#upatre-facv!d65db2cecf53#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+trojan-ransom.win32.locky.aac#ransomware-fld!5c2e557fcff8#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+heur:trojan.win32.generic#upatre-facn!abdd1156a022#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+worm.win32.autorun.hbbg#pws-zbot.gen.cy#win32/ramnit.a#gen:variant.kazy.8782
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!8459d9ba2680#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+heur:trojan.win32.generic#ransomware-locky!ad3ba3396d51#win32/filecoder.locky.a#gen:heur.locky.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+heur:trojan.win32.generic#upatre-facn!df6dfd9a0110#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-facv!0fda5a3b5192#win32/trojandownloader.small.prl#dropped:generic.malware.dld!.e9423ccd
+trojan.win32.shipup.bph#pws-zbot-fatg!66806024fc04#a variant of win32/kryptik.axpn#trojan.ransom.cerber.1
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#upatre-fach!27f30ee2333f#a variant of win32/kryptik.dqih#gen:trojan.ipatre.1
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+not-a-virus:adware.win32.dealply.chbhx#artemis!1cf6c7405502#a variant of win32/dealply.lh.gen potentially unwanted#trojan.generickd.12502224
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facm!b8f8921cabee#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!39125d7eb39b#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.cryptor.wm#ransomware-gby!f4c050a2586d#win32/filecoder.locky.l#trojan.generickd.5894276
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+not-a-virus:adware.win32.dealply.heur#artemis!8c711fd012cd#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+trojan-downloader.win32.agent.hfdg#upatre-faac!d803609c7607#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-spy.win32.zbot.swzk#downloader-fsh!dad7b002bf28#win32/trojandownloader.waski.e#trojan.spy.zbot.fmv
+heur:trojan.win32.generic#w32/sality.dr!69ca50f4e9a1#win32/sality.ndr#win32.sality.4
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.re potentially unwanted#gen:variant.application.bundler.dealply.464
+not-a-virus:heur:adware.win32.generic#adware-dealply!be04d21d7e20#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.vqu#artemis!5a7b3e3248cf#a variant of win32/packed.nsis.ac#trojan.ranserkd.3683893
+heur:trojan.win32.generic#upatre-facm!e63aa31723be#a variant of win32/kryptik.dlzd#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan.win32.generic#dropper-ffa!e5ec453ddb16#a variant of win32/injector.agby#gen:variant.zbot.106
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.wudi#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1464781
+virus.win32.expiro.ao#w32/expiro.gen.o#win32/expiro.nbi#win32.expiro.gen.2
+trojan-spy.win32.zbot.tbah#downloader-fsh!d731edcd7f83#win32/trojandownloader.waski.a#trojan.generickd.1697113
+packed.win32.krap.ar#pws-zbot.gen.di#win32/ramnit.a#gen:trojan.heur.ks.2
+virus.win32.expiro.rc#artemis!ce507408530b#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.small.cox#pws-zbot.gen.yh#a variant of win32/sality.nbe#trojan.salitystub.f
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.ele#upatre-faag!b1c8fa0bd8e6#win32/trojandownloader.waski.a#trojan.generickd.1956791
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.frrs#upatre-fach!79dbe51bc7ea#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+heur:trojan.win32.generic#upatre-fach!ca0bb98d7410#a variant of win32/kryptik.dpjz#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+trojan.win32.shipup.boz#pws-zbot-fatg!e5ceca25e907#win32/kryptik.axmg#trojan.ransom.cerber.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+trojan.win32.shipup.bqh#pws-zbot-fatg!b9a687c0d166#a variant of win32/kryptik.axyq#trojan.lethic.gen.11
+trojan-downloader.win32.upatre.frir#upatre-facn!05a7d076a539#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-spy.win32.zbot.rbnd#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1462270
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.bkvd#upatre-facm!4253659a7605#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!710264566bc6#a variant of win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.locky.wmd#genericrxaq-sb!49f40c4c6c50#a variant of win32/kryptik.fkwc#trojan.generickd.3799580
+trojan-ransom.win32.locky.acdo#rdn/generic.grp#win32/filecoder.locky.m#trojan.generickd.12532414
+trojan-ransom.win32.locky.g#rdn/generic.tfr#a variant of win32/kryptik.dkhb#trojan.generickd.3046471
+trojan-spy.win32.zbot.svfs#downloader-fsh!7eb8276155e3#win32/trojandownloader.waski.a#trojan.generickd.1683057
+not-a-virus:heur:adware.win32.generic#artemis!024a30576e58#a variant of win32/dealply.jt potentially unwanted#gen:variant.graftor.377263
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.linkury.gen#artemis!0d171899fbb3#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!fc470c138d74#a variant of win32/kryptik.dpfa#gen:trojan.ipatre.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#pws-zbot-fasg!09678805a469#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-ransom.win32.locky.so#rdn/generic.dx#a variant of win32/kryptik.ewlp#gen:variant.razy.44880
+trojan-ransom.win32.locky.as#ransomware-locky!fbc288ecd75c#a variant of win32/kryptik.eopq#trojan.generickd.3055658
+not-a-virus:heur:adware.win32.generic#artemis!40d8a9648c64#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.tble#downloader-fsh!2b8b6f2ce1ce#win32/trojandownloader.waski.e#trojan.spy.zbot.fmy
+heur:trojan.win32.generic#upatre-facv!b9ed00741576#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#gen:variant.graftor.374146
+not-a-virus:heur:adware.win32.generic#artemis!853482ce2f26#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-ransom.win32.wanna.m#ransom-wannacry!48d372a02f8c#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan.win32.generic#downloader-fsh!1ec148aee559#win32/trojandownloader.waski.a#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.qd#ransomware-fet!5032396aa8b5#a variant of win32/kryptik.eszx#gen:variant.razy.36170
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+trojan-downloader.win32.agent.hfdg#upatre-faac!aa53cde78789#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-ransom.win32.wanna.m#ransom-wannacry!83bd16c81f0b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-downloader.win32.upatre.frrs#upatre-fach!c4b6c7771ec4#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.rmwh#downloader-fsh#win32/trojandownloader.waski.a#trojan.downloader.jqkn
+not-a-virus:heur:adware.win32.dealply.gen#pup-fov#a variant of win32/dealply.eb potentially unwanted#gen:variant.application.bundler.dealply.126
+trojan-spy.win32.zbot.simd#downloader-fabv#win32/trojandownloader.waski.a#trojan.generickd.1670802
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.dealply.dffhc#artemis!65e6d9d7288c#a variant of win32/installcore.e potentially unwanted#gen:variant.adware.graftor.30582
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facv!f7e5e3a2beae#a variant of win32/trojandownloader.small.prl#gen:variant.razy.261664
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#pup-fme#a variant of win32/dealply.eb potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#dropper-ffa!b6d539412ffe#win32/trojandropper.gepys.aa#gen:variant.zbot.106
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.ay#win32.expiro.gen.3
+trojan-spy.win32.zbot.side#downloader-fabv!f12ad6465f42#win32/trojandownloader.waski.a#trojan.generickd.1669208
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+heur:trojan-downloader.win32.generic#upatre-faai!de7622800b6a#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!03fbeb9ec341#a variant of win32/dealply.jt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#pws-zbot-fasg!ba9b4ddf4c24#win32/filecoder.nan#gen:variant.symmi.20205
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!5cf8caa231a6#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-ransom.win32.locky.qb#ransomware-fev!98f0baefdb4c#a variant of win32/kryptik.eszx#trojan.generickd.3133138
+trojan-spy.win32.zbot.qsec#downloader-fwt!c21c15519c67#win32/trojandownloader.small.aab#trojan.generickd.1411747
+trojan-ransom.win32.wanna.m#ransom-wannacry!989b01f53cf9#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#pws-zbot.gen.aej#win32/vb.qms#gen:variant.barys.4372
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-fach!12b568c4779a#a variant of win32/kryptik.dpgo#trojan.upatre.gen.3
+trojan-spy.win32.zbot.wudi#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1464781
+not-a-virus:heur:adware.win32.generic#artemis!57ef8d8ea76a#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#upatre-facm!194e96458ea3#a variant of win32/kryptik.dmjn#trojan.upatre.gen.3
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+heur:trojan.win32.generic#dropper-ffa!d91b6479228d#a variant of win32/injector.agdg#gen:variant.zbot.106
+trojan-downloader.win32.upatre.dmid#downloader-faww!a5f45f7887bf#win32/trojandownloader.waski.v#trojan.upatre.et
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!6ffe6a79ce05#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-downloader.win32.upatre.frrs#upatre-fach!b3b89845ed9a#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.dma#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1899981
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!ef54f8b23971#a variant of win32/dealply.ma.gen potentially unwanted#gen:variant.application.bundler.dealply.455
+trojan-ransom.win32.locky.eb#generic.xu#win32/filecoder.locky.a#trojan.generickd.3091434
+trojan-ransom.win32.locky.yr#genericrxaa-xt!a0cd9876a771#a variant of win32/kryptik.exps#trojan.generickd.3241746
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.rc#artemis!ef2141541b65#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.shipup.bog#pws-zbot-bg!b4f1f8ec055d#a variant of win32/kryptik.axbq#gen:variant.ransom.71
+heur:trojan.win32.generic#upatre-fach!7bcd3ba31b7d#a variant of win32/kryptik.dqxg#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+heur:trojan-downloader.win32.generic#upatre-faai!9f08654e6f23#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+heur:trojan.win32.generic#upatre-facn!90dc777263ad#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!994f56b40eb4#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-ransom.win32.locky.uu#rdn/generic.tfr#a variant of win32/kryptik.ewzb#gen:trojan.brresmon.gen.1
+trojan-ransom.win32.locky.zq#ransomware-fld!6abc45cd6faf#a variant of win32/kryptik.exyb#trojan.agent.btkf
+not-a-virus:heur:adware.win32.generic#artemis!bf449c6b9c41#a variant of win32/dealply.rk potentially unwanted#gen:variant.application.bundler.dealply.84
+trojan.win32.deshacop.cgs#rdn/ransom#a variant of win32/filecoder.locky.b#trojan.ransom.locky.u
+virus.win32.expiro.ap#w32/expiro.gen.o#win32/expiro.nau#win32.expiro.gen.2
+trojan-downloader.win32.upatre.frrs#upatre-fach!edee00c7e913#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.nby#win32.expiro.gen.3
+trojan.win32.small.cpd#w32/sality.gen.z#win32/sality.ndr#trojan.salitystub.f
+trojan.win32.small.cpd#w32/sality.dr#win32/sality.ndr#trojan.salitystub.f
+trojan-ransom.win32.locky.ctj#genericr-isw!af5e2c1bc544#a variant of win32/injector.cvcu#trojan.kovter.gen.1
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!15c4d44a10f1#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.164
+not-a-virus:heur:adware.win32.generic#adware-dealply#a variant of win32/dealply.kq.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.shipup.bok#pws-zbot-fatw!b33e90a0b441#a variant of win32/kryptik.axid#gen:variant.razy.262327
+trojan-spy.win32.zbot.rqyj#downloader-fsh#win32/trojandownloader.waski.a#trojan.generickd.1588483
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!f273edada46b#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.linkury.gen#adware-linkury#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+trojan-ransom.win32.locky.aac#ransomware-fld!282321b62f01#a variant of win32/kryptik.eydh#gen:variant.razy.59033
+virus.win64.expiro.e#w64/expiro.a#win64/expiro.w#win64.expiro.gen.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+trojan-downloader.win32.upatre.frir#upatre-facn!a19bfc1c3657#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.frir#upatre-facn!859c78c41c20#a variant of win32/kryptik.dncm#trojan.upatre.gen.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!4196d116b832#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+heur:trojan.win32.generic#pws-zbot.gen.yg#a variant of msil/spy.agent.bp#generic.malware.gsd.75bf723f
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+not-a-virus:heur:adware.win32.generic#artemis!e8abe1914527#a variant of win32/dealply.ma.gen potentially unwanted#gen:variant.application.bundler.dealply.455
+trojan-ransom.win32.wanna.m#ransom-wannacry!c9956dcdf33b#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.siyn#downloader-fsh!c970fe3d9641#a variant of win32/kryptik.cajw#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#adware-dealply#a variant of win32/dealply.ea potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!06ba1be2d1de#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+trojan-ransom.win32.wanna.m#ransom-wannacry!300b8a6e0d43#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+trojan-ransom.win32.wanna.zbu#ransom-wannacry!82b831a49a20#win32/filecoder.wannacryptor.d#trojan.ransom.wannacryptor.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!bf452b517335#a variant of win32/dealply.fd.gen potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.nsis.cayu.ox#artemis!c3c5939babab#win32/filecoder.locky.c#trojan.generickd.4271839
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.cs#artemis!e8cd099dcb3b#a variant of win32/filecoder.locky.a#memscan:trojan.cryptolocker.di
+trojan-ransom.win32.wanna.m#ransom-wannacry!b2824f2cc268#win32/exploit.cve-2017-0147.a#trojan.ransom.wannacryptor.h
+not-a-virus:heur:adware.win32.generic#artemis!07084b620cc0#a variant of win32/dealply.jt potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.agent.hfdg#upatre-faac!878b9da16e5f#win32/trojandownloader.waski.f#trojan.generickd.1958089
+trojan-downloader.win32.upatre.emva#upatre-fach!ba9487842650#a variant of win32/kryptik.duao#gen:trojan.ipatre.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.wqki#downloader-fsh!17e661058007#win32/trojandownloader.waski.a#trojan.downloader.zbot.f
+heur:trojan.win32.generic#trojan-fobe!434adbafac40#win32/filecoder.natas.a#gen:variant.zbot.191
+trojan-spy.win32.zbot.side#downloader-fabv!3f7e25e93bf3#win32/trojandownloader.waski.a#trojan.generickd.1669208
+heur:trojan.win32.generic#genericrxah-yd!624ad418be52#a variant of win32/filecoder.locky.c#gen:variant.kazy.290343
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!bcfbaf7a7022#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.expiro.rc#w32/expiro.gen.rc#a variant of win32/expiro.cg#win32.expiro.gen.4
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+heur:trojan.win32.generic#rdn/ransom#a variant of win32/kryptik.esmo#gen:variant.locky.7
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nbu#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan-downloader.win32.generic#upatre-faai!e0af9a49593a#win32/trojandownloader.tiny.niv#trojan.agent.cjoo
+trojan-downloader.win32.upatre.frrs#upatre-fach!ed962416a315#a variant of win32/kryptik.dqsy#trojan.upatre.gen.3
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-spy.win32.zbot.rmwh#downloader-fsh#win32/trojandownloader.waski.a#trojan.downloader.jqkn
+virus.win64.expiro.c#w64/expiro#win64/expiro.a#win64.expiro.a
+heur:trojan.win32.generic#upatre-fach!ad3d5c7a3b31#a variant of win32/kryptik.dqpz#trojan.upatre.ew
+trojan-ransom.win32.locky.vnh#ransomware-fxg!63fb4f335617#a variant of win32/injector.dhgb#trojan.generickd.3682980
+trojan-downloader.win32.upatre.jgz#upatre-faca!fc52436184c2#a variant of win32/kryptik.dhfk#trojan.upatre.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+trojan-downloader.win32.agent.hfdg#upatre-faac!bbeef28afdcc#win32/trojandownloader.waski.f#trojan.generickd.1958089
+not-a-virus:heur:adware.win32.linkury.gen#pup-xdu-hz!7ca7485029db#a variant of win32/trojandropper.addrop.bv#gen:variant.adware.linkury.zusy.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.agentb.brij#generic.yk#win32/filecoder.locky.b#trojan.locky.u
+trojan-spy.win32.zbot.tdvn#pwszbot-fnc!7759892328b8#win32/trojandownloader.waski.a#trojan.generickd.1426259
+not-a-virus:heur:adware.win32.generic#artemis!72d83f4b3d4b#a variant of win32/dealply.jt potentially unwanted#application.bundler.dealply.2.gen
+trojan-ransom.win32.locky.xcu#artemis!5971c6ba5ca4#win32/filecoder.locky.c#trojan.generickd.4193821
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+not-a-virus:heur:adware.win32.generic#pup-xab-ek#a variant of win32/dealply.eb potentially unwanted#gen:variant.application.bundler.dealply.298
+virus.win32.expiro.ns#w32/expiro.gen.rd#a variant of win32/expiro.cg#win32.expiro.gen.5
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+trojan-ransom.win32.locky.bj#ransomware-locky!2f44dbe70ba1#win32/filecoder.locky.a#trojan.generic.15824576
+heur:trojan.win32.generic#upatre-facv!c855c4e3e407#win32/trojandownloader.small.prl#gen:variant.graftor.469639
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+trojan-spy.win32.zbot.qsec#downloader-fwt!815783aa8ad4#win32/trojandownloader.small.aab#trojan.generickd.1411747
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.so#rdn/generic.mem#a variant of win32/kryptik.ewlp#gen:variant.razy.44880
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#pup-fpd#a variant of win32/dealply.nc potentially unwanted#gen:variant.jacard.57419
+worm.win32.vobfus.dehs#w32/autorun.worm.aaeh#win32/sality.nao#win32.sality.2.oe
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#upatre-facm!fd97b5f6802a#a variant of win32/kryptik.dmns#trojan.upatre.gen.3
+virus.win32.expiro.nr#w32/expiro.gen.p#win32/expiro.as#win32.expiro.gen.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.small.cox#pws-zbot.gen.yh#win32/sality.nba#trojan.salitystub.f
+heur:trojan.win32.generic#pws-zbot-fasg!5c3e606b4fa7#win32/filecoder.nan#gen:variant.symmi.20205
+not-a-virus:heur:adware.win32.generic#artemis!bfeb3f17ad89#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality#win32.sality.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!fb5269589c52#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#adware.linkury.cv
+trojan-downloader.win32.upatre.fxzr#downloader-fsh#win32/trojandownloader.agent.pxo#trojan.generickd.1866300
+not-a-virus:heur:adware.win32.generic#artemis!4a0998bd584b#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.win32.agent.hfdg#upatre-faac!e75faf873bc4#win32/trojandownloader.waski.f#trojan.generickd.1958089
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen#win32/sality.nau#win32.sality.og
+not-a-virus:heur:adware.win32.generic#adware-dealply!4800f930656f#a variant of win32/dealply.ec potentially unwanted#gen:variant.application.bundler.dealply.84
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3

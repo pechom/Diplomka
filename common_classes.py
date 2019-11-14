@@ -19,9 +19,9 @@ def intersections():
         # same = set(file2).intersection(file1, file3)
         podmnoziny = list(itertools.combinations(antivirusy, 3))
         for i in range(len(podmnoziny)):
-            # rovnake.append(set(files[podmnoziny[i][0]]).intersection(files[podmnoziny[i][1]]))
-            rovnake.append(set(files[podmnoziny[i][0]]).intersection(files[podmnoziny[i][1]],
-                                                                     files[podmnoziny[i][2]]))
+            rovnake.append(set(files[podmnoziny[i][0]]).intersection(files[podmnoziny[i][1]]))
+            # rovnake.append(set(files[podmnoziny[i][0]]).intersection(files[podmnoziny[i][1]],
+            #                                                          files[podmnoziny[i][2]]))
             # same1 = set(file2).intersection(file1)
 
     for i in range(1, len(rovnake)):
@@ -31,4 +31,4 @@ def intersections():
             out.write(name)
 
 
-# intersections()
+intersections()

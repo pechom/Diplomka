@@ -16,8 +16,8 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/very_simple.csv'
-standard_feature_path = 'features/standard/very_simple.csv'
+feature_path = 'features/original.csv'
+standard_feature_path = 'features/standard/original.csv'
 labels_path = 'subory/clear_labels_head.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
@@ -269,18 +269,18 @@ def run_methods():
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     print("vsetky data: " + str(len(data[0])))
     print('\n')
-    xgboost(data, labels)
-    LGBM_goss(data, labels)
-    LGBM(data, labels)
-    RGF(data, labels, "RGF")
-    RGF(data, labels, "RGF_Opt")
-    RFC(data, labels)
+    # xgboost(data, labels)
+    # LGBM_goss(data, labels)
+    # LGBM(data, labels)
+    # RGF(data, labels, "RGF")
+    # RGF(data, labels, "RGF_Opt")
+    RFC(data, labels)  # fast
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    SVM(standard_data, labels, 'rbf', "RBF SVC")
-    SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
-    SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
-    SGD(standard_data, labels)
-    LSVC(standard_data, labels)
+    # SVM(standard_data, labels, 'rbf', "RBF SVC")
+    SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")  # fast
+    # SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
+    SGD(standard_data, labels)  # fast
+    LSVC(standard_data, labels)  # fast
 
 
 def create_original_labels_for_cluster_dataset():

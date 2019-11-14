@@ -7,14 +7,16 @@ import collections
 import pprint
 
 path_labeling = 'C:/PycharmProjects/Diplomka/reports/*'
-path_distribution = 'subory/labels.csv'
+path_distribution = 'subory/labels3.csv'
 empty_path = 'subory/empty'
+input_path = 'subory/same.txt'
 # input = open("subory/3_same_with_packed,obfuscated.txt", "r")
 
 
-def labeling(input, path):  # vytvori csv subor v ktorom budu mena vzoriek a ich triedy
-    classes = input.read().splitlines()
-    out = open('subory/labels2.csv', 'w')
+def labeling(input_path, path):  # vytvori csv subor v ktorom budu mena vzoriek a ich triedy
+    input_classes = open(input_path, "r")
+    classes = input_classes.read().splitlines()
+    out = open('subory/labels3.csv', 'w')
     out.write("id,trieda" + '\n')
     files = sorted(glob.glob(path))
     wannacry = {"wannacry", "wannacrypt", "wanna", "wannacryptor"}
@@ -124,7 +126,7 @@ def clear_empty(empty_file, labels_file):  # odstrani polozky ktore pri tvorbe
     os.rename('subory/clear_labels.csv', labels_file)
 
 
-# labeling(input, path_labeling)
+# labeling(input_path, path_labeling)
 # class_distribution(path_distribution)
 # normal_distribution(path_distribution, path_labeling)
 # class_distribution(path_distribution)
