@@ -21,10 +21,10 @@ import os
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/clear_labels_head.csv'
+labels_path = 'subory/cluster_labels.csv'
 output_dir = 'features/selection/'
 
-sys.stdout = open('new_vysledky/selection_times.txt', 'w')
+sys.stdout = open('results_second_dataset/selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
@@ -460,11 +460,9 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 500
+treshold = 1000
 
 # fcbf()
-# HSIC_lasso(treshold)
-#
 # for_small_data()
 for_big_data()
 #
@@ -474,6 +472,7 @@ data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.flo
 #
 svm_big_data()
 # LSVC_l2()
+# HSIC_lasso(treshold)
 
 # select_best_n(79, output_dir, "features/best_n/")
 sys.stdout.close()

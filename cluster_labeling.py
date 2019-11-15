@@ -53,7 +53,7 @@ def clustering():
         for label in clusterer.labels_:
             output.write(str(label)+'\n')
     clusterer.condensed_tree_.plot(select_clusters=True)
-    plt.show()
+    # plt.show()
     plt.savefig('stare subory/dendogram2.png')
 
 

@@ -229,6 +229,6 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
 # robim dodatocne lebo som uz mal urobene vsetko pred tym
 # create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
 #                              clear_cluster_labels_path, np.uint64)
-#
+
 # create_dataset_from_clusters(standard_dir+'*', cluster_standard_dir, cluster_labels_path,
 #                              clear_cluster_labels_path, np.float64)

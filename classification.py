@@ -18,7 +18,7 @@ import warnings
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/clear_labels_head.csv'
+labels_path = 'subory/cluster_labels.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
 warnings.filterwarnings("ignore")
@@ -263,7 +263,7 @@ def SVM(data, label, kernel, message):
 
 
 def run_methods():
-    sys.stdout = open('new_vysledky/classification_times.txt', 'w')
+    sys.stdout = open('results_second_dataset/classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset !!!
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
@@ -295,7 +295,7 @@ def create_original_labels_for_cluster_dataset():
 
 
 def check_selections():
-    sys.stdout = open('new_vysledky/classification_selected.txt', 'w')
+    sys.stdout = open('results_second_dataset/classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     for file in files:

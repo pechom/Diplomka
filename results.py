@@ -8,13 +8,13 @@ import sys
 import re
 
 best_features_path = 'features/selection/*'
-intersections_file = 'new_vysledky/intersections.txt'
-best_groups_output_file = 'new_vysledky/groups.txt'
+intersections_file = 'results_second_dataset/intersections.txt'
+best_groups_output_file = 'results_second_dataset/groups.txt'
 simple_file = 'features/simple.csv'
 very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
-selected_results = 'new_vysledky/selected/*'
-compact_selected_results = 'new_vysledky/compact_selected/'
+selected_results = 'results_second_dataset/selected/*'
+compact_selected_results = 'results_second_dataset/compact_selected/'
 
 
 def intersections(input_path, output_path):
