@@ -88,14 +88,15 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
                             line = next(result_file)
                             splitted = re.split('\s', line)
                             # print(splitted)
-                            results.append(splitted[2])
+                            results.append(float(splitted[2]))
                             next_line = "  "
                             while next_line != '\n':
                                 next_line = next(result_file)  # su tam dve prazdne riadky
                             next(result_file)
                             if next(result_file) == "------------------------------------------------------------\n":
                                 break
-                        output_file.write(str(min(results)) + " " + str(max(results)) + '\n')
+                        output_file.write('{:.5}'.format(str(min(results)*100)) + "\t "
+                                          + '{:.5}'.format(str(max(results)*100)) + '\n')
                         next(result_file)
                         next(result_file)
                         results = []
@@ -105,4 +106,4 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
 
 # intersections(best_features_path, intersections_file)
 # best_groups(best_features_path, best_groups_output_file)
-# result_processing(selected_results, compact_selected_results)
+result_processing(selected_results, compact_selected_results)
