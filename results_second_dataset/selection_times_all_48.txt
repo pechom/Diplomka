@@ -1,8 +1,0 @@
-pocet atributov: 536109
-
-
-FCBF
-48
-cas: 8:37:45.953312
-
-

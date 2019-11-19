@@ -1,0 +1,108 @@
+ANOVA_F-score
+pocet vybranych: 48
+[('1-gram_char_freq_strings', 13), ('sections', 7), ('2-gram_char_bin_strings', 6), ('2-gram_char_freq_strings', 6), ('strings', 5), ('instructions', 4), ('sizes', 3), ('import_libs', 2), ('metadata', 1), ('resources', 1)]
+simple: 48
+very simple: 48
+
+Fisher
+pocet vybranych: 48
+[('1-gram_char_freq_strings', 13), ('sections', 7), ('2-gram_char_bin_strings', 6), ('2-gram_char_freq_strings', 6), ('strings', 5), ('instructions', 4), ('sizes', 3), ('import_libs', 2), ('metadata', 1), ('resources', 1)]
+simple: 48
+very simple: 48
+
+Gini
+pocet vybranych: 48
+[('sections', 15), ('1-gram_char_freq_strings', 8), ('import_libs', 6), ('2-gram_char_bin_strings', 5), ('2-gram_char_freq_strings', 5), ('metadata', 4), ('resources', 3), ('sizes', 2)]
+simple: 48
+very simple: 48
+
+LGBM gain
+pocet vybranych: 48
+[('sections', 14), ('strings', 10), ('import_libs', 8), ('metadata', 6), ('instructions', 3), ('overlay', 3), ('1-gram_char_freq_strings', 2), ('file_entropy', 1), ('resources', 1)]
+simple: 48
+very simple: 48
+
+LGBM split
+pocet vybranych: 48
+[('sections', 17), ('strings', 9), ('metadata', 7), ('instructions', 3), ('overlay', 3), ('1-gram_char_freq_strings', 2), ('import_libs', 2), ('resources', 2), ('sizes', 2), ('file_entropy', 1)]
+simple: 48
+very simple: 48
+
+Laplacian
+pocet vybranych: 48
+[('import_libs', 34), ('2-gram_char_freq_strings', 9), ('sections', 2), ('1-gram_bin_hex', 1), ('file_entropy', 1), ('export', 1)]
+simple: 48
+very simple: 48
+
+RFC
+pocet vybranych: 48
+[('sections', 22), ('import_libs', 8), ('metadata', 6), ('instructions', 4), ('sizes', 3), ('1-gram_char_freq_strings', 2), ('2-gram_char_bin_strings', 1), ('2-gram_char_freq_strings', 1), ('resources', 1)]
+simple: 48
+very simple: 48
+
+ReliefF
+pocet vybranych: 48
+[('sections', 20), ('strings', 13), ('metadata', 5), ('sizes', 4), ('import_libs', 3), ('instructions', 1), ('file_entropy', 1), ('resources', 1)]
+simple: 48
+very simple: 48
+
+SGD_L1
+pocet vybranych: 48
+[('2-gram_char_freq_strings', 45), ('1-gram_char_freq_strings', 1), ('import_libs', 1), ('overlay', 1)]
+simple: 48
+very simple: 48
+
+SGD_L2
+pocet vybranych: 48
+[('2-gram_char_freq_strings', 13), ('sections', 9), ('strings', 6), ('2-gram_char_bin_strings', 5), ('import_libs', 5), ('1-gram_char_freq_strings', 3), ('overlay', 3), ('resources', 2), ('1-gram_char_bin_strings', 1), ('instructions', 1)]
+simple: 48
+very simple: 48
+
+SGD_elasticnet
+pocet vybranych: 48
+[('2-gram_char_freq_strings', 29), ('sections', 5), ('1-gram_char_freq_strings', 4), ('strings', 3), ('import_libs', 2), ('overlay', 2), ('2-gram_char_bin_strings', 1), ('instructions', 1), ('metadata', 1)]
+simple: 48
+very simple: 48
+
+SPEC
+pocet vybranych: 48
+[('1-gram_bin_hex', 21), ('1-gram_char_freq_strings', 21), ('1-gram_char_bin_strings', 3), ('resources', 2), ('strings', 1)]
+simple: 48
+very simple: 48
+
+SVC_L1
+pocet vybranych: 48
+[('1-gram_bin_hex', 10), ('sections', 10), ('import_libs', 9), ('resources', 6), ('strings', 5), ('overlay', 3), ('1-gram_char_bin_strings', 2), ('metadata', 2), ('instructions', 1)]
+simple: 48
+very simple: 48
+
+SVM
+pocet vybranych: 48
+[('sections', 11), ('1-gram_char_bin_strings', 9), ('import_libs', 9), ('resources', 6), ('strings', 4), ('overlay', 3), ('metadata', 2), ('sizes', 2), ('file_entropy', 1), ('instructions', 1)]
+simple: 48
+very simple: 48
+
+XGBoost gain
+pocet vybranych: 48
+[('sections', 16), ('strings', 9), ('import_libs', 6), ('metadata', 6), ('instructions', 4), ('1-gram_char_bin_strings', 2), ('1-gram_char_freq_strings', 2), ('overlay', 2), ('2-gram_char_bin_strings', 1)]
+simple: 48
+very simple: 48
+
+XGBoost split
+pocet vybranych: 48
+[('sections', 15), ('strings', 12), ('metadata', 7), ('import_libs', 5), ('overlay', 3), ('instructions', 2), ('resources', 2), ('1-gram_char_freq_strings', 1), ('file_entropy', 1)]
+simple: 48
+very simple: 48
+
+chi-square
+pocet vybranych: 48
+[('sections', 30), ('metadata', 5), ('sizes', 5), ('instructions', 4), ('overlay', 3), ('strings', 1)]
+simple: 48
+very simple: 48
+
+mutual_info
+pocet vybranych: 48
+[('sections', 18), ('strings', 10), ('sizes', 7), ('instructions', 6), ('metadata', 5), ('file_entropy', 1), ('import_libs', 1)]
+simple: 48
+very simple: 48
+

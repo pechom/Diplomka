@@ -1,0 +1,76 @@
+ANOVA_F-score: 48
+39.39	 42.22
+chi-square: 48
+95.68	 97.99
+FCBF: 48
+95.84	 98.29
+Fisher: 48
+39.39	 42.22
+Gini: 48
+64.51	 86.22
+Laplacian: 48
+72.79	 82.44
+LGBM gain: 48
+97.31	 99.15
+LGBM split: 48
+97.84	 99.30
+mutual_info: 48
+90.56	 95.82
+ReliefF: 48
+87.85	 94.04
+RFC: 48
+94.44	 97.76
+SPEC: 48
+75.55	 84.91
+XGBoost gain: 48
+97.23	 98.84
+XGBoost split: 48
+97.84	 99.53
+SGD_elasticnet: 48
+90.41	 95.81
+SGD_L1: 48
+89.17	 95.90
+SGD_L2: 48
+89.79	 96.58
+SVC_L1: 48
+97.84	 98.84
+SVM: 48
+90.33	 94.65
+ANOVA_F-score: 48
+31.70	 41.91
+chi-square: 48
+67.43	 84.32
+FCBF: 48
+94.20	 97.60
+Fisher: 48
+31.70	 41.91
+Gini: 48
+54.37	 70.77
+Laplacian: 48
+31.24	 44.53
+LGBM gain: 48
+94.36	 97.14
+LGBM split: 48
+92.58	 97.83
+mutual_info: 48
+60.89	 81.75
+ReliefF: 48
+19.57	 51.81
+RFC: 48
+89.19	 93.59
+SGD_elasticnet: 48
+52.68	 76.90
+SGD_L1: 48
+58.44	 80.73
+SGD_L2: 48
+61.82	 79.75
+SPEC: 48
+37.44	 62.58
+SVC_L1: 48
+97.14	 98.53
+SVM: 48
+69.02	 83.56
+XGBoost gain: 48
+92.51	 95.75
+XGBoost split: 48
+94.21	 97.91
