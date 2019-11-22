@@ -10,7 +10,6 @@ path_labeling = 'C:/PycharmProjects/Diplomka/reports/*'
 path_distribution = 'subory/labels3.csv'
 empty_path = 'subory/empty'
 input_path = 'subory/same.txt'
-# input = open("subory/3_same_with_packed,obfuscated.txt", "r")
 
 
 def labeling(input_path, path):  # vytvori csv subor v ktorom budu mena vzoriek a ich triedy
@@ -65,7 +64,7 @@ def normal_distribution(path_distribution, path_labeling):  # vyhodi vzorky z tr
         names = []
         for line in reader:
             names.append(line['id'])
-            if counter[line['trieda']] > 200:
+            if counter[line['trieda']] > 120:
                 counter[line['trieda']] -= 1
                 for file in files:
                     if os.path.basename(file) == line['id']:
@@ -109,7 +108,8 @@ def only_classes_csv(path_distribution):
     os.rename('subory/classes_labels.csv', path_distribution)
 
 
-def clear_empty(empty_file, labels_file):  # odstrani polozky ktore pri tvorbe
+def clear_empty(empty_file, labels_file):  # odstrani polozky pre ktore sa nepodarilo ziskat hex. subor.
+    # empty subor mam z remnuxu
     with open(empty_file, mode='r') as empty:
         to_delete = empty.readlines()
     with open(labels_file) as labels:

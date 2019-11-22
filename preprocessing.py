@@ -17,9 +17,9 @@ very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
 original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
 features_dir = 'C:/PycharmProjects/Diplomka/features/*'
 discrete_dir = 'C:/PycharmProjects/Diplomka/discrete/'
-labels_path = 'C:/PycharmProjects/Diplomka/subory/clear_labels2_head.csv'
+labels_path = 'C:/PycharmProjects/Diplomka/subory/labels3.csv'
 cluster_dataset_dir = 'C:/PycharmProjects/Diplomka/features/cluster/'
-cluster_labels_path = "C:/PycharmProjects/Diplomka/stare subory/cluster_labels.txt"
+cluster_labels_path = "C:/PycharmProjects/Diplomka/subory/cluster_labels.txt"
 clear_cluster_labels_path = "C:/PycharmProjects/Diplomka/subory/cluster_labels.csv"
 cluster_standard_dir = "C:/PycharmProjects/Diplomka/features/standard_cluster/"
 
@@ -202,6 +202,7 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
 
 
 # -------------------------------------------------------
+# os.mkdir(discrete_dir)
 # discretize(features_dir, discrete_dir, 5)  # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
 # shutil.rmtree(features_dir[:-1])
 # os.renames(discrete_dir, original_path[:-2])
@@ -218,13 +219,15 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
 # shutil.rmtree(original_path[:-1])
 # shutil.rmtree(simple_dir)
 # shutil.rmtree(very_simple_dir)
+# os.mkdir(cluster_dataset_dir)
+# os.mkdir(cluster_standard_dir)
 # vyhodim outliere podla klastrovania, ulozim tento dataset osobitne
 # create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
-#                              labels_path, clear_cluster_labels_path)
+#                              clear_cluster_labels_path, np.uint64)
 # os.mkdir(standard_dir)
 # na konci vsetky atributy standardizujem
 # standardize(features_dir, standard_dir)
-# standardize(cluster_dataset_dir, cluster_standard_dir)
+# standardize(cluster_dataset_dir+'*', cluster_standard_dir)
 
 # robim dodatocne lebo som uz mal urobene vsetko pred tym
 # create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,

@@ -11,6 +11,7 @@ import math
 import sys
 import re
 import gc
+from chardet.universaldetector import UniversalDetector
 
 reports_path = 'reports/*'
 string_path = 'strings/*'
@@ -25,15 +26,17 @@ opcodes_path = 'disassembled_divided/opcodes/*'
 def document_frequency_selection(counter):
     size = len(counter)
     for name, count in counter.copy().items():
-        if size < 100000:
-            if count < 19:  # prah, menej ako 10 percent najmensej triedy - DF, zvysil som pre cross-validation
-                del counter[name]
-        else:
-            if count <= 25:
-                del counter[name]
-            else:
-                if count >= 1540:
-                    del counter[name]
+        if count < 10:
+            del counter[name]
+        # if size < 100000:
+        #     if count < 19:  # prah, menej ako 10 percent najmensej triedy - DF, zvysil som pre cross-validation
+        #         del counter[name]
+        # else:
+        #     if count <= 25:
+        #         del counter[name]
+        #     else:
+        #         if count >= 1540:
+        #             del counter[name]
     return counter
 
 
@@ -686,7 +689,7 @@ def create_entropy_feature(file):
 def divide_disassembled_files(disassembled_path, hex_path, registers_path, opcodes_path):
     files = sorted(glob.glob(disassembled_path))
     for name in files:
-        with open(name) as f:
+        with open(name, errors='replace') as f:
             basename = os.path.basename(f.name)
             text = f.readlines()
         del text[0:7]  # v prvych riadkoch nie su instrukcie
@@ -696,10 +699,11 @@ def divide_disassembled_files(disassembled_path, hex_path, registers_path, opcod
                 if not ((line == "\n") or ("section" in line) or (">:" in line) or ("..." in line) or (
                         "Disassembly" in line)):
                     tokens = line.split("\t")
-                    del tokens[0]  # riadok v povodnom subore
-                    hex = tokens[0].replace(" ", "")
-                    hex = hex.replace("\n", "")
-                    f.write(hex + " ")
+                    del tokens[0]  # umiestnenie riadku (poradie) v povodnom subore
+                    if len(tokens) > 0:
+                        hex = tokens[0].replace(" ", "")
+                        hex = hex.replace("\n", "")
+                        f.write(hex + " ")
                     if len(tokens) > 1:
                         opcode = tokens[1].split()[0]
                         opcode = opcode.replace("\n", "")
@@ -761,7 +765,7 @@ def create_disassembled_features(path):
     max_length = 0
     sizes = collections.Counter()
     for name in files:
-        with open(name) as f:
+        with open(name, errors='replace') as f:
             text = f.readlines()
         for line in text:
             sizes[len(line)] += 1
@@ -776,7 +780,7 @@ def create_disassembled_features(path):
         for name in files:
             line_lengths = []
             feature = [0] * (len(selected_sizes) + 2)
-            with open(name) as f:
+            with open(name, errors='replace') as f:
                 text = f.readlines()
             for line in text:
                 length = len(line)
@@ -799,9 +803,21 @@ def create_disassembled_features(path):
     return header, features
 
 
+def guess_encoding(file_path):
+    with open(file_path, 'rb') as subor:
+        detector = UniversalDetector()
+        for line in subor.readlines():
+            detector.feed(line)
+            if detector.done:
+                break
+    detector.close()
+    print(detector.result)
+
+
 # spusti len raz, ak budem zase spustat extrakciu atributov toto vynecham !!!
 # (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
 # divide_disassembled_files(disassembled_path, dis_hex_path, registers_path, opcodes_path)
+
 # ------------------------------------------
 
 

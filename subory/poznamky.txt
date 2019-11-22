@@ -1,1 +1,11 @@
 klastre: [(0, 341), (2, 340), (-1, 266), (3, 215), (4, 199), (1, 198)]
+
+triedy: [('allaple', 828), ('msil', 576), ('vbkrypt', 479), ('nsis', 331), ('sality', 302), ('dealply', 221), ('parite', 199), ('hupigon', 106)]
+po odstraneni: [('1', 120), ('6', 120), ('4', 120), ('7', 120), ('5', 120), ('0', 120), ('2', 105), ('3', 92)]
+poradie ocislovanych tried: ['allaple', 'parite', 'hupigon', 'sality', 'nsis', 'msil', 'dealply', 'vbkrypt']
+klastre (min 92): [(1, 247), (3, 212), (0, 141), (4, 120), (2, 102), (-1, 95)] 
+
+pre DF som dal hranicu 10, hornu hranicu som nedal
+pre niektore disassembled subory som nevedel dekodovat byte 0x9d. Python pouziva encoding cp1252 (Windows-1252). Da sa to zistit cez print(locale.getpreferredencoding()).
+Podla chardet ma subor encoding Windows-1254, ale ten to tiez neprecital. Ani utf-8. Jediny encoding ktory to dekodoval je latin-1, ale ten dekoduje vsetky byty. 
+Preto som sa rozhodol nahradit byty ktore neviem dekodovat cez cp1252 otaznikom (error=replace).

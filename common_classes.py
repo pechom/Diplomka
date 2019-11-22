@@ -31,4 +31,4 @@ def intersections():
             out.write(name)
 
 
-intersections()
+# intersections()

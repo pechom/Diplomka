@@ -16,11 +16,12 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/original.csv'
-standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels.csv'
+feature_path = 'features/cluster/original.csv'
+standard_feature_path = 'features/standard_cluster/original.csv'
+labels_path = 'subory/cluster_labels3.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
+results_path = 'results_third_dataset/'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
 
@@ -263,7 +264,7 @@ def SVM(data, label, kernel, message):
 
 
 def run_methods():
-    sys.stdout = open('results_second_dataset/classification_times.txt', 'w')
+    sys.stdout = open(results_path+'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset !!!
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
@@ -284,18 +285,18 @@ def run_methods():
 
 
 def create_original_labels_for_cluster_dataset():
-    cluster_labels = np.loadtxt("stare subory/cluster_labels.txt", delimiter=',', skiprows=1, dtype=np.int8)
+    cluster_labels = np.loadtxt("subory/cluster_labels3.txt", delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
     for i in range(len(cluster_labels)):
         if cluster_labels[i] == -1:
             to_delete.append(i)
-    labels = np.loadtxt('subory/clear_labels_head.csv', delimiter=',', skiprows=1, dtype=np.uint8)
+    labels = np.loadtxt('subory/labels3.csv', delimiter=',', skiprows=1, dtype=np.uint8)
     labels = np.delete(labels, to_delete)
     return labels
 
 
 def check_selections():
-    sys.stdout = open('results_second_dataset/classification_selected.txt', 'w')
+    sys.stdout = open(results_path+'classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     for file in files:

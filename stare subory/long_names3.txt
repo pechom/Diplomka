@@ -1,0 +1,917 @@
+backdoor.win32.hupigon.tipv#packed-fe!3b32e89e6e0b#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+packed.win32.black.d#artemis!c636efa6b543#win32/packed.asprotect.aab#backdoor.hupigon.aype
+backdoor.win32.hupigon.pv#backdoor-awq#a variant of win32/hupigon.npk#gen:trojan.heur.3m0jukdbopbb
+backdoor.win32.hupigon.tipv#packed-fe!ad7b4cb8e96f#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.alnv#generic obfuscated.a#a variant of win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.lhf#artemis!edf060c69865#a variant of generik.gukbhdf#trojan.generickd.4004637
+backdoor.win32.hupigon.tipv#packed-fe!a5679a3eb009#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.tipv#packed-fe!497bb807f8a5#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+packed.win32.black.d#artemis!4756a616e217#win32/packed.asprotect.aab#backdoor.hupigon.aype
+backdoor.win32.hupigon.avkm#generic!bg#a variant of win32/hupigon#backdoor.hupigon.73558
+backdoor.win32.hupigon.adma#backdoor-awq#a variant of win32/hupigon#generic.hupigon.yqa.f9c68803
+backdoor.win32.hupigon.tipv#packed-fe!b7315ba0bffc#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.nqr#backdoor-awq.b#a variant of win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.dgls#backdoor-awq.svr.gen.e#win32/hupigon.axbr#backdoor.hupigon.aype
+packed.win32.black.d#artemis!be7608b30738#a variant of win32/hupigon#dropped:generic.hupigon.pas.317d63dd
+backdoor.win32.hupigon.axbr#artemis!304704eace96#a variant of win32/autorun.hupigon.x#gen:win32.explorerhijack.riqaaqy78tnb
+backdoor.win32.hupigon.nqr#backdoor-awq.b#a variant of win32/hupigon#generic.hupigon.yqa.6f9ddea9
+backdoor.win32.hupigon.tipv#packed-fe!b2b886ebf88c#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.nqr#backdoor-awq#a variant of win32/hupigon#gen:trojan.heur.z0w@rtbbnsaak
+heur:trojan.win32.generic#maskpe packed app#a variant of win32/hupigon.npi#gen:trojan.heur.tmkdrrktsfpbk
+backdoor.win32.hupigon.upvo#generic.dx!ne#a variant of win32/autorun.hupigon.l#trojan.packed.libix.gen.1
+backdoor.win32.hupigon.dkj#artemis!8adef62f03a9#a variant of win32/hupigon#backdoor.hupigon.zoa
+backdoor.win32.hupigon.utlo#artemis!0b346b201da2#win32/remtasu.u#trojan.generic.7576232
+packed.win32.polycrypt.b#polycrypt-packed#a variant of win32/kryptik.aapg#generic.hupigon.yqa.06447e88
+backdoor.win32.hupigon.tipv#packed-fe!fc513f8fb262#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+heur:backdoor.win32.generic#new malware.ka#a variant of win32/hupigon.npi#genpack:backdoor.generic.762639
+backdoor.win32.hupigon.nqr#backdoor-awq.svr.gen.e#a variant of win32/hupigon#generic.hupigon.yqa.0b8e446a
+packed.win32.polycrypt.d#backdoor-arr#a variant of win32/hupigon#packer.malware.crypter.c
+packed.win32.polycrypt.d#polycrypt-packed#a variant of win32/hupigon#packer.malware.crypter.c
+heur:trojan.win32.generic#generic!bg#a variant of win32/hupigon#gen:trojan.heur.z0w@rdkxjgmak
+packed.win32.black.d#artemis!30f8c0ec8d7c#win32/packed.asprotect.aab#backdoor.hupigon.aype
+backdoor.win32.hupigon.tipv#packed-fe!791bc1a4af5d#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.tipv#packed-fe!562b647d7741#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+packed.win32.pepatch.ju#generic backdoor.ba#a variant of win32/injector.aih#backdoor.hupigon.aype
+packed.win32.nsanti.r#backdoor-awq.svr.gen.b#a variant of win32/kryptik.be#backdoor.hupigon.aafv
+backdoor.win32.hupigon.axh#artemis!f2177e755201#win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.bhg#maskpe packed app#a variant of win32/hupigon#generic.malware.sbe!kdldg.79ac4987
+backdoor.win32.hupigon.tipv#packed-fe!dd5d93f28222#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+packed.win32.black.d#backdoor-awq.b#a variant of win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.vbgs#artemis!c4401b0ff05d#a variant of win32/packed.themida.aan#trojan.generickd.30389212
+packed.win32.black.d#w32/autorun.worm.f#a variant of win32/autorun.hupigon.l#gen:trojan.heur.o8war1hu9ofbi
+backdoor.win32.hupigon.tipv#packed-fe!add013ad5815#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+packed.win32.black.d#backdoor-awq#a variant of win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.dttp#backdoor-awq.b#a variant of win32/hupigon#trojan.delf.inject.z
+backdoor.win32.hupigon.nqr#backdoor-awq!hv.c#a variant of win32/hupigon#generic.hupigon.yqa.073477f1
+backdoor.win32.hupigon.nrc#nakedpack packed app#win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.bmci#backdoor-alc#a variant of win32/hupigon#backdoor.hupigon.aype
+packed.win32.black.d#artemis!d9921c013558#a variant of win32/autorun.hupigon.l#gen:win32.explorerhijack.nowaaywvvvkj
+backdoor.win32.hupigon.nqr#artemis!a0e6d6c716c9#a variant of win32/hupigon#generic.hupigon.yqa.632df887
+packed.win32.black.d#artemis!4b21304684b8#a variant of win32/trojandropper.delf.nrx#backdoor.hupigon.aype
+backdoor.win32.hupigon.nqr#generic packed.e#a variant of win32/hupigon#generic.hupigon.yqa.8b4cfa97
+packed.win32.black.d#artemis!f91bd962230f#win32/hupigon#backdoor.hupigon.aype
+backdoor.win32.hupigon.nqr#backdoor-arr#a variant of win32/hupigon#generic.hupigon.yqa.5067f186
+backdoor.win32.hupigon.cbs#backdoor-arr#a variant of win32/hupigon#backdoor.hupigon.cbs
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.tipv#packed-fe!b887033fb0d2#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.black.d#backdoor-awq!hv.c#a variant of win32/hupigon#genpack:backdoor.hupigon.ayrq
+backdoor.win32.hupigon.nqr#backdoor-awq.b#a variant of win32/hupigon#generic.hupigon.yqa.54c310e1
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.black.d#artemis!82cf759156c5#win32/packed.asprotect.aab#backdoor.hupigon.aype
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:backdoor.win32.generic#new malware.ka#a variant of win32/hupigon.npi#gen:trojan.heur.xm0@rxxocxmak
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.el.gen potentially unwanted#gen:variant.application.bundler.dealply.164
+packed.win32.pepatch.iz#generic malware.gv#a variant of win32/packed.kbys.a suspicious#backdoor.hupigon.aaah
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan.win32.generic#rdn/generic.grp#a variant of win32/dealply.ki potentially unwanted#adware.generic.1905215
+not-a-virus:heur:adware.win32.generic#artemis!62bdde629aec#a variant of win32/dealply.ky.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:adware.win32.dealply.bgzxu#artemis!136e5c02bbbf#win32/coinminer.agl#trojan.generickd.5293974
+not-a-virus:adware.win32.dealply.dffum#pup-gpz#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+heur:backdoor.win32.generic#rdn/backdoor-awq.b#a variant of win32/hupigon#packer.malware.nsanti.ci
+not-a-virus:heur:adware.win32.generic#artemis!875b7f2c9aa8#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!7caa7aa95bbb#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.heur#artemis!ec9a88364930#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+backdoor.win32.hupigon.tipv#packed-fe!a8cd49e54161#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.polycrypt.d#backdoor-awq#a variant of win32/hupigon#packer.malware.crypter.c
+not-a-virus:heur:adware.win32.generic#artemis!0ee36bdbdf92#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!b08e1baca7e6#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+backdoor.win32.hupigon.lnu#maskpe packed app#a variant of win32/hupigon#gen:win32.explorerhijack.wwgoayuntafb
+not-a-virus:heur:adware.win32.dealply.gen#artemis!704a66b29bad#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.lb.gen potentially unwanted#gen:variant.application.bundler.dealply.357
+not-a-virus:heur:adware.win32.generic#artemis!d9da6ccc880b#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.km.gen potentially unwanted#trojan.generickd.6043638
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.isk#backdoor-alc#a variant of win32/hupigon#generic.hupigon.yqa.4c14cae6
+heur:backdoor.win32.generic#backdoor-awq.gen.r#win32/hupigon#backdoor.hupigon.aype
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.tipv#packed-fe!b62c258995f6#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+not-a-virus:heur:adware.win32.generic#artemis!2681fe2b1584#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!0a1ce332cb53#a variant of win32/dealply.le.gen potentially unwanted#trojan.generickd.5421950
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.klone.af#generic malware.ja#a variant of win32/hupigon#backdoor.hupigon.aype
+not-a-virus:adware.win32.dealply.heur#artemis!3e7d9c286f3d#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.avkm#generic!bg#a variant of win32/hupigon#backdoor.hupigon.73558
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!d71daa11ad4b#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+backdoor.win32.hupigon.cir#artemis!51f4721ba397#a variant of win32/hupigon#gen:trojan.heur.pt.zsw@bcjrtto
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!9f70295cb61f#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.dejcu#artemis!46cd2486be63#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!b9cccb12d7a5#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!56b5054a1e14#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.qcj#backdoor-awq#a variant of win32/hupigon#gen:trojan.heur.yow@rhl6elaak
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!38ba5247e6ea#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.cfnqs#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#trojan.generickd.6055123
+not-a-virus:adware.win32.dealply.deaxl#artemis!530a880e3e07#win32/installcore.gen.a potentially unwanted#adware.generickd.40170798
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.black.d#artemis!511291e00ca1#win32/packed.asprotect.aac#backdoor.hupigon.aype
+not-a-virus:heur:adware.win32.generic#artemis!24f72af2f6ca#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:adware.win32.dealply.heur#artemis!43db607a2bf0#win32/installcore.gen.a potentially unwanted#adware.generickd.5960673
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#rdn/generic pup.x#win32/dealply.ca potentially unwanted#gen:variant.application.bundler.dealply.164
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!6fe4bd34d6a8#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+packed.win32.pepatch.ko#artemis!e62e5acaa3fe#a variant of win32/autorun.hupigon.l#gen:win32.explorerhijack.u0goamzhvrfj
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:adware.win32.dealply.chnir#artemis!18c693ed3081#win32/installcore.gen.a potentially unwanted#application.generickd.6129484
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.krap.hm#pws-zbot.gen.pq#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!26a229688a99#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:risktool.win32.magentkill.12950581.gen#artemis!54b411cbd2c7#a variant of win32/dealply.oy.gen potentially unwanted#trojan.generickd.5919729
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!085736f12a6b#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+trojan-ransom.nsis.myxah.acy#generic.zm#win32/glupteba.af#trojan.generickd.3396256
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!b3d71d6ed4d0#a variant of win32/dealply.eb potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:downloader.nsis.agent.ij#artemis!c9e154025eeb#a variant of win32/installiq.a potentially unwanted#gen:application.bundler.installiq.1
+not-a-virus:adware.win32.dealply.bphin#artemis!00fc506ac5ad#a variant of win32/dealply.mt potentially unwanted#adware.generic.1849634
+trojan.nsis.startpage.fq#artemis!e0398a68d70d#win32/startpage.ovk#trojan.generic.18154891
+trojan-dropper.nsis.agent.gb#artemis!4313b1131f4d#nsis/injector.zr#trojan.generickd.40177667
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!e9665e2f16cb#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!63527843dddc#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:adware.win32.dealply.cejje#rdn/generic pup.x#a variant of win32/dealply.km.gen potentially unwanted#gen:variant.graftor.405218
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.21506440
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-ransom.nsis.onion.oge#rdn/ransom#win32/neurevt.i#trojan.generickd.3223690
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+packed.win32.nsanti.b#backdoor-awq#a variant of win32/hupigon#packer.malware.nsanti.a
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!a88ea77d8f5b#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#pup-xbw-vg#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#artemis!8692d0d64023#nsis/trojandropper.agent.cq#trojan.generickd.30361947
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.ky.gen potentially unwanted#trojan.generickd.6053281
+not-a-virus:adware.win32.dealply.cfiwi#rdn/generic pup.x#a variant of win32/dealply.km.gen potentially unwanted#gen:variant.graftor.377177
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+packed.win32.polycrypt.d#polycrypt-packed#a variant of win32/hupigon#packer.malware.crypter.c
+not-a-virus:downloader.nsis.outbrowse.bw#artemis!15d4858efdb6#win32/outbrowse.bu potentially unwanted#memscan:application.bundler.ju
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+trojan-downloader.nsis.adload.byoj#artemis!e465ab77caa9#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+trojan-ransom.win32.scatter.bl#rdn/ransom#a variant of win32/packed.nsis.l#trojan.generickd.3492763
+backdoor.win32.hupigon.tipv#packed-fe!b91049213389#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:adware.win32.dealply.bogzd#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#trojan.generic.21932630
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+backdoor.win32.hupigon.axbr#backdoor-awq#a variant of win32/hupigon#backdoor.generic.762639
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.bx#adware-adload.c#nsis/trojandownloader.adload.cf#gen:variant.razy.191208
+backdoor.win32.hupigon.tipv#packed-fe!a6d0197f7c2b#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.bxvr#artemis!d18ef3a33af3#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+trojan-downloader.nsis.adload.rsdk#artemis!62fcc7f2f27d#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+not-a-virus:heur:adware.win32.dealply.gen#artemis!5b7759a0ad46#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!b60f2e712884#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:backdoor.win32.generic#backdoor-cgx#a variant of win32/blackhole#generic.hupigon.pas.fcbd0059
+not-a-virus:heur:adware.win32.generic#artemis!b771bfab61ca#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!339bc5a3f28e#a variant of win32/dealply.ko.gen potentially unwanted#trojan.generickd.6130043
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+not-a-virus:heur:adware.win32.generic#artemis!07d0bda3d4df#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#rdn/ransom#nsis/injector.hp#trojan.generickd.3630152
+trojan-downloader.nsis.adload.rtbq#artemis!74c0d8fb51be#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+not-a-virus:heur:downloader.nsis.spigot.heur#artemis!4fdf8d55ba89#a variant of win32/winwrapper.a potentially unwanted#adware.generic.1312710
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-downloader.nsis.adload.cfxu#artemis!e883ba2fc503#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+not-a-virus:heur:adware.win32.generic#artemis!f250c9a374e5#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.nsis.adload.rucg#artemis!9a510d3f6756#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.chbq#artemis!1eac294183ed#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+worm.win32.vobfus.dezx#vbobfus.bc#win32/autorun.vb.ant#gen:variant.vbkrypt.23
+backdoor.win32.hupigon.avkm#generic!bg#a variant of win32/hupigon#backdoor.hupigon.73558
+not-a-virus:adware.win32.dealply.cdzge#artemis!b24eae32cda0#win32/installcore.gen.a potentially unwanted#application.bundler.aos
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!01f5b9ea34a9#a variant of win32/dealply.ko.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.eflr#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vbkrypt.be#vbobfus.bn#win32/autorun.vb.alr#gen:variant.sirefef.460
+not-a-virus:heur:adware.win32.dealply.gen#artemis!6f36a8ba4641#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vbkrypt.be#vbobfus.bn#win32/autorun.vb.alr#gen:variant.sirefef.460
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!feb2463700ae#win32/delf.avy#gen:variant.symmi.3424
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+worm.win32.wbna.ipa#vbobfus.g#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.55
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-dropper.nsis.agent.gb#artemis!9afa33025276#a variant of generik.nqlcshi#trojan.generickd.30397254
+trojan-ransom.win32.locky.csl#artemis!ef3e66188f20#nsis/injector.ht#trojan.generickd.3633915
+not-a-virus:heur:adware.win32.generic#artemis!b06cf95ae572#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.nsis.adload.bxkl#artemis!30d528171b69#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.fe65a6fb
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+backdoor.win32.bifrose.adr#generic backdoor#win32/trojandropper.delf.nvp#backdoor.hupigon.aype
+trojan-downloader.nsis.adload.bxds#artemis!24dd1554bca6#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+not-a-virus:heur:adware.win32.generic#artemis!e765e314a67b#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.vbkrypt.ltuh#vbobfus.dv#win32/autorun.vb.avg#backdoor.vb.agent.kq
+trojan.win32.vb.avcb#vbobfus.at#win32/autorun.vb.akw#gen:variant.vbkrypt.23
+not-a-virus:adware.win32.dealply.deivz#artemis!835fed751920#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!d755dc4a5807#win32/delf.avy#gen:variant.symmi.3424
+not-a-virus:heur:adware.win32.generic#artemis!253070ced5c4#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!a6acd1eed6bd#win32/delf.avy#gen:variant.symmi.3424
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.rtsa#artemis!ffaa421cf81b#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+worm.win32.vobfus.efqn#vbobfus.bc#win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+not-a-virus:adware.nsis.agent.ig#artemis!13230acedb42#a variant of win32/packed.nsismod.a suspicious#gen:variant.application.bundler.yantai.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.xdky#ransomware-fmbt!15d57fc0e7ed#win32/filecoder.cerber.g#trojan.inject.vb.da
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!11691fce02ae#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!cc8905b43a40#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!bd0427629fa9#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!511e14f1863d#a variant of win32/dealply.pe potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:trojan.sresmon.gen.1
+uds:dangerousobject.multi.generic#artemis!fb5c66bd17bd#nsis/trojandropper.agent.cq#trojan.generickd.12438229
+not-a-virus:heur:adware.win32.dealply.gen#artemis!fc15486ca84b#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+trojan-downloader.nsis.adload.bx#artemis!2d18c23de63c#nsis/trojandownloader.adload.cf#application.istartsurf.1
+trojan-ransom.win32.zerber.cukj#artemis!d5aca11a9a38#nsis/injector.ux#trojan.generickd.4506341
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+backdoor.win32.hupigon.btl#backdoor-awq.svr.gen.b#a variant of win32/hupigon#backdoor.hupigon.aaah
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.22411543
+not-a-virus:downloader.nsis.outbrowse.b#artemis!5f5701bdfa4d#win32/outbrowse.g potentially unwanted#gen:variant.ser.ursu.87
+worm.win32.vobfus.dexr#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+trojan.win32.antavka.vis#generic malware.gv#win32/vb.npk#backdoor.hupigon.aaah
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vobfus.eeqo#vbobfus.bc#win32/autorun.vb.amh#gen:variant.vbkrypt.23
+trojan-ransom.win32.locky.wmv#artemis!32719cc209a6#nsis/injector.ls#trojan.generickd.3803720
+trojan-ransom.win32.cryptxxx.asdfzg#generic.atk#nsis/injector.lz#trojan.ranserkd.3812121
+heur:trojan.win32.generic#rdn/ransom#nsis/injector.hp#trojan.generickd.3630233
+worm.win32.vobfus.dfrp#vbobfus.bs#win32/autorun.vb.aok#gen:variant.vbkrypt.23
+packed.win32.black.d#artemis!00cc36543e5c#a variant of win32/trojandropper.delf.nrx#backdoor.hupigon.aype
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.hzgk#vbobfus.ar#win32/autorun.vb.akj#gen:trojan.sresmon.gen.1
+trojan-ransom.nsis.onion.iag#rdn/ransom#win32/filecoder.fj#trojan.generickd.2900139
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan.win32.vbkrypt.cirk#pws-spyeye.el#win32/delf.nvc#gen:heur.manbat.1
+not-a-virus:heur:adware.win32.generic#artemis!8a993a4ae498#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+worm.win32.vobfus.efkh#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+backdoor.win32.hupigon.cwd#backdoor-awq#a variant of win32/trojandropper.delf.nvp#backdoor.hupigon.aype
+packed.win32.krap.hm#pws-zbot.gen.pq#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.bx#artemis!7a202fb5c6e5#nsis/trojandownloader.adload.cf#trojan.generickd.6118434
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-dropper.win32.dorifel.acnq#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+trojan.win32.miner.ays#artemis!d7e5916e787a#nsis/coinminer.p#trojan.generickd.12061700
+trojan-downloader.nsis.adload.rtpg#artemis!4e89992d25a1#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-ransom.win32.locky.btm#artemis!5fbdf0685221#a variant of win32/packed.nsis.t#trojan.generickd.3552586
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.22411543
+trojan.nsis.cayu.me#artemis!d2fd1dc97d8d#win32/filecoder.locky.c#adware.generickd.3804109
+worm.win32.wbna.ipa#vbobfus.bs#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+not-a-virus:adware.win32.dealply.bcuod#artemis!e9e8d6ff9908#a variant of win32/dealply.ki potentially unwanted#adware.generic.1804904
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!f3ee5a732fe8#win32/delf.avy#gen:variant.symmi.3424
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.bwxy#artemis!1214f1762d43#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.fe65a6fb
+trojan.win32.vbkrypt.cixe#pws-zbot-fakq!c07759f6b1dd#a variant of win32/injector.eyu#gen:heur.manbat.1
+not-a-virus:adware.win32.dealply.heur#artemis!edb2be823946#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+trojan.win32.vbkrypt.ltuh#vbobfus.dv#win32/autorun.vb.avg#backdoor.vb.agent.kq
+trojan-ransom.win32.locky.xeg#artemis!d973c0b99ef0#a variant of nsis/injector.sg#trojan.generickd.4220449
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.efnr#vbobfus.bu#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.22411543
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-ransom.win32.locky.btv#artemis!810c01191115#a variant of win32/packed.nsis.t#trojan.nsis.androm.6
+packed.win32.polycrypt.b#polycrypt-packed#a variant of win32/kryptik.aapg#generic.hupigon.yqa.bfd708db
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vbna.axzl#vbobfus.bs#win32/autorun.vb.any#gen:variant.vbkrypt.23
+not-a-virus:adware.nsis.agent.iv#artemis!e1676039bd70#a variant of win32/packed.nsismod.ae suspicious#adware.generickd.5835943
+worm.win32.vobfus.dewm#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+trojan-downloader.nsis.adload.bx#artemis!96b32b847221#nsis/trojandownloader.adload.cf#gen:variant.application.adload.41
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!d6c120cbbd2e#win32/delf.avy#gen:variant.symmi.3424
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:downloader.nsis.agent.ij#artemis!f9b9ed901110#a variant of win32/installiq.a potentially unwanted#gen:application.bundler.installiq.1
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:trojan.sresmon.gen.1
+trojan.win32.vbkrypt.yemk#packed-st!4241259119a0#a variant of win32/injector.dsne#trojan.generickd.12485770
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.eeqo#vbobfus.bc#win32/autorun.vb.amh#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!58d8aa5cbcb0#a variant of win32/dealply.km.gen potentially unwanted#trojan.generickd.5601697
+not-a-virus:adware.msil.domaiq.cbus#cryptdomaiq#a variant of win32/domaiq.be potentially unwanted#application.bundler.domaiq.q
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+heur:trojan.win32.generic#packed-sz!fa7555d01093#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+not-a-virus:adware.win32.dealply.heur#artemis!def4f31b3b07#win32/installcore.gen.a potentially unwanted#application.bundler.apu
+packed.win32.black.d#artemis!3169ed737b27#win32/packed.asprotect.aab#backdoor.hupigon.aype
+not-a-virus:adware.win32.dealply.ceaph#rdn/generic.grp#a variant of win32/dealply.en.gen potentially unwanted#gen:variant.symmi.76714
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!efb87555f538#win32/delf.avy#gen:variant.symmi.3424
+worm.win32.vbkrypt.be#vbobfus.bn#win32/autorun.vb.alr#gen:variant.sirefef.460
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vobfus.efkh#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!459bdaa96f65#a variant of win32/dealply.pe potentially unwanted#application.bundler.dealply.2.gen
+trojan.msil.crypt.ggun#packed-fan!c5524068ae05#a variant of msil/kryptik.mxv#gen:variant.msilkrypt.72
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+heur:trojan.win32.generic#packed-fav!66e11ca37a0a#a variant of msil/kryptik.lml#gen:variant.application.bundler.temonde.379
+heur:trojan.win32.generic#packed-fav!55290bda0ee4#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#packed-sz!e79dc7c24b29#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+trojan-downloader.win32.tovkater.dirg#nsis/downloader.c#a variant of win32/trojandownloader.tovkater.il#gen:heur.conjar.1
+trojan-dropper.win32.autoit.bpz#generic.dbp#a variant of msil/bladabindi.as#ait:trojan.nymeria.81
+trojan.nsis.sod.jkw#artemis!225f47b46926#win32/filecoder.cerber.h#trojan.generickd.4500746
+trojan-downloader.nsis.adload.byzn#artemis!ae85398971f1#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.571cc196
+heur:trojan.win32.generic#artemis!ee379b44e179#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan.msil.agent.fpar#artemis!ff37260d5d0f#msil/nanocore.e#trojan.rasftuby.gen.11
+not-a-virus:heur:adware.win32.generic#artemis!852f2a7a9bcd#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!da5b11f0a316#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!d7df0f31cae3#a variant of win32/dealply.mj potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!f1ff5ac076e6#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-fav!d6ac20c9e960#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!a54a61b953cf#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.inject.acrga#artemis!08afc16820da#win32/injector.dixf#trojan.nsis.androm.av
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+heur:trojan.win32.generic#packed-fah!2055a50258f0#a variant of msil/kryptik.mvk#gen:variant.razy.261001
+heur:trojan.msil.generic#packed-fbg!77957a827cc7#a variant of win32/kryptik.gdzt#trojan.generickd.40161748
+worm.win32.vobfus.efkh#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+not-a-virus:heur:adware.win32.linkury.gen#artemis!f643cfeaf5ab#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+heur:trojan.win32.generic#packed-fav!802ddc1c8f95#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.msil.generic#trojan-fneo!66f07d33a9fb#a variant of msil/injector.cuz#gen:variant.msil.mensa.11
+heur:trojan.win32.generic#generic backdoor.adv#a variant of msil/autorun.spy.agent.cm#gen:variant.zusy.154335
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:adware.nsis.mediamagnet.su#artemis!ccac072a3672#win32/filecoder.locky.c#adware.generickd.3801361
+heur:trojan.win32.generic#packed-fav!caf96589ed49#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:trojan.sresmon.gen.1
+worm.win32.vobfus.efej#vbobfus.bc#win32/autorun.vb.amq#gen:variant.vbkrypt.23
+trojan.nsis.cayu.eda#generic trojan.i#nsis/injector.wl#trojan.generickd.12502979
+not-a-virus:heur:adware.win32.generic#artemis!32307540a841#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.nsis.adload.bwzl#artemis!25a490f57346#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+trojan.win32.vbkrypt.cgnr#pws-spyeye.el#a variant of win32/injector.eyu#gen:heur.manbat.1
+trojan.win32.reconyc.itwm#artemis!bfdc5fc4a2e8#a variant of msil/gamehack.yr potentially unsafe#gen:win32.malware.guz@aa238tai
+heur:trojan.win32.generic#packed-fav!5cdd8ccd427b#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+not-a-virus:adware.msil.solimba.c#artemis!9e2bca812d5b#msil/solimba potentially unwanted#gen:variant.adware.solimba.1
+worm.win32.vobfus.dewm#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#packed-fav!ef4d51df175a#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan-dropper.msil.generic#packed-fav!edd719cd68bd#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan-downloader.nsis.adload.rsky#artemis!b7123a70e4b2#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virtool.msil.binder.a#generic dropper.ji#a variant of msil/trojandropper.agent.bbq#gen:heur.msil.krypt.2
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.ywkx#packed-wm!1f3081cab4f0#a variant of win32/injector.dvau#gen:variant.graftor.457512
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!ee5702fc3313#win32/delf.avy#gen:variant.symmi.3424
+trojan.msil.disfa.bop#rdn/generic fakealert#msil/faketool.anf#gen:heur.msil.hacktool.65
+not-a-virus:adware.msil.domaiq.chck#artemis!067a4a679d52#msil/domaiq.f potentially unwanted#application.bundler.domaiq.q
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#packed-fav!db15356a5c55#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.msil.crypt.fccv#packed-mr!3179acc8b720#a variant of msil/kryptik.emq#gen:variant.msil.lynx.41
+heur:trojan.win32.generic#packed-fav!df15a12912b1#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+worm.win32.vobfus.dfrp#vbobfus.bs#win32/autorun.vb.aok#gen:variant.vbkrypt.23
+virus.win32.small.l#w32/alisa.d#win32/small.l#win32.parite.b
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.vbkrypt.yfhm#packed-st!e05497c00afc#a variant of win32/injector.dssl#trojan.generickd.12504067
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#packed-fav!a6a4acf976ff#a variant of msil/kryptik.lml#gen:variant.razy.276525
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!1142c26ecf9c#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+backdoor.win32.zegost.dftu#ransom-fxu!9fcd8e55457d#a variant of msil/injector.ide#gen:heur.msil.androm.1
+trojan-ransom.win32.scatter.of#generic.aut#nsis/injector.na#trojan.generickd.3913263
+heur:trojan.win32.generic#packed-zx!2424afdb9509#a variant of msil/trojandropper.agent.dof#gen:variant.razy.261057
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.hupigon.nqr#backdoor-arr#a variant of win32/hupigon#generic.hupigon.yqa.824cde53
+heur:trojan.msil.generic#packed-vq!2ae85062da9d#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+heur:trojan.win32.generic#packed-zx!6a408ea60c10#a variant of msil/trojandropper.agent.dof#gen:variant.razy.256726
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-ransom.win32.zerber.cwsr#artemis!1756ed25f06f#a variant of nsis/injector.vb#gen:heur.nsis.cerber.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.bx#artemis!803bd6912089#nsis/trojandownloader.adload.cf#application.istartsurf.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#artemis!00c8cec82e5a#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.msil.generic#packed-uc!4384946558bd#a variant of msil/kryptik.mpy#gen:trojan.heur.dnp.im1@au9slh
+heur:trojan.win32.generic#artemis!b758a94407bf#nsis/trojandropper.agent.cq#trojan.generickd.30386652
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/virut.nbk#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.nsis.convertad.gen#artemis!4ca8be14e302#win32/adware.convertad.aey#adware.generickd.12020280
+not-a-virus:heur:adware.win32.generic#artemis!e99d086db781#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!878cf3b278f0#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+worm.win32.vobfus.efot#vbobfus.bs#win32/autorun.vb.ami#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+trojan-ransom.win32.zerber.cqwv#artemis!def18c801d14#nsis/injector.uw#zum.ransom.nsis.cerber.1
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.dealply.gen#artemis!f985650aebd5#a variant of win32/installcore.aly potentially unwanted#application.bundler.aas
+trojan.win32.agent.ablml#vbobfus.bc#win32/autorun.vb.amk#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+heur:trojan-dropper.msil.generic#packed-fav!c8732c81d6d2#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!098a1eed6861#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan.win32.generic#trojan-fjll!8b695872a233#a variant of msil/injector.ixw#trojan.msil.agent.bnd
+trojan.msil.revenge.axo#rdn/generic.tfr#a variant of msil/kryptik.ldc#trojan.generickd.6095519
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#trojan.generickd.4894172
+heur:trojan-dropper.msil.generic#packed-fav!f3e8374dc3e8#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#rdn/ransom#nsis/injector.ja#trojan.generickd.3701225
+backdoor.win32.hupigon.mhp#artemis!ba034e859abb#a variant of win32/hupigon#deepscan:generic.hupigon.yqa.5843c32f
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.generic#artemis!ab2e1f75a097#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-fav!e6acf5fca3a3#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan-downloader.nsis.adload.rthn#artemis!44a6cff96ed9#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+trojan.win32.vbkrypt.cgnr#pws-spyeye.el#a variant of win32/injector.eyu#gen:heur.manbat.1
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+trojan.win32.vbkrypt.cirk#pws-spyeye.el#win32/delf.nvc#gen:heur.manbat.1
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+worm.win32.vobfus.efhl#vbobfus.bc#win32/autorun.vb.ana#gen:variant.vbkrypt.23
+worm.win32.vobfus.dezx#vbobfus.bc#win32/autorun.vb.ant#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+heur:trojan.win32.generic#packed-fav!5b7b2a559ccc#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.22411543
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.22411543
+heur:trojan.win32.generic#packed-vq!0a25cba3cf2f#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+trojan-ransom.win32.locky.wpb#rdn/ransom#nsis/injector.mr#trojan.generickd.4253773
+not-a-virus:heur:adware.win32.generic#artemis!2422f498c3ef#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#artemis!0c4b13470bd2#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!5dcd3907a9b9#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.win32.vbkrypt.yevk#packed-st!c8ce3c42019a#a variant of win32/injector.dspa#gen:variant.midie.41214
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#gen:variant.application.bundler.zusy.210164
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!08fa36af722a#win32/delf.avy#gen:variant.symmi.3424
+trojan-ransom.win32.cryptodef.aaxa#rdn/generic.bfr#win32/filecoder.cryptowall.d#trojan.nsis.androm.7
+trojan.win32.agent.ablml#vbobfus.bc#win32/autorun.vb.amk#gen:variant.vbkrypt.23
+trojan-downloader.nsis.adload.rrxk#artemis!687eb67f92c9#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#packed-fav!732dd8a0988b#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.win32.vbkrypt.xdky#ransomware-fmbt!42605082d949#win32/filecoder.cerber.g#trojan.generickd.5028110
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen.dam
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-vq!8c8b4b95f2d6#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:adware.msil.domaiq.cbus#cryptdomaiq#a variant of win32/domaiq.be potentially unwanted#application.bundler.domaiq.q
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fav!216270cca235#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan-downloader.nsis.adload.rtys#artemis!b16247569682#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+not-a-virus:heur:downloader.nsis.hafen.gen#rdn/generic pup.z#a variant of win32/softcnapp.c.gen potentially unwanted#gen:variant.symmi.65912
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+uds:dangerousobject.multi.generic#artemis!ee793ba8fc55#a variant of msil/packed.confuser.j suspicious#trojan.generic.20321781
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:adware.win32.dealply.ceiyw#rdn/generic pup.x#a variant of win32/dealply.en.gen potentially unwanted#trojan.generickd.12398443
+trojan-ransom.win32.locky.vpd#artemis!f5e85738755a#a variant of win32/packed.nsis.ac#trojan.ranserkd.3683853
+heur:trojan.win32.generic#packed-zx!05dbf0e875b5#a variant of msil/trojandropper.agent.dof#gen:variant.razy.256334
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.rstz#artemis!288dba2d5e25#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+trojan-ransom.win32.locky.cxh#artemis!bd915aff29e5#nsis/injector.ij#trojan.ranserkd.3655683
+trojan.win32.vbkrypt.voka#artemis!dbf88aedb7f1#a variant of win32/vb.bce#memscan:trojan.delf.pjo
+packed.win32.cpex-based.hq#artemis!e6aa6dd543b6#a variant of win32/hupigon#backdoor.hupigon.aype
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:downloader.win32.morstar.ag#artemis!72840b14121a#a variant of msil/solimba.ac potentially unwanted#application.bundler.morstar.m
+trojan.win32.vb.avcb#vbobfus.at#win32/autorun.vb.akw#gen:variant.vbkrypt.23
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.msil.revenge.bxz#artemis!341d60a1aeb6#a variant of msil/kryptik.epi#gen:variant.symmi.67365
+heur:trojan.msil.generic#artemis!2db5e123967e#a variant of msil/kryptik.hzg#gen:variant.ursu.1864
+worm.win32.vbna.axzl#vbobfus.bs#win32/autorun.vb.any#gen:variant.vbkrypt.23
+worm.win32.vobfus.dexr#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#packed-fav!70d1e3711b4a#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:heur:risktool.win32.magentkill.12950581.gen#artemis!eb93647999b5#a variant of win32/dealply.oy.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.vbkrypt.hzgk#vbobfus.ar#win32/autorun.vb.akj#gen:trojan.sresmon.gen.1
+heur:trojan.win32.generic#packed-sz!b09bc7f2cced#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+worm.win32.vobfus.axro#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fbc!3d6189d0f7e1#a variant of msil/kryptik.ncq#gen:variant.razy.270423
+trojan-downloader.nsis.adload.cgfq#artemis!3cc496202715#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-sz!0d33a6c49e0a#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+trojan-downloader.nsis.adload.rtjs#artemis!fc5b24c950e5#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+backdoor.win32.hupigon.bpfa#backdoor-awq!hv.z#a variant of win32/greybird#genpack:backdoor.hupigon.79330
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!8f75bec65950#a variant of win32/dealply.js potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-sz!867c45db5b53#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:downloader.nsis.outbrowse.o#artemis!963f560de531#win32/outbrowse.j potentially unwanted#application.bundler.outbrowse.bc
+heur:trojan.win32.generic#packed-vq!cf4bf869d8d9#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.win32.vbkrypt.lxuq#artemis!0a83777e95be#a variant of win32/packed.multipacked.ag#trojan.generic.7661557
+not-a-virus:heur:adware.win32.generic#artemis!96d17ec40658#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-fah!24ad2b101223#a variant of msil/kryptik.mvk#gen:variant.razy.259589
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#packed-fbc!46ffb1fb32ed#a variant of msil/kryptik.ncq#gen:variant.razy.270423
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.linkury.gen#artemis!c9714794e752#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-ransom.win32.purga.p#artemis!1f8a6be58cfc#nsis/injector.ei#trojan.generickd.3627769
+trojan-downloader.nsis.adload.rrut#artemis!ade191fb19ac#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#packed-sz!18e841d7e464#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!e3db4881da4b#win32/delf.avy#gen:variant.symmi.3424
+trojan-ransom.win32.zerber.cftb#nsis/obfusransom.t#a variant of win32/injector.dllc#trojan.generickd.4430680
+backdoor.win32.hupigon.oaz#backdoor-awq.svr.gen.b#a variant of win32/hupigon#backdoor.hupigon.aaah
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+packed.win32.nsanti.r#backdoor-awq.svr.gen.c#a variant of win32/hupigon.nyc.gen#packer.malware.nsanti.ci
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.chbz#artemis!6f5ef38f165b#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+trojan-spy.msil.agent.acft#artemis!9fe14c31060b#a variant of win32/packed.themida suspicious#trojan.generickd.6115740
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.generic#artemis!a222b37238e3#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:downloader.nsis.hafen.gen#pup-frs#a variant of win32/packed.nsismod.o suspicious#trojan.generic.21626095
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.rssf#artemis!e706fbae0bd8#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.nsis.domaiq.gen#artemis!d39cc11779cf#msil/domaiq.f potentially unwanted#application.bundler.domaiq.q
+not-a-virus:heur:adware.win32.generic#artemis!52f0929ebcf3#a variant of win32/dealply.mt potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.bx#artemis!7d900b24b53c#nsis/trojandownloader.adload.cf#trojan.generickd.40166806
+not-a-virus:heur:adware.msil.dotdo.gen#artemis!159935e31941#win32/adware.dotdo.b#application.generic.1749244
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.msil.generic#packed-uc!bbeffeb55cf2#a variant of msil/kryptik.mpy#gen:variant.zusy.205243
+worm.win32.vobfus.dgws#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.lh.gen potentially unwanted#trojan.generickd.6019012
+worm.win32.vobfus.eryt#vbobfus.bn#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.rtdn#artemis!304c41089413#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+heur:trojan.win32.generic#packed-sz!b1c934f87c10#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+heur:trojan.win32.generic#packed-sz!acdad2713de2#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.msil.generic#packed-zx!80e027d171c6#a variant of msil/trojandropper.agent.dof#gen:variant.razy.256726
+trojan-dropper.win32.dorifel.acnq#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+not-a-virus:heur:adware.win32.generic#artemis!60ae3275ac64#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!322f61d506f4#a variant of win32/dealply.en.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+worm.win32.vbkrypt.be#vbobfus.bn#win32/autorun.vb.alr#gen:heur.conjar.1
+heur:trojan-dropper.msil.generic#packed-fav!1fb0ec6bc730#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fah!c3cfc7d6254a#a variant of msil/kryptik.mvk#gen:variant.razy.260146
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!3f1b44d4a621#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan.nsis.decryptor.h#rdn/spybot.bfr!o#win32/psw.papras.dp#trojan.nsis.androm.6
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-spy.msil.keybase.awa#packed-sr!91c3a9036547#a variant of msil/injector.tbe#trojan.generickd.6111025
+net-worm.win32.allaple.e#w32/rahack#win32/virut.ba#win32.worm.allaple.gen
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!d62addc8888b#win32/delf.avy#gen:variant.symmi.3424
+not-a-virus:heur:adware.win32.generic#artemis!8b265eff2d73#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-sz!d210cf31be8a#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+not-a-virus:heur:adware.win32.generic#artemis!afc3acd052ad#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:downloader.nsis.greendou.bc#artemis!49c5f3d398bf#nsis/trojandownloader.grinidou.b#trojan.downloader.hicrazyk.a
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.patched.ka#generic dropper.pm.gen#a variant of win32/patched.hv#gen:heur.msil.hacktool.15
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan.win32.generic#packed-vq!6843b57bde4c#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+not-a-virus:heur:adware.win32.dealply.gen#artemis!995fff1651fe#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-fav!8b59b8a6b830#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#packed-fav!8b62dc8cc1c8#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:heur:adware.win32.generic#artemis!97b91c614262#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/virut.nbk#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dezx#vbobfus.bc#win32/autorun.vb.ant#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vbna.axzl#vbobfus.bs#win32/autorun.vb.any#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+trojan.win32.vbkrypt.iahg#vbobfus.g#win32/autorun.vb.aiu#gen:variant.midie.37934
+not-a-virus:heur:downloader.nsis.generic#artemis!ace34d053bff#win32/somoto.h potentially unwanted#trojan.generic.19492250
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!be34ceb99ab4#a variant of win32/dealply.ec potentially unwanted#application.bundler.dealply.2.gen
+worm.win32.wbna.ipa#vbobfus.bt#win32/autorun.vb.aor#gen:variant.vbkrypt.23
+trojan.win32.yakes.jmqr#trojan-ffnj!b5f28bf6d8d4#a variant of msil/injector.iew#gen:heur.msil.androm.1
+trojan.win32.vbkrypt.edju#pws-spyeye.q#a variant of win32/injector.eyu#gen:heur.manbat.1
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+worm.win32.vobfus.axro#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+worm.win32.wbna.ipa#vbobfus.bt#win32/autorun.vb.aor#gen:variant.vbkrypt.23
+not-a-virus:heur:adware.win32.generic#artemis!a6769ded1101#a variant of win32/dealply.km.gen potentially unwanted#trojan.generickd.6127286
+trojan.win32.llac.bwzx#vbobfus.bb#win32/autorun.vb.all#gen:variant.vbkrypt.23
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.win32.vbkrypt.cgnr#pws-spyeye.el#a variant of win32/injector.eyu#gen:heur.manbat.1
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.msil.generic#packed-fan!1dc3a66cab36#a variant of msil/kryptik.ndp#trojan.generickd.40160147
+heur:trojan-dropper.msil.generic#packed-fav!969bc2b2e0f5#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan-downloader.nsis.adload.rtbj#artemis!4079bc2e204e#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+not-a-virus:adware.win32.dealply.ddzcn#artemis!01da1e605c65#win32/installcore.gen.a potentially unwanted#adware.generickd.30392781
+trojan.win32.vbkrypt.iahg#vbobfus.g#win32/autorun.vb.aiu#gen:variant.midie.37934
+not-a-virus:risktool.msil.pcoptimizer.b#artemis!5695cb120c4b#a variant of msil/mypcbackup.g potentially unwanted#adware.generickd.4248738
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:hoax.win32.deceptpcclean.gen#artemis!8ccf355e5432#a variant of msil/uws.driverassist.a#trojan.generickd.6276683
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/wapomi.p#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fbc!3e6bc27d060f#a variant of msil/kryptik.ncq#gen:variant.razy.270452
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dgws#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fav!5d1ffe8f939c#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:heur:adware.win32.dealply.gen#artemis!97cc61612378#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+trojan-ransom.win32.scatter.in#rdn/ransom#nsis/injector.kh#trojan.generickd.3741465
+trojan.nsis.cayu.abw#generic.aaf#win32/filecoder.cerber.d#trojan.ranserkd.3913314
+not-a-virus:adware.win32.dealply.ddapr#artemis!47158b705e48#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+not-a-virus:heur:adware.win32.generic#artemis!1fdcdd01f7b2#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+not-a-virus:heur:adware.win32.linkury.gen#pup-xbc-yl#a variant of msil/toolbar.linkury.av potentially unwanted#trojan.scriptkd.3185
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.win32.diple.eosy#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+heur:trojan.win32.generic#packed-fav!348e9a37eebc#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.win32.vbkrypt.hzgk#vbobfus.ar#win32/autorun.vb.akj#gen:trojan.sresmon.gen.1
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-ransom.win32.shade.lfz#ransomware-locky.g#nsis/injector.lm#trojan.generickd.3799434
+heur:trojan.win32.generic#packed-fav!eccd7effdebb#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+not-a-virus:downloader.nsis.outbrowse.bp#artemis!b85a2b1ffbad#win32/outbrowse potentially unwanted#dropped:application.outbrowse.j
+trojan.win32.vb.avcb#vbobfus.at#win32/autorun.vb.akw#gen:variant.vbkrypt.23
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen.dam
+trojan.win32.vbkrypt.xupa#disttrack!1964c1e5e8aa#a variant of win32/genkryptik.rgy#gen:variant.graftor.322074
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan-spy.win32.noon.ifq#generic.dqa#nsis/injector.zn#trojan.generickd.30383006
+worm.win32.vobfus.eeuu#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+heur:trojan.win32.generic#packed-fav!734a35d56dc2#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#packed-sz!ec53abdf17cf#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+trojan.win32.vbkrypt.wzzu#vbobfus.bn#win32/autorun.vb.alw#gen:variant.sirefef.460
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.nsis.dotdo.gen#artemis!4c9c820a451f#a variant of msil/adware.dotdo.bp#gen:adware.msil.dotdo.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen.dam
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-downloader.nsis.adload.byhl#artemis!0f5244da132e#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+not-a-virus:risktool.msil.pcoptimizer.b#artemis!e1b64fe29079#a variant of msil/mypcbackup.g potentially unwanted#adware.generickd.4274275
+trojan-downloader.nsis.adload.rtkx#artemis!95a1a3f2345f#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+worm.win32.vobfus.eryt#vbobfus.bn#a variant of win32/pronny.ac#gen:variant.vbkrypt.23
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan-dropper.msil.generic#packed-fav!e9ab14baea9a#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+packed.win32.black.d#backdoor-arr#a variant of win32/hupigon#backdoor.hupigon.aype
+worm.win32.vobfus.dgws#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+heur:trojan.win32.generic#packed-fav!cf359a80d95d#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+packed.win32.krap.hm#pws-zbot.gen.pq#win32/sality.nba#win32.sality.3
+trojan.nsis.cayu.vf#artemis!3e2c9b73fec9#win32/filecoder.cerber.d#trojan.ransom.cerber.dz
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan.win32.generic#packed-fav!fbb8d9b9cbc6#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan.win32.agent.ahovt#genericrxax-ep!451bcf140cf5#a variant of msil/agent.oi#gen:variant.zusy.106826
+heur:trojan.win32.generic#packed-fav!6c31dc8dc549#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.msil.generic#artemis!5cc5fa701da1#a variant of msil/kryptik.ncf#trojan.generickd.30382598
+heur:trojan.win32.generic#packed-qr!358daf894c62#a variant of msil/kryptik.kpp#trojan.generickd.12475583
+heur:trojan.win32.generic#packed-vw!022e4e48a6fe#a variant of msil/injector.bhn#gen:variant.zusy.246330
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#artemis!a3f901bbd86a#win32/filecoder.cerber.b#trojan.nsis.androm.6
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!6e904cd354bd#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-fav!d0eb3d4ec0d0#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+heur:trojan.win32.generic#packed-fav!98bf3a533ac0#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-dropper.win32.binder.rz#artemis!e84745ee679b#a variant of win32/hupigon.npi#packer.malware.nsanti.a
+trojan.win32.vb.avcb#vbobfus.at#win32/autorun.vb.akw#gen:variant.vbkrypt.23
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+heur:trojan-ransom.win32.generic#packed-kz!716a663900f7#a variant of msil/injector.lhm#gen:variant.razy.180409
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.wbna.ipa#vbobfus.bt#win32/autorun.vb.aor#gen:variant.vbkrypt.23
+heur:trojan.win32.generic#packed-fav!0684c8523a14#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+trojan-ransom.win32.zerber.cwta#artemis!4a43a2e019ae#a variant of nsis/injector.va#trojan.generickd.4579241
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:adware.win32.dealply.chbhx#artemis!1cf6c7405502#a variant of win32/dealply.lh.gen potentially unwanted#trojan.generickd.12502224
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan-downloader.nsis.adload.byfb#artemis!4ca675fe3758#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.47483e8e
+heur:trojan.win32.generic#packed-fav!659b012cfe7b#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+backdoor.win32.eggdrop.16#generic packed.e#a variant of win32/hupigon#trojan.delf.inject.z
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:risktool.win32.bitcoinminer.iirf#artemis!db1d737f670c#nsis/trojandropper.agent.cq#trojan.generickd.6128627
+not-a-virus:heur:adware.win32.generic#artemis!39125d7eb39b#a variant of win32/dealply.kf.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vobfus.efkh#vbobfus.bc#win32/autorun.vb.ank#gen:variant.vbkrypt.23
+backdoor.win32.hupigon.axh#backdoor-arr#a variant of win32/hupigon#backdoor.hupigon.aype
+not-a-virus:adware.win32.dealply.heur#artemis!8c711fd012cd#win32/installcore.gen.a potentially unwanted#application.alphaeon.1
+heur:trojan.win32.generic#artemis!cc265264a09c#a variant of msil/packed.confuser.j suspicious#trojan.generickd.40172138
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-ransom.win32.locky.vqu#artemis!5a7b3e3248cf#a variant of win32/packed.nsis.ac#trojan.ranserkd.3683893
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/wapomi.p#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.win32.vbkrypt.hzgk#vbobfus.ar#win32/autorun.vb.akj#gen:trojan.sresmon.gen.1
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan-dropper.msil.generic#packed-fav!0274645d84f0#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan.win32.vbkrypt.xcyi#ransomware-fmbt!ebddb0efba86#a variant of generik.vrwled#trojan.ransom.bpr
+trojan.win32.vbkrypt.zcoe#fareit-fkm!f0521150e424#a variant of win32/injector.dwdr#gen:variant.symmi.84102
+not-a-virus:heur:adware.win32.generic#artemis!024a30576e58#a variant of win32/dealply.jt potentially unwanted#gen:variant.graftor.377263
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.ndr#win32.sality.4
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/virut.nbk#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.linkury.gen#artemis!0d171899fbb3#a variant of msil/toolbar.linkury.bi potentially unwanted#gen:variant.adware.ursu.225
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:risktool.msil.pcoptimizer.b#artemis!7594fa9860f7#a variant of msil/mypcbackup.g potentially unwanted#adware.generickd.4267019
+packed.win32.pepatch.jt#artemis!c929fdff4830#a variant of win32/hupigon.npi#generic.hupigon.pas.da4c7e48
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+not-a-virus:downloader.nsis.domaiq.a#artemis!3097b2116929#win32/domaiq.ah potentially unwanted#adware.generic.1954180
+heur:trojan-dropper.msil.generic#packed-fav!e417601501e6#a variant of msil/kryptik.lml#application.bundler.temonde.2.gen
+backdoor.msil.bladabindi.amyk#artemis!856966a1cabf#a variant of win32/packed.themida suspicious#trojan.generickd.30397271
+not-a-virus:heur:adware.win32.generic#artemis!40d8a9648c64#a variant of win32/dealply.lh.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.nsis.xpyn.heur#artemis!a96faa4c1f30#a variant of win32/packed.nsismod.e suspicious#adware.generic.1816181
+trojan.msil.crypt.giib#packed-vq!da2a04ddbac4#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+not-a-virus:heur:adware.win32.generic#rdn/generic pup.x#a variant of win32/dealply.kf.gen potentially unwanted#gen:variant.graftor.374146
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+trojan-dropper.msil.aotoit.alm#rdn/generic.mem#win32/injector.autoit.cvu#trojan.agent.cfof
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+trojan-dropper.win32.agent.bjtgoo#artemis!9b6b8e12cf33#nsis/trojandropper.agent.cq#trojan.generickd.12428952
+worm.win32.vobfus.dewm#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+worm.win32.vobfus.eflr#vbobfus.bc#a variant of win32/autorun.vb.aqe#gen:variant.vbkrypt.23
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:adware.win32.dealply.dffhc#artemis!65e6d9d7288c#a variant of win32/installcore.e potentially unwanted#gen:variant.adware.graftor.30582
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:adware.msil.domaiq.chaq#cryptdomaiq#a variant of win32/domaiq.ba potentially unwanted#application.bundler.domaiq.q
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+not-a-virus:heur:adware.win32.generic#pup-fme#a variant of win32/dealply.eb potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.nsis.adload.rssa#artemis!d9d2bc0dc024#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+worm.win32.vobfus.dezx#vbobfus.bc#win32/autorun.vb.ant#gen:variant.vbkrypt.23
+trojan-downloader.nsis.adload.runj#artemis!8743751270ff#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+backdoor.win32.hupigon.bxux#backdoor-awq!hv.c#win32/hupigon#trojan.delf.inject.z
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan-ransom.nsis.myxahatpyne.aan#generic.zb#win32/filecoder.ctblocker.a#trojan.generickd.3408918
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/wapomi.p#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-sz!ffe2f5b1782c#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+packed.win32.black.d#artemis!8097bc6c3a0b#a variant of win32/hupigon#backdoor.hupigon.aypy
+heur:trojan.win32.generic#packed-sz!7f5b26da2322#a variant of msil/kryptik.lfn#gen:variant.application.bundler.temonde.408
+heur:trojan-dropper.win32.generic#packed-fbp!4af17e05fa20#a variant of msil/kryptik.nec#trojan.generickd.30375807
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.generic#artemis!15c4d44a10f1#a variant of win32/dealply.jq potentially unwanted#gen:variant.application.bundler.dealply.164
+heur:trojan.win32.generic#artemis!72dd8bc7871f#nsis/injector.gx#trojan.ranserkd.3613626
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+worm.win32.vobfus.dddf#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan.nsis.cayu.ox#artemis!c3c5939babab#win32/filecoder.locky.c#trojan.generickd.4271839
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!0520376fb482#win32/delf.avy#gen:variant.symmi.3424
+trojan-downloader.nsis.adload.rtmj#artemis!24d7362dc3f3#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+heur:trojan.win32.generic#packed-vq!2689e5f9dad2#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+not-a-virus:heur:adware.win32.generic#artemis!bcfbaf7a7022#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.win32.generic#artemis!a59f68e0cf13#a variant of msil/kryptik.djr#gen:variant.barys.281
+trojan.win32.vbkrypt.xfjr#packed-kk!595d4257deb6#a variant of win32/injector.douy#gen:variant.symmi.75639
+packed.win32.polycrypt.b#polycrypt-packed#a variant of win32/hupigon#generic.hupigon.yqa.213e9302
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+heur:trojan.win32.generic#artemis!31c1b455b7a9#win32/injector.dlgo#trojan.nsis.androm.6
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#win32/virut.nbp#win32.worm.allaple.gen
+heur:trojan.win32.generic#packed-fau!812f05a4350c#a variant of msil/kryptik.ncb#gen:variant.razy.266542
+backdoor.win32.hupigon.tipv#packed-fe!b423798c5ed1#a variant of win32/kryptik.czfv#gen:variant.razy.139350
+backdoor.win32.hupigon.agp#backdoor-arr#a variant of win32/hupigon#backdoor.hupigon.aypy
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+heur:trojan.win32.generic#trojan-fkgv!feb88b4a73d9#a variant of msil/trojandropper.agent.mk#gen:variant.kazy.68473
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+trojan.nsis.inject.coa#artemis!87d58f91c873#a variant of win32/packed.nsis.l#trojan.generickd.3752408
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!f21dec97b8e0#win32/delf.avy#gen:variant.symmi.3424
+not-a-virus:adware.msil.solimba.c#artemis!47e4a87b1aa3#msil/solimba.h potentially unwanted#adware.solimba.k
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+not-a-virus:heur:adware.win32.generic#artemis!72d83f4b3d4b#a variant of win32/dealply.jt potentially unwanted#application.bundler.dealply.2.gen
+heur:trojan.win32.generic#packed-vq!cf9473cac95f#a variant of msil/kryptik.lol#gen:heur.msil.androm.3
+trojan-downloader.nsis.adload.rsfo#artemis!f6184b04a3b0#nsis/trojandownloader.adload.r#application.downloader.installmonster.s
+trojan.nsis.sod.jky#artemis!f734ad22403b#win32/filecoder.cerber.h#trojan.generickd.4500746
+backdoor.win32.hupigon.axbr#artemis!75c4cfe71ed4#a variant of win32/hupigon#backdoor.hupigon.aypy
+worm.win32.vobfus.eeuu#vbobfus.g#a variant of win32/autorun.vb.ahj#gen:variant.vbkrypt.55
+trojan-ransom.win32.shade.oqb#artemis!f68a97175472#nsis/injector.zn#trojan.generickd.30398291
+trojan-downloader.nsis.adload.bx#artemis!441ce58095f2#nsis/trojandownloader.adload.cf#application.istartsurf.1
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/wapomi.p#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.a#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+heur:trojan.msil.generic#rdn/generic.grp#a variant of msil/packed.confuser.j suspicious#gen:variant.kazy.523881
+not-a-virus:pswtool.win32.messengerpass.n#generic backdoor.adv#msil/spy.agent.xb#trojan.agent.bdmb
+backdoor.win32.hupigon.symi#backdoor-awq.b#a variant of win32/hupigon.nrb#gen:win32.explorerhijack.qmqaaauskrkb
+not-a-virus:heur:adware.win32.generic#artemis!bfeb3f17ad89#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+trojan.win32.vbkrypt.xabo#genericrxbd-ks!af1dc4c7995b#win32/delf.avy#gen:variant.symmi.3424
+not-a-virus:heur:adware.win32.dealply.gen#artemis!fb5269589c52#a variant of win32/dealply.ki potentially unwanted#application.bundler.dealply.2.gen
+trojan-downloader.nsis.adload.bxke#artemis!30573b84e65a#nsis/trojandownloader.adload.r#generic.nsis.downloader.4.fe65a6fb
+virus.win32.parite.b#w32/pate.b#win32/parite.b#win32.parite.b
+not-a-virus:heur:adware.win32.generic#artemis!4a0998bd584b#a variant of win32/dealply.km.gen potentially unwanted#application.bundler.dealply.2.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+net-worm.win32.allaple.e#w32/rahack#a variant of win32/allaple.gen#win32.worm.allaple.gen
+virus.win32.sality.gen#w32/sality.gen.z#win32/sality.nba#win32.sality.3
+trojan.win32.agent.ablml#vbobfus.bc#win32/autorun.vb.amk#gen:variant.vbkrypt.23
+trojan.win32.vbkrypt.xkgw#packed-mi!859d5c556fac#a variant of win32/genkryptik.alyu#gen:variant.symmi.79487
