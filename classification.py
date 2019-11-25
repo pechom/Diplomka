@@ -16,8 +16,8 @@ import os
 import preprocessing
 import warnings
 
-feature_path = 'features/cluster/original.csv'
-standard_feature_path = 'features/standard_cluster/original.csv'
+feature_path = 'features/simple.csv'
+standard_feature_path = 'features/standard/simple.csv'
 labels_path = 'subory/cluster_labels3.csv'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
@@ -266,20 +266,20 @@ def SVM(data, label, kernel, message):
 def run_methods():
     sys.stdout = open(results_path+'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-    # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset !!!
+    # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     print("vsetky data: " + str(len(data[0])))
     print('\n')
-    # xgboost(data, labels)
-    # LGBM_goss(data, labels)
-    # LGBM(data, labels)
-    # RGF(data, labels, "RGF")
-    # RGF(data, labels, "RGF_Opt")
+    xgboost(data, labels)
+    LGBM_goss(data, labels)
+    LGBM(data, labels)
+    RGF(data, labels, "RGF")
+    RGF(data, labels, "RGF_Opt")
     RFC(data, labels)  # fast
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    # SVM(standard_data, labels, 'rbf', "RBF SVC")
+    SVM(standard_data, labels, 'rbf', "RBF SVC")
     SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")  # fast
-    # SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
+    SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
     SGD(standard_data, labels)  # fast
     LSVC(standard_data, labels)  # fast
 
@@ -345,5 +345,5 @@ def check_selections():
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
     run_methods()
-    # check_selections()
+    check_selections()
 sys.stdout.close()

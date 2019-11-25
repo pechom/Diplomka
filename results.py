@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import glob
 import os
@@ -8,13 +7,13 @@ import sys
 import re
 
 best_features_path = 'features/selection/*'
-intersections_file = 'results_second_dataset/intersections.txt'
-best_groups_output_file = 'results_second_dataset/groups.txt'
+intersections_file = 'results_third_dataset/intersections.txt'
+best_groups_output_file = 'results_third_dataset/groups.txt'
 simple_file = 'features/simple.csv'
 very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
-selected_results = 'results_second_dataset/selected/*'
-compact_selected_results = 'results_second_dataset/compact_selected/'
+selected_results = 'results_third_dataset/selected/*'
+compact_selected_results = 'results_third_dataset/compact_selected/'
 
 
 def intersections(input_path, output_path):
@@ -105,5 +104,5 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
 
 
 # intersections(best_features_path, intersections_file)
-# best_groups(best_features_path, best_groups_output_file)
+best_groups(best_features_path, best_groups_output_file)
 result_processing(selected_results, compact_selected_results)

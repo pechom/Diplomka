@@ -21,10 +21,12 @@ import os
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels.csv'
+labels_path = 'subory/cluster_labels3.csv'
 output_dir = 'features/selection/'
+standard_output_dir = 'features/selection_standard/'
+results_path = 'results_third_dataset/'
 
-sys.stdout = open('results_second_dataset/selection_times.txt', 'w')
+sys.stdout = open(results_path + 'selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
 
 
@@ -460,13 +462,13 @@ header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
 print("pocet atributov: " + str(len(header)))
 print('\n')
-treshold = 1000
+treshold = 62
 
 # fcbf()
 # for_small_data()
 for_big_data()
 #
-output_dir = 'features/selection_standard/'
+output_dir = standard_output_dir
 header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
 #

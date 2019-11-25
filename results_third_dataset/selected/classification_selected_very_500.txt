@@ -1,0 +1,1296 @@
+ANOVA_F-score: 500
+XGBoost
+najlepsi priemer: 0.964674
+index najlepsieho: 93
+najhorsi priemer: 0.9136492
+finalny priemer: 0.964674
+cas: 0:00:10.969574
+
+
+LGBM GOSS
+najlepsi priemer: 0.978060609971179
+index najlepsieho: 69
+najhorsi priemer: 0.8927949463434878
+finalny priemer: 0.974431109390459
+cas: 0:00:03.672154
+
+
+LGBM
+najlepsi priemer: 0.9732255774938702
+index najlepsieho: 56
+najhorsi priemer: 0.8927949463434878
+finalny priemer: 0.9732255774938702
+cas: 0:00:05.031633
+
+
+RGF
+priemerny vysledok: 0.9695971776244373
+cas: 0:00:40.833633
+
+
+RGF_Opt
+priemerny vysledok: 0.9744752264049251
+cas: 0:00:45.032933
+
+
+RFC
+priemerny vysledok: 0.9365607073904539
+cas: 0:00:20.735942
+
+
+------------------------------------------------------------
+
+
+chi-square: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9670981
+cas: 0:00:11.110210
+
+
+LGBM GOSS
+najlepsi priemer: 0.9768851894868155
+index najlepsieho: 83
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756947132963393
+cas: 0:00:03.734658
+
+
+LGBM
+najlepsi priemer: 0.9744160536843464
+index najlepsieho: 89
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9744160536843464
+cas: 0:00:05.047259
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:38.708896
+
+
+RGF_Opt
+priemerny vysledok: 0.976914250795169
+cas: 0:00:41.510351
+
+
+RFC
+priemerny vysledok: 0.9426593437736431
+cas: 0:00:20.624218
+
+
+------------------------------------------------------------
+
+
+Fisher: 500
+XGBoost
+najlepsi priemer: 0.9671281
+index najlepsieho: 77
+najhorsi priemer: 0.9148257
+finalny priemer: 0.964659
+cas: 0:00:10.953948
+
+
+LGBM GOSS
+najlepsi priemer: 0.9707424613928679
+index najlepsieho: 74
+najhorsi priemer: 0.8940004529363688
+finalny priemer: 0.9683174173011572
+cas: 0:00:03.578398
+
+
+LGBM
+najlepsi priemer: 0.9731814857831118
+index najlepsieho: 65
+najhorsi priemer: 0.8940004529363688
+finalny priemer: 0.9719910095926356
+cas: 0:00:04.984752
+
+
+RGF
+priemerny vysledok: 0.9695971776244373
+cas: 0:00:40.940622
+
+
+RGF_Opt
+priemerny vysledok: 0.9744601706988125
+cas: 0:00:43.597275
+
+
+RFC
+priemerny vysledok: 0.9353852869060904
+cas: 0:00:20.673224
+
+
+------------------------------------------------------------
+
+
+Gini: 500
+XGBoost
+najlepsi priemer: 0.9683327
+index najlepsieho: 89
+najhorsi priemer: 0.9148257
+finalny priemer: 0.9670981
+cas: 0:00:11.032080
+
+
+LGBM GOSS
+najlepsi priemer: 0.9719910095926356
+index najlepsieho: 53
+najhorsi priemer: 0.9036554621848739
+finalny priemer: 0.9695369294962791
+cas: 0:00:04.078434
+
+
+LGBM
+najlepsi priemer: 0.973152449778466
+index najlepsieho: 59
+najhorsi priemer: 0.9036554621848739
+finalny priemer: 0.9719910095926356
+cas: 0:00:05.594176
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:40.378078
+
+
+RGF_Opt
+priemerny vysledok: 0.9732557142098032
+cas: 0:00:44.128353
+
+
+RFC
+priemerny vysledok: 0.9389997317806978
+cas: 0:00:20.704689
+
+
+------------------------------------------------------------
+
+
+Laplacian: 500
+XGBoost
+najlepsi priemer: 0.9610144
+index najlepsieho: 95
+najhorsi priemer: 0.8917336
+finalny priemer: 0.9597798
+cas: 0:00:10.953948
+
+
+LGBM GOSS
+najlepsi priemer: 0.971916806469652
+index najlepsieho: 63
+najhorsi priemer: 0.9024800417005103
+finalny priemer: 0.971916806469652
+cas: 0:00:03.640902
+
+
+LGBM
+najlepsi priemer: 0.9719028261711189
+index najlepsieho: 50
+najhorsi priemer: 0.9024800417005103
+finalny priemer: 0.9694928377855208
+cas: 0:00:04.984753
+
+
+RGF
+priemerny vysledok: 0.9719921103039229
+cas: 0:00:38.815460
+
+
+RGF_Opt
+priemerny vysledok: 0.9768852147905233
+cas: 0:00:42.143828
+
+
+RFC
+priemerny vysledok: 0.9365897433950997
+cas: 0:00:20.657810
+
+
+------------------------------------------------------------
+
+
+LGBM gain: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9670981
+cas: 0:00:11.032079
+
+
+LGBM GOSS
+najlepsi priemer: 0.978060609971179
+index najlepsieho: 71
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756796575902267
+cas: 0:00:03.797165
+
+
+LGBM
+najlepsi priemer: 0.9780315739665333
+index najlepsieho: 69
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756215855809351
+cas: 0:00:05.172268
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:40.143887
+
+
+RGF_Opt
+priemerny vysledok: 0.9744601706988125
+cas: 0:00:43.721870
+
+
+RFC
+priemerny vysledok: 0.9341356632987432
+cas: 0:00:20.720315
+
+
+------------------------------------------------------------
+
+
+LGBM split: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9670981
+cas: 0:00:11.016454
+
+
+LGBM GOSS
+najlepsi priemer: 0.978060609971179
+index najlepsieho: 71
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756796575902267
+cas: 0:00:03.781537
+
+
+LGBM
+najlepsi priemer: 0.9780315739665333
+index najlepsieho: 69
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756215855809351
+cas: 0:00:05.172269
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:39.706151
+
+
+RGF_Opt
+priemerny vysledok: 0.9744601706988125
+cas: 0:00:43.472055
+
+
+RFC
+priemerny vysledok: 0.9341356632987432
+cas: 0:00:20.689062
+
+
+------------------------------------------------------------
+
+
+mutual_info: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9670981
+cas: 0:00:11.141463
+
+
+LGBM GOSS
+najlepsi priemer: 0.9756506215855809
+index najlepsieho: 88
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9744601453951047
+cas: 0:00:03.765910
+
+
+LGBM
+najlepsi priemer: 0.9744160536843464
+index najlepsieho: 53
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9720060652987482
+cas: 0:00:05.203520
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:40.706229
+
+
+RGF_Opt
+priemerny vysledok: 0.976914250795169
+cas: 0:00:44.737775
+
+
+RFC
+priemerny vysledok: 0.9390438234914562
+cas: 0:00:20.829698
+
+
+------------------------------------------------------------
+
+
+ReliefF: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9148687
+finalny priemer: 0.9670981
+cas: 0:00:11.500864
+
+
+LGBM GOSS
+najlepsi priemer: 0.9731814857831118
+index najlepsieho: 64
+najhorsi priemer: 0.8999668141872829
+finalny priemer: 0.9707714973975137
+cas: 0:00:04.140941
+
+
+LGBM
+najlepsi priemer: 0.9744009979782338
+index najlepsieho: 68
+najhorsi priemer: 0.8999668141872829
+finalny priemer: 0.9731664300769992
+cas: 0:00:06.547373
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:41.675052
+
+
+RGF_Opt
+priemerny vysledok: 0.9768701590844107
+cas: 0:00:44.956541
+
+
+RFC
+priemerny vysledok: 0.9378243112963343
+cas: 0:00:20.860951
+
+
+------------------------------------------------------------
+
+
+RFC: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 90
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9670981
+cas: 0:00:11.110212
+
+
+LGBM GOSS
+najlepsi priemer: 0.9768701337807029
+index najlepsieho: 86
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9756355658794683
+cas: 0:00:04.000302
+
+
+LGBM
+najlepsi priemer: 0.9743870176797006
+index najlepsieho: 57
+najhorsi priemer: 0.9000098557941695
+finalny priemer: 0.9720060652987482
+cas: 0:00:05.453541
+
+
+RGF
+priemerny vysledok: 0.9695971776244373
+cas: 0:00:41.112508
+
+
+RGF_Opt
+priemerny vysledok: 0.9756506468892887
+cas: 0:00:45.394073
+
+
+RFC
+priemerny vysledok: 0.9377802195855759
+cas: 0:00:20.860952
+
+
+------------------------------------------------------------
+
+
+SPEC: 500
+XGBoost
+najlepsi priemer: 0.9670981
+index najlepsieho: 99
+najhorsi priemer: 0.9136491
+finalny priemer: 0.9670981
+cas: 0:00:11.125836
+
+
+LGBM GOSS
+najlepsi priemer: 0.9731814857831118
+index najlepsieho: 52
+najhorsi priemer: 0.8964244469242078
+finalny priemer: 0.9731814857831118
+cas: 0:00:03.812790
+
+
+LGBM
+najlepsi priemer: 0.9743870176797006
+index najlepsieho: 72
+najhorsi priemer: 0.8964244469242078
+finalny priemer: 0.9719619735879899
+cas: 0:00:05.250399
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:40.893742
+
+
+RGF_Opt
+priemerny vysledok: 0.9744601706988125
+cas: 0:00:44.987795
+
+
+RFC
+priemerny vysledok: 0.9378092555902217
+cas: 0:00:20.892202
+
+
+------------------------------------------------------------
+
+
+XGBoost gain: 500
+XGBoost
+najlepsi priemer: 0.9671131
+index najlepsieho: 79
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9658785
+cas: 0:00:11.016452
+
+
+LGBM GOSS
+najlepsi priemer: 0.9756796575902267
+index najlepsieho: 88
+najhorsi priemer: 0.8989065382250462
+finalny priemer: 0.9756796575902267
+cas: 0:00:03.469014
+
+
+LGBM
+najlepsi priemer: 0.9743870176797006
+index najlepsieho: 93
+najhorsi priemer: 0.8989065382250462
+finalny priemer: 0.9743870176797006
+cas: 0:00:04.687857
+
+
+RGF
+priemerny vysledok: 0.9720362020146812
+cas: 0:00:38.627944
+
+
+RGF_Opt
+priemerny vysledok: 0.9744591205949408
+cas: 0:00:41.768798
+
+
+RFC
+priemerny vysledok: 0.9305502544287815
+cas: 0:00:20.845326
+
+
+------------------------------------------------------------
+
+
+XGBoost split: 500
+XGBoost
+najlepsi priemer: 0.9671131
+index najlepsieho: 79
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9658785
+cas: 0:00:11.016453
+
+
+LGBM GOSS
+najlepsi priemer: 0.9756796575902267
+index najlepsieho: 88
+najhorsi priemer: 0.8989065382250462
+finalny priemer: 0.9756796575902267
+cas: 0:00:03.515892
+
+
+LGBM
+najlepsi priemer: 0.9743870176797006
+index najlepsieho: 93
+najhorsi priemer: 0.8989065382250462
+finalny priemer: 0.9743870176797006
+cas: 0:00:04.672230
+
+
+RGF
+priemerny vysledok: 0.9720362020146812
+cas: 0:00:38.315421
+
+
+RGF_Opt
+priemerny vysledok: 0.9744591205949408
+cas: 0:00:41.815678
+
+
+RFC
+priemerny vysledok: 0.9305502544287815
+cas: 0:00:20.845325
+
+
+------------------------------------------------------------
+
+
+SGD_elasticnet: 500
+XGBoost
+najlepsi priemer: 0.9683476
+index najlepsieho: 88
+najhorsi priemer: 0.9148247
+finalny priemer: 0.967098
+cas: 0:00:12.188417
+
+
+LGBM GOSS
+najlepsi priemer: 0.9781047016819374
+index najlepsieho: 85
+najhorsi priemer: 0.8877986027292579
+finalny priemer: 0.9781047016819374
+cas: 0:00:03.484642
+
+
+LGBM
+najlepsi priemer: 0.974371961973588
+index najlepsieho: 72
+najhorsi priemer: 0.8877986027292579
+finalny priemer: 0.974371961973588
+cas: 0:00:04.750360
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:42.081322
+
+
+RGF_Opt
+priemerny vysledok: 0.9744752264049251
+cas: 0:00:46.050384
+
+
+RFC
+priemerny vysledok: 0.9414538118770543
+cas: 0:00:20.876578
+
+
+------------------------------------------------------------
+
+
+SGD_L1: 500
+XGBoost
+najlepsi priemer: 0.9695672
+index najlepsieho: 82
+najhorsi priemer: 0.9161463
+finalny priemer: 0.9683327
+cas: 0:00:11.032080
+
+
+LGBM GOSS
+najlepsi priemer: 0.9756796575902267
+index najlepsieho: 92
+najhorsi priemer: 0.8987903435990475
+finalny priemer: 0.9756796575902267
+cas: 0:00:03.890921
+
+
+LGBM
+najlepsi priemer: 0.9768701337807029
+index najlepsieho: 81
+najhorsi priemer: 0.8987903435990475
+finalny priemer: 0.9768701337807029
+cas: 0:00:05.219146
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:41.581295
+
+
+RGF_Opt
+priemerny vysledok: 0.9732256027975779
+cas: 0:00:46.237888
+
+
+RFC
+priemerny vysledok: 0.9389997317806978
+cas: 0:00:20.860951
+
+
+------------------------------------------------------------
+
+
+SGD_L2: 500
+XGBoost
+najlepsi priemer: 0.9658786
+index najlepsieho: 81
+najhorsi priemer: 0.9148687
+finalny priemer: 0.9658786
+cas: 0:00:11.203968
+
+
+LGBM GOSS
+najlepsi priemer: 0.9756355658794683
+index najlepsieho: 49
+najhorsi priemer: 0.8987903435990475
+finalny priemer: 0.9744160536843464
+cas: 0:00:03.812790
+
+
+LGBM
+najlepsi priemer: 0.9744160536843464
+index najlepsieho: 40
+najhorsi priemer: 0.8987903435990475
+finalny priemer: 0.9743870176797006
+cas: 0:00:05.281653
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:42.081330
+
+
+RGF_Opt
+priemerny vysledok: 0.9720211463085686
+cas: 0:00:45.800355
+
+
+RFC
+priemerny vysledok: 0.9389997317806978
+cas: 0:00:20.907831
+
+
+------------------------------------------------------------
+
+
+SVC_L1: 500
+XGBoost
+najlepsi priemer: 0.970918
+index najlepsieho: 56
+najhorsi priemer: 0.9196596
+finalny priemer: 0.9708308
+cas: 0:00:11.063331
+
+
+LGBM GOSS
+najlepsi priemer: 0.9731373940723534
+index najlepsieho: 24
+najhorsi priemer: 0.8987913937029193
+finalny priemer: 0.9707865531036263
+cas: 0:00:03.375258
+
+
+LGBM
+najlepsi priemer: 0.9768260420699445
+index najlepsieho: 50
+najhorsi priemer: 0.8987913937029193
+finalny priemer: 0.97559147416871
+cas: 0:00:04.625350
+
+
+RGF
+priemerny vysledok: 0.9696552749374365
+cas: 0:00:40.503087
+
+
+RGF_Opt
+priemerny vysledok: 0.9756796828939345
+cas: 0:00:43.987941
+
+
+RFC
+priemerny vysledok: 0.933004334525138
+cas: 0:00:20.985738
+
+
+------------------------------------------------------------
+
+
+SVM: 500
+XGBoost
+najlepsi priemer: 0.9658785
+index najlepsieho: 91
+najhorsi priemer: 0.9136492
+finalny priemer: 0.9658785
+cas: 0:00:11.078957
+
+
+LGBM GOSS
+najlepsi priemer: 0.9732255774938702
+index najlepsieho: 77
+najhorsi priemer: 0.8963212077965784
+finalny priemer: 0.9732255774938702
+cas: 0:00:03.984679
+
+
+LGBM
+najlepsi priemer: 0.9768701337807029
+index najlepsieho: 77
+najhorsi priemer: 0.8963212077965784
+finalny priemer: 0.9756506215855809
+cas: 0:00:05.344156
+
+
+RGF
+priemerny vysledok: 0.9708166898195593
+cas: 0:00:44.206492
+
+
+RGF_Opt
+priemerny vysledok: 0.9756947386000471
+cas: 0:00:49.113320
+
+
+RFC
+priemerny vysledok: 0.9389706957760521
+cas: 0:00:21.032627
+
+
+------------------------------------------------------------
+
+
+ANOVA_F-score: 500
+RBF SVC
+priemerny vysledok: 0.915781682139884
+cas: 0:00:02.187666
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9330764374403782
+cas: 0:00:01.140712
+
+
+sigmoid SVC
+priemerny vysledok: 0.8719610246989491
+cas: 0:00:01.453235
+
+
+SGD SVC
+priemerny vysledok: 0.9354734956313149
+cas: 0:00:01.109852
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9233353449780997
+cas: 0:00:15.000747
+
+
+------------------------------------------------------------
+
+
+chi-square: 500
+RBF SVC
+priemerny vysledok: 0.9182347121323687
+cas: 0:00:02.078282
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9306965604670052
+cas: 0:00:01.140712
+
+
+sigmoid SVC
+priemerny vysledok: 0.8538114468913129
+cas: 0:00:01.484488
+
+
+SGD SVC
+priemerny vysledok: 0.9368672744617269
+cas: 0:00:01.109848
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.922072791176091
+cas: 0:00:14.340522
+
+
+------------------------------------------------------------
+
+
+Fisher: 500
+RBF SVC
+priemerny vysledok: 0.915781682139884
+cas: 0:00:02.187667
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9330764374403782
+cas: 0:00:01.140711
+
+
+sigmoid SVC
+priemerny vysledok: 0.8719610246989491
+cas: 0:00:01.453236
+
+
+SGD SVC
+priemerny vysledok: 0.9354734956313149
+cas: 0:00:01.094222
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9258044807805688
+cas: 0:00:15.203891
+
+
+------------------------------------------------------------
+
+
+Gini: 500
+RBF SVC
+priemerny vysledok: 0.9122102788721631
+cas: 0:00:02.109535
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9306083517417807
+cas: 0:00:01.109459
+
+
+sigmoid SVC
+priemerny vysledok: 0.8756636529950733
+cas: 0:00:01.453236
+
+
+SGD SVC
+priemerny vysledok: 0.9379275757276714
+cas: 0:00:01.109849
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9245118155663349
+cas: 0:00:14.250694
+
+
+------------------------------------------------------------
+
+
+Laplacian: 500
+RBF SVC
+priemerny vysledok: 0.918324995761629
+cas: 0:00:02.187666
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9257733445681796
+cas: 0:00:01.156338
+
+
+sigmoid SVC
+priemerny vysledok: 0.8940585502493681
+cas: 0:00:01.531366
+
+
+SGD SVC
+priemerny vysledok: 0.9257582635583592
+cas: 0:00:01.109853
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9197789974164914
+cas: 0:00:14.219437
+
+
+------------------------------------------------------------
+
+
+LGBM gain: 500
+RBF SVC
+priemerny vysledok: 0.9060826064843281
+cas: 0:00:02.297050
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9172657952069716
+cas: 0:00:01.187589
+
+
+sigmoid SVC
+priemerny vysledok: 0.8611435504644496
+cas: 0:00:01.562620
+
+
+SGD SVC
+priemerny vysledok: 0.922291200129555
+cas: 0:00:01.109459
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9147686482000208
+cas: 0:00:16.094973
+
+
+------------------------------------------------------------
+
+
+LGBM split: 500
+RBF SVC
+priemerny vysledok: 0.9060826064843281
+cas: 0:00:02.297050
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9172657952069716
+cas: 0:00:01.187590
+
+
+sigmoid SVC
+priemerny vysledok: 0.8611435504644496
+cas: 0:00:01.578244
+
+
+SGD SVC
+priemerny vysledok: 0.922291200129555
+cas: 0:00:01.094228
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9148127399107792
+cas: 0:00:16.250841
+
+
+------------------------------------------------------------
+
+
+mutual_info: 500
+RBF SVC
+priemerny vysledok: 0.9121812428675173
+cas: 0:00:02.172040
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9293608789495925
+cas: 0:00:01.125085
+
+
+sigmoid SVC
+priemerny vysledok: 0.8684046771373409
+cas: 0:00:01.468862
+
+
+SGD SVC
+priemerny vysledok: 0.9331646461656027
+cas: 0:00:01.109848
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9197209001034922
+cas: 0:00:15.000751
+
+
+------------------------------------------------------------
+
+
+ReliefF: 500
+RBF SVC
+priemerny vysledok: 0.9121952231660505
+cas: 0:00:02.297050
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.93066644905478
+cas: 0:00:01.187589
+
+
+sigmoid SVC
+priemerny vysledok: 0.8524897203687256
+cas: 0:00:01.484488
+
+
+SGD SVC
+priemerny vysledok: 0.9317999033398364
+cas: 0:00:01.109849
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9111402230268801
+cas: 0:00:14.953872
+
+
+------------------------------------------------------------
+
+
+RFC: 500
+RBF SVC
+priemerny vysledok: 0.9097260873635814
+cas: 0:00:02.281424
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9245107907661709
+cas: 0:00:01.156338
+
+
+sigmoid SVC
+priemerny vysledok: 0.8525639234917093
+cas: 0:00:01.468861
+
+
+SGD SVC
+priemerny vysledok: 0.9196316918818115
+cas: 0:00:01.109460
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9197639417103788
+cas: 0:00:14.969887
+
+
+------------------------------------------------------------
+
+
+SGD_elasticnet: 500
+RBF SVC
+priemerny vysledok: 0.9182508179423531
+cas: 0:00:02.156414
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9404978251463186
+cas: 0:00:01.078207
+
+
+sigmoid SVC
+priemerny vysledok: 0.8952511519512955
+cas: 0:00:01.468862
+
+
+SGD SVC
+priemerny vysledok: 0.9452467491061465
+cas: 0:00:01.094224
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9196187110797345
+cas: 0:00:13.656896
+
+
+------------------------------------------------------------
+
+
+SGD_L1: 500
+RBF SVC
+priemerny vysledok: 0.9207059481425813
+cas: 0:00:02.218918
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9391481380266651
+cas: 0:00:01.125086
+
+
+sigmoid SVC
+priemerny vysledok: 0.8963835308287723
+cas: 0:00:01.484487
+
+
+SGD SVC
+priemerny vysledok: 0.936576838504146
+cas: 0:00:01.109851
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9281864832653929
+cas: 0:00:13.531887
+
+
+------------------------------------------------------------
+
+
+SGD_L2: 500
+RBF SVC
+priemerny vysledok: 0.9158117935521092
+cas: 0:00:02.078283
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9441283758309105
+cas: 0:00:01.062581
+
+
+sigmoid SVC
+priemerny vysledok: 0.8904161194739866
+cas: 0:00:01.468861
+
+
+SGD SVC
+priemerny vysledok: 0.9440111311010402
+cas: 0:00:01.109459
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9208694100946612
+cas: 0:00:14.360467
+
+
+------------------------------------------------------------
+
+
+SPEC: 500
+RBF SVC
+priemerny vysledok: 0.9134297910672851
+cas: 0:00:02.281423
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9320032059797723
+cas: 0:00:01.140712
+
+
+sigmoid SVC
+priemerny vysledok: 0.8610101999245949
+cas: 0:00:01.531366
+
+
+SGD SVC
+priemerny vysledok: 0.9391610682213265
+cas: 0:00:01.109852
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9161032796135617
+cas: 0:00:13.828783
+
+
+------------------------------------------------------------
+
+
+SVC_L1: 500
+RBF SVC
+priemerny vysledok: 0.9182658483447579
+cas: 0:00:02.312674
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9367650854379692
+cas: 0:00:01.171965
+
+
+sigmoid SVC
+priemerny vysledok: 0.8842163694746191
+cas: 0:00:01.484488
+
+
+SGD SVC
+priemerny vysledok: 0.9378705285185438
+cas: 0:00:01.094289
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.924570962983206
+cas: 0:00:15.078815
+
+
+------------------------------------------------------------
+
+
+SVM: 500
+RBF SVC
+priemerny vysledok: 0.9242612456003179
+cas: 0:00:02.218919
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9343260610477253
+cas: 0:00:01.171964
+
+
+sigmoid SVC
+priemerny vysledok: 0.8586754900695599
+cas: 0:00:01.500114
+
+
+SGD SVC
+priemerny vysledok: 0.9342830194408387
+cas: 0:00:01.093949
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.9208833903931943
+cas: 0:00:14.704126
+
+
+------------------------------------------------------------
+
+
+XGBoost gain: 500
+RBF SVC
+priemerny vysledok: 0.900203378551059
+cas: 0:00:02.187667
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9088421782443782
+cas: 0:00:01.203217
+
+
+sigmoid SVC
+priemerny vysledok: 0.867252991530849
+cas: 0:00:01.625123
+
+
+SGD SVC
+priemerny vysledok: 0.917262594287941
+cas: 0:00:01.109460
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.8820345193181157
+cas: 0:00:15.391794
+
+
+------------------------------------------------------------
+
+
+XGBoost split: 500
+RBF SVC
+priemerny vysledok: 0.900203378551059
+cas: 0:00:02.187667
+
+
+linear SVC [libsvm]
+priemerny vysledok: 0.9088421782443782
+cas: 0:00:01.203216
+
+
+sigmoid SVC
+priemerny vysledok: 0.867252991530849
+cas: 0:00:01.625123
+
+
+SGD SVC
+priemerny vysledok: 0.917262594287941
+cas: 0:00:01.109460
+
+
+linear SVC [liblinear]
+priemerny vysledok: 0.8845477468313432
+cas: 0:00:15.141775
+
+
+------------------------------------------------------------
+
+

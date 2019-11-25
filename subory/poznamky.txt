@@ -9,3 +9,4 @@ pre DF som dal hranicu 10, hornu hranicu som nedal
 pre niektore disassembled subory som nevedel dekodovat byte 0x9d. Python pouziva encoding cp1252 (Windows-1252). Da sa to zistit cez print(locale.getpreferredencoding()).
 Podla chardet ma subor encoding Windows-1254, ale ten to tiez neprecital. Ani utf-8. Jediny encoding ktory to dekodoval je latin-1, ale ten dekoduje vsetky byty. 
 Preto som sa rozhodol nahradit byty ktore neviem dekodovat cez cp1252 otaznikom (error=replace).
+cluster bol horsi len na RFC all, very a sigmoid SVC simple, na ostatnych lepsi - vyberam ho
