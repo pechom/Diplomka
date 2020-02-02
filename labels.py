@@ -205,8 +205,8 @@ def levenshtein_matrix(input_file):
     matrix = np.zeros([len(input_list), len(input_list)], dtype=np.uint32)
     with open("stare subory/levenshtein_matrix3.txt", "w", newline='') as output:
         for i in range(len(input_list)):
-            for j in range(len(input_list)):
-                matrix[i, j] = Levenshtein.distance(input_list[i], input_list[j])
+            for j in range(i+1, len(input_list)):  # words have same distance, no matter the order, diagonal left zeroes
+                matrix[i, j] = matrix[j, i] = Levenshtein.distance(input_list[i], input_list[j])
         writer = csv.writer(output, delimiter=',')
         writer.writerows(matrix)
 
