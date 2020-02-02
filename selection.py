@@ -250,7 +250,7 @@ def trace(treshold):
 
 def spec(treshold):
     before = datetime.datetime.now()
-    result = SPEC.spec(data, mode="index")
+    result = SPEC.spec(data.copy(), labels.copy(), mode="index")
     after = datetime.datetime.now()
     print("SPEC")
     result = result[:treshold]
@@ -464,17 +464,17 @@ print("pocet atributov: " + str(len(header)))
 print('\n')
 treshold = 62
 
-# fcbf()
-# for_small_data()
+fcbf()
+for_small_data()
 for_big_data()
-#
+
 output_dir = standard_output_dir
 header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
 data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-#
+
 svm_big_data()
-# LSVC_l2()
-# HSIC_lasso(treshold)
+LSVC_l2()
+HSIC_lasso(treshold)
 
 # select_best_n(79, output_dir, "features/best_n/")
 sys.stdout.close()
