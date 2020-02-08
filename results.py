@@ -5,6 +5,8 @@ import csv
 import collections
 import sys
 import re
+import pprint
+import matplotlib.pyplot as plt
 
 best_features_path = 'features/selection/*'
 intersections_file = 'results_third_dataset/intersections.txt'
@@ -14,6 +16,8 @@ very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
 selected_results = 'results_third_dataset/selected/*'
 compact_selected_results = 'results_third_dataset/compact_selected/'
+groups_result_path = 'results/*'
+difference_file = 'results/3vsall.txt'
 
 
 def intersections(input_path, output_path):
@@ -103,6 +107,63 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
                     continue
 
 
+def feature_intersections(input_path, output):
+    # prienik medzi selektovanymi skupinami vo vybranych vysedkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
+    # ak je viac najlepsich vysledkov dam vsetky atributy do jedneho riadku (jednej mnoziny)
+    files = sorted(glob.glob(input_path))
+    intersections = {}
+    for file in files:
+        with open(file, "r") as selected_file:
+            sets = []
+            for count, line in enumerate(selected_file):
+                sets.append(set(re.findall(r'\'(.+?)\'', line)))
+        intersection = set.intersection(*sets)
+        intersections[os.path.basename(file[:-4])] = intersection
+        if output:
+            print(os.path.basename(file[:-4]))
+            print(sorted(intersection))
+    if not output:
+        return intersections
+
+
+def feature_intersections_difference(input_path, first, second):
+    # rozdiel medzi dvomi skupiami atributov, pouzivam pre rozdiel medzi prienikmi pre stromove a svm vysledky
+    intersections = feature_intersections(input_path, False)
+    difference = set.difference(intersections[first], intersections[second])
+    print(sorted(difference))
+
+
+def feature_difference(input_path):
+    # pouzivam na najdenie rozdielu pre atributy v tretom datasete a ostatnych
+    with open(input_path, "r") as file:
+        sets = []
+        for count, line in enumerate(file):
+            sets.append(set(re.findall(r'\'(.+?)\'', line)))
+    if len(sets) > 1:
+        print(sorted(set.difference(sets[0], sets[1])))
+
+
+def results_graphs():
+    matrix = [[[99.66, 99.67, 99.67, 99.45], [79, 500, 1000, 5567], [98.9, 99.67, 99.67, 98.46], [79, 500, 1000, 5567]],
+              [[99.53, 99.69, 99.69, 99.15], [48, 500, 1000, 4781], [98.53, 99.69, 99.92, 97.68], [48, 500, 1000, 4781]],
+              [[99.26, 99.27, 99.39, 98.05], [62, 500, 1000, 6070], [98.66, 99.87, 99.63, 97.08], [62, 500, 1000, 6070]]]
+    for i in range(len(matrix)):
+        plt.plot(matrix[i][1], matrix[i][0], marker='o', color='blue', alpha=0.9, label="stromy")
+        plt.plot(matrix[i][3], matrix[i][2], marker='o', color='red', alpha=0.5, label="SVM")
+        x1, x2, y1, y2 = plt.axis()
+        plt.axis((x1, x2, y1, 100))
+        plt.gca().set_yticklabels(['{:.1f}%'.format(x) for x in plt.gca().get_yticks()])
+        plt.xlabel('počet atribútov')
+        plt.ylabel('presnosť v percentách')
+        plt.title('výsledky')
+        plt.legend()
+        plt.show()
+
+
 # intersections(best_features_path, intersections_file)
-best_groups(best_features_path, best_groups_output_file)
-result_processing(selected_results, compact_selected_results)
+# best_groups(best_features_path, best_groups_output_file)
+# result_processing(selected_results, compact_selected_results)
+# feature_intersections(groups_result_path, True)
+# feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
+# feature_difference(difference_file)
+# results_graphs()
