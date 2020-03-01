@@ -94,7 +94,8 @@ def linear_xgb(data, label):  # implicitna selekcia atributov
              'learning_rate': 0.2, 'n_jobs': -1, 'booster': 'gblinear',
              'feature_selector': 'thrifty', 'updater': 'coord_descent'}
     before = datetime.datetime.now()
-    cvresult = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True)
+    cvresult = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
+                      shuffle=True)
     after = datetime.datetime.now()
     print("linear XGBoost")
     xgb_print(cvresult, before, after)
@@ -109,7 +110,7 @@ def xgboost_dart(data, label):
     result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
                     shuffle=True)
     after = datetime.datetime.now()
-    print("XGBoost")
+    print("XGBoost dart")
     xgb_print(result, before, after)
 
 
@@ -292,6 +293,23 @@ def create_original_dataset_for_cluster_dataset():
     return labels, data, standard_data
 
 
+def tree_methods(data, labels):
+    xgboost(data, labels)
+    LGBM_goss(data, labels)
+    LGBM(data, labels)
+    RGF(data, labels, "RGF")
+    RGF(data, labels, "RGF_Opt")
+    RFC(data, labels)  # fast
+
+
+def svm_methods(data, labels):
+    SVM(data, labels, 'rbf', "RBF SVC")
+    SVM(data, labels, 'linear', "linear SVC [libsvm]")  # fast
+    SVM(data, labels, 'sigmoid', "sigmoid SVC")
+    SGD(data, labels)  # fast
+    LSVC(data, labels)  # fast
+
+
 def run_methods():
     sys.stdout = open(results_path + 'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
@@ -299,18 +317,9 @@ def run_methods():
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
     print("vsetky data: " + str(len(data[0])))
     print('\n')
-    xgboost(data, labels)
-    LGBM_goss(data, labels)
-    LGBM(data, labels)
-    RGF(data, labels, "RGF")
-    RGF(data, labels, "RGF_Opt")
-    RFC(data, labels)  # fast
+    tree_methods(data, labels)
     standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    SVM(standard_data, labels, 'rbf', "RBF SVC")
-    SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")  # fast
-    SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
-    SGD(standard_data, labels)  # fast
-    LSVC(standard_data, labels)  # fast
+    svm_methods(standard_data, labels)
     sys.stdout.close()
 
 
@@ -321,12 +330,7 @@ def check_selections():
     for file in files:
         data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
         print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
-        xgboost(data, labels)
-        LGBM_goss(data, labels)
-        LGBM(data, labels)
-        RGF(data, labels, "RGF")
-        RGF(data, labels, "RGF_Opt")
-        RFC(data, labels)
+        tree_methods(data, labels)
         print("------------------------------------------------------------")
         print('\n')
 
@@ -334,12 +338,7 @@ def check_selections():
     for file in files:
         data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
         print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
-        xgboost(data, labels)
-        LGBM_goss(data, labels)
-        LGBM(data, labels)
-        RGF(data, labels, "RGF")
-        RGF(data, labels, "RGF_Opt")
-        RFC(data, labels)
+        tree_methods(data, labels)
         print("------------------------------------------------------------")
         print('\n')
 
@@ -348,11 +347,7 @@ def check_selections():
     for file in files:
         standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
         print(os.path.basename(file)[:-4] + ": " + str(len(standard_data[0])))
-        SVM(standard_data, labels, 'rbf', "RBF SVC")
-        SVM(standard_data, labels, 'linear', "linear SVC [libsvm]")
-        SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
-        SGD(standard_data, labels)
-        LSVC(standard_data, labels)
+        svm_methods(standard_data, labels)
         print("------------------------------------------------------------")
         print('\n')
     for file in files:

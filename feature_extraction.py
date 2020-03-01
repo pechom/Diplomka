@@ -10,7 +10,6 @@ import nltk
 import math
 import sys
 import re
-import gc
 
 reports_path = 'reports/*'
 string_path = 'strings/*'
@@ -26,7 +25,6 @@ max_ngram = 2  # maximalne n pre ktore robim n-gram
 
 
 def document_frequency_selection(counter):
-    size = len(counter)
     for name, count in counter.copy().items():
         if count < 10:
             del counter[name]
@@ -94,13 +92,18 @@ def create_import_libs_features(path):
             feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
             features.append(feature)
         features, selected = variance_treshold_selection(features)
-        header = []
-        for i in range(len(selected_libs)):
-            if i in selected:
-                header.append(selected_libs[i])
-        if len(selected_libs) in selected:
-            header.append("number_of_DLLs")
+        header = header_from_selection(selected_libs, selected, "number_of_DLLs")
     return header, features
+
+
+def header_from_selection(selected, variance_selected, message):
+    header = []
+    for i in range(len(selected)):
+        if i in variance_selected:
+            header.append(selected[i])
+    if len(selected) in variance_selected:
+        header.append(message)
+    return header
 
 
 def create_import_func_features(path):
@@ -115,7 +118,6 @@ def create_import_func_features(path):
     print(len(functions))
     functions = document_frequency_selection(functions)
     print("po DF " + str(len(functions)))
-    header = []
     features = []
     selected_funcs = list(functions.keys())
     for name in files:
@@ -149,24 +151,20 @@ def create_export_features(path):
     print("po DF " + str(len(libraries)))
     header = []
     features = []
-    selected_libs = list(libraries.keys())
-    for name in files:
-        with open(name) as f:
-            data = json.load(f)
-        feature = [0] * (len(selected_libs) + 1)
-        if "exports" in data["additional_info"]:
-            for i in range(len(selected_libs)):
-                if selected_libs[i] in data["additional_info"]["exports"]:
-                    feature[i] = 1  # vyskyt exportu
-            feature[-1] = len(data["additional_info"]["exports"])  # pocet exportov
-        features.append(feature)
-    features, selected = variance_treshold_selection(features)
-    header = []
-    for i in range(len(selected_libs)):
-        if i in selected:
-            header.append(selected_libs[i])
-    if len(selected_libs) in selected:
-        header.append("number_of_DLLs")
+    if len(libraries) > 0:
+        selected_libs = list(libraries.keys())
+        for name in files:
+            with open(name) as f:
+                data = json.load(f)
+            feature = [0] * (len(selected_libs) + 1)
+            if "exports" in data["additional_info"]:
+                for i in range(len(selected_libs)):
+                    if selected_libs[i] in data["additional_info"]["exports"]:
+                        feature[i] = 1  # vyskyt exportu
+                feature[-1] = len(data["additional_info"]["exports"])  # pocet exportov
+            features.append(feature)
+        features, selected = variance_treshold_selection(features)
+        header_from_selection(selected_libs, selected, "number_of_DLLs")
     return header, features
 
 
@@ -199,10 +197,7 @@ def create_metadata_features(path):
         feature[9] = data["additional_info"]["pe-machine-type"]
         feature[10] = data["size"]
         features.append(feature)
-    features, selected = variance_treshold_selection(features)
-    for i in reversed(range(len(header))):
-        if i not in selected:
-            del header[i]
+    features, header = delete_not_selected(features, header)
     return header, features
 
 
@@ -220,10 +215,7 @@ def create_overlay_features(path):
             feature[1] = data["additional_info"]["pe-overlay"]["offset"]
             feature[2] = data["additional_info"]["pe-overlay"]["size"]
         features.append(feature)
-    features, selected = variance_treshold_selection(features)
-    for i in reversed(range(len(header))):
-        if i not in selected:
-            del header[i]
+    features, header = delete_not_selected(features, header)
     return header, features
 
 
@@ -252,6 +244,7 @@ def create_section_features(path):
         size_of_unknown = 0
         number_of_empty_size = 0
         number_of_empty_name = 0
+        section_index = 0
         for section in data["additional_info"]["sections"]:
             if section[0] in known_sections:
                 for i in range(len(known_sections)):
@@ -303,31 +296,34 @@ def create_section_features(path):
         feature[7] = number_of_empty_size
         feature[8] = number_of_empty_name
         features.append(feature)
-    feature_size = len(header)
-    print(feature_size)
+    features, header = delete_not_selected(features, header)
+    return header, features
+
+
+def delete_not_selected(features, header):
     features, selected = variance_treshold_selection(features)
-    for i in reversed(range(feature_size)):
+    for i in reversed(range(len(header))):
         if i not in selected:
             del header[i]
-    return header, features
+    return features, header
 
 
 def create_resource_features(path):
     resource_types = collections.Counter()
     files = sorted(glob.glob(path))
-    non = 0
     for name in files:
         with open(name) as f:
             data = json.load(f)
         if "pe-resource-types" in data["additional_info"]:
-            for type in data["additional_info"]["pe-resource-types"]:
-                resource_types[type] += 1
+            for resource_type in data["additional_info"]["pe-resource-types"]:
+                resource_types[resource_type] += 1
     print(len(resource_types))
     resource_types = document_frequency_selection(resource_types)
     print("po DF " + str(len(resource_types)))
     header = []
     features = []
     if len(resource_types) > 0:
+        all_resources = 0
         selected_types = list(resource_types.keys())
         for name in files:
             with open(name) as f:
@@ -339,28 +335,26 @@ def create_resource_features(path):
                         feature[i] = data["additional_info"]["pe-resource-types"][
                             selected_types[i]]  # pocet resources typu
                         all_resources = 0
-                        for type in data["additional_info"]["pe-resource-types"]:
-                            all_resources += data["additional_info"]["pe-resource-types"][type]
+                        for resource_type in data["additional_info"]["pe-resource-types"]:
+                            all_resources += data["additional_info"]["pe-resource-types"][resource_type]
                 feature[-1] = all_resources
             features.append(feature)
         features, selected = variance_treshold_selection(features)
-        header = []
-        for i in range(len(selected_types)):
-            if i in selected:
-                header.append(selected_types[i])
-        if len(selected_types) in selected:
-            header.append("number_of_resources")
+        header_from_selection(selected_types, selected, "number_of_resources")
     return header, features
 
 
-def create_word_n_grams(path, n):
+def create_n_grams(path, n, is_char):
     files = sorted(glob.glob(path))
     counters = []
     global_counter = collections.Counter()
     for name in files:
         with open(name) as f:
             text = f.read()
-        tokenized = text.split()
+        if not is_char:
+            tokenized = text.split()
+        else:
+            tokenized = list(text)
         grams = list(nltk.ngrams(tokenized, n))
         counter = collections.Counter()
         for gram in grams:
@@ -381,56 +375,10 @@ def create_word_n_grams(path, n):
         for name in files:
             with open(name) as f:
                 text = f.read()
-            tokenized = text.split()
-            grams = nltk.ngrams(tokenized, n)
-            grams_freq = collections.Counter(grams)
-            bin_feature = [0] * len(selected_grams)
-            freq_feature = [0] * len(selected_grams)
-            for i in range(len(selected_grams)):
-                if grams_freq[selected_grams[i]] != 0:
-                    bin_feature[i] = 1
-                    freq_feature[i] = grams_freq[selected_grams[i]]
-            bin_features.append(bin_feature)
-            freq_features.append(freq_feature)
-        bin_features, bin_selected = variance_treshold_selection(bin_features)
-        freq_features, freq_selected = variance_treshold_selection(freq_features)
-        for i in range(len(selected_grams)):
-            if i in bin_selected:
-                bin_header.append(str(selected_grams[i]))
-            if i in freq_selected:
-                freq_header.append(str(selected_grams[i]))
-    return bin_header, bin_features, freq_header, freq_features
-
-
-def create_char_n_grams(path, n):
-    files = sorted(glob.glob(path))
-    counters = []
-    global_counter = collections.Counter()
-    for name in files:
-        with open(name) as f:
-            text = f.read()
-        tokenized = list(text)
-        grams = list(nltk.ngrams(tokenized, n))
-        counter = collections.Counter()
-        for gram in grams:
-            if counter[gram] == 0:
-                counter[gram] = 1
-        counters.append(counter)
-    for i in range(len(counters)):
-        global_counter = global_counter + counters[i]
-    print(len(global_counter))
-    global_counter = document_frequency_selection(global_counter)
-    print("po DF " + str(len(global_counter)))
-    bin_header = []
-    freq_header = []
-    bin_features = []
-    freq_features = []
-    if len(global_counter) > 0:
-        selected_grams = list(global_counter.keys())
-        for name in files:
-            with open(name) as f:
-                text = f.read()
-            tokenized = text.split()
+            if not is_char:
+                tokenized = text.split()
+            else:
+                tokenized = list(text)
             grams = nltk.ngrams(tokenized, n)
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(selected_grams)
@@ -492,12 +440,7 @@ def create_string_features(path):
             feature.append(os.path.getsize(f.name))
             feature.append(entropy(text))
         features.append(feature)
-    feature_size = len(header)
-    print(feature_size)
-    features, selected = variance_treshold_selection(features)
-    for i in reversed(range(feature_size)):
-        if i not in selected:
-            del header[i]
+    features, header = delete_not_selected(features, header)
     return header, features
 
 
@@ -510,14 +453,10 @@ def create_hex_grams(path, n):
             text = f.read()
             text = text.replace(" ", "")
         grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
-        del text
-        gc.collect()
         counter = collections.Counter()
         for gram in grams:
             if counter[gram] == 0:
                 counter[gram] = 1
-        del grams
-        gc.collect()
         counters.append(counter)
     for i in range(len(counters)):
         global_counter = global_counter + counters[i]
@@ -530,18 +469,12 @@ def create_hex_grams(path, n):
     freq_features = []
     if len(global_counter) > 0:
         selected_grams = list(global_counter.keys())
-        del global_counter
-        gc.collect()
         for name in files:
             with open(name) as f:
                 text = f.read()
                 file_size = os.path.getsize(f.name)
             grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
-            del text
-            gc.collect()
             grams_freq = collections.Counter(grams)
-            del grams
-            gc.collect()
             bin_feature = [0] * len(selected_grams)
             freq_feature = [0] * len(selected_grams)
             for i in range(len(selected_grams)):
@@ -550,10 +483,8 @@ def create_hex_grams(path, n):
                     freq_feature[i] = grams_freq[selected_grams[i]]
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
-        gc.collect()
         bin_features, bin_selected = variance_treshold_selection(bin_features)
         freq_features, freq_selected = variance_treshold_selection(freq_features)
-        gc.collect()
         for i in range(len(selected_grams)):
             if i in bin_selected:
                 bin_header.append(str(selected_grams[i]))
@@ -574,12 +505,12 @@ def entropy_bin_counts(block, window):
     c = np.bincount(block >> 4, minlength=16)  # 16-bin histogram
     p = c.astype(np.float32) / window
     wh = np.where(c)[0]
-    H = np.sum(-p[wh] * np.log2(
+    h = np.sum(-p[wh] * np.log2(
         p[wh])) * 2  # * x2 b.c. we reduced information by half: 256 bins (8 bits) to 16 bins (4 bits)
-    Hbin = int(H * 2)  # up to 16 bins (max entropy is 8 bits)
-    if Hbin == 16:  # handle entropy = 8.0 bits
-        Hbin = 15
-    return Hbin, c
+    hbin = int(h * 2)  # up to 16 bins (max entropy is 8 bits)
+    if hbin == 16:  # handle entropy = 8.0 bits
+        hbin = 15
+    return hbin, c
 
 
 def byte_entropy_histogram(bytez, step, window):
@@ -587,16 +518,16 @@ def byte_entropy_histogram(bytez, step, window):
     output = np.zeros((16, 16), dtype=np.int)
     a = np.frombuffer(bytez, dtype=np.uint8)
     if a.shape[0] < window:
-        Hbin, c = entropy_bin_counts(a, window)
-        output[Hbin, :] += c
+        hbin, c = entropy_bin_counts(a, window)
+        output[hbin, :] += c
     else:
         shape = a.shape[:-1] + (a.shape[-1] - window + 1, window)
         strides = a.strides + (a.strides[-1],)
         blocks = np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides)[::step, :]
         # from the blocks, compute histogram
         for block in blocks:
-            Hbin, c = entropy_bin_counts(block, window)
-            output[Hbin, :] += c
+            hbin, c = entropy_bin_counts(block, window)
+            output[hbin, :] += c
     return output.flatten().tolist()
 
 
@@ -608,8 +539,8 @@ def create_byte_entropy_histogram_features(path, step, window):
     header = []
     for name in files:
         with open(name) as f:
-            hex = f.read()
-        bytez = bytes.fromhex(hex)
+            hexes = f.read()
+        bytez = bytes.fromhex(hexes)
         histogram = byte_entropy_histogram(bytez, step, window)
         counter = collections.Counter()
         for i in range(len(histogram)):
@@ -625,8 +556,8 @@ def create_byte_entropy_histogram_features(path, step, window):
         selected_indices = list(global_counter.keys())
         for name in files:
             with open(name) as f:
-                hex = f.read()
-            bytez = bytes.fromhex(hex)
+                hexes = f.read()
+            bytez = bytes.fromhex(hexes)
             feature = byte_entropy_histogram(bytez, step, window)  # krok a okno, vyskusal som viac
             for i in reversed(range(len(feature))):
                 if i not in selected_indices:
@@ -660,10 +591,7 @@ def create_sizes_features(reports_path, hex_path, disassembled_path):
         feature[7] = feature[2] / feature[0]
         feature[8] = feature[2] / feature[1]
         features.append(feature)
-    features, selected = variance_treshold_selection(features)
-    for i in reversed(range(len(header))):
-        if i not in selected:
-            del header[i]
+    features, header = delete_not_selected(features, header)
     return header, features
 
 
@@ -694,9 +622,9 @@ def divide_disassembled_files(disassembled_path, hex_path, registers_path, opcod
                     tokens = line.split("\t")
                     del tokens[0]  # umiestnenie riadku (poradie) v povodnom subore
                     if len(tokens) > 0:
-                        hex = tokens[0].replace(" ", "")
-                        hex = hex.replace("\n", "")
-                        f.write(hex + " ")
+                        hexes = tokens[0].replace(" ", "")
+                        hexes = hexes.replace("\n", "")
+                        f.write(hexes + " ")
                     if len(tokens) > 1:
                         opcode = tokens[1].split()[0]
                         opcode = opcode.replace("\n", "")
@@ -746,16 +674,12 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path):
         feature[5] = len(hex_text)
         feature[6] = len(reg_text)
         features.append(feature)
-    features, selected = variance_treshold_selection(features)
-    for i in reversed(range(len(header))):
-        if i not in selected:
-            del header[i]
+    features, header = delete_not_selected(features, header)
     return header, features
 
 
 def create_disassembled_features(path):
     files = sorted(glob.glob(path))
-    max_length = 0
     sizes = collections.Counter()
     for name in files:
         with open(name, errors='replace') as f:
@@ -767,7 +691,6 @@ def create_disassembled_features(path):
     print("po DF " + str(len(sizes)))
     header = []
     features = []
-    selected_sizes = []
     if len(sizes) > 0:
         selected_sizes = list(sizes.keys())
         for name in files:
@@ -858,7 +781,7 @@ def main():
     # ------------------------------------------
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_word_n_grams(string_path, i)
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False)
         bin_header = [str(i) + "-gram_bin_strings"] * len(bin_features[0])
         freq_header = [str(i) + "-gram_freq_strings"] * len(freq_features[0])
         features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_strings")
@@ -875,21 +798,21 @@ def main():
         features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_hex")
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_char_n_grams(string_path, i)
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True)
         bin_header = [str(i) + "-gram_char_bin_strings"] * len(bin_features[0])
         freq_header = [str(i) + "-gram_char_freq_strings"] * len(freq_features[0])
         features_to_csv(bin_header, bin_features, str(i) + "-gram_char_bin_strings")
         features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings")
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_word_n_grams(opcodes_path, i)
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(opcodes_path, i, False)
         bin_header = [str(i) + "-gram_opcodes"] * len(bin_features[0])
         freq_header = [str(i) + "-gram_freq_opcodes"] * len(freq_features[0])
         features_to_csv(bin_header, bin_features, str(i) + "-gram_opcodes")
         features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcodes")
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_word_n_grams(registers_path, i)
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False)
         bin_header = [str(i) + "-gram_reg"] * len(bin_features[0])
         freq_header = [str(i) + "-gram_freq_reg"] * len(freq_features[0])
         features_to_csv(bin_header, bin_features, str(i) + "-gram_reg")
@@ -911,7 +834,7 @@ if __name__ == "__main__":
 
 # tuto skupinu atributov nepouzivam lebo je prilis velka
 # for i in range(1, max_ngram + 1):
-#     bin_header, bin_features, freq_header, freq_features = create_word_n_grams(dis_hex_path, i)
+#     bin_header, bin_features, freq_header, freq_features = create_n_grams(dis_hex_path, i, False)
 #     bin_header = [str(i) + "-gram_hex_opcode"]*len(bin_features[0])
 #     freq_header = [str(i) + "-gram_opcode_freq_hex"]*len(freq_features[0])
 #     features_to_csv(bin_header, bin_features, str(i) + "-gram_hex_opcode")

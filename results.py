@@ -3,9 +3,7 @@ import glob
 import os
 import csv
 import collections
-import sys
 import re
-import pprint
 import matplotlib.pyplot as plt
 import math
 

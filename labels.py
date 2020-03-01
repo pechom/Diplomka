@@ -2,7 +2,6 @@ import json
 import re
 import glob
 import os
-import csv
 import collections
 import pprint
 import numpy as np
@@ -72,7 +71,7 @@ def classes(antiviruses, class_min):  # vrati mena tried ktore su v jednotlivych
     for i in range(len(antiviruses)):
         antivirus = antiviruses[i][:-1]
         antivirus = re.split('[_ :/.!,-]', antivirus)
-        longNames = []
+        long_names = []
         out = open('subory/' + antivirus_names[i] + '.txt', 'w')
         for name in antivirus:
             if len(name) >= name_min_length:
@@ -80,9 +79,9 @@ def classes(antiviruses, class_min):  # vrati mena tried ktore su v jednotlivych
                 if name not in generic:
                     if name in wannacry_aliases:
                         name = "wannacry"
-                    longNames.append(name)
-        c = collections.Counter(longNames)
-        # pprint.pprint(c.most_common(len(longNames)))
+                    long_names.append(name)
+        c = collections.Counter(long_names)
+        # pprint.pprint(c.most_common(len(long_names)))
         for name, count in c.items():
             if count >= class_min:
                 final_classes.add(name)
@@ -132,7 +131,7 @@ def class_distribution(path):  # zisti kolko vzoriek je v jednotlivych triedach
     return c
 
 
-def normal_distribution(path_distribution, path_labeling, max, min):
+def normal_distribution(path_distribution, path_labeling, max_size, min_size):
     # vyhodi vzorky z tried ktore maju neumerne vela alebo malo vzoriek
     counter = class_distribution(path_distribution)
     files = sorted(glob.glob(path_labeling))
@@ -143,7 +142,7 @@ def normal_distribution(path_distribution, path_labeling, max, min):
         names = []
         for line in reader:
             names.append(line['id'])
-            if counter[line['trieda']] > max or (0 <= counter[line['trieda']] < min):
+            if counter[line['trieda']] > max_size or (0 <= counter[line['trieda']] < min_size):
                 counter[line['trieda']] -= 1
                 for file in files:
                     if os.path.basename(file) == line['id']:

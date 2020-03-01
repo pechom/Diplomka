@@ -4,7 +4,6 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 import numpy as np
 import pandas as pd
 import collections
-import sys
 import os
 import shutil
 
@@ -184,7 +183,7 @@ def prefix_hotfix(input_dir, output_dir):
                 writer.writerows([i] for i in data)
 
 
-def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_labels_file, type):
+def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_labels_file, number_type):
     # odstranim labels aj atributy pre vzorky ktore su outliere
     cluster_labels = np.loadtxt(clusters_file, delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
@@ -199,7 +198,7 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
     for file_name in files:
         if os.path.isfile(file_name):
             header = np.loadtxt(file_name, delimiter=',', max_rows=1, dtype="str")
-            data = np.loadtxt(file_name, delimiter=',', skiprows=1, dtype=type)
+            data = np.loadtxt(file_name, delimiter=',', skiprows=1, dtype=number_type)
             data = np.delete(data, to_delete, axis=0)
             with open(output_dir + os.path.basename(file_name), "w", newline='') as csv_file:
                 writer = csv.writer(csv_file, delimiter=',')
