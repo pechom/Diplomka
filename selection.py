@@ -21,13 +21,17 @@ import os
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels3.csv'
+labels_path = 'subory/cluster_labels.csv'
 output_dir = 'features/selection/'
 standard_output_dir = 'features/selection_standard/'
 results_path = 'results_third_dataset/'
+select_best_output_dir = 'features/best_n/'
 
-sys.stdout = open(results_path + 'selection_times.txt', 'w')
 np.set_printoptions(threshold=np.inf)
+treshold = 1000  # pocet selektovanych atributov
+is_standard = False  # ci mam standardizovane data
+is_small_data = False  # ci chcem pustat aj metody ktore su casovo/pamatovo narocne na velke datasety
+is_subselect = False  # ci robim plnu selekciu alebo len vyberam najlepsich n z predoslej selekcie
 
 
 def numpy_load():
@@ -178,25 +182,25 @@ def fit(selector, prefix):
         save_to_csv(new_data, selected, prefix)
 
 
-def chi_square(treshold):
+def chi_square():
     sel = SelectKBest(chi2, k=treshold)
     print("Chi-square")
     fit(sel, "chi-square")
 
 
-def MI(treshold):
+def MI():
     sel = SelectKBest(score_func=partial(mutual_info_classif, discrete_features=True), k=treshold)
     print("Mutual information")
     fit(sel, "mutual_info")
 
 
-def f_anova(treshold):
+def f_anova():
     sel = SelectKBest(f_classif, k=treshold)
     print("ANOVA F-score")
     fit(sel, "ANOVA_F-score")
 
 
-def gini(treshold):
+def gini():
     before = datetime.datetime.now()
     result = gini_index.gini_index(data, labels, mode="index")
     after = datetime.datetime.now()
@@ -209,7 +213,7 @@ def gini(treshold):
         transform_and_save(result, "Gini")
 
 
-def fisher(treshold):
+def fisher():
     before = datetime.datetime.now()
     result = fisher_score.fisher_score(data, labels, mode="index")
     after = datetime.datetime.now()
@@ -222,7 +226,7 @@ def fisher(treshold):
         transform_and_save(result, "Fisher")
 
 
-def lap(treshold):
+def lap():
     before = datetime.datetime.now()
     result = lap_score.lap_score(data.copy(), labels.copy(), mode="index")  # prepisuje vstup, preto ho kopirujem
     after = datetime.datetime.now()
@@ -235,7 +239,7 @@ def lap(treshold):
         transform_and_save(result, "Laplacian")
 
 
-def trace(treshold):
+def trace():
     before = datetime.datetime.now()
     result = trace_ratio.trace_ratio(data, labels, mode="index", n_selected_features=treshold)
     after = datetime.datetime.now()
@@ -248,7 +252,7 @@ def trace(treshold):
         transform_and_save(result, "Trace_ratio")
 
 
-def spec(treshold):
+def spec():
     before = datetime.datetime.now()
     result = SPEC.spec(data.copy(), labels.copy(), mode="index")
     after = datetime.datetime.now()
@@ -261,7 +265,7 @@ def spec(treshold):
         transform_and_save(result, "SPEC")
 
 
-def relieff(treshold):
+def relieff():
     before = datetime.datetime.now()
     result = reliefF.reliefF(data, labels, mode="index")
     after = datetime.datetime.now()
@@ -272,6 +276,8 @@ def relieff(treshold):
     print('\n')
     if len(result) < len(header):
         transform_and_save(result, "ReliefF")
+
+
 # -------------------------------------
 
 
@@ -298,7 +304,6 @@ def model_fit(model, prefix):
     model.fit(data, labels)
     after = datetime.datetime.now()
     model_selection_treshold(model, prefix)
-    # model_selection_median(model, prefix)
     # model_selection_zero(model, prefix)  # len pre L1 a elasticnet SVM
     print("cas: " + str(after - before))
     print('\n')
@@ -318,9 +323,11 @@ def xgboost():
 
 def LGBM():
     model_split = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
-                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split',  num_class=10)
+                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split',
+                                     num_class=10)
     model_gain = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
-                                    n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',  num_class=10)
+                                    n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',
+                                    num_class=10)
     print("LGBM split")
     model_fit(model_split, "LGBM split")
     print("LGBM gain")
@@ -393,7 +400,7 @@ def SVM():
     model_fit(svm, "SVM")
 
 
-def HSIC_lasso(treshold):
+def HSIC_lasso():
     hsic = HSICLasso()
     hsic.input(data, labels)
     before = datetime.datetime.now()
@@ -410,6 +417,8 @@ def HSIC_lasso(treshold):
 
 
 def select_best_n(n, input_path, output_path):
+    #  pouzival som pre metody ktore zoradzovali atributy aby som nemusel viac krat spustat selekciu ked som chcel
+    # ziskat menej najlepsich atributov - n bol mwnsi treshold
     files = sorted(glob.glob(input_path + "*"))
     for name in files:
         with open(name, 'r') as f:
@@ -424,32 +433,33 @@ def select_best_n(n, input_path, output_path):
 
 
 def for_small_data():
+    fcbf()
     mifs()
     mrmr()
     cife()
     jmi()
     cmim()
     disr()
-    trace(treshold)
+    trace()
     CAT()
     RGF()
 
 
 def for_big_data():
-    chi_square(treshold)
-    MI(treshold)
-    f_anova(treshold)
-    gini(treshold)
-    fisher(treshold)
-    lap(treshold)
-    spec(treshold)
-    relieff(treshold)
+    chi_square()
+    MI()
+    f_anova()
+    gini()
+    fisher()
+    lap()
+    spec()
+    relieff()
     xgboost()
     LGBM()
     RFC()
 
 
-def svm_big_data():
+def for_standard_big_data():
     LSVC_l1()
     SGD_l1()
     SGD_l2()
@@ -457,24 +467,41 @@ def svm_big_data():
     SVM()
 
 
-labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
-data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-print("pocet atributov: " + str(len(header)))
-print('\n')
-treshold = 62
+def for_standard_small_data():
+    LSVC_l2()
+    HSIC_lasso()
 
-fcbf()
-for_small_data()
-for_big_data()
 
-output_dir = standard_output_dir
-header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
-data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+def main():
+    if not is_subselect:
+        sys.stdout = open(results_path + 'selection_times.txt', 'w')
+        print("pocet atributov: " + str(len(header)))
+        print('\n')
+        if is_standard:
+            if is_small_data:
+                for_small_data()
+                for_big_data()
+            else:
+                for_big_data()
+        else:
+            if is_small_data:
+                for_standard_big_data()
+                for_standard_small_data()
+            else:
+                for_standard_big_data()
+        sys.stdout.close()
+    else:
+        select_best_n(treshold, output_dir, select_best_output_dir)
 
-svm_big_data()
-LSVC_l2()
-HSIC_lasso(treshold)
 
-# select_best_n(79, output_dir, "features/best_n/")
-sys.stdout.close()
+if __name__ == "__main__":
+    if not is_subselect:
+        labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+        if not is_standard:
+            header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
+            data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+        if is_standard:
+            output_dir = standard_output_dir
+            header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
+            data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    main()

@@ -7,6 +7,7 @@ import sys
 import re
 import pprint
 import matplotlib.pyplot as plt
+import math
 
 best_features_path = 'features/selection/*'
 intersections_file = 'results_third_dataset/intersections.txt'
@@ -21,7 +22,7 @@ difference_file = 'results/3vsall.txt'
 
 
 def intersections(input_path, output_path):
-    # pocet atributov v ktorych sa prelinaju. Ked som presiel na menovanie skupinami uz to nepouzivam
+    # pocet atributov v ktorych sa prelinaju. Ked som presiel na menovanie skupinami to uz nepouzivam
     files = sorted(glob.glob(input_path))
     names = []
     headers = []
@@ -108,7 +109,7 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
 
 
 def feature_intersections(input_path, output):
-    # prienik medzi selektovanymi skupinami vo vybranych vysedkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
+    # prienik medzi selektovanymi skupinami vo vybranych vysledkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
     # ak je viac najlepsich vysledkov dam vsetky atributy do jedneho riadku (jednej mnoziny)
     files = sorted(glob.glob(input_path))
     intersections = {}
@@ -127,7 +128,7 @@ def feature_intersections(input_path, output):
 
 
 def feature_intersections_difference(input_path, first, second):
-    # rozdiel medzi dvomi skupiami atributov, pouzivam pre rozdiel medzi prienikmi pre stromove a svm vysledky
+    # rozdiel medzi dvomi skupinami atributov, pouzivam pre rozdiel medzi prienikmi pre stromove a svm vysledky
     intersections = feature_intersections(input_path, False)
     difference = set.difference(intersections[first], intersections[second])
     print(sorted(difference))
@@ -144,26 +145,41 @@ def feature_difference(input_path):
 
 
 def results_graphs():
-    matrix = [[[99.66, 99.67, 99.67, 99.45], [79, 500, 1000, 5567], [98.9, 99.67, 99.67, 98.46], [79, 500, 1000, 5567]],
-              [[99.53, 99.69, 99.69, 99.15], [48, 500, 1000, 4781], [98.53, 99.69, 99.92, 97.68], [48, 500, 1000, 4781]],
-              [[99.26, 99.27, 99.39, 98.05], [62, 500, 1000, 6070], [98.66, 99.87, 99.63, 97.08], [62, 500, 1000, 6070]]]
+    matrix = [[[99.66, 99.67, 99.67], [98.9, 99.45, 94.95],
+               [math.log2(79), math.log2(500), math.log2(1000)], [math.log2(766), math.log2(5567), math.log2(486136)],
+               [98.9, 99.67, 99.67], [96.5, 98.46, 98.36],
+               [math.log2(79), math.log2(500), math.log2(1000)], [math.log2(766), math.log2(5567), math.log2(486136)]],
+              [[99.53, 99.69, 99.69], [98.53, 99.15, 94.98],
+               [math.log2(48), math.log2(500), math.log2(1000)], [math.log2(518), math.log2(4781), math.log2(536109)],
+               [98.53, 99.69, 99.92], [95.13, 97.68, 98.14],
+               [math.log2(48), math.log2(500), math.log2(1000)], [math.log2(518), math.log2(4781), math.log2(536109)]],
+              [[99.26, 99.27, 99.39], [97.68, 98.05, 89.87],
+               [math.log2(62), math.log2(500), math.log2(1000)], [math.log2(622), math.log2(6070), math.log2(478831)],
+               [98.66, 99.87, 99.63], [93.91, 97.08, 97.33],
+               [math.log2(62), math.log2(500), math.log2(1000)], [math.log2(622), math.log2(6070), math.log2(478831)]]]
     for i in range(len(matrix)):
-        plt.plot(matrix[i][1], matrix[i][0], marker='o', color='blue', alpha=0.9, label="stromy")
-        plt.plot(matrix[i][3], matrix[i][2], marker='o', color='red', alpha=0.5, label="SVM")
+        plt.plot(matrix[i][2], matrix[i][0], marker='o', color='blue', alpha=1, label="stromy selektované")
+        plt.plot(matrix[i][6], matrix[i][4], marker='o', color='red', alpha=1, label="SVM selektované")
+        plt.plot(matrix[i][3], matrix[i][1], marker='o', color='darkblue', alpha=1, label="stromy pred selekciou")
+        plt.plot(matrix[i][7], matrix[i][5], marker='o', color='darkred', alpha=1, label="SVM pred selekciou")
         x1, x2, y1, y2 = plt.axis()
         plt.axis((x1, x2, y1, 100))
         plt.gca().set_yticklabels(['{:.1f}%'.format(x) for x in plt.gca().get_yticks()])
-        plt.xlabel('počet atribútov')
-        plt.ylabel('presnosť v percentách')
+        plt.xlabel('počet atribútov (log2)')
+        plt.ylabel('presnosť')
         plt.title('výsledky')
         plt.legend()
         plt.show()
 
 
-# intersections(best_features_path, intersections_file)
-# best_groups(best_features_path, best_groups_output_file)
-# result_processing(selected_results, compact_selected_results)
-# feature_intersections(groups_result_path, True)
-# feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
-# feature_difference(difference_file)
-# results_graphs()
+def main():
+    best_groups(best_features_path, best_groups_output_file)
+    result_processing(selected_results, compact_selected_results)
+    feature_intersections(groups_result_path, True)
+    feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
+    feature_difference(difference_file)
+    results_graphs()
+
+
+if __name__ == "__main__":
+    main()

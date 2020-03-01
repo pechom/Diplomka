@@ -18,12 +18,18 @@ import warnings
 
 feature_path = 'features/simple.csv'
 standard_feature_path = 'features/standard/simple.csv'
-labels_path = 'subory/cluster_labels3.csv'
+labels_path = 'subory/cluster_labels.csv'
+cluster_labels_outliers_path = 'subory/cluster_labels.txt'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
 results_path = 'results_third_dataset/'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
+
+multi_cv_repeats = 5
+cv_fold = 10
+boost_rounds = 100
+max_iter = 1000
 
 
 def panda_load():
@@ -51,7 +57,8 @@ def xgboost(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
     xgb_print(result, before, after)
@@ -63,7 +70,7 @@ def xgboost_rf(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 100}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=1, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=1, nfold=cv_fold, metrics=['merror'], stratified=True, shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost forest")
     xgb_print(result, before, after)
@@ -74,7 +81,8 @@ def hist_xgboost(data, label):
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
              'learning_rate': 0.2, 'n_jobs': -1, 'tree_method': 'hist'}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost hist")
     xgb_print(result, before, after)
@@ -86,7 +94,7 @@ def linear_xgb(data, label):  # implicitna selekcia atributov
              'learning_rate': 0.2, 'n_jobs': -1, 'booster': 'gblinear',
              'feature_selector': 'thrifty', 'updater': 'coord_descent'}
     before = datetime.datetime.now()
-    cvresult = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True)
+    cvresult = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True)
     after = datetime.datetime.now()
     print("linear XGBoost")
     xgb_print(cvresult, before, after)
@@ -98,7 +106,8 @@ def xgboost_dart(data, label):
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10, 'booster': 'dart',
              'rate_drop': 0.1, 'skip_drop': 0.5}
     before = datetime.datetime.now()
-    result = xgb.cv(param, dtrain, num_boost_round=100, nfold=10, metrics=['merror'], stratified=True, shuffle=True)
+    result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("XGBoost")
     xgb_print(result, before, after)
@@ -121,7 +130,8 @@ def LGBM(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("LGBM")
     LGBM_print(result, before, after)
@@ -134,7 +144,7 @@ def LGBM_rf(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'bagging_fraction': 0.9, 'bagging_freq': 10, 'num_trees': 100}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, nfold=cv_fold, stratified=True, verbose_eval=None, shuffle=True)
     after = datetime.datetime.now()
     print("LGBM forest")
     LGBM_print(result, before, after)
@@ -147,7 +157,8 @@ def LGBM_goss(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("LGBM GOSS")
     LGBM_print(result, before, after)
@@ -160,7 +171,8 @@ def LGBM_dart(data, label):
              "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'xgboost_dart_mode': False}
     before = datetime.datetime.now()
-    result = lgb.cv(param, dtrain, num_boost_round=100, nfold=10, stratified=True, verbose_eval=None, shuffle=True)
+    result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
+                    shuffle=True)
     after = datetime.datetime.now()
     print("LGBM dart")
     LGBM_print(result, before, after)
@@ -176,21 +188,20 @@ def LGBM_print(result, before, after):
 
 
 def CAT(data, label):
-    # velmi pomaly
     pool = cat.Pool(data, label, has_header=False)
     params = {
         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
         "learning_rate": 0.2, "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
     before = datetime.datetime.now()
-    results = cat.cv(pool=pool, params=params, num_boost_round=100, fold_count=10, shuffle=True, stratified=True,
+    results = cat.cv(pool=pool, params=params, num_boost_round=boost_rounds, fold_count=cv_fold, shuffle=True,
+                     stratified=True,
                      verbose=False)
     after = datetime.datetime.now()
     print("CatBoost")
     print("najlepsi priemer: " + str(1 - min(results['test-MultiClassOneVsAll-mean'])))
-    print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean'] ==
-                                                                              min(results[
-                                                                                      'test-MultiClassOneVsAll-mean'])].index[
-                                          0]))
+    print("index najlepsieho: " + str(results['test-MultiClassOneVsAll-mean'][results['test-MultiClassOneVsAll-mean']
+                                                                              == min(
+        results['test-MultiClassOneVsAll-mean'])].index[0]))
     print("najhorsi priemer: " + str(1 - max(results['test-MultiClassOneVsAll-mean'])))
     print("finalny priemer: " + str(1 - results['test-MultiClassOneVsAll-mean'].iloc[-1]))
     print("cas: " + str(after - before))
@@ -224,47 +235,65 @@ def cv_fit(model, n_splits, data, label):
 def RGF(data, label, method):
     rgf = RGFClassifier(max_leaf=1000, algorithm=method, verbose=False, n_jobs=-1, min_samples_leaf=10,
                         learning_rate=0.2)  # max_leaf je globalne pre cely les co je defaultne 50 stromov
-    # multi_cv_fit(rgf, 5, 20)
+    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
     print(method)
-    cv_fit(rgf, 10, data, label)
+    cv_fit(rgf, cv_fold, data, label)
 
 
 def RFC(data, label):
     rfc = RandomForestClassifier(n_estimators=1000, max_depth=7, min_samples_leaf=10, max_leaf_nodes=100,
                                  bootstrap=True, n_jobs=-1, warm_start=False)
     print("RFC")
-    cv_fit(rfc, 10, data, label)
+    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    cv_fit(rfc, cv_fold, data, label)
 
 
 def SGD(data, label):
     sgd = SGDClassifier(
-        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=1000, tol=0.001, shuffle=False, verbose=0,
+        loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=max_iter, tol=0.001, shuffle=False, verbose=0,
         n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
     print("SGD SVC")
-    # multi_cv_fit(sgd, 5, 20, data, label)
-    cv_fit(sgd, 10, data, label)
+    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    cv_fit(sgd, cv_fold, data, label)
 
 
 def LSVC(data, label):
     svc = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
-                    fit_intercept=False, verbose=0, max_iter=1000)
+                    fit_intercept=False, verbose=0, max_iter=max_iter)
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
     print("linear SVC [liblinear]")
-    # multi_cv_fit(svc, 5, 20, data, label)
-    cv_fit(svc, 10, data, label)
+    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    cv_fit(svc, cv_fold, data, label)
 
 
 def SVM(data, label, kernel, message):
     svm = SVC(C=1.0, kernel=kernel, shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
-              max_iter=1000, decision_function_shape='ovr', gamma='scale')
+              max_iter=max_iter, decision_function_shape='ovr', gamma='scale')
     print(message)
-    # multi_cv_fit(svm, 5, 20, data, label)
-    cv_fit(svm, 10, data, label)
+    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    cv_fit(svm, cv_fold, data, label)
+
+
+def create_original_dataset_for_cluster_dataset():
+    #  pouzival som na odstranenie outlierov z konsenzoveho datastu aby som vedel porovnat obe metody labelingu
+    #  na rovnakych datach. Po porovani to uz nepouivam
+    cluster_labels = np.loadtxt(cluster_labels_outliers_path, delimiter=',', skiprows=1, dtype=np.int8)
+    to_delete = []
+    for i in range(len(cluster_labels)):
+        if cluster_labels[i] == -1:
+            to_delete.append(i)
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    labels = np.delete(labels, to_delete)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    data = np.delete(data, to_delete, axis=0)
+    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    standard_data = np.delete(standard_data, to_delete, axis=0)
+    return labels, data, standard_data
 
 
 def run_methods():
-    sys.stdout = open(results_path+'classification_times.txt', 'w')
+    sys.stdout = open(results_path + 'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset
     data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
@@ -282,21 +311,11 @@ def run_methods():
     SVM(standard_data, labels, 'sigmoid', "sigmoid SVC")
     SGD(standard_data, labels)  # fast
     LSVC(standard_data, labels)  # fast
-
-
-def create_original_labels_for_cluster_dataset():
-    cluster_labels = np.loadtxt("subory/cluster_labels3.txt", delimiter=',', skiprows=1, dtype=np.int8)
-    to_delete = []
-    for i in range(len(cluster_labels)):
-        if cluster_labels[i] == -1:
-            to_delete.append(i)
-    labels = np.loadtxt('subory/labels3.csv', delimiter=',', skiprows=1, dtype=np.uint8)
-    labels = np.delete(labels, to_delete)
-    return labels
+    sys.stdout.close()
 
 
 def check_selections():
-    sys.stdout = open(results_path+'classification_selected.txt', 'w')
+    sys.stdout = open(results_path + 'classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     for file in files:
@@ -340,10 +359,16 @@ def check_selections():
         if not (os.path.basename(file).startswith("SVC") or os.path.basename(file).startswith("SVM") or
                 os.path.basename(file).startswith("SGD")):
             os.remove(file)
+    sys.stdout.close()
 
 
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore")
-    run_methods()
-    check_selections()
-sys.stdout.close()
+def main():
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        run_methods()
+        check_selections()
+    sys.stdout.close()
+
+
+if __name__ == "__main__":
+    main()

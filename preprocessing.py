@@ -8,20 +8,24 @@ import sys
 import os
 import shutil
 
-original_path = 'C:/PycharmProjects/Diplomka/features/original/*'
-standard_dir = 'C:/PycharmProjects/Diplomka/features/standard/'
-simple_dir = 'C:/PycharmProjects/Diplomka/features/simple/'
-very_simple_dir = 'C:/PycharmProjects/Diplomka/features/very_simple/'
-simple_file = 'C:/PycharmProjects/Diplomka/features/simple.csv'
-very_simple_file = 'C:/PycharmProjects/Diplomka/features/very_simple.csv'
-original_file = 'C:/PycharmProjects/Diplomka/features/original.csv'
-features_dir = 'C:/PycharmProjects/Diplomka/features/*'
-discrete_dir = 'C:/PycharmProjects/Diplomka/discrete/'
-labels_path = 'C:/PycharmProjects/Diplomka/subory/labels3.csv'
-cluster_dataset_dir = 'C:/PycharmProjects/Diplomka/features/cluster/'
-cluster_labels_path = "C:/PycharmProjects/Diplomka/subory/cluster_labels.txt"
-clear_cluster_labels_path = "C:/PycharmProjects/Diplomka/subory/cluster_labels.csv"
-cluster_standard_dir = "C:/PycharmProjects/Diplomka/features/standard_cluster/"
+original_path = 'features/original/*'
+standard_dir = 'features/standard/'
+simple_dir = 'features/simple/'
+very_simple_dir = 'features/very_simple/'
+simple_file = 'features/simple.csv'
+very_simple_file = 'features/very_simple.csv'
+original_file = 'features/original.csv'
+features_dir = 'features/*'
+discrete_dir = 'discrete/'
+labels_path = 'subory/labels.csv'
+cluster_dataset_dir = 'features/cluster/'
+cluster_labels_path = "subory/cluster_labels.txt"
+clear_cluster_labels_path = "subory/cluster_labels.csv"
+cluster_standard_dir = "features/standard_cluster/"
+
+discretize_decimals = 5  # pocet desatinnych miest na ktore diskretizujem
+simple_treshold = 1000  # max pocet atributov skupiny ktora bude patrit medzi jednoduche skupiny
+very_simple_treshold = 100  # max pocet atributov skupiny ktora bude patrit medzi velmi jednoduche skupiny
 
 
 def normalize(input_path, normal_path):
@@ -112,7 +116,7 @@ def feature_size(file):
 
 
 def float_hotfix(input_dir, output_dir):
-    # oddelenie float atributov
+    # oddelenie float atributov. Ked som presiel na diskretizaciu to uz nepouzivam
     files = glob.glob(input_dir)
     float_frame = pd.DataFrame()
     column_loc = 0
@@ -140,7 +144,7 @@ def discretize(input_path, output_dir, decimals):
             reader = csv.reader(f, delimiter=',')
             header = next(reader)
             data = list(reader)
-        max_decimals = [0]*len(header)  # max pocet desat. cislic v string tvare atributov
+        max_decimals = [0] * len(header)  # max pocet desat. cislic v string tvare atributov
         for line in data:
             for i in range(len(line)):
                 float_position = line[i].find('.')
@@ -158,16 +162,17 @@ def discretize(input_path, output_dir, decimals):
             data = np.array(data, dtype=np.float64)
             for i in range(len(max_decimals)):
                 data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
-                data[:, i] = data[:, i]*np.power(10, max_decimals[i])
+                data[:, i] = data[:, i] * np.power(10, max_decimals[i])
             writer.writerows(data.astype(np.uint64))
 
 
-def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atributu podla mena suboru
+def prefix_hotfix(input_dir, output_dir):
+    # prefixy budu uz celym nazvom atributu podla mena suboru. Ked som presiel na menovanie skupinami to uz nepouzivam.
     files = glob.glob(input_dir)
     for name in files:
         data = np.loadtxt(name, delimiter=',', skiprows=1, dtype=np.uint64)
         if type(data[0]) is not np.uint64:
-            header = [os.path.basename(name)[:-4]]*len(data[0])
+            header = [os.path.basename(name)[:-4]] * len(data[0])
         else:  # niektore skupiny maju len jeden atribut
             header = [os.path.basename(name)[:-4]]
         with open(output_dir + os.path.basename(name), "w", newline='') as csv_file:
@@ -180,6 +185,7 @@ def prefix_hotfix(input_dir, output_dir):  # prefixy budu uz celym nazvom atribu
 
 
 def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_labels_file, type):
+    # odstranim labels aj atributy pre vzorky ktore su outliere
     cluster_labels = np.loadtxt(clusters_file, delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
     for i in range(len(cluster_labels)):
@@ -202,36 +208,36 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
 
 
 # -------------------------------------------------------
-# os.mkdir(discrete_dir)
-# discretize(features_dir, discrete_dir, 5)  # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
-# shutil.rmtree(features_dir[:-1])
-# os.renames(discrete_dir, original_path[:-2])
-# os.mkdir(simple_dir)
-# os.mkdir(very_simple_dir)
-# divide_simple(original_path, simple_dir, 1000)  # potom odddelim jednoduche
-# divide_simple(original_path, very_simple_dir, 100)  # odddelim velmi jednoduche
-# merge_features_from_dir(simple_dir+'*', simple_file)
-# merge_features_from_dir(original_path, original_file)
-# merge_features_from_dir(very_simple_dir+'*', very_simple_file)
-# for name in [original_file, simple_file, very_simple_file]:
-#     feature_size(name)
-# vymazem povodne subory, ostanu len zmergovane
-# shutil.rmtree(original_path[:-1])
-# shutil.rmtree(simple_dir)
-# shutil.rmtree(very_simple_dir)
-# os.mkdir(cluster_dataset_dir)
-# os.mkdir(cluster_standard_dir)
-# vyhodim outliere podla klastrovania, ulozim tento dataset osobitne
-# create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
-#                              clear_cluster_labels_path, np.uint64)
-# os.mkdir(standard_dir)
-# na konci vsetky atributy standardizujem
-# standardize(features_dir, standard_dir)
-# standardize(cluster_dataset_dir+'*', cluster_standard_dir)
 
-# robim dodatocne lebo som uz mal urobene vsetko pred tym
-# create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
-#                              clear_cluster_labels_path, np.uint64)
+def main():
+    os.mkdir(discrete_dir)
+    # diskretizujem, potom pôvodne zahodim a novy dir premenujem na original
+    discretize(features_dir, discrete_dir, discretize_decimals)
+    shutil.rmtree(features_dir[:-1])
+    os.renames(discrete_dir, original_path[:-2])
+    os.mkdir(simple_dir)
+    os.mkdir(very_simple_dir)
+    divide_simple(original_path, simple_dir, simple_treshold)  # potom odddelim jednoduche
+    divide_simple(original_path, very_simple_dir, very_simple_treshold)  # odddelim velmi jednoduche
+    merge_features_from_dir(simple_dir + '*', simple_file)
+    merge_features_from_dir(original_path, original_file)
+    merge_features_from_dir(very_simple_dir + '*', very_simple_file)
+    for name in [original_file, simple_file, very_simple_file]:
+        feature_size(name)
+    # vymazem povodne subory, ostanu len zmergovane
+    shutil.rmtree(original_path[:-1])
+    shutil.rmtree(simple_dir)
+    shutil.rmtree(very_simple_dir)
+    os.mkdir(cluster_dataset_dir)
+    os.mkdir(cluster_standard_dir)
+    # vyhodim outliere podla klastrovania, ulozim tento dataset osobitne
+    create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
+                                 clear_cluster_labels_path, np.uint64)
+    os.mkdir(standard_dir)
+    # na konci vsetky atributy standardizujem
+    standardize(features_dir, standard_dir)
+    standardize(cluster_dataset_dir + '*', cluster_standard_dir)
 
-# create_dataset_from_clusters(standard_dir+'*', cluster_standard_dir, cluster_labels_path,
-#                              clear_cluster_labels_path, np.float64)
+
+if __name__ == "__main__":
+    main()
