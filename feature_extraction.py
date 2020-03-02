@@ -352,9 +352,9 @@ def create_n_grams(path, n, is_char):
         with open(name) as f:
             text = f.read()
         if not is_char:
-            tokenized = text.split()
+            tokenized = text.split()  # split rozdeli na slova
         else:
-            tokenized = list(text)
+            tokenized = list(text)  # list rozdeli na pismena
         grams = list(nltk.ngrams(tokenized, n))
         counter = collections.Counter()
         for gram in grams:
@@ -379,7 +379,7 @@ def create_n_grams(path, n, is_char):
                 tokenized = text.split()
             else:
                 tokenized = list(text)
-            grams = nltk.ngrams(tokenized, n)
+            grams = list(nltk.ngrams(tokenized, n))
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(selected_grams)
             freq_feature = [0] * len(selected_grams)
@@ -452,6 +452,7 @@ def create_hex_grams(path, n):
         with open(name) as f:
             text = f.read()
             text = text.replace(" ", "")
+            # dvojice pismen su jeden byte - 1-gram
         grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
         counter = collections.Counter()
         for gram in grams:
