@@ -18,16 +18,16 @@ generic = {"win32", "variant", "spyware", "trojan", "worm", "virus", "heur", "tr
            "packed", "encrypted", "packer", "obfuscator", "encryptor", "malpack", "startpage", "servstart",
            "infostealer", "crypt", "rootkit", "passwordstealer", "optional", "genpack"}
 wannacry_aliases = {"wannacry", "wannacrypt", "wanna", "wannacryptor"}
-antivirus_names = ["kaspersky", "mcafee", "eset", "bitdefender"]
+antivirus_names = ["Kaspersky", "McAfee", "ESET-NOD32", "BitDefender"]
 
 processed_path = 'subory/same.txt'
 reports_path = 'reports/*'
 consensus_labels_file = 'subory/labels.csv'
-cluster_labels_file = 'subory/cluster_labels.txt'
+cluster_labels_file = 'subory/cluster_labels.csv'
 empty_path = 'subory/empty'
 long_names_file = 'subory/long_names.txt'
 dendogram_file = 'subory/dendogram.png'
-levenshtein_file = 'subory/levenshtein_matrix3.txt'
+levenshtein_file = 'subory/levenshtein_matrix.txt'
 output_dir = 'subory/'
 
 min_class_size = 50  # minimalna velkost triedy
@@ -39,7 +39,7 @@ name_min_length = 4  # minimalna dlzka mena malweru
 labeling_type = "clustering"
 
 
-def preprocess(path, antivirus_names):
+def preprocess(path, collect_names):
     reports = sorted(glob.glob(path))
     antiviruses = []
     longnames = []
@@ -53,20 +53,22 @@ def preprocess(path, antivirus_names):
         for i in range(len(names)):
             long_name = long_name + names[i] + "#"
         longnames.append(long_name[:-1].lower())
-
-        for i in range(len(names)):
-            if len(antiviruses) == len(names):
-                antiviruses[i] = antiviruses[i] + names[i] + ","
-            else:
-                antiviruses = names.copy()
-                break
+        if collect_names:
+            for i in range(len(names)):
+                if len(antiviruses) == len(names):
+                    antiviruses[i] = antiviruses[i] + names[i] + ","
+                else:
+                    antiviruses = names.copy()
+                    break
     with open(long_names_file, "w") as file:
         for name in longnames:
             file.write(name + '\n')
-    return antiviruses
+    if collect_names:
+        return antiviruses
 
 
-def classes(antiviruses, class_min):  # vrati mena tried ktore su v jednotlivych antivirusoch dost caste
+def classes(class_min):  # vrati mena tried ktore su v jednotlivych antivirusoch dost caste
+    antiviruses = preprocess(reports_path, True)
     final_classes = set({})
     for i in range(len(antiviruses)):
         antivirus = antiviruses[i][:-1]
@@ -92,11 +94,12 @@ def classes(antiviruses, class_min):  # vrati mena tried ktore su v jednotlivych
             out.write(name + '\n')
 
 
-def labeling(input_path, path, same, antivirus_names):  # vytvori csv subor v ktorom budu mena vzoriek a ich triedy
+def labeling(input_path, path, same):
+    # vytvori csv subor v ktorom budu mena vzoriek a ich triedy pre vzorky ktore dosiahli konsenzus
     input_classes = open(input_path, "r")
     classes = input_classes.read().splitlines()
     out = open(consensus_labels_file, 'w')
-    out.write("id,trieda" + '\n')
+    out.write("id,class" + '\n')
     files = sorted(glob.glob(path))
     for file in files:  # pre kazdy report (vzorku) zistujem konsenzus
         with open(file) as f:
@@ -124,7 +127,7 @@ def class_distribution(path):  # zisti kolko vzoriek je v jednotlivych triedach
     with open(path, mode='r') as csv_file:
         reader = csv.DictReader(csv_file)
         for line in reader:
-            labels.append(line['trieda'])
+            labels.append(line['class'])
         c = collections.Counter(labels)
         pprint.pprint(c.most_common(len(labels)))
     csv_file.close()
@@ -132,21 +135,22 @@ def class_distribution(path):  # zisti kolko vzoriek je v jednotlivych triedach
 
 
 def normal_distribution(path_distribution, path_labeling, max_size, min_size):
-    # vyhodi vzorky z tried ktore maju neumerne vela alebo malo vzoriek
+    # vyhodi vzorky z tried ktore maju neumerne vela alebo malo vzoriek. Odstrani outliere
     counter = class_distribution(path_distribution)
     files = sorted(glob.glob(path_labeling))
     with open(path_distribution, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
-        writer = csv.DictWriter(out, fieldnames=["id", "trieda"])
+        writer = csv.DictWriter(out, fieldnames=["id", "class"])
         writer.writeheader()
         names = []
         for line in reader:
             names.append(line['id'])
-            if counter[line['trieda']] > max_size or (0 <= counter[line['trieda']] < min_size):
-                counter[line['trieda']] -= 1
+            if (counter[line['class']] > max_size or (0 < counter[line['class']] < min_size)) or line['class'] == "-1":
+                counter[line['class']] -= 1
                 for file in files:
                     if os.path.basename(file) == line['id']:
                         os.remove(file)
+                        break
             else:
                 writer.writerow(line)
     for file in files:
@@ -159,17 +163,17 @@ def normal_distribution(path_distribution, path_labeling, max_size, min_size):
 def rename_classes_to_numbers(path_distribution):
     with open(path_distribution, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
-        writer = csv.DictWriter(out, fieldnames=["id", "trieda"])
+        writer = csv.DictWriter(out, fieldnames=["id", "class"])
         writer.writeheader()
         classes = set()
         for line in reader:
-            classes.add(line['trieda'])
+            classes.add(line['class'])
         classes = list(classes)
-        print(classes)
+        # print(classes)
         csv_file.seek(0)
         next(reader)
         for line in reader:
-            line['trieda'] = classes.index(line['trieda'])
+            line['class'] = classes.index(line['class'])
             writer.writerow(line)
     os.remove(path_distribution)
     os.rename(output_dir + 'new_labels.csv', path_distribution)
@@ -181,7 +185,7 @@ def only_classes_csv(path_distribution):
         writer = csv.writer(out)
         writer.writerow(["class"])
         for line in reader:
-            writer.writerow(line['trieda'])
+            writer.writerow(line['class'])
     os.remove(path_distribution)
     os.rename(output_dir + 'classes_labels.csv', path_distribution)
 
@@ -217,7 +221,7 @@ def levenshtein_matrix(input_file):
         writer.writerows(matrix)
 
 
-def clustering(min_cluster_size):
+def clustering(reports_path, min_cluster_size):
     distance_matrix = np.loadtxt(levenshtein_file, delimiter=',', dtype=np.float64)
     clusterer = hdbscan.HDBSCAN(algorithm='best', alpha=1.0, approx_min_span_tree=True,
                                 gen_min_span_tree=False, leaf_size=40, metric='precomputed',
@@ -226,23 +230,23 @@ def clustering(min_cluster_size):
     c = collections.Counter(clusterer.labels_)
     pprint.pprint(c.most_common(len(c)))
     print(clusterer.labels_.max())
+    files = sorted(glob.glob(reports_path))
+    counter = 0
     with open(cluster_labels_file, "w", newline='') as output:
-        output.write("class" + '\n')
+        output.write("id,class" + '\n')
         for label in clusterer.labels_:
-            output.write(str(label) + '\n')
+            output.write(os.path.basename(files[counter]) + "," + str(label) + '\n')
+            counter += 1
     clusterer.condensed_tree_.plot(select_clusters=True)
     # plt.show()
     plt.savefig(dendogram_file)
 
 
 def main():
-    # preprocessing
-    antiviruses = preprocess(reports_path, antivirus_names)
-    classes(antiviruses, min_class_size)
-
     if labeling_type == "consensus":
+        classes(min_class_size)
         # consensus labeling with distribution normalization
-        labeling(processed_path, reports_path, consensus_size, antivirus_names)
+        labeling(processed_path, reports_path, consensus_size)
         class_distribution(consensus_labels_file)
         normal_distribution(consensus_labels_file, reports_path, max_normal_size, min_normal_size)
         class_distribution(consensus_labels_file)
@@ -251,9 +255,14 @@ def main():
         only_classes_csv(consensus_labels_file)
     else:
         if labeling_type == "clustering":
-            # cluster labeling
+            preprocess(reports_path, False)
+            # cluster labeling with distribution normalization
             levenshtein_matrix(long_names_file)
-            clustering(min_cluster_size)
+            clustering(reports_path, min_cluster_size)
+            normal_distribution(cluster_labels_file, reports_path, max_normal_size, min_normal_size)
+            class_distribution(cluster_labels_file)
+            clear_empty(empty_path, cluster_labels_file)
+            only_classes_csv(cluster_labels_file)
         else:
             print("wrong labeling type")
 

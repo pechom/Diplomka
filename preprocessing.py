@@ -17,10 +17,6 @@ original_file = 'features/original.csv'
 features_dir = 'features/*'
 discrete_dir = 'discrete/'
 labels_path = 'subory/labels.csv'
-cluster_dataset_dir = 'features/cluster/'
-cluster_labels_path = "subory/cluster_labels.txt"
-clear_cluster_labels_path = "subory/cluster_labels.csv"
-cluster_standard_dir = "features/standard_cluster/"
 
 discretize_decimals = 5  # pocet desatinnych miest na ktore diskretizujem
 simple_treshold = 1000  # max pocet atributov skupiny ktora bude patrit medzi jednoduche skupiny
@@ -185,6 +181,7 @@ def prefix_hotfix(input_dir, output_dir):
 
 def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_labels_file, number_type):
     # odstranim labels aj atributy pre vzorky ktore su outliere
+    # uz to nepouzivam, odstranovanie outlierov som presunul do tvorby labels kvoli optimalizacii
     cluster_labels = np.loadtxt(clusters_file, delimiter=',', skiprows=1, dtype=np.int8)
     to_delete = []
     for i in range(len(cluster_labels)):
@@ -227,15 +224,9 @@ def main():
     shutil.rmtree(original_path[:-1])
     shutil.rmtree(simple_dir)
     shutil.rmtree(very_simple_dir)
-    os.mkdir(cluster_dataset_dir)
-    os.mkdir(cluster_standard_dir)
-    # vyhodim outliere podla klastrovania, ulozim tento dataset osobitne
-    create_dataset_from_clusters(features_dir, cluster_dataset_dir, cluster_labels_path,
-                                 clear_cluster_labels_path, np.uint64)
     os.mkdir(standard_dir)
     # na konci vsetky atributy standardizujem
     standardize(features_dir, standard_dir)
-    standardize(cluster_dataset_dir + '*', cluster_standard_dir)
 
 
 if __name__ == "__main__":
