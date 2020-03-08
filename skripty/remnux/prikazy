@@ -1,0 +1,22 @@
+find /home/remnux/Downloads/malware/Win32_EXE -name '*.*' -type f -exec mv --target-directory=/home/remnux/Downloads/malware/reports/ '{}' +  # oddelenie reportov od vzoriek
+find . -type f -exec sh -c 'mv "$0" "${0%.json}"' {} \;  # odstranenie koncovky u reports
+find . -type f -exec basename {} \; > ../reports.txt  # zoznam mien reportov
+# podla zoznamu odstranim vzorky bez reportov cez skript1, ale prikaz zmenim na: if ! grep -qxFe "$i" /home/remnux/Downloads/malware/report; then
+# obdobne odstranim reporty bez vzoriek
+find . -type f -exec sh -c 'mv "$0" "${0%}.json"' {} \;  # mozem pridat json priponu
+
+find . -size +5M -delete  # odstranim prilis velke vzorky, potom odstranim aj ich reporty
+# odstranenie non-pe suborov
+find . -type f -exec file {} \; > ../types
+sed -n '/PE32/!p' types > notpe
+sed 's/ .*//' notpe | sed 's/^..\(.*\).$/\1/' > names
+# nakoniec vymazem cez upraveny skript1
+
+#entropia
+tar c Win32_EXE | lzop - > malware.tar.lzo
+lzop.exe -df C:\Users\BPD\Desktop\malware.tar.lzo  # vo windowse
+sigcheck64 -a -c C:\Users\BPD\Desktop\Win32_EXE > C:\Users\BPD\Desktop\entropy.csv  # vo windowse
+# cistenie sigcheck vystupu a najdenie vzoriek s vysokou entropiou je v script8
+
+# niektore vzorky sa nedali disasemblovat, preto som ich vyhodil
+find . -size -4k -exec basename {} \; > ../empty  # na zoznam som pouzil script1

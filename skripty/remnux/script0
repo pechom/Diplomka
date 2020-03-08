@@ -1,1 +1,0 @@
-find /home/remnux/Downloads/malware/Win32_EXE -name '*.*' -type f -exec mv --target-directory=/home/remnux/Downloads/malware/reports/ '{}' +
