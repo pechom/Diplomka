@@ -245,7 +245,7 @@ def RFC(data, label):
     rfc = RandomForestClassifier(n_estimators=1000, max_depth=7, min_samples_leaf=10, max_leaf_nodes=100,
                                  bootstrap=True, n_jobs=-1, warm_start=False)
     print("RFC")
-    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    # multi_cv_fit(rfc, multi_cv_repeats, cv_fold, data, label)
     cv_fit(rfc, cv_fold, data, label)
 
 
@@ -254,7 +254,7 @@ def SGD(data, label):
         loss='hinge', penalty='l2', alpha=0.0001, l1_ratio=0.15, max_iter=max_iter, tol=0.001, shuffle=False, verbose=0,
         n_jobs=-1, learning_rate='optimal', eta0=0.0, power_t=0.5)
     print("SGD SVC")
-    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    # multi_cv_fit(sgd, multi_cv_repeats, cv_fold, data, label)
     cv_fit(sgd, cv_fold, data, label)
 
 
@@ -264,7 +264,7 @@ def LSVC(data, label):
     # ak mam standardizovane data tak fit_intercept mozem dat na False
     # ak mam vela atributov tak dam dual na True
     print("linear SVC [liblinear]")
-    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    # multi_cv_fit(svc, multi_cv_repeats, cv_fold, data, label)
     cv_fit(svc, cv_fold, data, label)
 
 
@@ -272,7 +272,7 @@ def SVM(data, label, kernel, message):
     svm = SVC(C=1.0, kernel=kernel, shrinking=True, probability=False, tol=0.001, cache_size=200, verbose=False,
               max_iter=max_iter, decision_function_shape='ovr', gamma='scale')
     print(message)
-    # multi_cv_fit(rgf, multi_cv_repeats, cv_fold, data, label)
+    # multi_cv_fit(svm, multi_cv_repeats, cv_fold, data, label)
     cv_fit(svm, cv_fold, data, label)
 
 
