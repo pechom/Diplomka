@@ -16,9 +16,9 @@ string_path = 'strings/*'
 hex_path = 'hex/*'
 disassembled_path = 'disassembled/*'
 entropy_file = 'subory/entropy.csv'
-dis_hex_path = 'disassembled_divided/hex/*'
-registers_path = 'disassembled_divided/registers/*'
 opcodes_path = 'disassembled_divided/opcodes/*'
+registers_path = 'disassembled_divided/registers/*'
+instructions_path = 'disassembled_divided/instructions/*'
 
 df_min_count = 10  # minimalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
@@ -723,7 +723,7 @@ def create_disassembled_features(path):
 def main():
     # spusti len raz, ak budem zase spustat extrakciu atributov toto vynecham !!!
     # (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
-    divide_disassembled_files(disassembled_path, dis_hex_path, registers_path, opcodes_path)
+    divide_disassembled_files(disassembled_path, opcodes_path, registers_path, instructions_path)
 
     # ------------------------------------------
 
@@ -771,7 +771,7 @@ def main():
     header = ["file_entropy"] * len(features[0])
     features_to_csv(header, features, "file_entropy")
 
-    header, features = create_instruction_features(opcodes_path, dis_hex_path, registers_path)
+    header, features = create_instruction_features(instructions_path, opcodes_path, registers_path)
     header = ["instructions"] * len(features[0])
     features_to_csv(header, features, "instructions")
 
@@ -806,11 +806,11 @@ def main():
         features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings")
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(opcodes_path, i, False)
-        bin_header = [str(i) + "-gram_opcodes"] * len(bin_features[0])
-        freq_header = [str(i) + "-gram_freq_opcodes"] * len(freq_features[0])
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_opcodes")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcodes")
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False)
+        bin_header = [str(i) + "-gram_instructions"] * len(bin_features[0])
+        freq_header = [str(i) + "-gram_freq_instructions"] * len(freq_features[0])
+        features_to_csv(bin_header, bin_features, str(i) + "-gram_instructions")
+        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_instructions")
 
     for i in range(1, max_ngram + 1):
         bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False)
@@ -821,13 +821,13 @@ def main():
 
     for i in range(1, max_ngram + 1):
         bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
-            create_hex_grams(dis_hex_path, i)
-        bin_header = [str(i) + "-gram_dis_hex"] * len(bin_features[0])
-        freq_header = [str(i) + "-gram_freq_dis_hex"] * len(freq_features[0])
-        normal_freq_header = [str(i) + "-gram_normal_freq_dis_hex"] * len(normal_freq_features[0])
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_dis_hex")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_dis_hex")
-        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_dis_hex")
+            create_hex_grams(opcodes_path, i)
+        bin_header = [str(i) + "-gram_opcode"] * len(bin_features[0])
+        freq_header = [str(i) + "-gram_freq_opcode"] * len(freq_features[0])
+        normal_freq_header = [str(i) + "-gram_normal_freq_opcode"] * len(normal_freq_features[0])
+        features_to_csv(bin_header, bin_features, str(i) + "-gram_opcode")
+        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcode")
+        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_opcode")
 
 
 if __name__ == "__main__":

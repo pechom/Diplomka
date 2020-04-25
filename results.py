@@ -142,41 +142,12 @@ def feature_difference(input_path):
         print(sorted(set.difference(sets[0], sets[1])))
 
 
-def results_graphs():
-    matrix = [[[99.66, 99.67, 99.67], [98.9, 99.45, 94.95],
-               [math.log2(79), math.log2(500), math.log2(1000)], [math.log2(766), math.log2(5567), math.log2(486136)],
-               [98.9, 99.67, 99.67], [96.5, 98.46, 98.36],
-               [math.log2(79), math.log2(500), math.log2(1000)], [math.log2(766), math.log2(5567), math.log2(486136)]],
-              [[99.53, 99.69, 99.69], [98.53, 99.15, 94.98],
-               [math.log2(48), math.log2(500), math.log2(1000)], [math.log2(518), math.log2(4781), math.log2(536109)],
-               [98.53, 99.69, 99.92], [95.13, 97.68, 98.14],
-               [math.log2(48), math.log2(500), math.log2(1000)], [math.log2(518), math.log2(4781), math.log2(536109)]],
-              [[99.26, 99.27, 99.39], [97.68, 98.05, 89.87],
-               [math.log2(62), math.log2(500), math.log2(1000)], [math.log2(622), math.log2(6070), math.log2(478831)],
-               [98.66, 99.87, 99.63], [93.91, 97.08, 97.33],
-               [math.log2(62), math.log2(500), math.log2(1000)], [math.log2(622), math.log2(6070), math.log2(478831)]]]
-    for i in range(len(matrix)):
-        plt.plot(matrix[i][2], matrix[i][0], marker='o', color='blue', alpha=1, label="stromy selektované")
-        plt.plot(matrix[i][6], matrix[i][4], marker='o', color='red', alpha=1, label="SVM selektované")
-        plt.plot(matrix[i][3], matrix[i][1], marker='o', color='darkblue', alpha=1, label="stromy pred selekciou")
-        plt.plot(matrix[i][7], matrix[i][5], marker='o', color='darkred', alpha=1, label="SVM pred selekciou")
-        x1, x2, y1, y2 = plt.axis()
-        plt.axis((x1, x2, y1, 100))
-        plt.gca().set_yticklabels(['{:.1f}%'.format(x) for x in plt.gca().get_yticks()])
-        plt.xlabel('počet atribútov (log2)')
-        plt.ylabel('presnosť')
-        plt.title('výsledky')
-        plt.legend()
-        plt.show()
-
-
 def main():
     best_groups(best_features_path, best_groups_output_file)
     result_processing(selected_results, compact_selected_results)
     feature_intersections(groups_result_path, True)
     feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
     feature_difference(difference_file)
-    results_graphs()
 
 
 if __name__ == "__main__":
