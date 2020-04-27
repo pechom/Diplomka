@@ -477,7 +477,7 @@ def main():
         sys.stdout = open(results_path + 'selection_times.txt', 'w')
         print("pocet atributov: " + str(len(header)))
         print('\n')
-        if is_standard:
+        if not is_standard:
             if is_small_data:
                 for_small_data()
                 for_big_data()
@@ -500,7 +500,7 @@ if __name__ == "__main__":
         if not is_standard:
             header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-        if is_standard:
+        else:
             output_dir = standard_output_dir
             header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
