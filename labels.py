@@ -29,6 +29,7 @@ long_names_file = 'subory/long_names.txt'
 dendogram_file = 'subory/dendogram.png'
 levenshtein_file = 'subory/levenshtein_matrix.txt'
 output_dir = 'subory/'
+class_number_file = '/subory/class_number.txt'
 
 min_class_size = 50  # minimalna velkost triedy
 min_cluster_size = 50  # minimalna velkost klastra
@@ -36,7 +37,8 @@ min_normal_size = 50  # minimalna velkost triedy po normalizacii distribucie
 max_normal_size = 100  # maximalna velkost triedy po normalizacii distribucie
 consensus_size = 2  # pocet AV pre ktore ma byt trieda spolocna
 name_min_length = 4  # minimalna dlzka mena malweru
-labeling_type = "clustering"
+labeling_type = "consensus"
+for_prediction = True
 
 
 def preprocess(path, collect_names):
@@ -134,11 +136,12 @@ def class_distribution(path):  # zisti kolko vzoriek je v jednotlivych triedach
     return c
 
 
-def normal_distribution(path_distribution, path_labeling, max_size, min_size):
-    # vyhodi vzorky z tried ktore maju neumerne vela alebo malo vzoriek. Odstrani outliere
-    counter = class_distribution(path_distribution)
-    files = sorted(glob.glob(path_labeling))
-    with open(path_distribution, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
+def normal_distribution(path_labels, path_reports, max_size, min_size):
+    # vyhodi reporty z tried ktore maju neumerne vela alebo malo vzoriek. Odstrani outliere (mimo vybranych tried)
+    # potom je potrebne odstranit aj samotne vzorky odstranenych reportov - robim vo virtualke
+    counter = class_distribution(path_labels)
+    files = sorted(glob.glob(path_reports))
+    with open(path_labels, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
         writer = csv.DictWriter(out, fieldnames=["id", "class"])
         writer.writeheader()
@@ -154,14 +157,38 @@ def normal_distribution(path_distribution, path_labeling, max_size, min_size):
             else:
                 writer.writerow(line)
     for file in files:
-        if os.path.basename(file) not in names:
+        if os.path.basename(file) not in names:  # tieto vzorky nemali triedu ktora bola v konsenze
             os.remove(file)
-    os.remove(path_distribution)
-    os.rename(output_dir + 'new_labels.csv', path_distribution)
+    os.remove(path_labels)
+    os.rename(output_dir + 'new_labels.csv', path_labels)
 
 
-def rename_classes_to_numbers(path_distribution):
-    with open(path_distribution, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
+def delete_unwanted_classes(path_labels, path_reports, class_number_file):
+    # odstrani z predikovaneho datasetu triedy ktore neboli v trenovacom
+    files = sorted(glob.glob(path_reports))
+    with open(path_labels, mode='r') as csv_file, open(class_number_file, 'r') as class_file, open(
+            output_dir + 'new_labels.csv', 'w', newline='') as out:
+        reader = csv.DictReader(csv_file)
+        class_reader = csv.DictReader(class_number_file)
+        classes = set()
+        for line in class_reader:
+            classes.add(line['class'])
+        writer = csv.DictWriter(out, fieldnames=["id", "class"])
+        writer.writeheader()
+        for line in reader:
+            if line['class'] not in classes:  # trieda ktora nebola v trenovacom datasete
+                for file in files:
+                    if os.path.basename(file) == line['id']:
+                        os.remove(file)
+                        break
+            else:
+                writer.writerow(line)
+    os.remove(path_labels)
+    os.rename(output_dir + 'new_labels.csv', path_labels)
+
+
+def rename_classes_to_numbers(path_labels):
+    with open(path_labels, mode='r') as csv_file, open(output_dir + 'new_labels.csv', 'w', newline='') as out:
         reader = csv.DictReader(csv_file)
         writer = csv.DictWriter(out, fieldnames=["id", "class"])
         writer.writeheader()
@@ -172,11 +199,34 @@ def rename_classes_to_numbers(path_distribution):
         # print(classes)
         csv_file.seek(0)
         next(reader)
+        with open(class_number_file, 'w', newline='') as out_file:
+            # triedy ktore mozu mat predikovane vzorky
+            out.write("class,number" + '\n')
+            for trieda in classes:
+                out_file.write(trieda + ',' + str(classes.index(trieda)) + '\n')
         for line in reader:
             line['class'] = classes.index(line['class'])
             writer.writerow(line)
-    os.remove(path_distribution)
-    os.rename(output_dir + 'new_labels.csv', path_distribution)
+    os.remove(path_labels)
+    os.rename(output_dir + 'new_labels.csv', path_labels)
+
+
+def keep_classes_numbers(path_labels, path_classes):
+    # prepise triedy na cisla v predikovanom datasete so zachovanim cisel z trenovacieho
+    with open(path_labels, mode='r') as csv_file, open(path_classes, 'r') as class_file, open(
+            output_dir + 'new_labels.csv', 'w', newline='') as out:
+        reader = csv.DictReader(csv_file)
+        class_reader = csv.DictReader(path_classes)
+        writer = csv.DictWriter(out, fieldnames=["id", "class"])
+        writer.writeheader()
+        for line in reader:
+            for class_line in class_reader:
+                if line['class'] == class_line['class']:
+                    line['class'] = class_line['number']
+                    break
+            writer.writerow(line)
+    os.remove(path_labels)
+    os.rename(output_dir + 'new_labels.csv', path_labels)
 
 
 def only_classes_csv(path_distribution):
@@ -248,10 +298,16 @@ def main():
         # consensus labeling with distribution normalization
         labeling(processed_path, reports_path, consensus_size)
         class_distribution(consensus_labels_file)
-        normal_distribution(consensus_labels_file, reports_path, max_normal_size, min_normal_size)
+        if not for_prediction:
+            normal_distribution(consensus_labels_file, reports_path, max_normal_size, min_normal_size)
+        else:
+            delete_unwanted_classes(consensus_labels_file, reports_path, class_number_file)
         class_distribution(consensus_labels_file)
         clear_empty(empty_path, consensus_labels_file)
-        rename_classes_to_numbers(consensus_labels_file)
+        if not for_prediction:
+            rename_classes_to_numbers(consensus_labels_file)
+        else:
+            keep_classes_numbers(consensus_labels_file, class_number_file)
         only_classes_csv(consensus_labels_file)
     else:
         if labeling_type == "clustering":

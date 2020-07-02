@@ -1,0 +1,14 @@
+na selekciu a klasifikaciu pouzijem len SVC (L1), XGBOOST a LGBM
+vyber len 100 a 1000 atributov
+
+- pred cistenim datasetu zmenit v novych reportoch AV výsledky na "detected: True/False"
+- ziskat metadata (exiftool) pre nove vzorky a dopisat ich do reportov
+done - v labeling ulozit premenu tried na ich cisla (zoznam), pridat metodu na labeling vzoriek na predikciu konsenzom podla zoznamu (vyhodim vzorky ktore maju triedu mimo zoznamu aj ked dosiahli konsenzus, triedam dam rovnake cisla ako v zozname)
+  Clustering je nemozny (mam vzdialenosti, nie body. Reclustering moze zmenit stare triedy)
+done - v extrakcii pridat nazvy atributov v hlavickach, pridat ich aj do selekcie - poriesit delimetre v nazvoch
+- v extrakcii rozoznavat medzi novymi a starymi reportmi - aj pri predikovanych - doplnit to do kazdej metody ktora ziskava atributy z reportov
+- v extrakcii pridat metody na extrakciu len selektovanych atributov pre predikovane vzorky podla ulozenej hlavicky - pozor na skupiny atributov podla predpony
+- v preprocessing ulozit scaler a pri predikcii vyberat vsetky atributy, selektovane vyberiem az po standardizacii. Druha moznost je po selekcii urobit na nestandardizovanych selektovanych datach novu standardizaciu 
+  a jej scaler pouzit pri predikcii. Prva moznost usetri miesto pri treningu, druha pri predikcii (pri treningu potrebujem mnohonasobne viac miesta takze prva je lepsia, ale zase nebudem pri predikcii vyberat len selektovane atributy)
+- v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov - maju metody na serializaciu. Pri predikcii kontrolovat spravnost podla cisla triedy (zo zoznamu meno - cislo)
+- v results urobit confusion matrix pre predikcie, automatizovat tvorbu grafu
