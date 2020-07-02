@@ -1,8 +1,8 @@
 na selekciu a klasifikaciu pouzijem len SVC (L1), XGBOOST a LGBM
 vyber len 100 a 1000 atributov
 
-- pred cistenim datasetu zmenit v novych reportoch AV výsledky na "detected: True/False"
-- ziskat metadata (exiftool) pre nove vzorky a dopisat ich do reportov
+- pred cistenim datasetu zmenit v novych reportoch AV text vysledkov skenov na "detected: True/False" - aspon na vybranych AV. Potrebujem to pre cistenie datasetu aj labeling
+- ziskat metadata (exiftool) pre nove vzorky a dopisat ich do reportov v rovnakej strukture ako je v starych
 done - v labeling ulozit premenu tried na ich cisla (zoznam), pridat metodu na labeling vzoriek na predikciu konsenzom podla zoznamu (vyhodim vzorky ktore maju triedu mimo zoznamu aj ked dosiahli konsenzus, triedam dam rovnake cisla ako v zozname)
   Clustering je nemozny (mam vzdialenosti, nie body. Reclustering moze zmenit stare triedy)
 done - v extrakcii pridat nazvy atributov v hlavickach, pridat ich aj do selekcie - poriesit delimetre v nazvoch
