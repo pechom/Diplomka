@@ -18,8 +18,8 @@ import warnings
 import pickle
 import labels
 
-feature_path = 'features/simple.csv'
-standard_feature_path = 'features/standard/simple.csv'
+feature_path = 'features/original.csv'
+standard_feature_path = 'features/standard/original.csv'
 labels_path = 'subory/cluster_labels.csv'
 cluster_labels_outliers_path = 'subory/cluster_labels.txt'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
@@ -397,7 +397,6 @@ def run_methods():
 
 
 def check_selections():
-    # TODO: standardizovane datasety budu nahradene tymi ktore budu standardizovane az po selekcii
     sys.stdout = open(results_path + 'classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
@@ -407,16 +406,7 @@ def check_selections():
         tree_methods(data, labels)
         print("------------------------------------------------------------")
         print('\n')
-
-    files = glob.glob(standard_selected_dir + '*')
-    for file in files:
-        data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
-        print(os.path.basename(file)[:-4] + ": " + str(len(data[0])))
-        tree_methods(data, labels)
-        print("------------------------------------------------------------")
-        print('\n')
-
-    preprocessing.standardize(selected_dir, standard_selected_dir)
+    preprocessing.standardize(selected_dir, standard_selected_dir, True)
     files = glob.glob(standard_selected_dir + '*')
     for file in files:
         standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
@@ -424,10 +414,6 @@ def check_selections():
         svm_methods(standard_data, labels)
         print("------------------------------------------------------------")
         print('\n')
-    for file in files:
-        if not (os.path.basename(file).startswith("SVC") or os.path.basename(file).startswith("SVM") or
-                os.path.basename(file).startswith("SGD")):
-            os.remove(file)
     sys.stdout.close()
 
 
@@ -441,7 +427,7 @@ def main():
         if mode == "prediction_train":
             train_for_prediction()  # po skontrolovani selekcii
         if mode == "prediction":
-            prediction()
+            predictions()
     sys.stdout.close()
 
 

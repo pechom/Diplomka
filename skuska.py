@@ -5,6 +5,7 @@ import xgboost as xgb
 import pandas as pd
 import numpy as np
 import lightgbm as lgb
+import os
 X, y = datasets.load_iris(return_X_y=True)
 
 
@@ -62,3 +63,7 @@ X, y = datasets.load_iris(return_X_y=True)
 # X_train_std = sc.fit_transform(X_train)
 # pickle.dump(sc, open('file/path/scaler.pkl','wb'))
 # sc = pickle.load(open('file/path/scaler.pkl','rb'))
+
+subor = 'subory/labels3.csv'
+with open(subor) as f:
+    print(os.path.basename(subor)[:-4])

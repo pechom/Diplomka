@@ -67,7 +67,10 @@ def transform_and_save(selected, prefix):
     with open(output_dir + prefix + ".csv", "w", newline='') as csv_file:  # zapisem len vybrane
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
-        writer.writerows(data[:, selected])
+        if is_standard:
+            writer.writerows(pure_data[:, selected])
+        else:
+            writer.writerows(data[:, selected])
     with open(headers_dir + prefix + ".csv", "w", newline='') as header_file:
         writer = csv.writer(header_file, delimiter=',')
         writer.writerow(header[selected])
@@ -180,13 +183,14 @@ def fit(selector, prefix):
     before = datetime.datetime.now()
     selector.fit(data, labels)
     after = datetime.datetime.now()
-    new_data = selector.transform(data)
+    # new_data = selector.transform(data)
     selected = selector.get_support(True)
     print(len(selected))
     print("cas: " + str(after - before))
     print('\n')
     if len(selected) < len(header):
-        save_to_csv(new_data, selected, prefix)
+        # save_to_csv(new_data, selected, prefix)
+        transform_and_save(selected, prefix)
 
 
 def chi_square():
@@ -290,20 +294,22 @@ def relieff():
 
 def model_selection_treshold(model, prefix):
     selection = SelectFromModel(model, threshold=-np.inf, prefit=True, max_features=treshold)
-    new_data = selection.transform(data)
+    # new_data = selection.transform(data)
     selected = selection.get_support(True)
     print(len(selected))
     if len(selected) < len(header):
-        save_to_csv(new_data, selected, prefix)
+        # save_to_csv(new_data, selected, prefix)
+        transform_and_save(selected, prefix)
 
 
 def model_selection_zero(model, prefix):
     selection = SelectFromModel(model, threshold=1e-5, prefit=True)
-    new_data = selection.transform(data)
+    # new_data = selection.transform(data)
     selected = selection.get_support(True)
     print(len(selected))
     if len(selected) < len(header):
-        save_to_csv(new_data, selected, prefix)
+        # save_to_csv(new_data, selected, prefix)
+        transform_and_save(selected, prefix)
 
 
 def model_fit(model, prefix):
@@ -508,7 +514,8 @@ if __name__ == "__main__":
             header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
         else:
-            output_dir = standard_output_dir
             header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+            pure_data = np.loadtxt(feature_path, delimiter=',', skiprows=1,
+                                   dtype=np.uint64)  # tieto budem neskor standardizovat
     main()

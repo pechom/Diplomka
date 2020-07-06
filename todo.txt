@@ -7,8 +7,9 @@ Krosvalidaciu pouzijem na vysledky - presnost pred a po selekcii (a pripadny hyp
 done - v labeling ulozit premenu tried na ich cisla (zoznam), pridat metodu na labeling vzoriek na predikciu konsenzom podla zoznamu (vyhodim vzorky ktore maju triedu mimo zoznamu aj ked dosiahli konsenzus, triedam dam rovnake cisla ako v zozname)
   Clustering je nemozny (mam vzdialenosti, nie body. Reclustering moze zmenit stare triedy)
 done - v extrakcii pridat nazvy atributov v hlavickach, pridat ich aj do selekcie - poriesit delimetre v nazvoch
-- v extrakcii pridat metody (alebo rozsirit stare) na extrakciu len selektovanych atributov pre predikovane vzorky podla ulozenej hlavicky - pozor na skupiny atributov podla predpony. Tato extrakcia bude uz len podla novych reportov
-1 - Po selekcii urobit na nestandardizovanych selektovanych datach novu standardizaciu (pri standardizovanych musim ulozit aj nestandardizovane atributy) a jej scaler ulozit a pouzit pri predikcii. Pouzit ho aj pri vysledkoch klasifikacie
-  po selekcii (namiesto pôvodnych vysledkov) - metoda check_selections. Pre kazdu selekciu vznikne novy scaler
-2 - v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov. Pri predikcii kontrolovat spravnost (validacia) podla cisla triedy (zo zoznamu meno - cislo). Vratit vysledky validacie pre confusion matrix
-3 - v results urobit confusion matrix pre predikcie, automatizovat tvorbu grafu
+- v extrakcii pridat metody (alebo rozsirit stare) na extrakciu len selektovanych atributov pre predikovane vzorky podla ulozenej hlavicky (pre kazdu hlavicku osobitne) - pozor na skupiny atributov podla predpony. 
+  Tato extrakcia bude uz len podla novych reportov. Pre kazdu hlavicku zavolam aj metody z preprocessing kde original file bude nazov hlavicky - podla neho urcim scaler na pouzitie
+done - Po selekcii urobit na nestandardizovanych selektovanych datach novu standardizaciu (pri standardizovanych musim ulozit aj nestandardizovane atributy) a jej scaler ulozit a pouzit pri predikcii. Pouzit ho aj pri vysledkoch klasifikacie
+  po selekcii (namiesto pôvodnych vysledkov) - metoda check_selections. Pre kazdu selekciu vznikne novy scaler.
+in progress - v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov. Pri predikcii kontrolovat spravnost (validacia) podla cisla triedy (zo zoznamu meno - cislo). Vratit vysledky validacie pre confusion matrix
+1 - v results urobit confusion matrix pre predikcie, automatizovat tvorbu grafu

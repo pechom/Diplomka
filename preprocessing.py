@@ -6,6 +6,7 @@ import pandas as pd
 import collections
 import os
 import shutil
+import pickle
 
 original_path = 'features/original/*'
 standard_dir = 'features/standard/'
@@ -17,6 +18,7 @@ original_file = 'features/original.csv'
 features_dir = 'features/*'
 discrete_dir = 'discrete/'
 labels_path = 'subory/labels.csv'
+scalers_path = 'subory/scalers/'
 
 discretize_decimals = 5  # pocet desatinnych miest na ktore diskretizujem
 simple_treshold = 1000  # max pocet atributov skupiny ktora bude patrit medzi jednoduche skupiny
@@ -38,7 +40,7 @@ def normalize(input_path, normal_path):
             writer.writerows(normal_data)
 
 
-def standardize(input_path, standard_path):
+def standardize(input_path, standard_path, is_save):
     files = glob.glob(input_path)
     for name in files:
         if os.path.isfile(name):
@@ -51,7 +53,22 @@ def standardize(input_path, standard_path):
                 writer.writerow(header)
                 scaler = StandardScaler(copy=True)
                 standard_data = scaler.fit_transform(data)
+                if is_save:
+                    pickle.dump(scaler, open(scalers_path + os.path.basename(name)[:-4] + '.pkl', 'wb'))
                 writer.writerows(standard_data)
+
+
+def saved_standardize(input_file, output_dir):  # input je original file premenovany podla selected hlavicky
+    scaler = pickle.load(open(scalers_path + os.path.basename(input_file)[:-4] + '.pkl', 'rb'))
+    with open(input_file) as f:
+        reader = csv.reader(f, delimiter=',')
+        header = next(reader)
+        data = list(reader)
+    with open(output_dir + os.path.basename(f.name), "w", newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        writer.writerow(header)
+        standard_data = scaler.transform(data)
+        writer.writerows(standard_data)
 
 
 def divide_simple(input_path, simple_path, treshold):  # jednoduche atributy sa skopiruju do ineho priecinka
@@ -211,22 +228,22 @@ def main():
     discretize(features_dir, discrete_dir, discretize_decimals)
     shutil.rmtree(features_dir[:-1])
     os.renames(discrete_dir, original_path[:-2])
-    os.mkdir(simple_dir)
-    os.mkdir(very_simple_dir)
-    divide_simple(original_path, simple_dir, simple_treshold)  # potom odddelim jednoduche
-    divide_simple(original_path, very_simple_dir, very_simple_treshold)  # odddelim velmi jednoduche
-    merge_features_from_dir(simple_dir + '*', simple_file)
+    # os.mkdir(simple_dir)
+    # os.mkdir(very_simple_dir)
+    # divide_simple(original_path, simple_dir, simple_treshold)  # potom odddelim jednoduche
+    # divide_simple(original_path, very_simple_dir, very_simple_treshold)  # odddelim velmi jednoduche
+    # merge_features_from_dir(simple_dir + '*', simple_file)
+    # merge_features_from_dir(very_simple_dir + '*', very_simple_file)
     merge_features_from_dir(original_path, original_file)
-    merge_features_from_dir(very_simple_dir + '*', very_simple_file)
-    for name in [original_file, simple_file, very_simple_file]:
-        feature_size(name)
+    # for name in [original_file, simple_file, very_simple_file]:
+    #     feature_size(name)
     # vymazem povodne subory, ostanu len zmergovane
     shutil.rmtree(original_path[:-1])
-    shutil.rmtree(simple_dir)
-    shutil.rmtree(very_simple_dir)
+    # shutil.rmtree(simple_dir)
+    # shutil.rmtree(very_simple_dir)
     os.mkdir(standard_dir)
     # na konci vsetky atributy standardizujem
-    standardize(features_dir, standard_dir)
+    standardize(features_dir, standard_dir, False)
 
 
 if __name__ == "__main__":
