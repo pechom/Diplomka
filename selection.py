@@ -26,6 +26,7 @@ output_dir = 'features/selection/'
 standard_output_dir = 'features/selection_standard/'
 results_path = 'results_third_dataset/'
 select_best_output_dir = 'features/best_n/'
+headers_dir = 'features/headers/'
 
 np.set_printoptions(threshold=np.inf)
 treshold = 1000  # pocet selektovanych atributov
@@ -56,6 +57,9 @@ def save_to_csv(transformed_data, selected, prefix):
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
         writer.writerows(transformed_data)
+    with open(headers_dir + prefix + ".csv", "w", newline='') as header_file:
+        writer = csv.writer(header_file, delimiter=',')
+        writer.writerow(header[selected])
 
 
 def transform_and_save(selected, prefix):
@@ -64,6 +68,9 @@ def transform_and_save(selected, prefix):
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(header[selected])
         writer.writerows(data[:, selected])
+    with open(headers_dir + prefix + ".csv", "w", newline='') as header_file:
+        writer = csv.writer(header_file, delimiter=',')
+        writer.writerow(header[selected])
 
 
 def cfs():  # extremne pomaly

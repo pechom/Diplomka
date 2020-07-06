@@ -20,23 +20,24 @@ opcodes_path = 'disassembled_divided/opcodes/*'
 registers_path = 'disassembled_divided/registers/*'
 instructions_path = 'disassembled_divided/instructions/*'
 
-df_min_count = 10  # minimalny pocet vyskytov pre DF pri ktorom odstranim atribut
+df_max_count = 10  # maximalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
+for_prediction = True  # ci robim predikciu
 
 
 def document_frequency_selection(counter):
     for name, count in counter.copy().items():
-        if count < 10:
+        if count < df_max_count + 1:
             del counter[name]
     return counter
 
 
 def variance_treshold_selection(data):
-    treshold = 0.01
-    if len(data[0]) >= 1000:
-        treshold = 0.05
-    if len(data[0]) >= 10000:
-        treshold = 0.1
+    treshold = 0.05
+    # if len(data[0]) >= 1000:
+    #     treshold = 0.05
+    # if len(data[0]) >= 10000:
+    #     treshold = 0.1
     sel = VarianceThreshold(threshold=treshold)
     try:
         data = sel.fit_transform(data)
@@ -419,7 +420,8 @@ def create_string_features(path):
     bins.append(sys.maxsize)
     for i in range(len(bins) - 1):
         header.append(str(bins[i]) + "-" + str(bins[i + 1]))
-    header.extend(["C:\\\\", "http", "HKEY_", "MZ", "IP", "average_length", "number_of_strings", "file_size", "entropy"])
+    header.extend(
+        ["C:\\\\", "http", "HKEY_", "MZ", "IP", "average_length", "number_of_strings", "file_size", "entropy"])
     for name in files:
         feature = []
         line_lengths = []
@@ -725,7 +727,9 @@ def create_disassembled_features(path):
 
 def selected_extraction():
     print("TODO")
-    # TODO: tu bude extrakcia atributov pre vzorky urcene na predikciu. Atributy budu zo zoznamu (hlavicka selekcie) a podla nich sa vytvori matica datasetu na predikciu
+    # TODO: tu bude extrakcia atributov pre vzorky urcene na predikciu.
+    #  Atributy budu zo zoznamu (hlavicka selekcie) a podla nich sa vytvori matica datasetu na predikciu.
+    #  Pri tejto extrakcii sa bude pouzivat novy typ reportov.
 
 
 def main():
@@ -734,81 +738,84 @@ def main():
     divide_disassembled_files(disassembled_path, opcodes_path, registers_path, instructions_path)
 
     # ------------------------------------------
+    if not for_prediction:
+        header, features = create_export_features(reports_path)
+        features_to_csv(header, features, "export")
 
-    header, features = create_export_features(reports_path)
-    features_to_csv(header, features, "export")
+        header, features = create_import_libs_features(reports_path)
+        features_to_csv(header, features, "import_libs")
 
-    header, features = create_import_libs_features(reports_path)
-    features_to_csv(header, features, "import_libs")
+        header, features = create_import_func_features(reports_path)
+        features_to_csv(header, features, "import_funcs")
 
-    header, features = create_import_func_features(reports_path)
-    features_to_csv(header, features, "import_funcs")
+        header, features = create_metadata_features(reports_path)
+        features_to_csv(header, features, "metadata")
 
-    header, features = create_metadata_features(reports_path)
-    features_to_csv(header, features, "metadata")
+        header, features = create_overlay_features(reports_path)
+        features_to_csv(header, features, "overlay")
 
-    header, features = create_overlay_features(reports_path)
-    features_to_csv(header, features, "overlay")
+        header, features = create_section_features(reports_path)
+        features_to_csv(header, features, "sections")
 
-    header, features = create_section_features(reports_path)
-    features_to_csv(header, features, "sections")
+        header, features = create_resource_features(reports_path)
+        features_to_csv(header, features, "resources")
 
-    header, features = create_resource_features(reports_path)
-    features_to_csv(header, features, "resources")
+        header, features = create_string_features(string_path)
+        features_to_csv(header, features, "strings")
 
-    header, features = create_string_features(string_path)
-    features_to_csv(header, features, "strings")
+        header, features = create_byte_entropy_histogram_features(hex_path, step=512, window=2048)
+        features_to_csv(header, features, "histogram")
 
-    header, features = create_byte_entropy_histogram_features(hex_path, step=512, window=2048)
-    features_to_csv(header, features, "byte_entropy_histogram")
+        header, features = create_sizes_features(reports_path, hex_path, disassembled_path)
+        features_to_csv(header, features, "sizes")
 
-    header, features = create_sizes_features(reports_path, hex_path, disassembled_path)
-    features_to_csv(header, features, "sizes")
+        header, features = create_entropy_feature(entropy_file)
+        features_to_csv(header, features, "file_entropy")
 
-    header, features = create_entropy_feature(entropy_file)
-    features_to_csv(header, features, "file_entropy")
+        header, features = create_instruction_features(instructions_path, opcodes_path, registers_path)
+        features_to_csv(header, features, "instructions")
 
-    header, features = create_instruction_features(instructions_path, opcodes_path, registers_path)
-    features_to_csv(header, features, "instructions")
+        header, features = create_disassembled_features(disassembled_path)
+        features_to_csv(header, features, "disassembled")
 
-    header, features = create_disassembled_features(disassembled_path)
-    features_to_csv(header, features, "disassembled")
+        # ------------------------------------------
 
-    # ------------------------------------------
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_strings")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_strings")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_strings")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_strings")
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
+                create_hex_grams(hex_path, i)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_hex")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_hex")
+            features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_hex")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
-            create_hex_grams(hex_path, i)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_bin_hex")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_hex")
-        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_hex")
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_char_bin_strings")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_char_bin_strings")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_char_freq_strings")
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_instructions")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_instructions")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_instructions")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_instructions")
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_reg")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_reg")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_reg")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_reg")
+        for i in range(1, max_ngram + 1):
+            bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
+                create_hex_grams(opcodes_path, i)
+            features_to_csv(bin_header, bin_features, str(i) + "-gram_opcode")
+            features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcode")
+            features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_opcode")
 
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
-            create_hex_grams(opcodes_path, i)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram_opcode")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram_freq_opcode")
-        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram_normal_freq_opcode")
+    else:
+        selected_extraction()
 
 
 if __name__ == "__main__":

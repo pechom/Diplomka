@@ -38,7 +38,7 @@ max_normal_size = 100  # maximalna velkost triedy po normalizacii distribucie
 consensus_size = 2  # pocet AV pre ktore ma byt trieda spolocna
 name_min_length = 4  # minimalna dlzka mena malweru
 labeling_type = "consensus"
-for_prediction = True
+for_prediction = True  # ci robim predikciu
 
 
 def preprocess(path, collect_names):
@@ -305,7 +305,7 @@ def main():
         else:
             delete_unwanted_classes(consensus_labels_file, reports_path, class_number_file)
         class_distribution(consensus_labels_file)
-        # clear_empty(empty_path, consensus_labels_file)
+        clear_empty(empty_path, consensus_labels_file)
         if not for_prediction:
             rename_classes_to_numbers(consensus_labels_file)
         else:

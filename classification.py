@@ -15,6 +15,8 @@ import glob
 import os
 import preprocessing
 import warnings
+import pickle
+import labels
 
 feature_path = 'features/simple.csv'
 standard_feature_path = 'features/standard/simple.csv'
@@ -23,8 +25,11 @@ cluster_labels_outliers_path = 'subory/cluster_labels.txt'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
 results_path = 'results_third_dataset/'
+trained_path = 'subory/trained/'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
+mode = "preselection"
+labels_for_predict = labels.consensus_labels_file
 
 multi_cv_repeats = 5
 cv_fold = 10
@@ -293,6 +298,74 @@ def create_original_dataset_for_cluster_dataset():
     return labels, data, standard_data
 
 
+# tieto metody pouzijem az po tom, co urobim klasifikaciu selektovaneho datasetu a nastavim hyperparametre
+def xgboost_train(data, labels):
+    dtrain = xgb.DMatrix(data, labels)
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+             'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
+    result = xgb.train(param, dtrain, num_boost_round=boost_rounds)
+    result.save_model(trained_path + "xgb.txt")
+
+
+def lgbm_train(data, labels):
+    param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
+             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
+    dtrain = lgb.Dataset(data, labels)
+    result = lgb.train(param, dtrain, num_boost_round=boost_rounds, verbose_eval=None)  # cv nevracia model,len vysledky
+    result.save_model(trained_path + 'lgb.txt', num_iteration=result.best_iteration)
+
+
+def svc_train(data, labels):
+    svc = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
+                    fit_intercept=False, verbose=0, max_iter=max_iter)
+    svc.fit(data, labels)
+    with open(trained_path + 'svc.txt', 'wb') as subor:
+        pickle.dump(svc, subor, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def train_for_prediction():
+    # TODO: toto pojde pre vsetky selekcie, rovnako ako check_selections
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    lgbm_train(data, labels)
+    xgboost_train(data, labels)
+    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    svc_train(standard_data, labels)
+
+
+# tieto metody potrebuju labels pre predikovane vzorky na validaciu
+# TODO: dokonci
+def xgboost_predict(data, labels):
+    model = xgb.Booster()
+    model.load_model(trained_path + 'xgb.txt')
+    result = model.predict(data, labels)
+    print(result)
+
+
+def lgbm_predict(data, labels):
+    model = lgb.Booster(model_file=trained_path + "lgb.txt")
+    result = model.predict(data, labels, num_iteration=boost_rounds)  # vracia pravdepodobnosti pre kazdu triedu
+    print(((np.where(result == np.max(result)))[0])[0])  # pre kazdy riadok, potom to pridat do pola
+
+
+def svc_predict(data, labels):
+    with open(trained_path + 'svc.txt', 'rb') as subor:
+        model = pickle.load(subor)
+    result = model.predict(data, labels)
+    print(result)
+
+
+def predictions():
+    # TODO: dokonci, pozor na standardizacie. Vrat vysledky
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    lgbm_predict(data, labels)
+    xgboost_predict(data, labels)
+    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    svc_predict(standard_data, labels)
+
+
 def tree_methods(data, labels):
     xgboost(data, labels)
     LGBM_goss(data, labels)
@@ -324,6 +397,7 @@ def run_methods():
 
 
 def check_selections():
+    # TODO: standardizovane datasety budu nahradene tymi ktore budu standardizovane az po selekcii
     sys.stdout = open(results_path + 'classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
@@ -360,8 +434,14 @@ def check_selections():
 def main():
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        run_methods()
-        check_selections()
+        if mode == "preselection":
+            run_methods()  # pred selekciou
+        if mode == "selection_check":
+            check_selections()  # po selekcii
+        if mode == "prediction_train":
+            train_for_prediction()  # po skontrolovani selekcii
+        if mode == "prediction":
+            prediction()
     sys.stdout.close()
 
 
