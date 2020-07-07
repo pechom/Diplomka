@@ -11,5 +11,5 @@ done - v extrakcii pridat nazvy atributov v hlavickach, pridat ich aj do selekci
   Tato extrakcia bude uz len podla novych reportov. Pre kazdu hlavicku zavolam aj metody z preprocessing kde original file bude nazov hlavicky - podla neho urcim scaler na pouzitie
 done - Po selekcii urobit na nestandardizovanych selektovanych datach novu standardizaciu (pri standardizovanych musim ulozit aj nestandardizovane atributy) a jej scaler ulozit a pouzit pri predikcii. Pouzit ho aj pri vysledkoch klasifikacie
   po selekcii (namiesto pôvodnych vysledkov) - metoda check_selections. Pre kazdu selekciu vznikne novy scaler.
-in progress - v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov. Pri predikcii kontrolovat spravnost (validacia) podla cisla triedy (zo zoznamu meno - cislo). Vratit vysledky validacie pre confusion matrix
-1 - v results urobit confusion matrix pre predikcie, automatizovat tvorbu grafu
+done - v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov. Ukladat vysledky - predikovane triedy (z nich sa urobi heat map).
+in progress - v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels, mena tried budu z class_number. Triedy su v confusion matrix ciselne zoradene), automatizovat tvorbu grafu.

@@ -17,9 +17,10 @@ import preprocessing
 import warnings
 import pickle
 import labels
+import csv
 
-feature_path = 'features/original.csv'
-standard_feature_path = 'features/standard/original.csv'
+feature_file = 'features/original.csv'
+standard_feature_file = 'features/standard/original.csv'
 labels_path = 'subory/cluster_labels.csv'
 cluster_labels_outliers_path = 'subory/cluster_labels.txt'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
@@ -39,8 +40,8 @@ max_iter = 1000
 
 def panda_load():
     labels = pd.read_csv(labels_path, dtype=np.int8)  # pri sklearn treba mat label.values.ravel()
-    standard_data = pd.read_csv(standard_feature_path, dtype=np.float)
-    data = pd.read_csv(feature_path)
+    standard_data = pd.read_csv(standard_feature_file, dtype=np.float)
+    data = pd.read_csv(feature_file)
     return data, standard_data, labels.values.ravel()
 
 
@@ -52,7 +53,7 @@ def numpy_load(labels_path, feature_path):
 
 def numpy_standard_load():
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.int8)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float)
+    standard_data = np.loadtxt(standard_feature_file, delimiter=',', skiprows=1, dtype=np.float)
     return standard_data, labels
 
 
@@ -291,9 +292,9 @@ def create_original_dataset_for_cluster_dataset():
             to_delete.append(i)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     labels = np.delete(labels, to_delete)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    data = np.loadtxt(feature_file, delimiter=',', skiprows=1, dtype=np.uint64)
     data = np.delete(data, to_delete, axis=0)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    standard_data = np.loadtxt(standard_feature_file, delimiter=',', skiprows=1, dtype=np.float64)
     standard_data = np.delete(standard_data, to_delete, axis=0)
     return labels, data, standard_data
 
@@ -324,46 +325,61 @@ def svc_train(data, labels):
         pickle.dump(svc, subor, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def train_for_prediction():
-    # TODO: toto pojde pre vsetky selekcie, rovnako ako check_selections
+def train_for_prediction():  # trenujem na celom datasete, nie na selekciach
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    data = np.loadtxt(feature_file, delimiter=',', skiprows=1, dtype=np.uint64)
     lgbm_train(data, labels)
     xgboost_train(data, labels)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    standard_data = np.loadtxt(standard_feature_file, delimiter=',', skiprows=1, dtype=np.float64)
     svc_train(standard_data, labels)
 
 
-# tieto metody potrebuju labels pre predikovane vzorky na validaciu
-# TODO: dokonci
-def xgboost_predict(data, labels):
+def xgboost_predict(data):
     model = xgb.Booster()
     model.load_model(trained_path + 'xgb.txt')
-    result = model.predict(data, labels)
-    print(result)
+    result = model.predict(data)
+    return result
 
 
-def lgbm_predict(data, labels):
+def lgbm_predict(data):
     model = lgb.Booster(model_file=trained_path + "lgb.txt")
-    result = model.predict(data, labels, num_iteration=boost_rounds)  # vracia pravdepodobnosti pre kazdu triedu
-    print(((np.where(result == np.max(result)))[0])[0])  # pre kazdy riadok, potom to pridat do pola
+    probs = model.predict(data)  # vracia pravdepodobnosti pre kazdu triedu
+    result = []
+    for i in range(len(probs)):
+        max_prob_index = (np.where(probs == np.max(probs[i]))[1])[0]
+        result.append(max_prob_index)
+    return result
 
 
-def svc_predict(data, labels):
+def svc_predict(data):
     with open(trained_path + 'svc.txt', 'rb') as subor:
         model = pickle.load(subor)
-    result = model.predict(data, labels)
-    print(result)
+    result = model.predict(data)
+    return result
 
 
-def predictions():
-    # TODO: dokonci, pozor na standardizacie. Vrat vysledky
-    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-    lgbm_predict(data, labels)
-    xgboost_predict(data, labels)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
-    svc_predict(standard_data, labels)
+def predictions():  # na predikovanom datasete - vsetky selekcie
+    with open(results_path + 'predictions_selected.csv', "w", newline='') as output:
+        writer = csv.writer(output, delimiter=',')
+        files = glob.glob(selected_dir)
+        for file in files:
+            data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
+            writer.writerow([os.path.basename(file)[:-4]])
+            result = lgbm_predict(data)
+            writer.writerow(result)
+            result = xgboost_predict(data)
+            writer.writerow(result)
+            data = np.loadtxt(standard_selected_dir + os.path.basename(file), delimiter=',', skiprows=1,
+                              dtype=np.float64)
+            result = svc_predict(data)
+            writer.writerow(result)
+        #     writer.writerow("-----------------")
+        # files = glob.glob(standard_selected_dir + '*')
+        # for file in files:
+        #     standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
+        #     writer.writerow(os.path.basename(file)[:-4])
+        #     result = svc_predict(standard_data)
+        #     writer.writerow(result)
 
 
 def tree_methods(data, labels):
@@ -387,11 +403,11 @@ def run_methods():
     sys.stdout = open(results_path + 'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset
-    data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+    data = np.loadtxt(feature_file, delimiter=',', skiprows=1, dtype=np.uint64)
     print("vsetky data: " + str(len(data[0])))
     print('\n')
     tree_methods(data, labels)
-    standard_data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
+    standard_data = np.loadtxt(standard_feature_file, delimiter=',', skiprows=1, dtype=np.float64)
     svm_methods(standard_data, labels)
     sys.stdout.close()
 

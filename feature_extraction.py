@@ -731,7 +731,9 @@ def selected_extraction():
     #  Atributy budu zo zoznamu (hlavicka selekcie) a podla nich sa vytvori matica datasetu na predikciu.
     #  Pri tejto extrakcii sa bude pouzivat novy typ reportov.
     #  Pre kazdu hlavicku pouzijem aj preprocessing aby som vytvoril subor s jej nazvom a pouzil jej scaler.
-    #  Pri volani preprocessing musim zmenit original file na meno hlavicky - rovnake meno ma scaler.
+    #  Pri volani preprocessing musim zmenit original file na meno hlavicky - rovnake meno ma scaler (v scalers_path).
+    #  Po skonceni preprocessingov ulozit original subory do selected_dir a standardizovane do standard_selected_dir
+    #  Extrakcia prejde cyklom pre kazdu hlavicku.
 
 
 def main():
