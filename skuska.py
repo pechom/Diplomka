@@ -10,6 +10,7 @@ import numpy as np
 import lightgbm as lgb
 import os
 import csv
+import json
 
 X, y = datasets.load_iris(return_X_y=True)
 
@@ -76,3 +77,15 @@ X, y = datasets.load_iris(return_X_y=True)
 # X_train_std = sc.fit_transform(X_train)
 # pickle.dump(sc, open('file/path/scaler.pkl','wb'))
 # sc = pickle.load(open('file/path/scaler.pkl','rb'))
+
+# CONFIG_FILE = 'vt-config.json'
+# CONFIG_FOLDER = 'D:/praca/'
+# filepath = CONFIG_FOLDER + CONFIG_FILE
+# init_conf = {
+#                 'api_key': '0c4047d034a7f8e0f5afd8884d47af625df14618c8ec5c98ff03d599a8f5441e',
+#                 'api_url': 'https://www.virustotal.com/vtapi/v2/',
+#                 'output': 'json'
+#             }
+# f = open(filepath, 'w')
+# f.write(json.dumps(init_conf))
+# f.close()

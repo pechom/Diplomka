@@ -6,6 +6,8 @@ import collections
 import re
 import matplotlib.pyplot as plt
 import math
+from sklearn.metrics import confusion_matrix
+import seaborn as sn
 
 best_features_path = 'features/selection/*'
 intersections_file = 'results_third_dataset/intersections.txt'
@@ -17,6 +19,8 @@ selected_results = 'results_third_dataset/selected/*'
 compact_selected_results = 'results_third_dataset/compact_selected/'
 groups_result_path = 'results/*'
 difference_file = 'results/3vsall.txt'
+labels_path = 'subory/cluster_labels.csv'
+preictions_file = 'results_third_dataset/predictions_selected.csv'
 
 
 def intersections(input_path, output_path):
@@ -168,6 +172,17 @@ def results_graphs():
         plt.title('výsledky')
         plt.legend()
         plt.show()
+
+
+def heatmap_predictions():
+    # TODO: nacitam vysledky zo suboru a potom podla labels a vysledkov urobim heatmap
+    labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
+    result = 0  # tu budem nacitavat vysledky zo suboru postupne cez cyklus
+    mat = confusion_matrix(labels, result)  # triedy su zoradene ciselne
+    names = ("malware1", "malware2")  # ziskam z class_number
+    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
+    plt.show()
+    plt.savefig('subory/plot.png')  # k menu pridam meno z suboru vysledkov
 
 
 def main():
