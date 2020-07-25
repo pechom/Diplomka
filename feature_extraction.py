@@ -636,14 +636,14 @@ def create_entropy_feature(file):
     return header, features
 
 
-def divide_disassembled_files(disassembled_path, hex_path, registers_path, opcodes_path):
+def divide_disassembled_files(disassembled_path, opcodes_path, registers_path, instructions_path):
     files = sorted(glob.glob(disassembled_path))
     for name in files:
         with open(name, errors='replace') as f:
             basename = os.path.basename(f.name)
             text = f.readlines()
         del text[0:7]  # v prvych riadkoch nie su instrukcie
-        with open(hex_path[:-1] + basename, 'w') as f, open(opcodes_path[:-1] + basename, 'w') as f2, open(
+        with open(opcodes_path[:-1] + basename, 'w') as f, open(instructions_path[:-1] + basename, 'w') as f2, open(
                 registers_path[:-1] + basename, 'w') as f3:
             for line in text:
                 if not ((line == "\n") or ("section" in line) or (">:" in line) or ("..." in line) or (
@@ -751,7 +751,7 @@ def create_disassembled_features(path):
 def selected_extraction():
     print("TODO")
     # TODO: extrakcia atributov pre vzorky urcene na predikciu.
-    #  Atributy budu zo zoznamu (hlavicka selekcie) a podla nich sa vytvori matica datasetu na predikciu.
+    #  Atributy budu zo zoznamu (hlavicka selekcie pre rôzne selekcie) a podla nich sa vytvori matica datasetu na predikciu.
     #  Pre kazdu hlavicku pouzijem aj preprocessing (so saved_standardize) aby som vytvoril subor s jej nazvom a pouzil jej scaler.
     #  Pri volani preprocessing musim zmenit original file na meno hlavicky - rovnake meno ma scaler (v scalers_path).
     #  Po skonceni preprocessingov ulozit original subory do selected_dir a standardizovane do standard_selected_dir
@@ -759,8 +759,13 @@ def selected_extraction():
     for name in files:
         global selected_file
         selected_file = os.path.basename(name)[:-4]
-        sample_extraction()  # pre selekciu vyextrahujem vsetky atributy - dam to do metody
-        ngram_extraction()
+        # sample_extraction()  # tieto dve riadky az ked vsetky metody budu mat verziu pre selekciu, zatial ma len import_libs
+        # ngram_extraction()
+        # docasne tu mam len metodu import_libs
+        prefix = "import_libs"
+        header, features = create_import_libs_features(reports_path, prefix)
+        features_to_csv(header, features, prefix)
+
         os.mkdir(preprocessing.discrete_dir)
         preprocessing.discretize(preprocessing.features_dir, preprocessing.discrete_dir,
                                  preprocessing.discretize_decimals)

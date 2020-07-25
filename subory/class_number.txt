@@ -1,0 +1,12 @@
+class,number
+expiro,0
+virut,1
+neshta,2
+madang,3
+msil,4
+sality,5
+ramnit,6
+allaple,7
+dealply,8
+parite,9
+mydoom,10

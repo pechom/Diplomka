@@ -11,8 +11,10 @@ import lightgbm as lgb
 import os
 import csv
 import json
+import collections
+import pprint
 
-X, y = datasets.load_iris(return_X_y=True)
+# X, y = datasets.load_iris(return_X_y=True)
 
 # ---------------
 # ukladanie pre sklearn

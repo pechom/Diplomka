@@ -15,13 +15,13 @@ generic = {"win32", "variant", "spyware", "trojan", "worm", "virus", "heur", "tr
            "backdoor", "hacktool", "bitcoinminer", "win64", "potentially", "toolbar", "unwanted", "small", "tiny",
            "blocker", "proxy", "email", "injector", "inject", "softwarebundler", "virtool", "ddos", "exploit",
            "filecoder", "dropper", "sitehijack", "cryptolocker", "application", "deepscan", "keylogger", "obfuscated",
-           "packed", "encrypted", "packer", "obfuscator", "encryptor", "malpack", "startpage", "servstart",
-           "infostealer", "crypt", "rootkit", "passwordstealer", "optional", "genpack"}
+           "packed", "encrypted", "packer", "obfuscator", "encryptor", "malpack", "startpage", "servstart", "multi",
+           "infostealer", "crypt", "rootkit", "passwordstealer", "optional", "genpack", "suspicious", "starter"}
 wannacry_aliases = {"wannacry", "wannacrypt", "wanna", "wannacryptor"}
 antivirus_names = ["Kaspersky", "McAfee", "ESET-NOD32", "BitDefender"]
 
 processed_path = 'subory/same.txt'
-reports_path = 'reports2/*'
+reports_path = 'reports/*'
 consensus_labels_file = 'subory/labels.csv'
 cluster_labels_file = 'subory/cluster_labels.csv'
 empty_path = 'subory/empty'
@@ -31,14 +31,15 @@ levenshtein_file = 'subory/levenshtein_matrix.txt'
 output_dir = 'subory/'
 class_number_file = 'subory/class_number.txt'
 
-min_class_size = 50  # minimalna velkost triedy
-min_cluster_size = 50  # minimalna velkost klastra
-min_normal_size = 50  # minimalna velkost triedy po normalizacii distribucie
+min_class_size = 100  # minimalna velkost triedy
+min_cluster_size = 100  # minimalna velkost klastra
+min_normal_size = 100  # minimalna velkost triedy po normalizacii distribucie
 max_normal_size = 100  # maximalna velkost triedy po normalizacii distribucie
-consensus_size = 2  # pocet AV pre ktore ma byt trieda spolocna
+consensus_size = 3  # pocet AV pre ktore ma byt trieda spolocna
 name_min_length = 4  # minimalna dlzka mena malweru
 labeling_type = "consensus"
-for_prediction = True  # ci robim predikciu
+for_prediction = False  # ci robim predikciu
+has_empty = True
 
 
 def preprocess(path, collect_names):
@@ -215,7 +216,7 @@ def rename_classes_to_numbers(path_labels):
     os.rename(output_dir + 'new_labels.csv', path_labels)
 
 
-def keep_classes_numbers(path_labels, path_classes):
+def keep_classes_numbers(path_labels, path_classes):  # pozor na dvojciferne triedy
     # prepise triedy na cisla v predikovanom datasete so zachovanim cisel z trenovacieho
     with open(path_labels, mode='r') as csv_file, open(path_classes, 'r') as class_file, open(
             output_dir + 'new_labels.csv', 'w', newline='') as out:
@@ -237,7 +238,7 @@ def only_classes_csv(path_distribution):
         writer = csv.writer(out)
         writer.writerow(["class"])
         for line in reader:
-            writer.writerow(line['class'])
+            writer.writerow([line['class']])
     os.remove(path_distribution)
     os.rename(output_dir + 'classes_labels.csv', path_distribution)
 
@@ -296,31 +297,37 @@ def clustering(reports_path, min_cluster_size):
 
 def main():
     if labeling_type == "consensus":
-        classes(min_class_size)
-        # consensus labeling with distribution normalization
-        labeling(processed_path, reports_path, consensus_size)
-        class_distribution(consensus_labels_file)
-        if not for_prediction:
-            normal_distribution(consensus_labels_file, reports_path, max_normal_size, min_normal_size)
+        if not has_empty:
+            classes(min_class_size)
+            # consensus labeling with distribution normalization
+            labeling(processed_path, reports_path, consensus_size)
+            class_distribution(consensus_labels_file)
+            if not for_prediction:
+                normal_distribution(consensus_labels_file, reports_path, max_normal_size, min_normal_size)
+            else:
+                delete_unwanted_classes(consensus_labels_file, reports_path, class_number_file)
+            class_distribution(consensus_labels_file)
         else:
-            delete_unwanted_classes(consensus_labels_file, reports_path, class_number_file)
-        class_distribution(consensus_labels_file)
-        clear_empty(empty_path, consensus_labels_file)
-        if not for_prediction:
-            rename_classes_to_numbers(consensus_labels_file)
-        else:
-            keep_classes_numbers(consensus_labels_file, class_number_file)
-        only_classes_csv(consensus_labels_file)
+            clear_empty(empty_path, consensus_labels_file)
+            class_distribution(consensus_labels_file)
+            if not for_prediction:
+                rename_classes_to_numbers(consensus_labels_file)
+            else:
+                keep_classes_numbers(consensus_labels_file, class_number_file)
+            only_classes_csv(consensus_labels_file)
     else:
         if labeling_type == "clustering":
-            preprocess(reports_path, False)
-            # cluster labeling with distribution normalization
-            levenshtein_matrix(long_names_file)
-            clustering(reports_path, min_cluster_size)
-            normal_distribution(cluster_labels_file, reports_path, max_normal_size, min_normal_size)
-            class_distribution(cluster_labels_file)
-            clear_empty(empty_path, cluster_labels_file)
-            only_classes_csv(cluster_labels_file)
+            if not has_empty:
+                preprocess(reports_path, False)
+                # cluster labeling with distribution normalization
+                levenshtein_matrix(long_names_file)
+                clustering(reports_path, min_cluster_size)
+                normal_distribution(cluster_labels_file, reports_path, max_normal_size, min_normal_size)
+                class_distribution(cluster_labels_file)
+            else:
+                clear_empty(empty_path, cluster_labels_file)
+                class_distribution(consensus_labels_file)
+                only_classes_csv(cluster_labels_file)
         else:
             print("wrong labeling type")
 
