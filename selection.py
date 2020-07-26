@@ -21,15 +21,15 @@ import os
 
 feature_path = 'features/original.csv'
 standard_feature_path = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels.csv'
+labels_path = 'subory/labels.csv'
 output_dir = 'features/selection/'
 standard_output_dir = 'features/selection_standard/'
-results_path = 'results_third_dataset/'
+results_path = 'results_old_dataset/'
 select_best_output_dir = 'features/best_n/'
 headers_dir = 'features/headers/'
 
 np.set_printoptions(threshold=np.inf)
-treshold = 1000  # pocet selektovanych atributov
+treshold = 100  # pocet selektovanych atributov
 is_standard = False  # ci mam standardizovane data
 is_small_data = False  # ci chcem pustat aj metody ktore su casovo/pamatovo narocne na velke datasety
 is_subselect = False  # ci robim plnu selekciu alebo len vyberam najlepsich n z predoslej selekcie
@@ -325,9 +325,9 @@ def model_fit(model, prefix):
 def xgboost():
     # ak budu prve tri pomale tak dam n_estimators na 50
     model_gain = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                   n_jobs=-1, n_estimators=100, importance_type='gain', num_class=10)  # 'total_gain'
+                                   n_jobs=-1, n_estimators=100, importance_type='gain', num_class=11)  # 'total_gain'
     model_cover = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                    n_jobs=-1, n_estimators=100, importance_type='weight', num_class=10)
+                                    n_jobs=-1, n_estimators=100, importance_type='weight', num_class=11)
     print("XGBoost gain")
     model_fit(model_gain, "XGBoost gain")
     print("XGBoost split")
@@ -337,10 +337,10 @@ def xgboost():
 def LGBM():
     model_split = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
                                      n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split',
-                                     num_class=10)
+                                     num_class=11)
     model_gain = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',
-                                    num_class=10)
+                                    num_class=11)
     print("LGBM split")
     model_fit(model_split, "LGBM split")
     print("LGBM gain")
@@ -459,25 +459,25 @@ def for_small_data():
 
 
 def for_big_data():
-    chi_square()
-    MI()
-    f_anova()
-    gini()
-    fisher()
-    lap()
-    spec()
-    relieff()
+    # chi_square()
+    # MI()
+    # f_anova()
+    # gini()
+    # fisher()
+    # lap()
+    # spec()
+    # relieff()
     xgboost()
     LGBM()
-    RFC()
+    # RFC()
 
 
 def for_standard_big_data():
     LSVC_l1()
-    SGD_l1()
-    SGD_l2()
-    SGD_elastic()
-    SVM()
+    # SGD_l1()
+    # SGD_l2()
+    # SGD_elastic()
+    # SVM()
 
 
 def for_standard_small_data():
@@ -511,11 +511,14 @@ if __name__ == "__main__":
     if not is_subselect:
         labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
         if not is_standard:
+            print("ns")
             header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
-            data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+            # data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+            print(len(header))
         else:
             header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
             pure_data = np.loadtxt(feature_path, delimiter=',', skiprows=1,
-                                   dtype=np.uint64)  # tieto budem neskor standardizovat
-    main()
+                                   dtype=np.uint64)
+            # pure budem standardizovat az po selekcii, aby nova standardizacia zodpovedala selektovanym atributom
+    # main()

@@ -24,7 +24,7 @@ preictions_file = 'results_third_dataset/predictions_selected.csv'
 
 
 def intersections(input_path, output_path):
-    # pocet atributov v ktorych sa prelinaju. Ked som presiel na menovanie skupinami to uz nepouzivam
+    # pocet atributov v ktorych sa prelinaju.
     files = sorted(glob.glob(input_path))
     names = []
     headers = []
@@ -55,28 +55,28 @@ def intersections(input_path, output_path):
 
 def best_groups(input_dir, output_file):
     features = set(np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str"))
-    simple_features = set(np.loadtxt(simple_file, delimiter=',', max_rows=1, dtype="str"))
-    very_simple_features = set(np.loadtxt(very_simple_file, delimiter=',', max_rows=1, dtype="str"))
+    # simple_features = set(np.loadtxt(simple_file, delimiter=',', max_rows=1, dtype="str"))
+    # very_simple_features = set(np.loadtxt(very_simple_file, delimiter=',', max_rows=1, dtype="str"))
     files = sorted(glob.glob(input_dir))
     with open(output_file, 'w') as out:
         for file in files:
             groups = collections.Counter()
-            simple = 0
-            very_simple = 0
+            # simple = 0
+            # very_simple = 0
             header = np.loadtxt(file, delimiter=',', max_rows=1, dtype="str")
             for i in range(len(header)):
                 for feature in features:
                     if header[i] == feature or header[i] == ('"' + feature + '"'):
                         groups[feature] += 1
-                        if feature in simple_features:
-                            simple += 1
-                            if feature in very_simple_features:
-                                very_simple += 1
+                        # if feature in simple_features:
+                        #     simple += 1
+                        #     if feature in very_simple_features:
+                        #         very_simple += 1
             out.write(os.path.basename(file)[:-4] + '\n')
             out.write("pocet vybranych: " + str(len(header)) + '\n')
             out.write(str(groups.most_common()) + '\n')
-            out.write("simple: " + str(simple) + '\n')
-            out.write("very simple: " + str(very_simple) + '\n')
+            # out.write("simple: " + str(simple) + '\n')
+            # out.write("very simple: " + str(very_simple) + '\n')
             out.write('\n')
 
 

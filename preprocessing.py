@@ -123,7 +123,6 @@ def feature_size(file):
         header = next(reader)
         counter = collections.Counter(header)
         print(os.path.basename(file)[:-4])
-        print(counter)
         print(len(header))
 
 
@@ -235,15 +234,14 @@ def main():
     # merge_features_from_dir(simple_dir + '*', simple_file)
     # merge_features_from_dir(very_simple_dir + '*', very_simple_file)
     merge_features_from_dir(original_path, original_file)
-    # for name in [original_file, simple_file, very_simple_file]:
-    #     feature_size(name)
+    feature_size(original_file)
     # vymazem povodne subory, ostanu len zmergovane
     shutil.rmtree(original_path[:-1])
     # shutil.rmtree(simple_dir)
     # shutil.rmtree(very_simple_dir)
     os.mkdir(standard_dir)
     # na konci vsetky atributy standardizujem
-    standardize(features_dir, standard_dir, False)
+    standardize(features_dir, standard_dir, True)
 
 
 if __name__ == "__main__":

@@ -91,3 +91,8 @@ import pprint
 # f = open(filepath, 'w')
 # f.write(json.dumps(init_conf))
 # f.close()
+
+# feature_path = 'features/original.csv'
+# header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
+# print(len(header))
+# print(header)

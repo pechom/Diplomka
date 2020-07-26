@@ -26,7 +26,7 @@ headers_dir = 'features/headers/'
 
 df_max_count = 10  # maximalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
-for_prediction = True  # ci robim predikciu
+for_prediction = False  # ci robim predikciu
 selected_file = ''
 
 
@@ -115,7 +115,8 @@ def create_import_libs_features(path, prefix):
                 data = json.load(f)
             feature = [0] * (len(header) + 1)
             for i in range(len(header)):
-                if header[i] in data["additional_info"]["imports"]:
+                lib = word_clearing(data["additional_info"]["imports"])
+                if header[i] in lib:
                     feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
             feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
             features.append(feature)
@@ -126,10 +127,26 @@ def header_from_selection(selected, variance_selected, message):
     header = []
     for i in range(len(selected)):
         if i in variance_selected:
-            # s odstranenim delimetra
-            header.append(selected[i].replace(",", "?"))
+            header.append(selected[i])
     if len(selected) in variance_selected:
-        header.append(message)
+        if message != "":
+            header.append(message)
+    header = header_clearing(header)
+    return header
+
+
+def word_clearing(word):
+    for ch in ['\\', ',', '\'', '\"']:
+        if ch in word:
+            word = word.replace(ch, '?')
+    return word
+
+
+def header_clearing(header):
+    for i in range(len(header)):
+        for ch in ['\\', ',', '\'', '\"']:
+            if ch in header[i]:
+                header[i] = header[i].replace(ch, '?')
     return header
 
 
@@ -157,10 +174,7 @@ def create_import_func_features(path):
                     feature[i] = 1  # vyskyt funkcie
         features.append(feature)
     features, selected = variance_treshold_selection(features)
-    header = []
-    for i in range(len(selected_funcs)):
-        if i in selected:
-            header.append(selected_funcs[i].replace(",", "?"))
+    header = header_from_selection(selected_funcs, selected, "")
     return header, features
 
 
@@ -418,11 +432,8 @@ def create_n_grams(path, n, is_char):
             freq_features.append(freq_feature)
         bin_features, bin_selected = variance_treshold_selection(bin_features)
         freq_features, freq_selected = variance_treshold_selection(freq_features)
-        for i in range(len(selected_grams)):
-            if i in bin_selected:
-                bin_header.append((str(selected_grams[i])).replace(",", "?"))
-            if i in freq_selected:
-                freq_header.append((str(selected_grams[i])).replace(",", "?"))
+        bin_header = header_from_selection(selected_grams, bin_selected, "")
+        freq_header = header_from_selection(selected_grams, freq_selected, "")
     return bin_header, bin_features, freq_header, freq_features
 
 
@@ -496,6 +507,7 @@ def create_hex_grams(path, n):
     freq_header = []
     bin_features = []
     freq_features = []
+    normal_freq_features = []
     if len(global_counter) > 0:
         selected_grams = list(global_counter.keys())
         for name in files:
@@ -514,18 +526,15 @@ def create_hex_grams(path, n):
             freq_features.append(freq_feature)
         bin_features, bin_selected = variance_treshold_selection(bin_features)
         freq_features, freq_selected = variance_treshold_selection(freq_features)
-        for i in range(len(selected_grams)):
-            if i in bin_selected:
-                bin_header.append((str(selected_grams[i])).replace(",", "?"))
-            if i in freq_selected:
-                freq_header.append((str(selected_grams[i])).replace(",", "?"))
-    normal_freq_features = freq_features.copy()
-    for i in range(len(freq_features)):
-        for j in range(len(freq_features[0])):
-            if normal_freq_features[i][j] != 0:
-                normal_freq_features[i][j] = file_size / normal_freq_features[i][j]
-            else:
-                normal_freq_features[i][j] = file_size
+        bin_header = header_from_selection(selected_grams, bin_selected, "")
+        freq_header = header_from_selection(selected_grams, freq_selected, "")
+        normal_freq_features = freq_features.copy()
+        for i in range(len(freq_features)):
+            for j in range(len(freq_features[0])):
+                if normal_freq_features[i][j] != 0:
+                    normal_freq_features[i][j] = file_size / normal_freq_features[i][j]
+                else:
+                    normal_freq_features[i][j] = file_size
     return bin_header, bin_features, freq_header, freq_features, freq_header, normal_freq_features
 
 
@@ -595,7 +604,7 @@ def create_byte_entropy_histogram_features(path, step, window):
         features, selected = variance_treshold_selection(features)
         for i in range(len(selected_indices)):
             if i in selected:
-                header.append((str(selected_indices[i])).replace(",", "?"))
+                header.append((str(selected_indices[i])))
     return header, features
 
 
@@ -761,7 +770,7 @@ def selected_extraction():
         selected_file = os.path.basename(name)[:-4]
         # sample_extraction()  # tieto dve riadky az ked vsetky metody budu mat verziu pre selekciu, zatial ma len import_libs
         # ngram_extraction()
-        # docasne tu mam len metodu import_libs
+        # TODO: docasne tu mam len metodu import_libs - podla nej urobim ostatne
         prefix = "import_libs"
         header, features = create_import_libs_features(reports_path, prefix)
         features_to_csv(header, features, prefix)
