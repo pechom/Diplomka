@@ -511,9 +511,8 @@ if __name__ == "__main__":
     if not is_subselect:
         labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
         if not is_standard:
-            print("ns")
             header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
-            # data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
+            data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
             print(len(header))
         else:
             header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")

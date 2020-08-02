@@ -1,5 +1,5 @@
 na selekciu a klasifikaciu pouzijem len SVC (L1), XGBOOST a LGBM
-vyber len 100 a 1000 atributov
+vyber len 50 a 100 atributov
 Krosvalidaciu pouzijem na vysledky - presnost pred a po selekcii (a pripadny hyperparameter tuning) lebo je robustna. Po selekcii pouzijem cely dataset na trenovanie (s rovnakymi parametrami) a potom z natrenovaneho modelu urobim predikciu.
 
 netreba pre V2 - pred cistenim datasetu zmenit v novych reportoch AV text vysledkov skenov na "detected: True/False" - aspon na vybranych AV. Potrebujem to pre cistenie datasetu aj labeling
@@ -7,9 +7,47 @@ netreba pre V2 - ziskat metadata (exiftool) pre nove vzorky a dopisat ich do rep
 done - v labeling ulozit premenu tried na ich cisla (zoznam), pridat metodu na labeling vzoriek na predikciu konsenzom podla zoznamu (vyhodim vzorky ktore maju triedu mimo zoznamu aj ked dosiahli konsenzus, triedam dam rovnake cisla ako v zozname)
   Clustering je nemozny (mam vzdialenosti, nie body. Reclustering moze zmenit stare triedy)
 done - v extrakcii pridat nazvy atributov v hlavickach, pridat ich aj do selekcie - poriesit delimetre v nazvoch
-in progress - v extrakcii pridat metody (alebo rozsirit stare) na extrakciu len selektovanych atributov pre predikovane vzorky podla ulozenej hlavicky (pre kazdu hlavicku osobitne) - pozor na skupiny atributov podla predpony. 
-  Tato extrakcia bude uz len podla novych reportov. Pre kazdu hlavicku zavolam aj metody z preprocessing kde original file bude nazov hlavicky - podla neho urcim scaler na pouzitie
+! in progress - v extrakcii pridat metody (alebo rozsirit stare) na extrakciu len selektovanych atributov pre predikovane vzorky podla ulozenej hlavicky (pre kazdu hlavicku osobitne) - pozor na skupiny atributov podla predpony. 
+            Tato extrakcia bude uz len podla novych reportov. Pre kazdu hlavicku zavolam aj metody z preprocessing kde original file bude nazov hlavicky - podla neho urcim scaler na pouzitie
+            Este dokoncit pre metody pre disassembled_features a n-gramy - pozor na to, ake -n sa spracovava
+            Do vsetkych metod pridat este osetrenie stavu, ked clear_prefix_from_header vrati prazdnu hlavicku - ziaden atribut skupiny nebol selektovany. V tom pripade vratit z metody hned prazdnu hlavicku a nezapisovat nic do csv. 
 done - Po selekcii urobit na nestandardizovanych selektovanych datach novu standardizaciu (pri standardizovanych musim ulozit aj nestandardizovane atributy) a jej scaler ulozit a pouzit pri predikcii. Pouzit ho aj pri vysledkoch klasifikacie
   po selekcii (namiesto pôvodnych vysledkov) - metoda check_selections. Pre kazdu selekciu vznikne novy scaler.
 done - v klasifikacii pridat predikciu a perzistenciu naucenych klasifikatorov. Ukladat vysledky - predikovane triedy (z nich sa urobi heat map).
-in progress - v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels, mena tried budu z class_number. Triedy su v confusion matrix ciselne zoradene), automatizovat tvorbu grafu.
+! in progress - v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels, mena tried budu z class_number. Triedy su v confusion matrix ciselne zoradene), automatizovat tvorbu grafu.
+!!! todo - v results upravit metody tak, aby spracovali nove hlavicky
+
+dve hlavne typy extrakcie selektovanych atributov:
+        header = clear_prefix_from_header(prefix)
+        files = sorted(glob.glob(path))
+        features = []
+        for name in files:
+            with open(name) as f:
+                data = json.load(f)
+            feature = [0] * (len(header))
+            imps = []
+            for imp in data["additional_info"]["imports"]:
+                imps.append(imp)
+            imps = header_clearing(imps)
+            for i in range(len(header)):
+                for lib in imps:
+                    if header[i] in lib:
+                        feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
+            if "number_of_DLLs" in header[-1]:
+                feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
+            features.append(feature)
+
+
+        header = clear_prefix_from_header(prefix)
+        files = sorted(glob.glob(path))
+        features = []
+        feature_names = ["CodeSize"]
+        for name in files:
+            with open(name) as f:
+                data = json.load(f)
+            feature = [0] * (len(header))
+            counter = 0
+            if feature_names[0] in header:
+                feature[counter] = data["additional_info"]["exiftool"]["CodeSize"]
+                counter += 1
+	    features.append(feature)
