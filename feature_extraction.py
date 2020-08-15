@@ -27,6 +27,7 @@ headers_dir = 'features/headers/'
 df_max_count = 10  # maximalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
 for_prediction = False  # ci robim predikciu
+first_time = False  # pre divide disassembled
 selected_file = ''
 
 
@@ -63,7 +64,7 @@ def entropy(string):
 
 
 def features_to_csv(header, data, name):
-    if not (len(data) == 0):
+    if not (len(data) == 0 or len(header) == 0):
         for i in range(len(header)):
             header[i] = name + "_" + header[i]
         with open("features/" + name + ".csv", "w", newline='') as csv_file:
@@ -112,7 +113,7 @@ def header_clearing(header):
     return header
 
 
-def clear_prefix_from_header(prefix):
+def clear_prefix_from_header(prefix):  # vyberiem z hlavicky len atributy vybranej skupiny a odsranim prefix
     prefix_header = np.loadtxt(selected_file, delimiter=',', max_rows=1, dtype="str")
     header = []
     for header_name in prefix_header:
@@ -326,6 +327,7 @@ def create_metadata_features(path, prefix):
                 feature[counter] = data["additional_info"]["exiftool"]["ImageVersion"]
                 counter += 1
             if feature_names[6] in header:
+                dt = data["additional_info"]["exiftool"]["TimeStamp"]
                 if dt[:19] == "0000:00:00 00:00:00":
                     feature[counter] = 0
                 else:
@@ -671,7 +673,7 @@ def create_string_features(path, prefix):
             feature.append(len(line_lengths))
             feature.append(os.path.getsize(f.name))
             feature.append(entropy(text))
-        features.append(feature)
+            features.append(feature)
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
@@ -797,7 +799,7 @@ def create_byte_entropy_histogram_features(path, prefix, step, window):
             feature = byte_entropy_histogram(bytez, step, window)
             selected_feature = []
             for i in range(len(feature)):
-                if str(i) in header or i in header:
+                if str(i) in header:
                     selected_feature.append(feature[i])
             features.append(selected_feature)
     return header, features
@@ -1013,74 +1015,122 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path, pref
 
 
 def create_disassembled_features(path, prefix):
-    files = sorted(glob.glob(path))
-    sizes = collections.Counter()
-    for name in files:
-        with open(name, errors='replace') as f:
-            text = f.readlines()
-        for line in text:
-            sizes[len(line)] += 1
-    print(len(sizes))
-    sizes = document_frequency_selection(sizes)
-    print("po DF " + str(len(sizes)))
-    header = []
-    features = []
-    if len(sizes) > 0:
-        selected_sizes = list(sizes.keys())
+    if not for_prediction:
+        files = sorted(glob.glob(path))
+        sizes = collections.Counter()
+        for name in files:
+            with open(name, errors='replace') as f:
+                text = f.readlines()
+            for line in text:
+                sizes[len(line)] += 1
+        print(len(sizes))
+        sizes = document_frequency_selection(sizes)
+        print("po DF " + str(len(sizes)))
+        header = []
+        features = []
+        if len(sizes) > 0:
+            selected_sizes = list(sizes.keys())
+            for name in files:
+                line_lengths = []
+                feature = [0] * (len(selected_sizes) + 2)
+                with open(name, errors='replace') as f:
+                    text = f.readlines()
+                for line in text:
+                    length = len(line)
+                    line_lengths.append(length)
+                    if length in selected_sizes:
+                        feature[selected_sizes.index(length)] += 1
+                    # max_length = max(max_length, len(line))
+                feature[len(selected_sizes)] = np.mean(line_lengths)
+                feature[len(selected_sizes) + 1] = len(line_lengths)
+                features.append(feature)
+            # print(max_length)
+            features, selected = variance_treshold_selection(features)
+            for i in range(len(selected_sizes)):
+                if i in selected:
+                    header.append(str(selected_sizes[i]))
+            if len(selected_sizes) in selected:
+                header.append("average_length")
+            if (len(selected_sizes) + 1) in selected:
+                header.append("number_of_lines")
+    else:
+        header = clear_prefix_from_header(prefix)
+        files = sorted(glob.glob(path))
+        features = []
         for name in files:
             line_lengths = []
-            feature = [0] * (len(selected_sizes) + 2)
+            feature = [0] * (len(header))
             with open(name, errors='replace') as f:
                 text = f.readlines()
             for line in text:
                 length = len(line)
                 line_lengths.append(length)
-                if length in selected_sizes:
-                    feature[selected_sizes.index(length)] += 1
-                # max_length = max(max_length, len(line))
-            feature[len(selected_sizes)] = np.mean(line_lengths)
-            feature[len(selected_sizes) + 1] = len(line_lengths)
+                if str(length) in header:
+                    feature[header.index(str(length))] += 1
+            if "average_length" in header:
+                feature[header.index("average_length")] = np.mean(line_lengths)
+            if "number_of_lines" in header:
+                feature[header.index("number_of_lines")] = len(line_lengths)
             features.append(feature)
-        # print(max_length)
-        features, selected = variance_treshold_selection(features)
-        for i in range(len(selected_sizes)):
-            if i in selected:
-                header.append("line_length_" + str(selected_sizes[i]))
-        if len(selected_sizes) in selected:
-            header.append("average_length")
-        if (len(selected_sizes) + 1) in selected:
-            header.append("number_of_lines")
     return header, features
 
 
-def create_n_grams(path, n, is_char, prefix):
-    files = sorted(glob.glob(path))
-    counters = []
-    global_counter = collections.Counter()
-    for name in files:
-        with open(name) as f:
-            text = f.read()
-        if not is_char:
-            tokenized = text.split()  # split rozdeli na slova
-        else:
-            tokenized = list(text)  # list rozdeli na pismena
-        grams = list(nltk.ngrams(tokenized, n))
-        counter = collections.Counter()
-        for gram in grams:
-            if counter[gram] == 0:
-                counter[gram] = 1
-        counters.append(counter)
-    for i in range(len(counters)):
-        global_counter = global_counter + counters[i]
-    print(len(global_counter))
-    global_counter = document_frequency_selection(global_counter)
-    print("po DF " + str(len(global_counter)))
-    bin_header = []
-    freq_header = []
-    bin_features = []
-    freq_features = []
-    if len(global_counter) > 0:
-        selected_grams = list(global_counter.keys())
+def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
+    if not for_prediction:
+        files = sorted(glob.glob(path))
+        counters = []
+        global_counter = collections.Counter()
+        for name in files:
+            with open(name) as f:
+                text = f.read()
+            if not is_char:
+                tokenized = text.split()  # split rozdeli na slova
+            else:
+                tokenized = list(text)  # list rozdeli na pismena
+            grams = list(nltk.ngrams(tokenized, n))
+            counter = collections.Counter()
+            for gram in grams:
+                if counter[gram] == 0:
+                    counter[gram] = 1
+            counters.append(counter)
+        for i in range(len(counters)):
+            global_counter = global_counter + counters[i]
+        print(len(global_counter))
+        global_counter = document_frequency_selection(global_counter)
+        print("po DF " + str(len(global_counter)))
+        bin_header = []
+        freq_header = []
+        bin_features = []
+        freq_features = []
+        if len(global_counter) > 0:
+            selected_grams = list(global_counter.keys())
+            for name in files:
+                with open(name) as f:
+                    text = f.read()
+                if not is_char:
+                    tokenized = text.split()
+                else:
+                    tokenized = list(text)
+                grams = list(nltk.ngrams(tokenized, n))
+                grams_freq = collections.Counter(grams)
+                bin_feature = [0] * len(selected_grams)
+                freq_feature = [0] * len(selected_grams)
+                for i in range(len(selected_grams)):
+                    if grams_freq[selected_grams[i]] != 0:
+                        bin_feature[i] = 1
+                        freq_feature[i] = grams_freq[selected_grams[i]]
+                bin_features.append(bin_feature)
+                freq_features.append(freq_feature)
+            bin_features, bin_selected = variance_treshold_selection(bin_features)
+            freq_features, freq_selected = variance_treshold_selection(freq_features)
+            bin_header = header_from_selection(selected_grams, bin_selected, "")
+            freq_header = header_from_selection(selected_grams, freq_selected, "")
+    else:
+        bin_header = clear_prefix_from_header(bin_prefix)
+        freq_header = clear_prefix_from_header(freq_prefix)
+        files = sorted(glob.glob(path))
+        bin_features = []
+        freq_features = []
         for name in files:
             with open(name) as f:
                 text = f.read()
@@ -1089,95 +1139,125 @@ def create_n_grams(path, n, is_char, prefix):
             else:
                 tokenized = list(text)
             grams = list(nltk.ngrams(tokenized, n))
+            grams = header_clearing(grams)
             grams_freq = collections.Counter(grams)
-            bin_feature = [0] * len(selected_grams)
-            freq_feature = [0] * len(selected_grams)
-            for i in range(len(selected_grams)):
-                if grams_freq[selected_grams[i]] != 0:
-                    bin_feature[i] = 1
-                    freq_feature[i] = grams_freq[selected_grams[i]]
+            bin_feature = [0] * len(bin_header)
+            freq_feature = [0] * len(freq_header)
+            for i in range(len(bin_header)):
+                for j in range(len(grams)):
+                    if bin_header[i] in grams[j]:
+                        if grams_freq[grams[j]] != 0:
+                            bin_feature[i] = 1
+            for i in range(len(freq_header)):
+                for gram in grams_freq:
+                    if freq_header[i] in gram:
+                        freq_feature[i] = grams_freq[gram]
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
-        bin_features, bin_selected = variance_treshold_selection(bin_features)
-        freq_features, freq_selected = variance_treshold_selection(freq_features)
-        bin_header = header_from_selection(selected_grams, bin_selected, "")
-        freq_header = header_from_selection(selected_grams, freq_selected, "")
     return bin_header, bin_features, freq_header, freq_features
 
 
-def create_hex_grams(path, n, prefix):
-    files = sorted(glob.glob(path))
-    counters = []
-    global_counter = collections.Counter()
-    for name in files:
-        with open(name) as f:
-            text = f.read()
-            text = text.replace(" ", "")
-            # dvojice pismen su jeden byte - 1-gram
-        grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
-        counter = collections.Counter()
-        for gram in grams:
-            if counter[gram] == 0:
-                counter[gram] = 1
-        counters.append(counter)
-    for i in range(len(counters)):
-        global_counter = global_counter + counters[i]
-    print(len(global_counter))
-    global_counter = document_frequency_selection(global_counter)
-    print("po DF " + str(len(global_counter)))
-    bin_header = []
-    freq_header = []
-    bin_features = []
-    freq_features = []
-    normal_freq_features = []
-    if len(global_counter) > 0:
-        selected_grams = list(global_counter.keys())
+def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
+    if not for_prediction:
+        files = sorted(glob.glob(path))
+        counters = []
+        global_counter = collections.Counter()
+        for name in files:
+            with open(name) as f:
+                text = f.read()
+                text = text.replace(" ", "")
+                # dvojice pismen su jeden byte - 1-gram
+            grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
+            counter = collections.Counter()
+            for gram in grams:
+                if counter[gram] == 0:
+                    counter[gram] = 1
+            counters.append(counter)
+        for i in range(len(counters)):
+            global_counter = global_counter + counters[i]
+        print(len(global_counter))
+        global_counter = document_frequency_selection(global_counter)
+        print("po DF " + str(len(global_counter)))
+        bin_header = []
+        freq_header = []
+        normal_freq_header = []
+        bin_features = []
+        freq_features = []
+        normal_freq_features = []
+        if len(global_counter) > 0:
+            selected_grams = list(global_counter.keys())
+            for name in files:
+                with open(name) as f:
+                    text = f.read()
+                    file_size = os.path.getsize(f.name)
+                grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
+                grams_freq = collections.Counter(grams)
+                bin_feature = [0] * len(selected_grams)
+                freq_feature = [0] * len(selected_grams)
+                for i in range(len(selected_grams)):
+                    if grams_freq[selected_grams[i]] != 0:
+                        bin_feature[i] = 1
+                        freq_feature[i] = grams_freq[selected_grams[i]]
+                bin_features.append(bin_feature)
+                freq_features.append(freq_feature)
+            bin_features, bin_selected = variance_treshold_selection(bin_features)
+            freq_features, freq_selected = variance_treshold_selection(freq_features)
+            bin_header = header_from_selection(selected_grams, bin_selected, "")
+            freq_header = header_from_selection(selected_grams, freq_selected, "")
+            normal_freq_features = freq_features.copy()
+            normal_freq_header = freq_header.copy()
+            for i in range(len(freq_features)):
+                for j in range(len(freq_features[0])):
+                    if normal_freq_features[i][j] != 0:
+                        normal_freq_features[i][j] = file_size / normal_freq_features[i][j]
+                    else:
+                        normal_freq_features[i][j] = file_size
+    else:
+        bin_header = clear_prefix_from_header(bin_prefix)
+        freq_header = clear_prefix_from_header(freq_prefix)
+        normal_freq_header = clear_prefix_from_header(normal_freq_prefix)
+        bin_features = []
+        freq_features = []
+        normal_freq_features = []
+        files = sorted(glob.glob(path))
         for name in files:
             with open(name) as f:
                 text = f.read()
                 file_size = os.path.getsize(f.name)
             grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
             grams_freq = collections.Counter(grams)
-            bin_feature = [0] * len(selected_grams)
-            freq_feature = [0] * len(selected_grams)
-            for i in range(len(selected_grams)):
-                if grams_freq[selected_grams[i]] != 0:
-                    bin_feature[i] = 1
-                    freq_feature[i] = grams_freq[selected_grams[i]]
+            bin_feature = [0] * len(bin_header)
+            freq_feature = [0] * len(freq_header)
+            normal_freq_feature = [0] * len(normal_freq_header)
+            for i in range(len(bin_header)):
+                for gram in grams:
+                    if bin_header[i] in gram:
+                        if grams_freq[gram] != 0:
+                            bin_feature[i] = 1
+            for i in range(len(freq_header)):
+                for gram in grams_freq:
+                    if freq_header[i] in gram:
+                        freq_feature[i] = grams_freq[gram]
+            for i in range(len(normal_freq_header)):
+                for gram in grams_freq:
+                    if normal_freq_header[i] in gram:
+                        if grams_freq[gram] != 0:
+                            normal_freq_feature[i] = file_size / grams_freq[gram]
+                        else:
+                            normal_freq_feature[i] = file_size
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
-        bin_features, bin_selected = variance_treshold_selection(bin_features)
-        freq_features, freq_selected = variance_treshold_selection(freq_features)
-        bin_header = header_from_selection(selected_grams, bin_selected, "")
-        freq_header = header_from_selection(selected_grams, freq_selected, "")
-        normal_freq_features = freq_features.copy()
-        for i in range(len(freq_features)):
-            for j in range(len(freq_features[0])):
-                if normal_freq_features[i][j] != 0:
-                    normal_freq_features[i][j] = file_size / normal_freq_features[i][j]
-                else:
-                    normal_freq_features[i][j] = file_size
-    return bin_header, bin_features, freq_header, freq_features, freq_header, normal_freq_features
+            normal_freq_features.append(normal_freq_feature)
+    return bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features
 
 
 def selected_extraction():
-    print("TODO")
-    # TODO: extrakcia atributov pre vzorky urcene na predikciu.
-    #  Atributy budu zo zoznamu (hlavicka selekcie pre rôzne selekcie) a podla nich sa vytvori matica datasetu na predikciu.
-    #  Pre kazdu hlavicku pouzijem aj preprocessing (so saved_standardize) aby som vytvoril subor s jej nazvom a pouzil jej scaler.
-    #  Pri volani preprocessing musim zmenit original file na meno hlavicky - rovnake meno ma scaler (v scalers_path).
-    #  Po skonceni preprocessingov ulozit original subory do selected_dir a standardizovane do standard_selected_dir
     files = glob.glob(headers_dir)
     for name in files:
         global selected_file
         selected_file = os.path.basename(name)[:-4]
-        # sample_extraction()  # tieto dve riadky az ked vsetky metody budu mat verziu pre selekciu, zatial ma len import_libs
-        # ngram_extraction()
-        # TODO: docasne tu mam len metodu import_libs - podla nej urobim ostatne
-        prefix = "import_libs"
-        header, features = create_import_libs_features(reports_path, prefix)
-        features_to_csv(header, features, prefix)
-
+        sample_extraction()
+        ngram_extraction()
         os.mkdir(preprocessing.discrete_dir)
         preprocessing.discretize(preprocessing.features_dir, preprocessing.discrete_dir,
                                  preprocessing.discretize_decimals)
@@ -1245,45 +1325,62 @@ def sample_extraction():
 
 def ngram_extraction():
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-bin-strings")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-freq-strings")
+        bin_prefix = str(i) + "-gram-bin-strings"
+        freq_prefix = str(i) + "-gram-freq-strings"
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False, bin_prefix,
+                                                                              freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
 
     for i in range(1, max_ngram + 1):
+        bin_prefix = str(i) + "-gram-char-bin-strings"
+        freq_prefix = str(i) + "-gram-char-freq-strings"
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True, bin_prefix,
+                                                                              freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
+
+    for i in range(1, max_ngram + 1):
+        bin_prefix = str(i) + "-gram-instructions"
+        freq_prefix = str(i) + "-gram-freq-instructions"
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False, bin_prefix,
+                                                                              freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
+
+    for i in range(1, max_ngram + 1):
+        bin_prefix = str(i) + "-gram-reg"
+        freq_prefix = str(i) + "-gram-freq-reg"
+        bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False, bin_prefix,
+                                                                              freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
+
+    for i in range(1, max_ngram + 1):
+        bin_prefix = str(i) + "-gram-bin-hex"
+        freq_prefix = str(i) + "-gram-freq-hex"
+        normal_freq_prefix = str(i) + "-gram-normal-freq-hex"
         bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
-            create_hex_grams(hex_path, i)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-bin-hex")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-freq-hex")
-        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram-normal-freq-hex")
+            create_hex_grams(hex_path, i, bin_prefix, freq_prefix, normal_freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
+        features_to_csv(normal_freq_header, normal_freq_features, normal_freq_prefix)
 
     for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-char-bin-strings")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-char-freq-strings")
-
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-instructions")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-freq-instructions")
-
-    for i in range(1, max_ngram + 1):
-        bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-reg")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-freq-reg")
-
-    for i in range(1, max_ngram + 1):
+        bin_prefix = str(i) + "-gram-opcode"
+        freq_prefix = str(i) + "-gram-freq-opcode"
+        normal_freq_prefix = str(i) + "-gram-normal-freq-opcode"
         bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
-            create_hex_grams(opcodes_path, i)
-        features_to_csv(bin_header, bin_features, str(i) + "-gram-opcode")
-        features_to_csv(freq_header, freq_features, str(i) + "-gram-freq-opcode")
-        features_to_csv(normal_freq_header, normal_freq_features, str(i) + "-gram-normal-freq-opcode")
+            create_hex_grams(opcodes_path, i, bin_prefix, freq_prefix, normal_freq_prefix)
+        features_to_csv(bin_header, bin_features, bin_prefix)
+        features_to_csv(freq_header, freq_features, freq_prefix)
+        features_to_csv(normal_freq_header, normal_freq_features, normal_freq_prefix)
 
 
 def main():
-    # spusti len raz, ak budem zase spustat extrakciu atributov toto vynecham !!!
-    # (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
-    divide_disassembled_files(disassembled_path, opcodes_path, registers_path, instructions_path)
-
+    # spusti len raz (ak budem mat dalsi dataset musim z danych priecinkov odstranit subory)
+    if first_time:
+        divide_disassembled_files(disassembled_path, opcodes_path, registers_path, instructions_path)
     if for_prediction:
         selected_extraction()
     else:

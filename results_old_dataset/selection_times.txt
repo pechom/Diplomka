@@ -1,0 +1,23 @@
+pocet atributov: 100
+
+
+XGBoost gain
+100
+cas: 0:22:46.227201
+
+
+XGBoost split
+100
+cas: 0:22:57.247538
+
+
+LGBM split
+100
+cas: 0:24:01.496361
+
+
+LGBM gain
+100
+cas: 0:24:33.944543
+
+
