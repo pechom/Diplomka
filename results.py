@@ -25,6 +25,7 @@ labels_path = 'subory/cluster_labels.csv'
 predictions_file = results_path + 'predictions_selected.csv'
 class_number_file = 'subory/class_number.txt'
 prediction_accuracy_file = 'results/prediction_accuracy'
+for_prediction = False
 
 
 def intersections(input_path, output_path):
@@ -59,6 +60,10 @@ def intersections(input_path, output_path):
 
 def best_groups(input_dir, output_file):
     features = set(np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str"))
+    feature_groups = set()
+    for feature in features:
+        feature = feature[:feature.index("_")]
+        feature_groups.add(feature)
     # simple_features = set(np.loadtxt(simple_file, delimiter=',', max_rows=1, dtype="str"))
     # very_simple_features = set(np.loadtxt(very_simple_file, delimiter=',', max_rows=1, dtype="str"))
     files = sorted(glob.glob(input_dir))
@@ -68,8 +73,9 @@ def best_groups(input_dir, output_file):
             # simple = 0
             # very_simple = 0
             header = np.loadtxt(file, delimiter=',', max_rows=1, dtype="str")
+            header = [x[:x.index("_")] for x in header]  # list comprehension
             for i in range(len(header)):
-                for feature in features:
+                for feature in feature_groups:
                     if header[i] == feature or header[i] == ('"' + feature + '"'):
                         groups[feature] += 1
                         # if feature in simple_features:
@@ -82,6 +88,7 @@ def best_groups(input_dir, output_file):
             # out.write("simple: " + str(simple) + '\n')
             # out.write("very simple: " + str(very_simple) + '\n')
             out.write('\n')
+    return 0
 
 
 def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "selected" vysledkov
@@ -112,6 +119,7 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
                         results = []
                 except StopIteration:
                     continue
+    return 0
 
 
 def feature_intersections(input_path, output):
@@ -221,12 +229,16 @@ def predictions_results():
 
 
 def main():
-    best_groups(best_features_path, best_groups_output_file)
-    result_processing(selected_results, compact_selected_results)
-    feature_intersections(groups_result_path, True)
-    feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
-    feature_difference(difference_file)
-    predictions_results()
+    if not for_prediction:
+        intersections(best_features_path, intersections_file)
+        best_groups(best_features_path, best_groups_output_file)
+        result_processing(selected_results, compact_selected_results)
+        feature_intersections(groups_result_path, True)
+        feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
+        # results_graphs()
+        # feature_difference(difference_file)
+    else:
+        predictions_results()
 
 
 if __name__ == "__main__":

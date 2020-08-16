@@ -27,7 +27,7 @@ done - v extrakcii pridat metody (alebo rozsirit stare) na extrakciu len selekto
         
 done - v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels, mena tried budu z class_number. Triedy su v confusion matrix ciselne zoradene)
 
-!!! todo - v results upravit metody tak, aby spracovali nove hlavicky
+done - v results upravit metody tak, aby spracovali nove hlavicky
 
 !!! todo - v results pocitaj aj pocet atributov pre predikovane vysledky ktore maju 0 varianciu aby som vedel kolko zo selektovanych atributov bolo aj pouzitelnych
 

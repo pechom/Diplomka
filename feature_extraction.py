@@ -145,7 +145,7 @@ def create_import_libs_features(path, prefix):
                 feature = [0] * (len(selected_libs) + 1)
                 for i in range(len(selected_libs)):
                     for imp in data["additional_info"]["imports"]:
-                        if selected_libs[i] in imp:
+                        if selected_libs[i] == imp:
                             feature[i] = len(data["additional_info"]["imports"][selected_libs[i]])  # pocet funkcii
                 feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
                 features.append(feature)
@@ -166,9 +166,9 @@ def create_import_libs_features(path, prefix):
                 imps = header_clearing(imps)
                 for i in range(len(header)):
                     for lib in imps:
-                        if header[i] in lib:
+                        if header[i] == lib:
                             feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
-                if "number_of_DLLs" in header[-1]:
+                if "number_of_DLLs" == header[-1]:
                     feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
                 features.append(feature)
     return header, features
@@ -197,7 +197,7 @@ def create_import_func_features(path, prefix):
                 feature = [0] * (len(selected_funcs))
                 for i in range(len(selected_funcs)):
                     for imp in data["additional_info"]["imports"]:
-                        if selected_funcs[i] in data["additional_info"]["imports"][imp]:
+                        if selected_funcs[i] == data["additional_info"]["imports"][imp]:
                             feature[i] = 1  # vyskyt funkcie
                 features.append(feature)
             features, selected = variance_treshold_selection(features)
@@ -215,7 +215,7 @@ def create_import_func_features(path, prefix):
                     for imp in data["additional_info"]["imports"]:
                         funcs = header_clearing(data["additional_info"]["imports"][imp])
                         for func in funcs:
-                            if header[i] in func:
+                            if header[i] == func:
                                 feature[i] = 1
                 features.append(feature)
     return header, features
@@ -263,9 +263,9 @@ def create_export_features(path, prefix):
                     for i in range(len(header)):
                         libs = header_clearing(data["additional_info"]["exports"])
                         for lib in libs:
-                            if header[i] in lib:
+                            if header[i] == lib:
                                 feature[i] = 1
-                    if "number_of_DLLs" in header[-1]:
+                    if "number_of_DLLs" == header[-1]:
                         feature[-1] = len(data["additional_info"]["exports"])
                     features.append(feature)
     return header, features
@@ -628,9 +628,9 @@ def create_resource_features(path, prefix):
                     types = header_clearing(types)
                     for i in range(len(header)):
                         for type in types:
-                            if header[i] in type:
+                            if header[i] == type:
                                 feature[i] = data["additional_info"]["pe-resource-types"][type]
-                    if "number_of_resources" in header[-1]:
+                    if "number_of_resources" == header[-1]:
                         all_resources = 0
                         for resource_type in data["additional_info"]["pe-resource-types"]:
                             all_resources += data["additional_info"]["pe-resource-types"][resource_type]
@@ -978,7 +978,7 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path, pref
         header = clear_prefix_from_header(prefix)
         features = []
         if len(header) != 0:
-            files = sorted(glob.glob(path))
+            files = sorted(glob.glob(opcodes_path))
             for name in files:
                 feature = [0] * len(header)
                 feature_help = [0] * 2
@@ -1167,7 +1167,7 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             freq_feature = [0] * len(freq_header)
             for i in range(len(freq_header)):
                 for gram in grams_freq:
-                    if freq_header[i] in gram:
+                    if freq_header[i] == gram:
                         freq_feature[i] = grams_freq[gram]
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
@@ -1248,16 +1248,16 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
             normal_freq_feature = [0] * len(normal_freq_header)
             for i in range(len(bin_header)):
                 for gram in grams:
-                    if bin_header[i] in gram:
+                    if bin_header[i] == gram:
                         if grams_freq[gram] != 0:
                             bin_feature[i] = 1
             for i in range(len(freq_header)):
                 for gram in grams_freq:
-                    if freq_header[i] in gram:
+                    if freq_header[i] == gram:
                         freq_feature[i] = grams_freq[gram]
             for i in range(len(normal_freq_header)):
                 for gram in grams_freq:
-                    if normal_freq_header[i] in gram:
+                    if normal_freq_header[i] == gram:
                         if grams_freq[gram] != 0:
                             normal_freq_feature[i] = file_size / grams_freq[gram]
                         else:

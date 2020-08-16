@@ -141,3 +141,8 @@ import pprint
 # print(func)
 # lib = header_clearing(data["additional_info"]["imports"]['MPR.dll'])
 # print(lib)
+
+header = ["bla_alb", "aaa_bbb"]
+header = np.array(header)
+header = [x[:x.index("_")] for x in header]
+print(header)
