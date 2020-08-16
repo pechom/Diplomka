@@ -27,6 +27,7 @@ selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po sel
 standard_selected_dir = 'features/selection_standard/'
 results_path = 'results_third_dataset/'
 trained_path = 'subory/trained/'
+predictions_file = results_path + 'predictions_selected.csv'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
 mode = "preselection"
@@ -359,7 +360,7 @@ def svc_predict(data):
 
 
 def predictions():  # na predikovanom datasete - vsetky selekcie
-    with open(results_path + 'predictions_selected.csv', "w", newline='') as output:
+    with open(predictions_file, "w", newline='') as output:
         writer = csv.writer(output, delimiter=',')
         files = glob.glob(selected_dir)
         for file in files:

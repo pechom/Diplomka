@@ -78,13 +78,14 @@ def features_to_csv(header, data, name):
 
 def header_from_selection(selected, variance_selected, message):
     header = []
-    for i in range(len(selected)):
-        if i in variance_selected:
-            header.append(selected[i])
-    if len(selected) in variance_selected:
-        if message != "":
-            header.append(message)
-    header = header_clearing(header)
+    if len(selected) != 0:
+        for i in range(len(selected)):
+            if i in variance_selected:
+                header.append(selected[i])
+        if len(selected) in variance_selected:
+            if message != "":
+                header.append(message)
+        header = header_clearing(header)
     return header
 
 
@@ -152,23 +153,24 @@ def create_import_libs_features(path, prefix):
             header = header_from_selection(selected_libs, selected, "number_of_DLLs")
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            imps = []
-            for imp in data["additional_info"]["imports"]:
-                imps.append(imp)
-            imps = header_clearing(imps)
-            for i in range(len(header)):
-                for lib in imps:
-                    if header[i] in lib:
-                        feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
-            if "number_of_DLLs" in header[-1]:
-                feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(header))
+                imps = []
+                for imp in data["additional_info"]["imports"]:
+                    imps.append(imp)
+                imps = header_clearing(imps)
+                for i in range(len(header)):
+                    for lib in imps:
+                        if header[i] in lib:
+                            feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
+                if "number_of_DLLs" in header[-1]:
+                    feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
+                features.append(feature)
     return header, features
 
 
@@ -186,33 +188,36 @@ def create_import_func_features(path, prefix):
         functions = document_frequency_selection(functions)
         print("po DF " + str(len(functions)))
         features = []
-        selected_funcs = list(functions.keys())
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(selected_funcs))
-            for i in range(len(selected_funcs)):
-                for imp in data["additional_info"]["imports"]:
-                    if selected_funcs[i] in data["additional_info"]["imports"][imp]:
-                        feature[i] = 1  # vyskyt funkcie
-            features.append(feature)
-        features, selected = variance_treshold_selection(features)
-        header = header_from_selection(selected_funcs, selected, "")
+        header = []
+        if len(functions) != 0:
+            selected_funcs = list(functions.keys())
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(selected_funcs))
+                for i in range(len(selected_funcs)):
+                    for imp in data["additional_info"]["imports"]:
+                        if selected_funcs[i] in data["additional_info"]["imports"][imp]:
+                            feature[i] = 1  # vyskyt funkcie
+                features.append(feature)
+            features, selected = variance_treshold_selection(features)
+            header = header_from_selection(selected_funcs, selected, "")
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            for i in range(len(header)):
-                for imp in data["additional_info"]["imports"]:
-                    funcs = header_clearing(data["additional_info"]["imports"][imp])
-                    for func in funcs:
-                        if header[i] in func:
-                            feature[i] = 1
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(header))
+                for i in range(len(header)):
+                    for imp in data["additional_info"]["imports"]:
+                        funcs = header_clearing(data["additional_info"]["imports"][imp])
+                        for func in funcs:
+                            if header[i] in func:
+                                feature[i] = 1
+                features.append(feature)
     return header, features
 
 
@@ -247,21 +252,22 @@ def create_export_features(path, prefix):
             header = header_from_selection(selected_libs, selected, "number_of_DLLs")
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            if "exports" in data["additional_info"]:
-                for i in range(len(header)):
-                    libs = header_clearing(data["additional_info"]["exports"])
-                    for lib in libs:
-                        if header[i] in lib:
-                            feature[i] = 1
-                if "number_of_DLLs" in header[-1]:
-                    feature[-1] = len(data["additional_info"]["exports"])
-                features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(header))
+                if "exports" in data["additional_info"]:
+                    for i in range(len(header)):
+                        libs = header_clearing(data["additional_info"]["exports"])
+                        for lib in libs:
+                            if header[i] in lib:
+                                feature[i] = 1
+                    if "number_of_DLLs" in header[-1]:
+                        feature[-1] = len(data["additional_info"]["exports"])
+                    features.append(feature)
     return header, features
 
 
@@ -298,54 +304,55 @@ def create_metadata_features(path, prefix):
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        feature_names = ["CodeSize", "LinkerVersion", "InitializedDataSize", "UninitializedDataSize",
-                         "OSVersion", "ImageVersion", "TimeStamp", "EntryPoint", "SubsystemVersion", "MachineType",
-                         "Size"]
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            counter = 0
-            if feature_names[0] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["CodeSize"]
-                counter += 1
-            if feature_names[1] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["LinkerVersion"]
-                counter += 1
-            if feature_names[2] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["InitializedDataSize"]
-                counter += 1
-            if feature_names[3] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["UninitializedDataSize"]
-                counter += 1
-            if feature_names[4] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["OSVersion"]
-                counter += 1
-            if feature_names[5] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["ImageVersion"]
-                counter += 1
-            if feature_names[6] in header:
-                dt = data["additional_info"]["exiftool"]["TimeStamp"]
-                if dt[:19] == "0000:00:00 00:00:00":
-                    feature[counter] = 0
-                else:
-                    dt = time.strptime(dt[:19], '%Y:%m:%d %X')
-                    feature[counter] = int(time.mktime(dt))
-                counter += 1
-            if feature_names[7] in header:
-                feature[counter] = data["additional_info"]["pe-entry-point"]
-                counter += 1
-            if feature_names[8] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["SubsystemVersion"]
-                counter += 1
-            if feature_names[9] in header:
-                feature[counter] = data["additional_info"]["pe-machine-type"]
-                counter += 1
-            if feature_names[10] in header:
-                feature[counter] = data["size"]
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            feature_names = ["CodeSize", "LinkerVersion", "InitializedDataSize", "UninitializedDataSize",
+                             "OSVersion", "ImageVersion", "TimeStamp", "EntryPoint", "SubsystemVersion", "MachineType",
+                             "Size"]
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(header))
+                counter = 0
+                if feature_names[0] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["CodeSize"]
+                    counter += 1
+                if feature_names[1] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["LinkerVersion"]
+                    counter += 1
+                if feature_names[2] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["InitializedDataSize"]
+                    counter += 1
+                if feature_names[3] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["UninitializedDataSize"]
+                    counter += 1
+                if feature_names[4] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["OSVersion"]
+                    counter += 1
+                if feature_names[5] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["ImageVersion"]
+                    counter += 1
+                if feature_names[6] in header:
+                    dt = data["additional_info"]["exiftool"]["TimeStamp"]
+                    if dt[:19] == "0000:00:00 00:00:00":
+                        feature[counter] = 0
+                    else:
+                        dt = time.strptime(dt[:19], '%Y:%m:%d %X')
+                        feature[counter] = int(time.mktime(dt))
+                    counter += 1
+                if feature_names[7] in header:
+                    feature[counter] = data["additional_info"]["pe-entry-point"]
+                    counter += 1
+                if feature_names[8] in header:
+                    feature[counter] = data["additional_info"]["exiftool"]["SubsystemVersion"]
+                    counter += 1
+                if feature_names[9] in header:
+                    feature[counter] = data["additional_info"]["pe-machine-type"]
+                    counter += 1
+                if feature_names[10] in header:
+                    feature[counter] = data["size"]
+                features.append(feature)
     return header, features
 
 
@@ -367,24 +374,25 @@ def create_overlay_features(path, prefix):
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        feature_names = ["entropy", "offset", "size"]
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-                feature = [0] * (len(header))
-            if "pe-overlay" in data["additional_info"]:
-                counter = 0
-                if feature_names[0] in header:
-                    feature[counter] = data["additional_info"]["pe-overlay"]["entropy"]
-                    counter += 1
-                if feature_names[1] in header:
-                    feature[counter] = data["additional_info"]["pe-overlay"]["offset"]
-                    counter += 1
-                if feature_names[2] in header:
-                    feature[counter] = data["additional_info"]["pe-overlay"]["size"]
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            feature_names = ["entropy", "offset", "size"]
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                    feature = [0] * (len(header))
+                if "pe-overlay" in data["additional_info"]:
+                    counter = 0
+                    if feature_names[0] in header:
+                        feature[counter] = data["additional_info"]["pe-overlay"]["entropy"]
+                        counter += 1
+                    if feature_names[1] in header:
+                        feature[counter] = data["additional_info"]["pe-overlay"]["offset"]
+                        counter += 1
+                    if feature_names[2] in header:
+                        feature[counter] = data["additional_info"]["pe-overlay"]["size"]
+                features.append(feature)
     return header, features
 
 
@@ -469,103 +477,105 @@ def create_section_features(path, prefix):
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-                feature = [0] * (len(header))
-            header_start = ["number_of_known", "number_of_unknown", "number_of_all", "size_of_known", "size_of_unknown",
-                            "file_size/size_of_known", "file_size/size_of_unknown", "number_of_empty_size",
-                            "number_of_empty_name",
-                            "size_of_known/unknown", "size_of_unknown/known"]
-            file_size = data["size"]
-            number_of_known = 0
-            number_of_unknown = 0
-            size_of_known = 0
-            size_of_unknown = 0
-            number_of_empty_size = 0
-            number_of_empty_name = 0
-            for section in data["additional_info"]["sections"]:
-                if section[0] in known_sections:
-                    number_of_known += 1
-                    if (section[0] + "_virtual_address") in header:
-                        feature[header.index(section[0] + "_virtual_address")] = section[1]
-                    if (section[0] + "_physical_address") in header:
-                        feature[header.index(section[0] + "_physical_address")] = section[2]
-                    if (section[0] + "size") in header:
-                        feature[header.index(section[0] + "_size")] = section[3]
-                    size_of_known += section[3]
-                    if section[3] == 0:
-                        number_of_empty_size += 1
-                    if (section[0] + "_entropy") in header:
-                        feature[header.index(section[0] + "_entropy")] = section[4]
-                    if section[3] != 0:
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                    feature = [0] * (len(header))
+                header_start = ["number_of_known", "number_of_unknown", "number_of_all", "size_of_known",
+                                "size_of_unknown",
+                                "file_size/size_of_known", "file_size/size_of_unknown", "number_of_empty_size",
+                                "number_of_empty_name",
+                                "size_of_known/unknown", "size_of_unknown/known"]
+                file_size = data["size"]
+                number_of_known = 0
+                number_of_unknown = 0
+                size_of_known = 0
+                size_of_unknown = 0
+                number_of_empty_size = 0
+                number_of_empty_name = 0
+                for section in data["additional_info"]["sections"]:
+                    if section[0] in known_sections:
+                        number_of_known += 1
+                        if (section[0] + "_virtual_address") in header:
+                            feature[header.index(section[0] + "_virtual_address")] = section[1]
+                        if (section[0] + "_physical_address") in header:
+                            feature[header.index(section[0] + "_physical_address")] = section[2]
+                        if (section[0] + "size") in header:
+                            feature[header.index(section[0] + "_size")] = section[3]
+                        size_of_known += section[3]
+                        if section[3] == 0:
+                            number_of_empty_size += 1
                         if (section[0] + "_entropy") in header:
-                            feature[header.index(section[0] + "_entropy")] = file_size / section[3]
+                            feature[header.index(section[0] + "_entropy")] = section[4]
+                        if section[3] != 0:
+                            if (section[0] + "_entropy") in header:
+                                feature[header.index(section[0] + "_entropy")] = file_size / section[3]
+                        else:
+                            if (section[0] + "_entropy") in header:
+                                feature[header.index(section[0] + "_entropy")] = file_size
                     else:
-                        if (section[0] + "_entropy") in header:
-                            feature[header.index(section[0] + "_entropy")] = file_size
+                        if len(section[0]) == 0:
+                            number_of_empty_name += 1
+                        if section[3] == 0:
+                            number_of_empty_size += 1
+                        number_of_unknown += 1
+                        size_of_unknown += section[3]
+                counter = 0
+                if header_start[0] in header:
+                    feature[counter] = number_of_known
+                    counter += 1
+                if header_start[1] in header:
+                    feature[counter] = number_of_unknown
+                    counter += 1
+                if header_start[2] in header:
+                    feature[counter] = number_of_unknown + number_of_unknown
+                    counter += 1
+                if header_start[3] in header:
+                    feature[counter] = number_of_known
+                    counter += 1
+                if header_start[4] in header:
+                    feature[counter] = number_of_unknown
+                    counter += 1
+                if size_of_known != 0:
+                    if header_start[5] in header:
+                        feature[counter] = file_size / size_of_known
+                        counter += 1
                 else:
-                    if len(section[0]) == 0:
-                        number_of_empty_name += 1
-                    if section[3] == 0:
-                        number_of_empty_size += 1
-                    number_of_unknown += 1
-                    size_of_unknown += section[3]
-            counter = 0
-            if header_start[0] in header:
-                feature[counter] = number_of_known
-                counter += 1
-            if header_start[1] in header:
-                feature[counter] = number_of_unknown
-                counter += 1
-            if header_start[2] in header:
-                feature[counter] = number_of_unknown + number_of_unknown
-                counter += 1
-            if header_start[3] in header:
-                feature[counter] = number_of_known
-                counter += 1
-            if header_start[4] in header:
-                feature[counter] = number_of_unknown
-                counter += 1
-            if size_of_known != 0:
-                if header_start[5] in header:
-                    feature[counter] = file_size / size_of_known
+                    if header_start[5] in header:
+                        feature[counter] = file_size
+                        counter += 1
+                if size_of_unknown != 0:
+                    if header_start[6] in header:
+                        feature[counter] = file_size / size_of_unknown
+                        counter += 1
+                else:
+                    if header_start[6] in header:
+                        feature[counter] = file_size / size_of_unknown
+                        counter += 1
+                if header_start[7] in header:
+                    feature[counter] = number_of_empty_size
                     counter += 1
-            else:
-                if header_start[5] in header:
-                    feature[counter] = file_size
+                if header_start[8] in header:
+                    feature[counter] = number_of_empty_name
                     counter += 1
-            if size_of_unknown != 0:
-                if header_start[6] in header:
-                    feature[counter] = file_size / size_of_unknown
-                    counter += 1
-            else:
-                if header_start[6] in header:
-                    feature[counter] = file_size / size_of_unknown
-                    counter += 1
-            if header_start[7] in header:
-                feature[counter] = number_of_empty_size
-                counter += 1
-            if header_start[8] in header:
-                feature[counter] = number_of_empty_name
-                counter += 1
-            if size_of_unknown != 0:
-                if header_start[9] in header:
-                    feature[counter] = size_of_known / size_of_unknown
-                    counter += 1
-            else:
-                if header_start[9] in header:
-                    feature[counter] = size_of_known
-                    counter += 1
-            if size_of_known != 0:
-                if header_start[10] in header:
-                    feature[counter] = size_of_unknown / size_of_known
-            else:
-                if header_start[10] in header:
-                    feature[counter] = size_of_unknown
-            features.append(feature)
+                if size_of_unknown != 0:
+                    if header_start[9] in header:
+                        feature[counter] = size_of_known / size_of_unknown
+                        counter += 1
+                else:
+                    if header_start[9] in header:
+                        feature[counter] = size_of_known
+                        counter += 1
+                if size_of_known != 0:
+                    if header_start[10] in header:
+                        feature[counter] = size_of_unknown / size_of_known
+                else:
+                    if header_start[10] in header:
+                        feature[counter] = size_of_unknown
+                features.append(feature)
     return header, features
 
 
@@ -604,27 +614,28 @@ def create_resource_features(path, prefix):
             header = header_from_selection(selected_types, selected, "number_of_resources")
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            if "pe-resource-types" in data["additional_info"]:
-                types = []
-                for type in data["additional_info"]["pe-resource-types"]:
-                    types.append(type)
-                types = header_clearing(types)
-                for i in range(len(header)):
-                    for type in types:
-                        if header[i] in type:
-                            feature[i] = data["additional_info"]["pe-resource-types"][type]
-                if "number_of_resources" in header[-1]:
-                    all_resources = 0
-                    for resource_type in data["additional_info"]["pe-resource-types"]:
-                        all_resources += data["additional_info"]["pe-resource-types"][resource_type]
-                    feature[-1] = all_resources
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                feature = [0] * (len(header))
+                if "pe-resource-types" in data["additional_info"]:
+                    types = []
+                    for type in data["additional_info"]["pe-resource-types"]:
+                        types.append(type)
+                    types = header_clearing(types)
+                    for i in range(len(header)):
+                        for type in types:
+                            if header[i] in type:
+                                feature[i] = data["additional_info"]["pe-resource-types"][type]
+                    if "number_of_resources" in header[-1]:
+                        all_resources = 0
+                        for resource_type in data["additional_info"]["pe-resource-types"]:
+                            all_resources += data["additional_info"]["pe-resource-types"][resource_type]
+                        feature[-1] = all_resources
+                features.append(feature)
     return header, features
 
 
@@ -677,47 +688,49 @@ def create_string_features(path, prefix):
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            feature = [0] * (len(header))
-            line_lengths = []
-            with open(name) as f:
-                text = f.readlines()
-                for line in text:
-                    line_lengths.append(len(line))
-                    max_length = max(max_length, len(line))
-                hist = np.histogram(line_lengths, bins=bins)
-                histogram = hist[0]
-                f.seek(0)
-                text = f.read()
-            low_text = text.lower()
-            for i in range(len(bins) - 1):
-                if (str(bins[i]) + "-" + str(bins[i + 1])) in header:
-                    feature[header.index(str(bins[i]) + "-" + str(bins[i + 1]))] = histogram[i]
-            next_header = ["C", "http", "HKEY", "MZ", "IP", "average_length", "max_length", "number_of_strings",
-                           "file_size", "entropy"]
-            if next_header[0] in header:
-                feature[header.index(next_header[0])] = low_text.count("c:\\\\")
-            if next_header[1] in header:
-                feature[header.index(next_header[1])] = low_text.count("http")
-            if next_header[2] in header:
-                feature[header.index(next_header[2])] = low_text.count("hkey")
-            if next_header[3] in header:
-                feature[header.index(next_header[3])] = low_text.count("mz")
-            if next_header[4] in header:
-                feature[header.index(next_header[4])] = len(re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", text))
-            if next_header[5] in header:
-                feature[header.index(next_header[5])] = np.mean(line_lengths)
-            if next_header[6] in header:
-                feature[header.index(next_header[6])] = max_length
-            if next_header[7] in header:
-                feature[header.index(next_header[7])] = len(line_lengths)
-            if next_header[8] in header:
-                feature[header.index(next_header[8])] = os.path.getsize(f.name)
-            if next_header[9] in header:
-                feature[header.index(next_header[9])] = entropy(text)
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                feature = [0] * (len(header))
+                line_lengths = []
+                with open(name) as f:
+                    text = f.readlines()
+                    for line in text:
+                        line_lengths.append(len(line))
+                        max_length = max(max_length, len(line))
+                    hist = np.histogram(line_lengths, bins=bins)
+                    histogram = hist[0]
+                    f.seek(0)
+                    text = f.read()
+                low_text = text.lower()
+                for i in range(len(bins) - 1):
+                    if (str(bins[i]) + "-" + str(bins[i + 1])) in header:
+                        feature[header.index(str(bins[i]) + "-" + str(bins[i + 1]))] = histogram[i]
+                next_header = ["C", "http", "HKEY", "MZ", "IP", "average_length", "max_length", "number_of_strings",
+                               "file_size", "entropy"]
+                if next_header[0] in header:
+                    feature[header.index(next_header[0])] = low_text.count("c:\\\\")
+                if next_header[1] in header:
+                    feature[header.index(next_header[1])] = low_text.count("http")
+                if next_header[2] in header:
+                    feature[header.index(next_header[2])] = low_text.count("hkey")
+                if next_header[3] in header:
+                    feature[header.index(next_header[3])] = low_text.count("mz")
+                if next_header[4] in header:
+                    feature[header.index(next_header[4])] = len(
+                        re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", text))
+                if next_header[5] in header:
+                    feature[header.index(next_header[5])] = np.mean(line_lengths)
+                if next_header[6] in header:
+                    feature[header.index(next_header[6])] = max_length
+                if next_header[7] in header:
+                    feature[header.index(next_header[7])] = len(line_lengths)
+                if next_header[8] in header:
+                    feature[header.index(next_header[8])] = os.path.getsize(f.name)
+                if next_header[9] in header:
+                    feature[header.index(next_header[9])] = entropy(text)
+                features.append(feature)
     return header, features
 
 
@@ -790,18 +803,19 @@ def create_byte_entropy_histogram_features(path, prefix, step, window):
                     header.append((str(selected_indices[i])))
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            with open(name) as f:
-                hexes = f.read()
-            bytez = bytes.fromhex(hexes)
-            feature = byte_entropy_histogram(bytez, step, window)
-            selected_feature = []
-            for i in range(len(feature)):
-                if str(i) in header:
-                    selected_feature.append(feature[i])
-            features.append(selected_feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                with open(name) as f:
+                    hexes = f.read()
+                bytez = bytes.fromhex(hexes)
+                feature = byte_entropy_histogram(bytez, step, window)
+                selected_feature = []
+                for i in range(len(feature)):
+                    if str(i) in header:
+                        selected_feature.append(feature[i])
+                features.append(selected_feature)
     return header, features
 
 
@@ -831,45 +845,46 @@ def create_sizes_features(reports_path, hex_path, disassembled_path, prefix):
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(reports_path))
         features = []
         feature_data = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-                basename = os.path.basename(f.name)
-            feature = [0] * (len(header))
-            feature_data.append(data["size"])
-            feature_data.append(os.path.getsize(hex_path[:-1] + basename))
-            feature_data.append(os.path.getsize(disassembled_path[:-1] + basename))
-            counter = 0
-            if feature_names[0] in header:
-                feature[counter] = feature_data[0]
-                counter += 1
-            if feature_names[1] in header:
-                feature[counter] = feature_data[1]
-                counter += 1
-            if feature_names[2] in header:
-                feature[counter] = feature_data[2]
-                counter += 1
-            if feature_names[3] in header:
-                feature[counter] = feature_data[0] / feature_data[1]
-                counter += 1
-            if feature_names[4] in header:
-                feature[counter] = feature_data[0] / feature_data[2]
-                counter += 1
-            if feature_names[5] in header:
-                feature[counter] = feature_data[1] / feature_data[0]
-                counter += 1
-            if feature_names[6] in header:
-                feature[counter] = feature_data[1] / feature_data[2]
-                counter += 1
-            if feature_names[7] in header:
-                feature[counter] = feature_data[2] / feature_data[0]
-                counter += 1
-            if feature_names[8] in header:
-                feature[counter] = feature_data[2] / feature_data[1]
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(reports_path))
+            for name in files:
+                with open(name) as f:
+                    data = json.load(f)
+                    basename = os.path.basename(f.name)
+                feature = [0] * (len(header))
+                feature_data.append(data["size"])
+                feature_data.append(os.path.getsize(hex_path[:-1] + basename))
+                feature_data.append(os.path.getsize(disassembled_path[:-1] + basename))
+                counter = 0
+                if feature_names[0] in header:
+                    feature[counter] = feature_data[0]
+                    counter += 1
+                if feature_names[1] in header:
+                    feature[counter] = feature_data[1]
+                    counter += 1
+                if feature_names[2] in header:
+                    feature[counter] = feature_data[2]
+                    counter += 1
+                if feature_names[3] in header:
+                    feature[counter] = feature_data[0] / feature_data[1]
+                    counter += 1
+                if feature_names[4] in header:
+                    feature[counter] = feature_data[0] / feature_data[2]
+                    counter += 1
+                if feature_names[5] in header:
+                    feature[counter] = feature_data[1] / feature_data[0]
+                    counter += 1
+                if feature_names[6] in header:
+                    feature[counter] = feature_data[1] / feature_data[2]
+                    counter += 1
+                if feature_names[7] in header:
+                    feature[counter] = feature_data[2] / feature_data[0]
+                    counter += 1
+                if feature_names[8] in header:
+                    feature[counter] = feature_data[2] / feature_data[1]
+                features.append(feature)
     return header, features
 
 
@@ -961,56 +976,57 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path, pref
         features, header = delete_not_selected(features, header)
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(opcodes_path))
         features = []
-        for name in files:
-            feature = [0] * len(header)
-            feature_help = [0] * 2
-            counter = 0
-            with open(name) as f:
-                basename = os.path.basename(f.name)
-                instructions = f.read().split()
-            with open(dis_hex_path[:-1] + basename) as f2, open(registers_path[:-1] + basename) as f3:
-                hex_text = f2.read().split()
-                reg_text = f3.read().split()
-            number_of_instructions = len(instructions)
-            for instruction in instructions:
-                if instruction in allocation_instructions:
-                    feature_help[0] += 1
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                feature = [0] * len(header)
+                feature_help = [0] * 2
+                counter = 0
+                with open(name) as f:
+                    basename = os.path.basename(f.name)
+                    instructions = f.read().split()
+                with open(dis_hex_path[:-1] + basename) as f2, open(registers_path[:-1] + basename) as f3:
+                    hex_text = f2.read().split()
+                    reg_text = f3.read().split()
+                number_of_instructions = len(instructions)
+                for instruction in instructions:
+                    if instruction in allocation_instructions:
+                        feature_help[0] += 1
+                    else:
+                        if instruction in jump_instructions:
+                            feature_help[1] += 1
+                if feature_names[0] in header:
+                    feature[counter] = feature_help[0]
+                    counter += 1
+                if feature_names[1] in header:
+                    feature[counter] = feature_help[1]
+                    counter += 1
+                if feature_help[0] != 0:
+                    if feature_names[2] in header:
+                        feature[counter] = number_of_instructions / feature[0]
+                        counter += 1
                 else:
-                    if instruction in jump_instructions:
-                        feature_help[1] += 1
-            if feature_names[0] in header:
-                feature[counter] = feature_help[0]
-                counter += 1
-            if feature_names[1] in header:
-                feature[counter] = feature_help[1]
-                counter += 1
-            if feature_help[0] != 0:
-                if feature_names[2] in header:
-                    feature[counter] = number_of_instructions / feature[0]
-                    counter += 1
-            else:
-                if feature_names[2] in header:
+                    if feature_names[2] in header:
+                        feature[counter] = number_of_instructions
+                        counter += 1
+                if feature_help[1] != 0:
+                    if feature_names[3] in header:
+                        feature[counter] = number_of_instructions / feature[1]
+                        counter += 1
+                else:
+                    if feature_names[3] in header:
+                        feature[counter] = number_of_instructions
+                        counter += 1
+                if feature_names[4] in header:
                     feature[counter] = number_of_instructions
                     counter += 1
-            if feature_help[1] != 0:
-                if feature_names[3] in header:
-                    feature[counter] = number_of_instructions / feature[1]
+                if feature_names[5] in header:
+                    feature[counter] = len(hex_text)
                     counter += 1
-            else:
-                if feature_names[3] in header:
-                    feature[counter] = number_of_instructions
-                    counter += 1
-            if feature_names[4] in header:
-                feature[counter] = number_of_instructions
-                counter += 1
-            if feature_names[5] in header:
-                feature[counter] = len(hex_text)
-                counter += 1
-            if feature_names[6] in header:
-                feature[counter] = len(reg_text)
-            features.append(feature)
+                if feature_names[6] in header:
+                    feature[counter] = len(reg_text)
+                features.append(feature)
     return header, features
 
 
@@ -1055,23 +1071,24 @@ def create_disassembled_features(path, prefix):
                 header.append("number_of_lines")
     else:
         header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
         features = []
-        for name in files:
-            line_lengths = []
-            feature = [0] * (len(header))
-            with open(name, errors='replace') as f:
-                text = f.readlines()
-            for line in text:
-                length = len(line)
-                line_lengths.append(length)
-                if str(length) in header:
-                    feature[header.index(str(length))] += 1
-            if "average_length" in header:
-                feature[header.index("average_length")] = np.mean(line_lengths)
-            if "number_of_lines" in header:
-                feature[header.index("number_of_lines")] = len(line_lengths)
-            features.append(feature)
+        if len(header) != 0:
+            files = sorted(glob.glob(path))
+            for name in files:
+                line_lengths = []
+                feature = [0] * (len(header))
+                with open(name, errors='replace') as f:
+                    text = f.readlines()
+                for line in text:
+                    length = len(line)
+                    line_lengths.append(length)
+                    if str(length) in header:
+                        feature[header.index(str(length))] += 1
+                if "average_length" in header:
+                    feature[header.index("average_length")] = np.mean(line_lengths)
+                if "number_of_lines" in header:
+                    feature[header.index("number_of_lines")] = len(line_lengths)
+                features.append(feature)
     return header, features
 
 
@@ -1128,9 +1145,9 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
     else:
         bin_header = clear_prefix_from_header(bin_prefix)
         freq_header = clear_prefix_from_header(freq_prefix)
-        files = sorted(glob.glob(path))
         bin_features = []
         freq_features = []
+        files = sorted(glob.glob(path))
         for name in files:
             with open(name) as f:
                 text = f.read()
@@ -1142,12 +1159,12 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             grams = header_clearing(grams)
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
-            freq_feature = [0] * len(freq_header)
             for i in range(len(bin_header)):
                 for j in range(len(grams)):
                     if bin_header[i] in grams[j]:
                         if grams_freq[grams[j]] != 0:
                             bin_feature[i] = 1
+            freq_feature = [0] * len(freq_header)
             for i in range(len(freq_header)):
                 for gram in grams_freq:
                     if freq_header[i] in gram:

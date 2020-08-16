@@ -7,20 +7,24 @@ import re
 import matplotlib.pyplot as plt
 import math
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 import seaborn as sn
 
 best_features_path = 'features/selection/*'
-intersections_file = 'results_third_dataset/intersections.txt'
-best_groups_output_file = 'results_third_dataset/groups.txt'
+results_path = 'results_third_dataset/'
+intersections_file = results_path + 'intersections.txt'
+best_groups_output_file = results_path + 'groups.txt'
 simple_file = 'features/simple.csv'
 very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
-selected_results = 'results_third_dataset/selected/*'
-compact_selected_results = 'results_third_dataset/compact_selected/'
+selected_results = results_path + 'selected/*'
+compact_selected_results = results_path + 'compact_selected/'
 groups_result_path = 'results/*'
 difference_file = 'results/3vsall.txt'
 labels_path = 'subory/cluster_labels.csv'
-preictions_file = 'results_third_dataset/predictions_selected.csv'
+predictions_file = results_path + 'predictions_selected.csv'
+class_number_file = 'subory/class_number.txt'
+prediction_accuracy_file = 'results/prediction_accuracy'
 
 
 def intersections(input_path, output_path):
@@ -101,8 +105,8 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
                             next(result_file)
                             if next(result_file) == "------------------------------------------------------------\n":
                                 break
-                        output_file.write('{:.5}'.format(str(min(results)*100)) + "\t "
-                                          + '{:.5}'.format(str(max(results)*100)) + '\n')
+                        output_file.write('{:.5}'.format(str(min(results) * 100)) + "\t "
+                                          + '{:.5}'.format(str(max(results) * 100)) + '\n')
                         next(result_file)
                         next(result_file)
                         results = []
@@ -111,8 +115,9 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
 
 
 def feature_intersections(input_path, output):
-    # prienik medzi selektovanymi skupinami vo vybranych vysledkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
+    # prienik medzi selektovanymi skupinami v najlepsich vysledkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
     # ak je viac najlepsich vysledkov dam vsetky atributy do jedneho riadku (jednej mnoziny)
+    # atrivuty z najlepsich vysledkov som vybral z best_groups vysledkov rucne
     files = sorted(glob.glob(input_path))
     intersections = {}
     for file in files:
@@ -174,15 +179,45 @@ def results_graphs():
         plt.show()
 
 
-def heatmap_predictions():
-    # TODO: nacitam vysledky zo suboru a potom podla labels a vysledkov urobim heatmap
+def predictions_results():
+    # v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-    result = 0  # tu budem nacitavat vysledky zo suboru postupne cez cyklus
-    mat = confusion_matrix(labels, result)  # triedy su zoradene ciselne
-    names = ("malware1", "malware2")  # ziskam z class_number
-    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
-    plt.show()
-    plt.savefig('subory/plot.png')  # k menu pridam meno z suboru vysledkov
+    names = []
+    with open(class_number_file, 'r') as f:
+        reader = csv.reader(f, delimiter=',')
+        next(reader)
+        for line in reader:
+            names.append(line[0])
+    with open(predictions_file, 'r') as f:
+        reader = csv.reader(f, delimiter=',')
+        with open(prediction_accuracy_file, "w") as output:
+            writer = csv.writer(output, delimiter=',')
+            while 1 == 1:
+                selector = next(reader, None)
+                lgbm = next(reader, None)
+                xgboost = next(reader, None)
+                svc = next(reader, None)
+                if selector is not None or lgbm is not None or xgboost is not None or svc is not None:
+                    lgbm = np.cast[int](lgbm)
+                    xgboost = np.cast[int](xgboost)
+                    svc = np.cast[int](svc)
+                    writer.writerow(selector)
+                    writer.writerow(["lgbm", "xgboost", "svc"])
+                    writer.writerow(
+                        [accuracy_score(labels, lgbm), accuracy_score(labels, xgboost), accuracy_score(labels, svc)])
+                    mat = confusion_matrix(labels, lgbm)  # triedy su zoradene ciselne
+                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
+                    # plt.show()
+                    plt.savefig('subory/' + selector + "lgbm" + '.png')
+                    mat = confusion_matrix(labels, xgboost)
+                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
+                    plt.savefig('subory/' + selector + "xgboost" + '.png')
+                    mat = confusion_matrix(labels, svc)
+                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
+                    plt.savefig('subory/' + selector + "svc" + '.png')
+                else:
+                    break
+    return 0
 
 
 def main():
@@ -191,6 +226,7 @@ def main():
     feature_intersections(groups_result_path, True)
     feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
     feature_difference(difference_file)
+    predictions_results()
 
 
 if __name__ == "__main__":

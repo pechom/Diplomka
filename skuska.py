@@ -114,29 +114,29 @@ import pprint
 # print(header)
 
 
-def word_clearing(word):
-    for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
-               '\6', '\7']:
-        if ch in word:
-            word = word.replace(ch, '?')
-    return word
-
-
-def header_clearing(header):
-    for i in range(len(header)):
-        for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
-                   '\6', '\7']:
-            if ch in header[i]:
-                header[i] = header[i].replace(ch, '?')
-    return header
-
-
-name = "report.json"
-with open(name) as f:
-    data = json.load(f)
-print(data["additional_info"]["pe-resource-types"]['RT_ICON'])
-for type in data["additional_info"]["pe-resource-types"]:
-    print(type)
+# def word_clearing(word):
+#     for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
+#                '\6', '\7']:
+#         if ch in word:
+#             word = word.replace(ch, '?')
+#     return word
+#
+#
+# def header_clearing(header):
+#     for i in range(len(header)):
+#         for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
+#                    '\6', '\7']:
+#             if ch in header[i]:
+#                 header[i] = header[i].replace(ch, '?')
+#     return header
+#
+#
+# name = "report.json"
+# with open(name) as f:
+#     data = json.load(f)
+# print(data["additional_info"]["pe-resource-types"]['RT_ICON'])
+# for type in data["additional_info"]["pe-resource-types"]:
+#     print(type)
 # func = word_clearing(data["additional_info"]["imports"]['MPR.dll'])
 # print(func)
 # lib = header_clearing(data["additional_info"]["imports"]['MPR.dll'])
