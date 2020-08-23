@@ -188,7 +188,7 @@ def results_graphs():
 
 
 def predictions_results():
-    # v results urobit heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels
+    # v results urobi heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     names = []
     with open(class_number_file, 'r') as f:

@@ -29,43 +29,8 @@ done - v results urobit heat map a accuracy pre predikcie (cez predikovane vysle
 
 done - v results upravit metody tak, aby spracovali nove hlavicky
 
-!!! todo - v results pocitaj aj pocet atributov pre predikovane vysledky ktore maju 0 varianciu aby som vedel kolko zo selektovanych atributov bolo aj pouzitelnych
+done - v results pocitaj aj pocet atributov pre predikovane vysledky ktore maju 0 varianciu aby som vedel kolko zo selektovanych atributov bolo aj pouzitelnych
 
 ! in progress - testovanie
 
-!!! todo - automatizovat tvorbu grafu pre vysledky. Pridat graf aj pre predikcie
-
-dve hlavne typy extrakcie selektovanych atributov:
-        header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
-        features = []
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            imps = []
-            for imp in data["additional_info"]["imports"]:
-                imps.append(imp)
-            imps = header_clearing(imps)
-            for i in range(len(header)):
-                for lib in imps:
-                    if header[i] in lib:
-                        feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
-            if "number_of_DLLs" in header[-1]:
-                feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
-            features.append(feature)
-
-
-        header = clear_prefix_from_header(prefix)
-        files = sorted(glob.glob(path))
-        features = []
-        feature_names = ["CodeSize"]
-        for name in files:
-            with open(name) as f:
-                data = json.load(f)
-            feature = [0] * (len(header))
-            counter = 0
-            if feature_names[0] in header:
-                feature[counter] = data["additional_info"]["exiftool"]["CodeSize"]
-                counter += 1
-	    features.append(feature)
+low priority - automatizovat tvorbu grafu pre vysledky. Pridat graf aj pre predikcie

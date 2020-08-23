@@ -5,6 +5,7 @@ import lightgbm as lgb
 import datetime
 from rgf.sklearn import RGFClassifier
 from sklearn.model_selection import cross_val_score, RepeatedStratifiedKFold, StratifiedKFold
+from sklearn.feature_selection import VarianceThreshold
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.svm import SVC, LinearSVC
@@ -365,6 +366,14 @@ def predictions():  # na predikovanom datasete - vsetky selekcie
         files = glob.glob(selected_dir)
         for file in files:
             data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
+            sel = VarianceThreshold()
+            try:
+                sel.fit_transform(data)
+                support = sel.get_support(True)
+                print("number of irrelevant features for " + os.path.basename(file)[:-4] + " is " +
+                      str(len(data[0]) - len(support)))
+            except ValueError:
+                print("empty")
             writer.writerow([os.path.basename(file)[:-4]])
             result = lgbm_predict(data)
             writer.writerow(result)

@@ -121,7 +121,6 @@ def feature_size(file):
     with open(file) as f:
         reader = csv.reader(f, delimiter=',')
         header = next(reader)
-        counter = collections.Counter(header)
         print(os.path.basename(file)[:-4])
         print(len(header))
 
