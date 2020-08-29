@@ -22,7 +22,7 @@ entropy_file = 'subory/entropy.csv'
 opcodes_path = 'disassembled_divided/opcodes/*'
 registers_path = 'disassembled_divided/registers/*'
 instructions_path = 'disassembled_divided/instructions/*'
-headers_dir = 'features/headers/'
+headers_dir = 'features/headers/*'
 
 df_max_count = 10  # maximalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
@@ -99,7 +99,7 @@ def delete_not_selected(features, header):
 
 def word_clearing(word):
     for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
-               '\6', '\7']:
+               '\6', '\7', '#']:  # pridal som aj mriezku, lebo np.loadtxt ju nespracuje
         if ch in word:
             word = word.replace(ch, '?')
     return word
@@ -108,14 +108,14 @@ def word_clearing(word):
 def header_clearing(header):
     for i in range(len(header)):
         for ch in ['\\', ',', '\'', '\"', '\a', '\b', '\f', '\n', '\r', '\t', '\v', '\0', '\1', '\2', '\3', '\4', '\5',
-                   '\6', '\7']:
+                   '\6', '\7', '#']:
             if ch in header[i]:
                 header[i] = header[i].replace(ch, '?')
     return header
 
 
-def clear_prefix_from_header(prefix):  # vyberiem z hlavicky len atributy vybranej skupiny a odsranim prefix
-    prefix_header = np.loadtxt(selected_file, delimiter=',', max_rows=1, dtype="str")
+def clear_prefix_from_header(prefix):  # vyberiem z hlavicky len atributy vybranej skupiny a odstranim prefix
+    prefix_header = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
     header = []
     for header_name in prefix_header:
         if header_name.startswith(prefix):
@@ -145,7 +145,7 @@ def create_import_libs_features(path, prefix):
                 feature = [0] * (len(selected_libs) + 1)
                 for i in range(len(selected_libs)):
                     for imp in data["additional_info"]["imports"]:
-                        if selected_libs[i] == imp:
+                        if selected_libs[i] in imp:
                             feature[i] = len(data["additional_info"]["imports"][selected_libs[i]])  # pocet funkcii
                 feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
                 features.append(feature)
@@ -166,9 +166,9 @@ def create_import_libs_features(path, prefix):
                 imps = header_clearing(imps)
                 for i in range(len(header)):
                     for lib in imps:
-                        if header[i] == lib:
+                        if header[i] in lib:
                             feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
-                if "number_of_DLLs" == header[-1]:
+                if "number_of_DLLs" in header[-1]:
                     feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
                 features.append(feature)
     return header, features
@@ -197,7 +197,7 @@ def create_import_func_features(path, prefix):
                 feature = [0] * (len(selected_funcs))
                 for i in range(len(selected_funcs)):
                     for imp in data["additional_info"]["imports"]:
-                        if selected_funcs[i] == data["additional_info"]["imports"][imp]:
+                        if selected_funcs[i] in data["additional_info"]["imports"][imp]:
                             feature[i] = 1  # vyskyt funkcie
                 features.append(feature)
             features, selected = variance_treshold_selection(features)
@@ -215,7 +215,7 @@ def create_import_func_features(path, prefix):
                     for imp in data["additional_info"]["imports"]:
                         funcs = header_clearing(data["additional_info"]["imports"][imp])
                         for func in funcs:
-                            if header[i] == func:
+                            if header[i] in func:
                                 feature[i] = 1
                 features.append(feature)
     return header, features
@@ -263,9 +263,9 @@ def create_export_features(path, prefix):
                     for i in range(len(header)):
                         libs = header_clearing(data["additional_info"]["exports"])
                         for lib in libs:
-                            if header[i] == lib:
+                            if header[i] in lib:
                                 feature[i] = 1
-                    if "number_of_DLLs" == header[-1]:
+                    if "number_of_DLLs" in header[-1]:
                         feature[-1] = len(data["additional_info"]["exports"])
                     features.append(feature)
     return header, features
@@ -426,7 +426,7 @@ def create_section_features(path, prefix):
             for section in data["additional_info"]["sections"]:
                 if section[0] in known_sections:
                     for i in range(len(known_sections)):
-                        if known_sections[i] == section[0]:
+                        if known_sections[i] in section[0]:
                             section_index = i
                             break
                     iterator = initial_size + 5 * section_index
@@ -628,9 +628,9 @@ def create_resource_features(path, prefix):
                     types = header_clearing(types)
                     for i in range(len(header)):
                         for type in types:
-                            if header[i] == type:
+                            if header[i] in type:
                                 feature[i] = data["additional_info"]["pe-resource-types"][type]
-                    if "number_of_resources" == header[-1]:
+                    if "number_of_resources" in header[-1]:
                         all_resources = 0
                         for resource_type in data["additional_info"]["pe-resource-types"]:
                             all_resources += data["additional_info"]["pe-resource-types"][resource_type]
@@ -1140,6 +1140,8 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                 freq_features.append(freq_feature)
             bin_features, bin_selected = variance_treshold_selection(bin_features)
             freq_features, freq_selected = variance_treshold_selection(freq_features)
+            for i in range(len(selected_grams)):
+                selected_grams[i] = str(selected_grams[i])
             bin_header = header_from_selection(selected_grams, bin_selected, "")
             freq_header = header_from_selection(selected_grams, freq_selected, "")
     else:
@@ -1156,6 +1158,8 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             else:
                 tokenized = list(text)
             grams = list(nltk.ngrams(tokenized, n))
+            for i in range(len(grams)):
+                grams[i] = str(grams[i])
             grams = header_clearing(grams)
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
@@ -1167,7 +1171,7 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             freq_feature = [0] * len(freq_header)
             for i in range(len(freq_header)):
                 for gram in grams_freq:
-                    if freq_header[i] == gram:
+                    if freq_header[i] in gram:
                         freq_feature[i] = grams_freq[gram]
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
@@ -1248,16 +1252,16 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
             normal_freq_feature = [0] * len(normal_freq_header)
             for i in range(len(bin_header)):
                 for gram in grams:
-                    if bin_header[i] == gram:
+                    if bin_header[i] in gram:
                         if grams_freq[gram] != 0:
                             bin_feature[i] = 1
             for i in range(len(freq_header)):
                 for gram in grams_freq:
-                    if freq_header[i] == gram:
+                    if freq_header[i] in gram:
                         freq_feature[i] = grams_freq[gram]
             for i in range(len(normal_freq_header)):
                 for gram in grams_freq:
-                    if normal_freq_header[i] == gram:
+                    if normal_freq_header[i] in gram:
                         if grams_freq[gram] != 0:
                             normal_freq_feature[i] = file_size / grams_freq[gram]
                         else:
@@ -1288,110 +1292,148 @@ def selected_extraction():
 
 def sample_extraction():
     prefix = "export"
+    print(prefix)
     header, features = create_export_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "import-libs"
+    print(prefix)
     header, features = create_import_libs_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "import-funcs"
+    print(prefix)
     header, features = create_import_func_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "metadata"
+    print(prefix)
     header, features = create_metadata_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "overlay"
+    print(prefix)
     header, features = create_overlay_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "sections"
+    print(prefix)
     header, features = create_section_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "resources"
+    print(prefix)
     header, features = create_resource_features(reports_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "strings"
+    print(prefix)
     header, features = create_string_features(string_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "histogram"
+    print(prefix)
     header, features = create_byte_entropy_histogram_features(hex_path, prefix, step=512, window=2048)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "sizes"
+    print(prefix)
     header, features = create_sizes_features(reports_path, hex_path, disassembled_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "file-entropy"
+    print(prefix)
     header, features = create_entropy_feature(entropy_file, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "instructions"
+    print(prefix)
     header, features = create_instruction_features(instructions_path, opcodes_path, registers_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
     prefix = "disassembled"
+    print(prefix)
     header, features = create_disassembled_features(disassembled_path, prefix)
     features_to_csv(header, features, prefix)
+    print("\n")
 
 
 def ngram_extraction():
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-bin-strings"
         freq_prefix = str(i) + "-gram-freq-strings"
+        print(str(i) + "-gram-bin-strings")
         bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, False, bin_prefix,
                                                                               freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
+        print("\n")
 
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-char-bin-strings"
         freq_prefix = str(i) + "-gram-char-freq-strings"
+        print(bin_prefix)
         bin_header, bin_features, freq_header, freq_features = create_n_grams(string_path, i, True, bin_prefix,
                                                                               freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
+        print("\n")
 
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-instructions"
         freq_prefix = str(i) + "-gram-freq-instructions"
+        print(bin_prefix)
         bin_header, bin_features, freq_header, freq_features = create_n_grams(instructions_path, i, False, bin_prefix,
                                                                               freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
+        print("\n")
 
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-reg"
         freq_prefix = str(i) + "-gram-freq-reg"
+        print(bin_prefix)
         bin_header, bin_features, freq_header, freq_features = create_n_grams(registers_path, i, False, bin_prefix,
                                                                               freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
+        print("\n")
 
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-bin-hex"
         freq_prefix = str(i) + "-gram-freq-hex"
         normal_freq_prefix = str(i) + "-gram-normal-freq-hex"
+        print(str(i) + "-gram-hex")
         bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
             create_hex_grams(hex_path, i, bin_prefix, freq_prefix, normal_freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
         features_to_csv(normal_freq_header, normal_freq_features, normal_freq_prefix)
+        print("\n")
 
     for i in range(1, max_ngram + 1):
         bin_prefix = str(i) + "-gram-opcode"
         freq_prefix = str(i) + "-gram-freq-opcode"
         normal_freq_prefix = str(i) + "-gram-normal-freq-opcode"
+        print(bin_prefix)
         bin_header, bin_features, freq_header, freq_features, normal_freq_header, normal_freq_features = \
             create_hex_grams(opcodes_path, i, bin_prefix, freq_prefix, normal_freq_prefix)
         features_to_csv(bin_header, bin_features, bin_prefix)
         features_to_csv(freq_header, freq_features, freq_prefix)
         features_to_csv(normal_freq_header, normal_freq_features, normal_freq_prefix)
+        print("\n")
 
 
 def main():
