@@ -29,6 +29,7 @@ select_best_output_dir = 'features/best_n/'
 headers_dir = 'features/headers/'
 
 np.set_printoptions(threshold=np.inf)
+num_class = 11
 treshold = 100  # pocet selektovanych atributov
 is_standard = False  # ci mam standardizovane data
 is_small_data = False  # ci chcem pustat aj metody ktore su casovo/pamatovo narocne na velke datasety
@@ -325,9 +326,9 @@ def model_fit(model, prefix):
 def xgboost():
     # ak budu prve tri pomale tak dam n_estimators na 50
     model_gain = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                   n_jobs=-1, n_estimators=100, importance_type='gain', num_class=11)  # 'total_gain'
+                                   n_jobs=-1, n_estimators=100, importance_type='gain', num_class=num_class)
     model_cover = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
-                                    n_jobs=-1, n_estimators=100, importance_type='weight', num_class=11)
+                                    n_jobs=-1, n_estimators=100, importance_type='weight', num_class=num_class)
     print("XGBoost gain")
     model_fit(model_gain, "XGBoost gain")
     print("XGBoost split")
@@ -337,10 +338,10 @@ def xgboost():
 def LGBM():
     model_split = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
                                      n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='split',
-                                     num_class=11)
+                                     num_class=num_class)
     model_gain = lgb.LGBMClassifier(max_depth=7, learning_rate=0.2, n_estimators=100, objective='multiclass',
                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',
-                                    num_class=11)
+                                    num_class=num_class)
     print("LGBM split")
     model_fit(model_split, "LGBM split")
     print("LGBM gain")
@@ -349,7 +350,7 @@ def LGBM():
 
 def CAT():
     model = cat.CatBoostClassifier(max_depth=7, n_estimators=100, loss_function='MultiClassOneVsAll', learning_rate=0.2,
-                                   task_type='CPU', verbose=False, thread_count=6, classes_count=10)
+                                   task_type='CPU', verbose=False, thread_count=6, classes_count=num_class)
     print("CatBoost")
     model_fit(model, "CatBoost")
 
@@ -487,7 +488,7 @@ def for_standard_small_data():
 
 def main():
     if not is_subselect:
-        sys.stdout = open(results_path + 'selection_times.txt', 'w')
+        sys.stdout = open(results_path + 'selection_times' + "_standard_" + str(is_standard) + '.txt', 'w')
         print("pocet atributov: " + str(len(header)))
         print('\n')
         if not is_standard:
@@ -513,11 +514,10 @@ if __name__ == "__main__":
         if not is_standard:
             header = np.loadtxt(feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(feature_path, delimiter=',', skiprows=1, dtype=np.uint64)
-            print(len(header))
         else:
             header = np.loadtxt(standard_feature_path, delimiter=',', max_rows=1, dtype="str")
             data = np.loadtxt(standard_feature_path, delimiter=',', skiprows=1, dtype=np.float64)
             pure_data = np.loadtxt(feature_path, delimiter=',', skiprows=1,
                                    dtype=np.uint64)
-            # pure budem standardizovat az po selekcii, aby nova standardizacia zodpovedala selektovanym atributom
+            # pure standardizujem az po klasifikacii, aby nova standardizacia zodpovedala selektovanym atributom
     # main()

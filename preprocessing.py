@@ -7,6 +7,7 @@ import collections
 import os
 import shutil
 import pickle
+import selection
 
 original_path = 'features/original/*'
 standard_dir = 'features/standard/'
@@ -240,7 +241,11 @@ def main():
     # shutil.rmtree(very_simple_dir)
     os.mkdir(standard_dir)
     # na konci vsetky atributy standardizujem
-    standardize(features_dir, standard_dir, True)
+    os.mkdir(scalers_path)
+    standardize(features_dir, standard_dir, False)
+    os.mkdir(selection.output_dir)
+    os.mkdir(selection.standard_output_dir)
+    os.mkdir(selection.headers_dir)
 
 
 if __name__ == "__main__":

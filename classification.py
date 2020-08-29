@@ -38,6 +38,7 @@ multi_cv_repeats = 5
 cv_fold = 10
 boost_rounds = 100
 max_iter = 1000
+num_class = 11
 
 
 def panda_load():
@@ -62,7 +63,7 @@ def numpy_standard_load():
 def xgboost(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     before = datetime.datetime.now()
     result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
@@ -75,7 +76,7 @@ def xgboost(data, label):
 def xgboost_rf(data, label):
     # parametre: https://xgboost.readthedocs.io/en/latest/parameter.html
     dtrain = xgb.DMatrix(data, label=label)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'num_parallel_tree': 100}
     before = datetime.datetime.now()
     result = xgb.cv(param, dtrain, num_boost_round=1, nfold=cv_fold, metrics=['merror'], stratified=True, shuffle=True)
@@ -86,7 +87,7 @@ def xgboost_rf(data, label):
 
 def hist_xgboost(data, label):
     dtrain = xgb.DMatrix(data, label=label)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'tree_method': 'hist'}
     before = datetime.datetime.now()
     result = xgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, metrics=['merror'], stratified=True,
@@ -98,7 +99,7 @@ def hist_xgboost(data, label):
 
 def linear_xgb(data, label):  # implicitna selekcia atributov
     dtrain = xgb.DMatrix(data, label=label)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'booster': 'gblinear',
              'feature_selector': 'thrifty', 'updater': 'coord_descent'}
     before = datetime.datetime.now()
@@ -111,7 +112,7 @@ def linear_xgb(data, label):  # implicitna selekcia atributov
 
 def xgboost_dart(data, label):
     dtrain = xgb.DMatrix(data, label=label)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10, 'booster': 'dart',
              'rate_drop': 0.1, 'skip_drop': 0.5}
     before = datetime.datetime.now()
@@ -136,7 +137,8 @@ def LGBM(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
+             'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
@@ -150,7 +152,8 @@ def LGBM_rf(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'rf',
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
+             'verbosity': -1,
              'bagging_fraction': 0.9, 'bagging_freq': 10, 'num_trees': 100}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, nfold=cv_fold, stratified=True, verbose_eval=None, shuffle=True)
@@ -163,7 +166,8 @@ def LGBM_goss(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'goss',
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
+             'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
@@ -177,7 +181,8 @@ def LGBM_dart(data, label):
     # https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
     dtrain = lgb.Dataset(data=data, label=label)
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80, 'boosting': 'dart',
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
+             'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'xgboost_dart_mode': False}
     before = datetime.datetime.now()
     result = lgb.cv(param, dtrain, num_boost_round=boost_rounds, nfold=cv_fold, stratified=True, verbose_eval=None,
@@ -200,7 +205,7 @@ def CAT(data, label):
     pool = cat.Pool(data, label, has_header=False)
     params = {
         "loss_function": 'MultiClassOneVsAll', "eval_metric": 'MultiClassOneVsAll', "max_depth": 7,
-        "learning_rate": 0.2, "classes_count": 10, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
+        "learning_rate": 0.2, "classes_count": num_class, "task_type": 'CPU', "thread_count": 6, "verbose_eval": False}
     before = datetime.datetime.now()
     results = cat.cv(pool=pool, params=params, num_boost_round=boost_rounds, fold_count=cv_fold, shuffle=True,
                      stratified=True,
@@ -304,7 +309,7 @@ def create_original_dataset_for_cluster_dataset():
 # tieto metody pouzijem az po tom, co urobim klasifikaciu selektovaneho datasetu a nastavim hyperparametre
 def xgboost_train(data, labels):
     dtrain = xgb.DMatrix(data, labels)
-    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': 10,
+    param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     result = xgb.train(param, dtrain, num_boost_round=boost_rounds)
     result.save_model(trained_path + "xgb.txt")
@@ -312,7 +317,8 @@ def xgboost_train(data, labels):
 
 def lgbm_train(data, labels):
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
-             "num_class": 10, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1, 'verbosity': -1,
+             "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
+             'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     dtrain = lgb.Dataset(data, labels)
     result = lgb.train(param, dtrain, num_boost_round=boost_rounds, verbose_eval=None)  # cv nevracia model,len vysledky
