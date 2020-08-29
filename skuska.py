@@ -15,6 +15,7 @@ import collections
 import pprint
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.preprocessing import StandardScaler
+import nltk
 
 #
 # X, y = datasets.load_iris(return_X_y=True)
@@ -160,7 +161,16 @@ from sklearn.preprocessing import StandardScaler
 # except ValueError:
 #     print("empty")
 
-headers_dir = 'features/headers/*'
-selected_file = "header1"
-text = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
-print(text)
+text = "just some text to test \n and more text"
+n = 2
+tokenized1 = text.split()
+tokenized2 = list(text)
+string_grams = list(nltk.ngrams(tokenized1, n))
+char_grams = list(nltk.ngrams(tokenized2, n))
+print(string_grams)
+print(char_grams)
+char_grams = [text[i:i + n] for i in range(len(text) - n + 1)]
+string_grams = [tokenized1[i:i + n] for i in range(len(tokenized1) - n + 1)]
+string_grams = [' '.join(grams) for grams in string_grams]
+print(string_grams)
+print(char_grams)

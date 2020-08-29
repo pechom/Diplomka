@@ -6,7 +6,6 @@ import os
 import time
 from sklearn.feature_selection import VarianceThreshold
 import numpy as np
-import nltk
 import math
 import sys
 import re
@@ -1101,10 +1100,11 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             with open(name) as f:
                 text = f.read()
             if not is_char:
-                tokenized = text.split()  # split rozdeli na slova
+                tokenized = text.split()
+                grams = [tokenized[i:i + n] for i in range(len(tokenized) - n + 1)]
+                grams = [' '.join(gram) for gram in grams]
             else:
-                tokenized = list(text)  # list rozdeli na pismena
-            grams = list(nltk.ngrams(tokenized, n))
+                grams = [text[i:i + n] for i in range(len(text) - n + 1)]
             counter = collections.Counter()
             for gram in grams:
                 if counter[gram] == 0:
@@ -1126,9 +1126,10 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                     text = f.read()
                 if not is_char:
                     tokenized = text.split()
+                    grams = [tokenized[i:i + n] for i in range(len(tokenized) - n + 1)]
+                    grams = [' '.join(gram) for gram in grams]
                 else:
-                    tokenized = list(text)
-                grams = list(nltk.ngrams(tokenized, n))
+                    grams = [text[i:i + n] for i in range(len(text) - n + 1)]
                 grams_freq = collections.Counter(grams)
                 bin_feature = [0] * len(selected_grams)
                 freq_feature = [0] * len(selected_grams)
@@ -1140,8 +1141,6 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                 freq_features.append(freq_feature)
             bin_features, bin_selected = variance_treshold_selection(bin_features)
             freq_features, freq_selected = variance_treshold_selection(freq_features)
-            for i in range(len(selected_grams)):
-                selected_grams[i] = str(selected_grams[i])
             bin_header = header_from_selection(selected_grams, bin_selected, "")
             freq_header = header_from_selection(selected_grams, freq_selected, "")
     else:
@@ -1155,11 +1154,10 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                 text = f.read()
             if not is_char:
                 tokenized = text.split()
+                grams = [tokenized[i:i + n] for i in range(len(tokenized) - n + 1)]
+                grams = [' '.join(gram) for gram in grams]
             else:
-                tokenized = list(text)
-            grams = list(nltk.ngrams(tokenized, n))
-            for i in range(len(grams)):
-                grams[i] = str(grams[i])
+                grams = [text[i:i + n] for i in range(len(text) - n + 1)]
             grams = header_clearing(grams)
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
