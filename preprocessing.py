@@ -8,6 +8,8 @@ import os
 import shutil
 import pickle
 import selection
+import classification
+import results
 
 original_path = 'features/original/*'
 standard_dir = 'features/standard/'
@@ -90,17 +92,18 @@ def merge_features_from_dir(input_path, output_file):  # zluci atributy z prieci
     files = glob.glob(input_path)
     alldata = []
     for name in files:
-        with open(name) as f:
-            reader = csv.reader(f)
-            data = list(reader)
-        if not alldata:
-            alldata = data
-        else:
-            for i in range(len(alldata)):
-                alldata[i].extend(data[i])
-    with open(output_file, "w", newline='') as f2:
-        writer = csv.writer(f2)
-        writer.writerows(alldata)
+        if os.path.isfile(name):
+            with open(name) as f:
+                reader = csv.reader(f)
+                data = list(reader)
+            if not alldata:
+                alldata = data
+            else:
+                for i in range(len(alldata)):
+                    alldata[i].extend(data[i])
+        with open(output_file, "w", newline='') as f2:
+            writer = csv.writer(f2)
+            writer.writerows(alldata)
 
 
 def merge_feature_files(file_to_merge_1, file_to_merge_2, output_file):
@@ -151,30 +154,31 @@ def discretize(input_path, output_dir, decimals):
     # obmedzi pocet cislic za desatinnou ciarkou - x, vynasobi 10^x a pretypuje na int
     files = glob.glob(input_path)
     for feature_file in files:
-        with open(feature_file) as f:
-            reader = csv.reader(f, delimiter=',')
-            header = next(reader)
-            data = list(reader)
-        max_decimals = [0] * len(header)  # max pocet desat. cislic v string tvare atributov
-        for line in data:
-            for i in range(len(line)):
-                float_position = line[i].find('.')
-                if float_position != -1:  # pri celych cislach necham nulu
-                    max_decimals[i] = max(max_decimals[i], (len(line[i]) - float_position - 1))
-        #         absolutna lebo find da -1 ked nenajde
-        for i in range(len(max_decimals)):
-            if max_decimals[i] <= 1:
-                max_decimals[i] = 0  # len jedno cislo ignorujem, casto to je len nula
-            if max_decimals[i] > decimals:
-                max_decimals[i] = decimals
-        with open(output_dir + os.path.basename(feature_file), "w", newline='') as csv_file:
-            writer = csv.writer(csv_file, delimiter=',')
-            writer.writerow(header)
-            data = np.array(data, dtype=np.float64)
+        if os.path.isfile(feature_file):
+            with open(feature_file) as f:
+                reader = csv.reader(f, delimiter=',')
+                header = next(reader)
+                data = list(reader)
+            max_decimals = [0] * len(header)  # max pocet desat. cislic v string tvare atributov
+            for line in data:
+                for i in range(len(line)):
+                    float_position = line[i].find('.')
+                    if float_position != -1:  # pri celych cislach necham nulu
+                        max_decimals[i] = max(max_decimals[i], (len(line[i]) - float_position - 1))
+            #         absolutna lebo find da -1 ked nenajde
             for i in range(len(max_decimals)):
-                data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
-                data[:, i] = data[:, i] * np.power(10, max_decimals[i])
-            writer.writerows(data.astype(np.uint64))
+                if max_decimals[i] <= 1:
+                    max_decimals[i] = 0  # len jedno cislo ignorujem, casto to je len nula
+                if max_decimals[i] > decimals:
+                    max_decimals[i] = decimals
+            with open(output_dir + os.path.basename(feature_file), "w", newline='') as csv_file:
+                writer = csv.writer(csv_file, delimiter=',')
+                writer.writerow(header)
+                data = np.array(data, dtype=np.float64)
+                for i in range(len(max_decimals)):
+                    data[:, i] = np.around(data[:, i], decimals=max_decimals[i])
+                    data[:, i] = data[:, i] * np.power(10, max_decimals[i])
+                writer.writerows(data.astype(np.uint64))
 
 
 def prefix_hotfix(input_dir, output_dir):
@@ -246,6 +250,11 @@ def main():
     os.mkdir(selection.output_dir)
     os.mkdir(selection.standard_output_dir)
     os.mkdir(selection.headers_dir)
+    os.mkdir(selection.results_path)
+    os.mkdir(classification.trained_path)
+    os.mkdir(results.selected_results)
+    os.mkdir(results.classification_selected_dir)
+    os.mkdir(results.groups_result_path[:-1])
 
 
 if __name__ == "__main__":

@@ -21,11 +21,11 @@ entropy_file = 'subory/entropy.csv'
 opcodes_path = 'disassembled_divided/opcodes/*'
 registers_path = 'disassembled_divided/registers/*'
 instructions_path = 'disassembled_divided/instructions/*'
-headers_dir = 'features/headers/*'
+headers_dir = 'subory/headers/*'
 
 df_max_count = 10  # maximalny pocet vyskytov pre DF pri ktorom odstranim atribut
 max_ngram = 2  # maximalne n pre ktore robim n-gram
-for_prediction = False  # ci robim predikciu
+for_prediction = True  # ci robim predikciu
 first_time = False  # pre divide disassembled
 selected_file = ''
 
@@ -118,7 +118,7 @@ def clear_prefix_from_header(prefix):  # vyberiem z hlavicky len atributy vybran
     header = []
     for header_name in prefix_header:
         if header_name.startswith(prefix):
-            header.append(header_name[len(prefix):])
+            header.append(header_name[len(prefix) + 1:])
     return header
 
 
@@ -552,7 +552,7 @@ def create_section_features(path, prefix):
                         counter += 1
                 else:
                     if header_start[6] in header:
-                        feature[counter] = file_size / size_of_unknown
+                        feature[counter] = file_size
                         counter += 1
                 if header_start[7] in header:
                     feature[counter] = number_of_empty_size
@@ -1280,12 +1280,15 @@ def selected_extraction():
         os.mkdir(preprocessing.discrete_dir)
         preprocessing.discretize(preprocessing.features_dir, preprocessing.discrete_dir,
                                  preprocessing.discretize_decimals)
-        shutil.rmtree(preprocessing.features_dir[:-1])
+        files_to_delete = glob.glob(preprocessing.features_dir[:-1])
+        for to_delete in files_to_delete:
+            if os.path.isfile(to_delete):
+                os.remove(to_delete)
         os.renames(preprocessing.discrete_dir, preprocessing.original_path[:-2])
         original_file = classification.selected_dir[:-1] + selected_file + ".csv"
         preprocessing.merge_features_from_dir(preprocessing.original_path, original_file)
         shutil.rmtree(preprocessing.original_path[:-1])
-        preprocessing.saved_standardize(name, classification.standard_selected_dir)
+        preprocessing.saved_standardize(original_file, classification.standard_selected_dir)
 
 
 def sample_extraction():

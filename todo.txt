@@ -31,6 +31,8 @@ done - v results upravit metody tak, aby spracovali nove hlavicky
 
 done - v results pocitaj aj pocet atributov pre predikovane vysledky ktore maju 0 varianciu aby som vedel kolko zo selektovanych atributov bolo aj pouzitelnych
 
+!!! TODO - po skonceni extrakcie pre predikciu a mergovani zoradit atributy podla hlavicky z headers. Potom skontroluj, ci je vzniknuty subor rovnaky ako selekcia ktorej patri hlavicka
+
 ! in progress - testovanie
 
 low priority - automatizovat tvorbu grafu pre vysledky. Pridat graf aj pre predikcie

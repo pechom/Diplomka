@@ -11,18 +11,19 @@ from sklearn.metrics import accuracy_score
 import seaborn as sn
 
 best_features_path = 'features/selection/*'
-results_path = 'results_third_dataset/'
+results_path = 'results/'
 intersections_file = results_path + 'intersections.txt'
-best_groups_output_file = results_path + 'groups.txt'
+best_groups_output_file = results_path + '/groups/groups.txt'
 simple_file = 'features/simple.csv'
 very_simple_file = 'features/very_simple.csv'
 original_file = 'features/original.csv'
 selected_results = results_path + 'selected/*'
 compact_selected_results = results_path + 'compact_selected/'
-groups_result_path = 'results/*'
+groups_result_path = 'results/groups/*'
 difference_file = 'results/3vsall.txt'
-labels_path = 'subory/cluster_labels.csv'
-predictions_file = results_path + 'predictions_selected.csv'
+labels_path = 'subory/labels.csv'
+classification_selected_dir = results_path + 'selected/'
+predictions_file = classification_selected_dir + 'predictions_selected.csv'
 class_number_file = 'subory/class_number.txt'
 prediction_accuracy_file = 'results/prediction_accuracy'
 for_prediction = False
@@ -125,7 +126,7 @@ def result_processing(input_dir, output_dir):  # kompaktnejsie spracovanie "sele
 def feature_intersections(input_path, output):
     # prienik medzi selektovanymi skupinami v najlepsich vysledkoch (vstup ma v kazdom riadku vysledok jednej selekcie)
     # ak je viac najlepsich vysledkov dam vsetky atributy do jedneho riadku (jednej mnoziny)
-    # atrivuty z najlepsich vysledkov som vybral z best_groups vysledkov rucne
+    # atributy z najlepsich vysledkov som vybral z best_groups vysledkov rucne
     files = sorted(glob.glob(input_path))
     intersections = {}
     for file in files:
@@ -233,10 +234,10 @@ def main():
         intersections(best_features_path, intersections_file)
         best_groups(best_features_path, best_groups_output_file)
         result_processing(selected_results, compact_selected_results)
-        feature_intersections(groups_result_path, True)
-        feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu')
+        # feature_intersections(groups_result_path, True)  # pred tym je potrebne pripravit subory
         # results_graphs()
-        # feature_difference(difference_file)
+        # feature_intersections_difference(groups_result_path, 'min_stromy', 'min_spolu') # pouzijem podla potreby
+        # feature_difference(difference_file)  # uz nepouzivam, bolo to na rozdiel medzi datasetmi
     else:
         predictions_results()
 

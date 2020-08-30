@@ -24,14 +24,15 @@ standard_feature_path = 'features/standard/original.csv'
 labels_path = 'subory/labels.csv'
 output_dir = 'features/selection/'
 standard_output_dir = 'features/selection_standard/'
-results_path = 'results_old_dataset/'
+results_path = 'results/'
+times_path = results_path + 'selection_times/'
 select_best_output_dir = 'features/best_n/'
-headers_dir = 'features/headers/'
+headers_dir = 'subory/headers/'
 
 np.set_printoptions(threshold=np.inf)
 num_class = 11
 treshold = 100  # pocet selektovanych atributov
-is_standard = False  # ci mam standardizovane data
+is_standard = True  # ci mam standardizovane data
 is_small_data = False  # ci chcem pustat aj metody ktore su casovo/pamatovo narocne na velke datasety
 is_subselect = False  # ci robim plnu selekciu alebo len vyberam najlepsich n z predoslej selekcie
 
@@ -488,7 +489,7 @@ def for_standard_small_data():
 
 def main():
     if not is_subselect:
-        sys.stdout = open(results_path + 'selection_times' + "_standard_" + str(is_standard) + '.txt', 'w')
+        sys.stdout = open(times_path + 'selection_times' + "_standard_" + str(is_standard) + '.txt', 'w')
         print("pocet atributov: " + str(len(header)))
         print('\n')
         if not is_standard:
@@ -520,4 +521,4 @@ if __name__ == "__main__":
             pure_data = np.loadtxt(feature_path, delimiter=',', skiprows=1,
                                    dtype=np.uint64)
             # pure standardizujem az po klasifikacii, aby nova standardizacia zodpovedala selektovanym atributom
-    # main()
+    main()

@@ -22,23 +22,25 @@ import csv
 
 feature_file = 'features/original.csv'
 standard_feature_file = 'features/standard/original.csv'
-labels_path = 'subory/cluster_labels.csv'
+labels_path = 'subory/labels.csv'
 cluster_labels_outliers_path = 'subory/cluster_labels.txt'
 selected_dir = 'features/selection/*'  # kde sa ulozili skupiny atributov po selekcii
 standard_selected_dir = 'features/selection_standard/'
-results_path = 'results_third_dataset/'
+results_path = 'results/'
+classification_selected_dir = results_path + 'selected/'
+times_path = results_path + 'classification_times/'
 trained_path = 'subory/trained/'
-predictions_file = results_path + 'predictions_selected.csv'
+predictions_file = classification_selected_dir + 'predictions_selected.csv'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
-mode = "preselection"
+mode = "prediction_train"
 labels_for_predict = labels.consensus_labels_file
 
 multi_cv_repeats = 5
-cv_fold = 10
 boost_rounds = 100
 max_iter = 1000
 num_class = 11
+cv_fold = 10
 
 
 def panda_load():
@@ -400,23 +402,23 @@ def predictions():  # na predikovanom datasete - vsetky selekcie
 
 def tree_methods(data, labels):
     xgboost(data, labels)
-    LGBM_goss(data, labels)
+    # LGBM_goss(data, labels)
     LGBM(data, labels)
-    RGF(data, labels, "RGF")
-    RGF(data, labels, "RGF_Opt")
-    RFC(data, labels)  # fast
+    # RGF(data, labels, "RGF")
+    # RGF(data, labels, "RGF_Opt")
+    # RFC(data, labels)  # fast
 
 
 def svm_methods(data, labels):
-    SVM(data, labels, 'rbf', "RBF SVC")
-    SVM(data, labels, 'linear', "linear SVC [libsvm]")  # fast
-    SVM(data, labels, 'sigmoid', "sigmoid SVC")
-    SGD(data, labels)  # fast
+    # SVM(data, labels, 'rbf', "RBF SVC")
+    # SVM(data, labels, 'linear', "linear SVC [libsvm]")  # fast
+    # SVM(data, labels, 'sigmoid', "sigmoid SVC")
+    # SGD(data, labels)  # fast
     LSVC(data, labels)  # fast
 
 
 def run_methods():
-    sys.stdout = open(results_path + 'classification_times.txt', 'w')
+    sys.stdout = open(times_path + 'classification_times.txt', 'w')
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     # labels = create_original_labels_for_cluster_dataset()  # pre porovnanie povodnych labels na cluster dataset
     data = np.loadtxt(feature_file, delimiter=',', skiprows=1, dtype=np.uint64)
@@ -429,7 +431,7 @@ def run_methods():
 
 
 def check_selections():
-    sys.stdout = open(results_path + 'classification_selected.txt', 'w')
+    sys.stdout = open(classification_selected_dir + 'classification_selected.txt', 'w')
     files = glob.glob(selected_dir)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     for file in files:
@@ -438,7 +440,7 @@ def check_selections():
         tree_methods(data, labels)
         print("------------------------------------------------------------")
         print('\n')
-    preprocessing.standardize(selected_dir, standard_selected_dir, True)
+    preprocessing.standardize(selected_dir, standard_selected_dir, True)  # aj ulozi scaler pre kazdu selekciu
     files = glob.glob(standard_selected_dir + '*')
     for file in files:
         standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
@@ -457,9 +459,9 @@ def main():
         if mode == "selection_check":
             check_selections()  # po selekcii
         if mode == "prediction_train":
-            train_for_prediction()  # po skontrolovani selekcii
+            train_for_prediction()  # pred predikciou, na povodnom datasete
         if mode == "prediction":
-            predictions()
+            predictions()  # predikcia, na novom datasete
     sys.stdout.close()
 
 

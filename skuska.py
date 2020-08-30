@@ -161,16 +161,16 @@ import nltk
 # except ValueError:
 #     print("empty")
 
-text = "just some text to test \n and more text"
-n = 2
-tokenized1 = text.split()
-tokenized2 = list(text)
-string_grams = list(nltk.ngrams(tokenized1, n))
-char_grams = list(nltk.ngrams(tokenized2, n))
-print(string_grams)
-print(char_grams)
-char_grams = [text[i:i + n] for i in range(len(text) - n + 1)]
-string_grams = [tokenized1[i:i + n] for i in range(len(tokenized1) - n + 1)]
-string_grams = [' '.join(grams) for grams in string_grams]
-print(string_grams)
-print(char_grams)
+# text = "just some text to test \n and more text"
+# n = 2
+# tokenized1 = text.split()
+# tokenized2 = list(text)
+# string_grams = list(nltk.ngrams(tokenized1, n))
+# char_grams = list(nltk.ngrams(tokenized2, n))
+# print(string_grams)
+# print(char_grams)
+# char_grams = [text[i:i + n] for i in range(len(text) - n + 1)]
+# string_grams = [tokenized1[i:i + n] for i in range(len(tokenized1) - n + 1)]
+# string_grams = [' '.join(grams) for grams in string_grams]
+# print(string_grams)
+# print(char_grams)
