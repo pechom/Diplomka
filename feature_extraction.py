@@ -1288,6 +1288,21 @@ def selected_extraction():
         original_file = classification.selected_dir[:-1] + selected_file + ".csv"
         preprocessing.merge_features_from_dir(preprocessing.original_path, original_file)
         shutil.rmtree(preprocessing.original_path[:-1])
+        # ziskane atributy usporiadam podla hlavicky selekcie
+        real_header = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
+        header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
+        data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
+        idx = np.zeros(len(real_header), dtype=np.uint16)
+        for i in range(len(header_to_correct)):
+            for j in range(len(real_header)):
+                if header_to_correct[i] == data_to_correct[j]:
+                    idx[i] = j
+        os.remove(original_file)
+        with open(original_file, "w", newline='') as csv_file:
+            writer = csv.writer(csv_file, delimiter=',')
+            writer.writerow(header_to_correct[idx])
+            transformed_data = data_to_correct[:, idx]
+            writer.writerows(transformed_data)
         preprocessing.saved_standardize(original_file, classification.standard_selected_dir)
 
 

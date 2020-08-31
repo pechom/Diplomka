@@ -309,50 +309,54 @@ def create_original_dataset_for_cluster_dataset():
 
 
 # tieto metody pouzijem az po tom, co urobim klasifikaciu selektovaneho datasetu a nastavim hyperparametre
-def xgboost_train(data, labels):
+def xgboost_train(data, labels, selector):
     dtrain = xgb.DMatrix(data, labels)
     param = {'max_depth': 7, 'objective': 'multi:softmax', 'eval_metric': 'merror', 'num_class': num_class,
              'learning_rate': 0.2, 'n_jobs': -1, 'min_child_weight': 10}
     result = xgb.train(param, dtrain, num_boost_round=boost_rounds)
-    result.save_model(trained_path + "xgb.txt")
+    result.save_model(trained_path + 'xgb' + '_from_' + selector + '.txt')
 
 
-def lgbm_train(data, labels):
+def lgbm_train(data, labels, selector):
     param = {"max_depth": 7, "learning_rate": 0.2, "objective": 'multiclass', 'num_leaves': 80,
              "num_class": num_class, "metric": 'multi_error', 'min_data_in_leaf': 10, 'num_threads': -1,
              'verbosity': -1,
              'min_data_in_bin': 3, 'max_bin': 255, 'enable_bundle': True, 'max_conflict_rate': 0.0}
     dtrain = lgb.Dataset(data, labels)
     result = lgb.train(param, dtrain, num_boost_round=boost_rounds, verbose_eval=None)  # cv nevracia model,len vysledky
-    result.save_model(trained_path + 'lgb.txt', num_iteration=result.best_iteration)
+    result.save_model(trained_path + 'lgb' + '_from_' + selector + '.txt', num_iteration=result.best_iteration)
 
 
-def svc_train(data, labels):
+def svc_train(data, labels, selector):
     svc = LinearSVC(penalty='l1', loss='squared_hinge', dual=False, tol=0.001, C=1, multi_class='ovr',
                     fit_intercept=False, verbose=0, max_iter=max_iter)
     svc.fit(data, labels)
-    with open(trained_path + 'svc.txt', 'wb') as subor:
+    with open(trained_path + 'svc' + '_from_' + selector + '.txt', 'wb') as subor:
         pickle.dump(svc, subor, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def train_for_prediction():  # trenujem na celom datasete, nie na selekciach
+def train_for_prediction():  # trenovat musim na selekciach a potom pouzit pri predikcii spravny model
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
-    data = np.loadtxt(feature_file, delimiter=',', skiprows=1, dtype=np.uint64)
-    lgbm_train(data, labels)
-    xgboost_train(data, labels)
-    standard_data = np.loadtxt(standard_feature_file, delimiter=',', skiprows=1, dtype=np.float64)
-    svc_train(standard_data, labels)
+    files = glob.glob(selected_dir)
+    for file in files:
+        data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.uint64)
+        lgbm_train(data, labels, os.path.basename(file)[:-4])
+        xgboost_train(data, labels, os.path.basename(file)[:-4])
+    files = glob.glob(standard_selected_dir + '*')
+    for file in files:
+        standard_data = np.loadtxt(file, delimiter=',', skiprows=1, dtype=np.float64)
+        svc_train(standard_data, labels, os.path.basename(file)[:-4])
 
 
-def xgboost_predict(data):
+def xgboost_predict(data, selector):
     model = xgb.Booster()
-    model.load_model(trained_path + 'xgb.txt')
+    model.load_model(trained_path + 'xgb' + '_from_' + selector + '.txt')
     result = model.predict(data)
     return result
 
 
-def lgbm_predict(data):
-    model = lgb.Booster(model_file=trained_path + "lgb.txt")
+def lgbm_predict(data, selector):
+    model = lgb.Booster(model_file=trained_path + 'lgb' + '_from_' + selector + '.txt')
     probs = model.predict(data)  # vracia pravdepodobnosti pre kazdu triedu
     result = []
     for i in range(len(probs)):
@@ -361,8 +365,8 @@ def lgbm_predict(data):
     return result
 
 
-def svc_predict(data):
-    with open(trained_path + 'svc.txt', 'rb') as subor:
+def svc_predict(data, selector):
+    with open(trained_path + 'svc' + '_from_' + selector + '.txt', 'rb') as subor:
         model = pickle.load(subor)
     result = model.predict(data)
     return result
@@ -382,14 +386,15 @@ def predictions():  # na predikovanom datasete - vsetky selekcie
                       str(len(data[0]) - len(support)))
             except ValueError:
                 print("empty")
-            writer.writerow([os.path.basename(file)[:-4]])
-            result = lgbm_predict(data)
+            selector = os.path.basename(file)[:-4]
+            writer.writerow([selector])
+            result = lgbm_predict(data, selector)
             writer.writerow(result)
-            result = xgboost_predict(data)
+            result = xgboost_predict(data, selector)
             writer.writerow(result)
             data = np.loadtxt(standard_selected_dir + os.path.basename(file), delimiter=',', skiprows=1,
                               dtype=np.float64)
-            result = svc_predict(data)
+            result = svc_predict(data, selector)
             writer.writerow(result)
         #     writer.writerow("-----------------")
         # files = glob.glob(standard_selected_dir + '*')
@@ -459,7 +464,7 @@ def main():
         if mode == "selection_check":
             check_selections()  # po selekcii
         if mode == "prediction_train":
-            train_for_prediction()  # pred predikciou, na povodnom datasete
+            train_for_prediction()  # pred predikciou, na selekciach
         if mode == "prediction":
             predictions()  # predikcia, na novom datasete
     sys.stdout.close()

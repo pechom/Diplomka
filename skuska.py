@@ -174,3 +174,17 @@ import nltk
 # string_grams = [' '.join(grams) for grams in string_grams]
 # print(string_grams)
 # print(char_grams)
+
+a = np.array([[1, 2, 7], [3, 4, 8], [5, 6, 9]])
+b = np.array([[7, 2, 1], [8, 4, 3], [9, 6, 5]])
+c = np.array([7, 2, 1])
+d = np.array([1, 2, 7])
+print(a)
+print(b)
+idx = np.zeros(len(c), dtype=np.uint16)
+for i in range(len(c)):  # chcem c na d
+    for j in range(len(d)):
+        if c[i] == d[j]:
+            idx[i] = j
+print(b[:, idx])
+print(c[idx])

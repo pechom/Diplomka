@@ -1,6 +1,7 @@
 na selekciu a klasifikaciu pouzijem len SVC (L1), XGBOOST a LGBM
 vyber len 50 a 100 atributov
-Krosvalidaciu pouzijem na vysledky - presnost pred a po selekcii (a pripadny hyperparameter tuning) lebo je robustna. Po selekcii pouzijem cely dataset na trenovanie (s rovnakymi parametrami) a potom z natrenovaneho modelu urobim predikciu.
+Krosvalidaciu pouzijem na vysledky - presnost pred a po selekcii (a pripadny hyperparameter tuning) lebo je robustna. Po selekcii pouzijem selektovane atributy na trenovanie (s rovnakymi parametrami) 
+Potom z natrenovaneho modelu urobim predikciu.
 
 netreba pre V2 - pred cistenim datasetu zmenit v novych reportoch AV text vysledkov skenov na "detected: True/False" - aspon na vybranych AV. Potrebujem to pre cistenie datasetu aj labeling
 
@@ -32,6 +33,8 @@ done - v results upravit metody tak, aby spracovali nove hlavicky
 done - v results pocitaj aj pocet atributov pre predikovane vysledky ktore maju 0 varianciu aby som vedel kolko zo selektovanych atributov bolo aj pouzitelnych
 
 !!! TODO - po skonceni extrakcie pre predikciu a mergovani zoradit atributy podla hlavicky z headers. Potom skontroluj, ci je vzniknuty subor rovnaky ako selekcia ktorej patri hlavicka
+
+!!! TODO - train_for_prediction: musim kazdy model trenovat pre vsetky selekcie, jednotlive modely ukladat a potom pri predikcii vybrat spravny model na zaklade toho, s akym modelom robim predikciu, a podla akej selekcie
 
 ! in progress - testovanie
 
