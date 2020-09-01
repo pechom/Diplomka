@@ -129,7 +129,11 @@ def create_import_libs_features(path, prefix):
         for name in files:
             with open(name) as f:
                 data = json.load(f)
+            imps = []
             for imp in data["additional_info"]["imports"]:
+                imps.append(imp)
+            imps = header_clearing(imps)
+            for imp in imps:
                 libraries[imp] += 1
         print(len(libraries))
         libraries = document_frequency_selection(libraries)
@@ -142,9 +146,13 @@ def create_import_libs_features(path, prefix):
                 with open(name) as f:
                     data = json.load(f)
                 feature = [0] * (len(selected_libs) + 1)
+                imps = []
+                for imp in data["additional_info"]["imports"]:
+                    imps.append(imp)
+                imps = header_clearing(imps)
                 for i in range(len(selected_libs)):
-                    for imp in data["additional_info"]["imports"]:
-                        if selected_libs[i] in imp:
+                    for imp in imps:
+                        if selected_libs[i] == imp:
                             feature[i] = len(data["additional_info"]["imports"][selected_libs[i]])  # pocet funkcii
                 feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
                 features.append(feature)
@@ -165,7 +173,7 @@ def create_import_libs_features(path, prefix):
                 imps = header_clearing(imps)
                 for i in range(len(header)):
                     for lib in imps:
-                        if header[i] in lib:
+                        if header[i] == lib:
                             feature[i] = len(data["additional_info"]["imports"][header[i]])  # pocet funkcii
                 if "number_of_DLLs" in header[-1]:
                     feature[-1] = len(data["additional_info"]["imports"])  # pocet kniznic
@@ -180,9 +188,13 @@ def create_import_func_features(path, prefix):
         for name in files:
             with open(name) as f:
                 data = json.load(f)
+            funcs = []
             for imp in data["additional_info"]["imports"]:
                 for func in data["additional_info"]["imports"][imp]:
-                    functions[func] += 1
+                    funcs.append(func)
+            funcs = header_clearing(funcs)
+            for func in funcs:
+                functions[func] += 1
         print(len(functions))
         functions = document_frequency_selection(functions)
         print("po DF " + str(len(functions)))
@@ -194,9 +206,14 @@ def create_import_func_features(path, prefix):
                 with open(name) as f:
                     data = json.load(f)
                 feature = [0] * (len(selected_funcs))
+                funcs = []
+                for imp in data["additional_info"]["imports"]:
+                    for func in data["additional_info"]["imports"][imp]:
+                        funcs.append(func)
+                funcs = header_clearing(funcs)
                 for i in range(len(selected_funcs)):
-                    for imp in data["additional_info"]["imports"]:
-                        if selected_funcs[i] in data["additional_info"]["imports"][imp]:
+                    for func in funcs:
+                        if selected_funcs[i] == func:
                             feature[i] = 1  # vyskyt funkcie
                 features.append(feature)
             features, selected = variance_treshold_selection(features)
@@ -210,12 +227,15 @@ def create_import_func_features(path, prefix):
                 with open(name) as f:
                     data = json.load(f)
                 feature = [0] * (len(header))
+                funcs = []
+                for imp in data["additional_info"]["imports"]:
+                    for func in data["additional_info"]["imports"][imp]:
+                        funcs.append(func)
+                funcs = header_clearing(funcs)
                 for i in range(len(header)):
-                    for imp in data["additional_info"]["imports"]:
-                        funcs = header_clearing(data["additional_info"]["imports"][imp])
-                        for func in funcs:
-                            if header[i] in func:
-                                feature[i] = 1
+                    for func in funcs:
+                        if header[i] == func:
+                            feature[i] = 1
                 features.append(feature)
     return header, features
 
@@ -227,9 +247,13 @@ def create_export_features(path, prefix):
         for name in files:
             with open(name) as f:
                 data = json.load(f)
+            exps = []
             if "exports" in data["additional_info"]:
-                for imp in data["additional_info"]["exports"]:
-                    libraries[imp] += 1
+                for exp in data["additional_info"]["exports"]:
+                    exps.append(exp)
+                exps = header_clearing(exps)
+                for exp in exps:
+                    libraries[exp] += 1
         print(len(libraries))
         libraries = document_frequency_selection(libraries)
         print("po DF " + str(len(libraries)))
@@ -242,9 +266,14 @@ def create_export_features(path, prefix):
                     data = json.load(f)
                 feature = [0] * (len(selected_libs) + 1)
                 if "exports" in data["additional_info"]:
+                    exps = []
+                    for exp in data["additional_info"]["exports"]:
+                        exps.append(exp)
+                    exps = header_clearing(exps)
                     for i in range(len(selected_libs)):
-                        if selected_libs[i] in data["additional_info"]["exports"]:
-                            feature[i] = 1  # vyskyt exportu
+                        for exp in exps:
+                            if selected_libs[i] == exp:
+                                feature[i] = 1  # vyskyt exportu
                     feature[-1] = len(data["additional_info"]["exports"])  # pocet exportov
                 features.append(feature)
             features, selected = variance_treshold_selection(features)
@@ -259,10 +288,13 @@ def create_export_features(path, prefix):
                     data = json.load(f)
                 feature = [0] * (len(header))
                 if "exports" in data["additional_info"]:
+                    exps = []
+                    for exp in data["additional_info"]["exports"]:
+                        exps.append(exp)
+                    exps = header_clearing(exps)
                     for i in range(len(header)):
-                        libs = header_clearing(data["additional_info"]["exports"])
-                        for lib in libs:
-                            if header[i] in lib:
+                        for exp in exps:
+                            if header[i] == exp:
                                 feature[i] = 1
                     if "number_of_DLLs" in header[-1]:
                         feature[-1] = len(data["additional_info"]["exports"])
@@ -579,6 +611,7 @@ def create_section_features(path, prefix):
 
 
 def create_resource_features(path, prefix):
+    # tu sa moze pocet atributov pre predikciu lisit
     if not for_prediction:
         resource_types = collections.Counter()
         files = sorted(glob.glob(path))
@@ -1105,6 +1138,7 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                 grams = [' '.join(gram) for gram in grams]
             else:
                 grams = [text[i:i + n] for i in range(len(text) - n + 1)]
+            grams = header_clearing(grams)
             counter = collections.Counter()
             for gram in grams:
                 if counter[gram] == 0:
@@ -1130,6 +1164,7 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
                     grams = [' '.join(gram) for gram in grams]
                 else:
                     grams = [text[i:i + n] for i in range(len(text) - n + 1)]
+                grams = header_clearing(grams)
                 grams_freq = collections.Counter(grams)
                 bin_feature = [0] * len(selected_grams)
                 freq_feature = [0] * len(selected_grams)
@@ -1163,13 +1198,13 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             bin_feature = [0] * len(bin_header)
             for i in range(len(bin_header)):
                 for j in range(len(grams)):
-                    if bin_header[i] in grams[j]:
+                    if bin_header[i] == grams[j]:
                         if grams_freq[grams[j]] != 0:
                             bin_feature[i] = 1
             freq_feature = [0] * len(freq_header)
             for i in range(len(freq_header)):
                 for gram in grams_freq:
-                    if freq_header[i] in gram:
+                    if freq_header[i] == gram:
                         freq_feature[i] = grams_freq[gram]
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
@@ -1187,6 +1222,7 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
                 text = text.replace(" ", "")
                 # dvojice pismen su jeden byte - 1-gram
             grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
+            grams = header_clearing(grams)
             counter = collections.Counter()
             for gram in grams:
                 if counter[gram] == 0:
@@ -1210,6 +1246,7 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
                     text = f.read()
                     file_size = os.path.getsize(f.name)
                 grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
+                grams = header_clearing(grams)
                 grams_freq = collections.Counter(grams)
                 bin_feature = [0] * len(selected_grams)
                 freq_feature = [0] * len(selected_grams)
@@ -1244,22 +1281,23 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
                 text = f.read()
                 file_size = os.path.getsize(f.name)
             grams = [text[i:i + 2 * n] for i in range(0, (len(text) - 2 * n + 1), 2)]
+            grams = header_clearing(grams)
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
             freq_feature = [0] * len(freq_header)
             normal_freq_feature = [0] * len(normal_freq_header)
             for i in range(len(bin_header)):
                 for gram in grams:
-                    if bin_header[i] in gram:
+                    if bin_header[i] == gram:
                         if grams_freq[gram] != 0:
                             bin_feature[i] = 1
             for i in range(len(freq_header)):
-                for gram in grams_freq:
-                    if freq_header[i] in gram:
+                for gram in grams:
+                    if freq_header[i] == gram:
                         freq_feature[i] = grams_freq[gram]
             for i in range(len(normal_freq_header)):
-                for gram in grams_freq:
-                    if normal_freq_header[i] in gram:
+                for gram in grams:
+                    if normal_freq_header[i] == gram:
                         if grams_freq[gram] != 0:
                             normal_freq_feature[i] = file_size / grams_freq[gram]
                         else:
