@@ -1280,7 +1280,7 @@ def selected_extraction():
         os.mkdir(preprocessing.discrete_dir)
         preprocessing.discretize(preprocessing.features_dir, preprocessing.discrete_dir,
                                  preprocessing.discretize_decimals)
-        files_to_delete = glob.glob(preprocessing.features_dir[:-1])
+        files_to_delete = glob.glob(preprocessing.features_dir)
         for to_delete in files_to_delete:
             if os.path.isfile(to_delete):
                 os.remove(to_delete)
@@ -1293,9 +1293,9 @@ def selected_extraction():
         header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
         data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
         idx = np.zeros(len(real_header), dtype=np.uint16)
-        for i in range(len(header_to_correct)):
-            for j in range(len(real_header)):
-                if header_to_correct[i] == data_to_correct[j]:
+        for i in range(len(real_header)):
+            for j in range(len(header_to_correct)):
+                if real_header[i] == header_to_correct[j]:
                     idx[i] = j
         os.remove(original_file)
         with open(original_file, "w", newline='') as csv_file:

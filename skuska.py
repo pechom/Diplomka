@@ -175,16 +175,22 @@ import nltk
 # print(string_grams)
 # print(char_grams)
 
-a = np.array([[1, 2, 7], [3, 4, 8], [5, 6, 9]])
-b = np.array([[7, 2, 1], [8, 4, 3], [9, 6, 5]])
-c = np.array([7, 2, 1])
-d = np.array([1, 2, 7])
-print(a)
-print(b)
-idx = np.zeros(len(c), dtype=np.uint16)
-for i in range(len(c)):  # chcem c na d
-    for j in range(len(d)):
-        if c[i] == d[j]:
-            idx[i] = j
-print(b[:, idx])
-print(c[idx])
+# header_file = "skuska1.txt"
+# original_file = "skuska2.txt"
+#
+# real_header = np.loadtxt(header_file, delimiter=',', max_rows=1, dtype="str")
+# header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
+# data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
+# idx = np.zeros(len(real_header), dtype=np.uint16)
+# for i in range(len(real_header)):
+#     for j in range(len(header_to_correct)):
+#         if real_header[i] == header_to_correct[j]:
+#             idx[i] = j
+# os.remove(original_file)
+# print(real_header)
+# print(header_to_correct[idx])
+# with open(original_file, "w", newline='') as csv_file:
+#     writer = csv.writer(csv_file, delimiter=',')
+#     writer.writerow(header_to_correct[idx])
+#     transformed_data = data_to_correct[:, idx]
+#     writer.writerows(transformed_data)
