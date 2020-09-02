@@ -115,6 +115,7 @@ def header_clearing(header):
 
 def clear_prefix_from_header(prefix):  # vyberiem z hlavicky len atributy vybranej skupiny a odstranim prefix
     prefix_header = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
+    prefix_header = np.atleast_1d(prefix_header)
     header = []
     for header_name in prefix_header:
         if header_name.startswith(prefix):
@@ -1328,7 +1329,9 @@ def selected_extraction():
         shutil.rmtree(preprocessing.original_path[:-1])
         # ziskane atributy usporiadam podla hlavicky selekcie
         real_header = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
+        real_header = np.atleast_1d(real_header)
         header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
+        header_to_correct = np.atleast_1(header_to_correct)
         data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
         idx = np.zeros(len(real_header), dtype=np.uint16)
         for i in range(len(real_header)):
@@ -1339,8 +1342,12 @@ def selected_extraction():
         with open(original_file, "w", newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
             writer.writerow(header_to_correct[idx])
-            transformed_data = data_to_correct[:, idx]
-            writer.writerows(transformed_data)
+            if data_to_correct.ndim > 1:
+                transformed_data = data_to_correct[:, idx]
+                writer.writerows(transformed_data)
+            else:
+                for data in data_to_correct:
+                    writer.writerow([data])
         preprocessing.saved_standardize(original_file, classification.standard_selected_dir)
 
 

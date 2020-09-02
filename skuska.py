@@ -175,22 +175,38 @@ import nltk
 # print(string_grams)
 # print(char_grams)
 
-# header_file = "skuska1.txt"
-# original_file = "skuska2.txt"
-#
-# real_header = np.loadtxt(header_file, delimiter=',', max_rows=1, dtype="str")
-# header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
-# data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
-# idx = np.zeros(len(real_header), dtype=np.uint16)
-# for i in range(len(real_header)):
-#     for j in range(len(header_to_correct)):
-#         if real_header[i] == header_to_correct[j]:
-#             idx[i] = j
-# os.remove(original_file)
-# print(real_header)
-# print(header_to_correct[idx])
-# with open(original_file, "w", newline='') as csv_file:
-#     writer = csv.writer(csv_file, delimiter=',')
-#     writer.writerow(header_to_correct[idx])
-#     transformed_data = data_to_correct[:, idx]
-#     writer.writerows(transformed_data)
+header_file = "skuska1.txt"
+original_file = "skuska2.txt"
+
+real_header = np.loadtxt(header_file, delimiter=',', max_rows=1, dtype="str")
+header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
+data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
+real_header = np.atleast_1d(real_header)
+header_to_correct = np.atleast_1d(header_to_correct)
+idx = np.zeros(len(real_header), dtype=np.uint16)
+for i in range(len(real_header)):
+    for j in range(len(header_to_correct)):
+        if real_header[i] == header_to_correct[j]:
+            idx[i] = j
+os.remove(original_file)
+print(real_header)
+print(header_to_correct[idx])
+with open(original_file, "w", newline='') as csv_file:
+    writer = csv.writer(csv_file, delimiter=',')
+    writer.writerow(header_to_correct[idx])
+    if data_to_correct.ndim > 1:
+        transformed_data = data_to_correct[:, idx]
+        writer.writerows(transformed_data)
+    else:
+        for data in data_to_correct:
+            writer.writerow([data])
+
+# header = np.loadtxt("D:\materialy skola\clanok\\features\original.csv", delimiter=',', max_rows=1, dtype="str")
+# header = np.loadtxt("features\\1-gram-char-freq-strings.csv", delimiter=',', max_rows=1, dtype="str")
+# for head in header:
+#     if head.startswith("1-gram-char-freq-strings"):
+#         print(head[25:])
+
+# prefix_header = np.loadtxt("subory/headers_test/export.csv", delimiter=',', max_rows=1, dtype="str")
+# print(type(prefix_header))
+# print(len(np.atleast_1d(prefix_header)))
