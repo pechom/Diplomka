@@ -1198,9 +1198,9 @@ def create_n_grams(path, n, is_char, bin_prefix, freq_prefix):
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
             for i in range(len(bin_header)):
-                for j in range(len(grams)):
-                    if bin_header[i] == grams[j]:
-                        if grams_freq[grams[j]] != 0:
+                for gram in grams_freq:
+                    if bin_header[i] == gram:
+                        if grams_freq[gram] != 0:
                             bin_feature[i] = 1
             freq_feature = [0] * len(freq_header)
             for i in range(len(freq_header)):
@@ -1288,16 +1288,16 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
             freq_feature = [0] * len(freq_header)
             normal_freq_feature = [0] * len(normal_freq_header)
             for i in range(len(bin_header)):
-                for gram in grams:
+                for gram in grams_freq:
                     if bin_header[i] == gram:
                         if grams_freq[gram] != 0:
                             bin_feature[i] = 1
             for i in range(len(freq_header)):
-                for gram in grams:
+                for gram in grams_freq:
                     if freq_header[i] == gram:
                         freq_feature[i] = grams_freq[gram]
             for i in range(len(normal_freq_header)):
-                for gram in grams:
+                for gram in grams_freq:
                     if normal_freq_header[i] == gram:
                         if grams_freq[gram] != 0:
                             normal_freq_feature[i] = file_size / grams_freq[gram]
@@ -1331,7 +1331,7 @@ def selected_extraction():
         real_header = np.loadtxt(headers_dir[:-1] + selected_file + ".csv", delimiter=',', max_rows=1, dtype="str")
         real_header = np.atleast_1d(real_header)
         header_to_correct = np.loadtxt(original_file, delimiter=',', max_rows=1, dtype="str")
-        header_to_correct = np.atleast_1(header_to_correct)
+        header_to_correct = np.atleast_1d(header_to_correct)
         data_to_correct = np.loadtxt(original_file, delimiter=',', skiprows=1, dtype=np.uint64)
         idx = np.zeros(len(real_header), dtype=np.uint16)
         for i in range(len(real_header)):
