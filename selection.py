@@ -330,9 +330,9 @@ def xgboost():
                                    n_jobs=-1, n_estimators=100, importance_type='gain', num_class=num_class)
     model_cover = xgb.XGBClassifier(max_depth=7, objective='multi:softmax', min_child_weight=10, learning_rate=0.2,
                                     n_jobs=-1, n_estimators=100, importance_type='weight', num_class=num_class)
-    print("XGBoost gain")
+    print("XGBoost_gain")
     model_fit(model_gain, "XGBoost gain")
-    print("XGBoost split")
+    print("XGBoost_split")
     model_fit(model_cover, "XGBoost split")
 
 
@@ -344,9 +344,9 @@ def LGBM():
                                     n_jobs=-1, num_leaves=80, min_child_samples=10, importance_type='gain',
                                     num_class=num_class)
     print("LGBM split")
-    model_fit(model_split, "LGBM split")
+    model_fit(model_split, "LGBM_split")
     print("LGBM gain")
-    model_fit(model_gain, "LGBM gain")
+    model_fit(model_gain, "LGBM_gain")
 
 
 def CAT():

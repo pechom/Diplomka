@@ -9,6 +9,7 @@ import math
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 import seaborn as sn
+from matplotlib.ticker import ScalarFormatter
 
 best_features_path = 'features/selection/*'
 results_path = 'results/'
@@ -25,8 +26,9 @@ labels_path = 'subory/labels.csv'
 classification_selected_dir = results_path + 'selected/'
 predictions_file = classification_selected_dir + 'predictions_selected.csv'
 class_number_file = 'subory/class_number.txt'
-prediction_accuracy_file = 'results/prediction_accuracy'
-for_prediction = False
+prediction_accuracy_file = 'results/prediction_accuracy.csv'
+plot_dir = 'subory/plots/'
+for_prediction = True
 
 
 def intersections(input_path, output_path):
@@ -192,6 +194,7 @@ def predictions_results():
     # v results urobi heat map a accuracy pre predikcie (cez predikovane vysledky a realne labels)
     labels = np.loadtxt(labels_path, delimiter=',', skiprows=1, dtype=np.uint8)
     names = []
+    plt.figure(dpi=1200)
     with open(class_number_file, 'r') as f:
         reader = csv.reader(f, delimiter=',')
         next(reader)
@@ -199,8 +202,9 @@ def predictions_results():
             names.append(line[0])
     with open(predictions_file, 'r') as f:
         reader = csv.reader(f, delimiter=',')
-        with open(prediction_accuracy_file, "w") as output:
+        with open(prediction_accuracy_file, "w", newline='') as output:
             writer = csv.writer(output, delimiter=',')
+            writer.writerow(["lgbm", "xgboost", "svc"])
             while 1 == 1:
                 selector = next(reader, None)
                 lgbm = next(reader, None)
@@ -211,19 +215,26 @@ def predictions_results():
                     xgboost = np.cast[int](xgboost)
                     svc = np.cast[int](svc)
                     writer.writerow(selector)
-                    writer.writerow(["lgbm", "xgboost", "svc"])
                     writer.writerow(
                         [accuracy_score(labels, lgbm), accuracy_score(labels, xgboost), accuracy_score(labels, svc)])
                     mat = confusion_matrix(labels, lgbm)  # triedy su zoradene ciselne
-                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
-                    # plt.show()
-                    plt.savefig('subory/' + selector + "lgbm" + '.png')
+                    ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
+                                    yticklabels=names)
+                    ax.set(xlabel='predicted', ylabel='real')
+                    plt.savefig(plot_dir + selector[0] + " + LGBM" + '.png', bbox_inches='tight')
+                    plt.clf()
                     mat = confusion_matrix(labels, xgboost)
-                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
-                    plt.savefig('subory/' + selector + "xgboost" + '.png')
+                    ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
+                                    yticklabels=names)
+                    ax.set(xlabel='predicted', ylabel='real')
+                    plt.savefig(plot_dir + selector[0] + " + XGBoost" + '.png', bbox_inches='tight')
+                    plt.clf()
                     mat = confusion_matrix(labels, svc)
-                    sn.heatmap(mat, annot=True, annot_kws={"size": 18}, xticklabels=names, yticklabels=names)
-                    plt.savefig('subory/' + selector + "svc" + '.png')
+                    ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
+                                    yticklabels=names)
+                    ax.set(xlabel='predicted', ylabel='real')
+                    plt.savefig(plot_dir + selector[0] + " + SVC" + '.png', bbox_inches='tight')
+                    plt.clf()
                 else:
                     break
     return 0

@@ -33,7 +33,7 @@ trained_path = 'subory/trained/'
 predictions_file = classification_selected_dir + 'predictions_selected.csv'
 warnings.filterwarnings("ignore")
 warnings.simplefilter("ignore")
-mode = "prediction_train"
+mode = "prediction"
 labels_for_predict = labels.consensus_labels_file
 
 multi_cv_repeats = 5
@@ -349,6 +349,7 @@ def train_for_prediction():  # trenovat musim na selekciach a potom pouzit pri p
 
 
 def xgboost_predict(data, selector):
+    data = xgb.DMatrix(data)
     model = xgb.Booster()
     model.load_model(trained_path + 'xgb' + '_from_' + selector + '.txt')
     result = model.predict(data)
@@ -391,6 +392,7 @@ def predictions():  # na predikovanom datasete - vsetky selekcie
             result = lgbm_predict(data, selector)
             writer.writerow(result)
             result = xgboost_predict(data, selector)
+            result = result.astype(np.uint8)
             writer.writerow(result)
             data = np.loadtxt(standard_selected_dir + os.path.basename(file), delimiter=',', skiprows=1,
                               dtype=np.float64)
