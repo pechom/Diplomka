@@ -10,6 +10,7 @@ import pickle
 import selection
 import classification
 import results
+import hashlib
 
 original_path = 'features/original/*'
 standard_dir = 'features/standard/'
@@ -221,6 +222,27 @@ def create_dataset_from_clusters(input_dir, output_dir, clusters_file, new_label
                 writer = csv.writer(csv_file, delimiter=',')
                 writer.writerow(header)
                 writer.writerows(data)
+
+
+def compare_identity(old_path, new_path):
+    # porovna obsah suborov dvoch priecinkov a vrati nazvy suborov ktore nemaju rovnaky obsah ako ich counterpart
+    old_files = sorted(glob.glob(old_path))
+    new_files = sorted(glob.glob(new_path))
+    old = []
+    new = []
+    for file in old_files:
+        with open(file, mode='rb') as bin:
+            m = hashlib.sha256()
+            m.update(bin.read())
+            old.append(m.hexdigest())
+    for file in new_files:
+        with open(file, mode='rb') as bin:
+            m = hashlib.sha256()
+            m.update(bin.read())
+            new.append(m.hexdigest())
+    for i in range(len(old)):
+        if old[i] != new[i]:
+            print(old_files[i])
 
 
 # -------------------------------------------------------

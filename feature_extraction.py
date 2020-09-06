@@ -39,18 +39,11 @@ def document_frequency_selection(counter):
 
 def variance_treshold_selection(data):
     treshold = 0.05
-    # if len(data[0]) >= 1000:
-    #     treshold = 0.05
-    # if len(data[0]) >= 10000:
-    #     treshold = 0.1
     sel = VarianceThreshold(threshold=treshold)
     try:
         data = sel.fit_transform(data)
     except ValueError:
-        selected = []
-        for i in range(len(data[0])):
-            selected.append(i)
-        return [], selected
+        return [], []
     return data, sel.get_support(True)  # indexy vybranych
 
 
@@ -299,7 +292,7 @@ def create_export_features(path, prefix):
                                 feature[i] = 1
                     if "number_of_DLLs" in header[-1]:
                         feature[-1] = len(data["additional_info"]["exports"])
-                    features.append(feature)
+                features.append(feature)
     return header, features
 
 
@@ -439,7 +432,7 @@ def create_section_features(path, prefix):
         header.append(section + "_physical_address")
         header.append(section + "_size")
         header.append(section + "_entropy")
-        header.append(section + "_size/file_size")
+        header.append(section + "_file_size/size")
     if not for_prediction:
         files = sorted(glob.glob(path))
         features = []
@@ -543,11 +536,11 @@ def create_section_features(path, prefix):
                         if (section[0] + "_entropy") in header:
                             feature[header.index(section[0] + "_entropy")] = section[4]
                         if section[3] != 0:
-                            if (section[0] + "_entropy") in header:
-                                feature[header.index(section[0] + "_entropy")] = file_size / section[3]
+                            if (section[0] + "_file_size/size") in header:
+                                feature[header.index(section[0] + "_file_size/size")] = file_size / section[3]
                         else:
-                            if (section[0] + "_entropy") in header:
-                                feature[header.index(section[0] + "_entropy")] = file_size
+                            if (section[0] + "_file_size/size") in header:
+                                feature[header.index(section[0] + "_file_size/size")] = file_size
                     else:
                         if len(section[0]) == 0:
                             number_of_empty_name += 1
@@ -563,13 +556,13 @@ def create_section_features(path, prefix):
                     feature[counter] = number_of_unknown
                     counter += 1
                 if header_start[2] in header:
-                    feature[counter] = number_of_unknown + number_of_unknown
+                    feature[counter] = number_of_known + number_of_unknown
                     counter += 1
                 if header_start[3] in header:
-                    feature[counter] = number_of_known
+                    feature[counter] = size_of_known
                     counter += 1
                 if header_start[4] in header:
-                    feature[counter] = number_of_unknown
+                    feature[counter] = size_of_unknown
                     counter += 1
                 if size_of_known != 0:
                     if header_start[5] in header:
@@ -634,13 +627,13 @@ def create_resource_features(path, prefix):
                 with open(name) as f:
                     data = json.load(f)
                 feature = [0] * (len(selected_types) + 1)
-                for i in range(len(selected_types)):
-                    if "pe-resource-types" in data["additional_info"]:
+                all_resources = 0
+                if "pe-resource-types" in data["additional_info"]:
+                    for i in range(len(selected_types)):
                         if selected_types[i] in data["additional_info"]["pe-resource-types"]:
                             feature[i] = data["additional_info"]["pe-resource-types"][selected_types[i]]
-                            all_resources = 0
-                            for resource_type in data["additional_info"]["pe-resource-types"]:
-                                all_resources += data["additional_info"]["pe-resource-types"][resource_type]
+                    for resource_type in data["additional_info"]["pe-resource-types"]:
+                        all_resources += data["additional_info"]["pe-resource-types"][resource_type]
                     feature[-1] = all_resources
                 features.append(feature)
             features, selected = variance_treshold_selection(features)
@@ -710,7 +703,7 @@ def create_string_features(path, prefix):
             feature.append(low_text.count("c:\\\\"))
             feature.append(low_text.count("http"))
             feature.append(low_text.count("hkey"))
-            feature.append(text.count("mz"))
+            feature.append(low_text.count("mz"))
             feature.append(len(re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", text)))
             feature.append(np.mean(line_lengths))
             feature.append(max_length)
@@ -768,7 +761,7 @@ def create_string_features(path, prefix):
 
 
 def entropy_bin_counts(block, window):
-    # source https://arxiv.org/pdf/1508.03096.pdf
+    # zdroj https://arxiv.org/pdf/1508.03096.pdf
     c = np.bincount(block >> 4, minlength=16)
     p = c.astype(np.float32) / window
     wh = np.where(c)[0]
@@ -879,7 +872,6 @@ def create_sizes_features(reports_path, hex_path, disassembled_path, prefix):
     else:
         header = clear_prefix_from_header(prefix)
         features = []
-        feature_data = []
         if len(header) != 0:
             files = sorted(glob.glob(reports_path))
             for name in files:
@@ -887,9 +879,8 @@ def create_sizes_features(reports_path, hex_path, disassembled_path, prefix):
                     data = json.load(f)
                     basename = os.path.basename(f.name)
                 feature = [0] * (len(header))
-                feature_data.append(data["size"])
-                feature_data.append(os.path.getsize(hex_path[:-1] + basename))
-                feature_data.append(os.path.getsize(disassembled_path[:-1] + basename))
+                feature_data = [data["size"], os.path.getsize(hex_path[:-1] + basename),
+                                os.path.getsize(disassembled_path[:-1] + basename)]
                 counter = 0
                 if feature_names[0] in header:
                     feature[counter] = feature_data[0]
@@ -1037,7 +1028,7 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path, pref
                     counter += 1
                 if feature_help[0] != 0:
                     if feature_names[2] in header:
-                        feature[counter] = number_of_instructions / feature[0]
+                        feature[counter] = number_of_instructions / feature_help[0]
                         counter += 1
                 else:
                     if feature_names[2] in header:
@@ -1045,7 +1036,7 @@ def create_instruction_features(opcodes_path, dis_hex_path, registers_path, pref
                         counter += 1
                 if feature_help[1] != 0:
                     if feature_names[3] in header:
-                        feature[counter] = number_of_instructions / feature[1]
+                        feature[counter] = number_of_instructions / feature_help[1]
                         counter += 1
                 else:
                     if feature_names[3] in header:
@@ -1251,24 +1242,21 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
                 grams_freq = collections.Counter(grams)
                 bin_feature = [0] * len(selected_grams)
                 freq_feature = [0] * len(selected_grams)
+                normal_freq_feature = [file_size] * len(selected_grams)
                 for i in range(len(selected_grams)):
                     if grams_freq[selected_grams[i]] != 0:
                         bin_feature[i] = 1
                         freq_feature[i] = grams_freq[selected_grams[i]]
+                        normal_freq_feature[i] = file_size / freq_feature[i]
                 bin_features.append(bin_feature)
                 freq_features.append(freq_feature)
+                normal_freq_features.append(normal_freq_feature)
             bin_features, bin_selected = variance_treshold_selection(bin_features)
             freq_features, freq_selected = variance_treshold_selection(freq_features)
+            normal_freq_features, normal_freq_selected = variance_treshold_selection(normal_freq_features)
             bin_header = header_from_selection(selected_grams, bin_selected, "")
             freq_header = header_from_selection(selected_grams, freq_selected, "")
-            normal_freq_features = freq_features.copy()
-            normal_freq_header = freq_header.copy()
-            for i in range(len(freq_features)):
-                for j in range(len(freq_features[0])):
-                    if normal_freq_features[i][j] != 0:
-                        normal_freq_features[i][j] = file_size / normal_freq_features[i][j]
-                    else:
-                        normal_freq_features[i][j] = file_size
+            normal_freq_header = header_from_selection(selected_grams, normal_freq_selected, "")
     else:
         bin_header = clear_prefix_from_header(bin_prefix)
         freq_header = clear_prefix_from_header(freq_prefix)
@@ -1286,7 +1274,7 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
             grams_freq = collections.Counter(grams)
             bin_feature = [0] * len(bin_header)
             freq_feature = [0] * len(freq_header)
-            normal_freq_feature = [0] * len(normal_freq_header)
+            normal_freq_feature = [file_size] * len(normal_freq_header)
             for i in range(len(bin_header)):
                 for gram in grams_freq:
                     if bin_header[i] == gram:
@@ -1301,8 +1289,6 @@ def create_hex_grams(path, n, bin_prefix, freq_prefix, normal_freq_prefix):
                     if normal_freq_header[i] == gram:
                         if grams_freq[gram] != 0:
                             normal_freq_feature[i] = file_size / grams_freq[gram]
-                        else:
-                            normal_freq_feature[i] = file_size
             bin_features.append(bin_feature)
             freq_features.append(freq_feature)
             normal_freq_features.append(normal_freq_feature)
