@@ -1,0 +1,20 @@
+LGBM gain: 100
+99.08	 99.35
+LGBM split: 100
+98.99	 99.45
+SVC_L1: 100
+96.15	 97.25
+XGBoost gain: 100
+98.99	 99.54
+XGBoost split: 100
+98.99	 99.35
+LGBM gain: 100
+95.78	 95.78
+LGBM split: 100
+91.10	 91.10
+SVC_L1: 100
+94.86	 94.86
+XGBoost gain: 100
+95.05	 95.05
+XGBoost split: 100
+95.69	 95.69

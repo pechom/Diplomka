@@ -1,0 +1,20 @@
+LGBM gain
+pocet vybranych: 100
+[('2-gram-freq-instructions', 21), ('sections', 11), ('1-gram-bin-strings', 10), ('2-gram-freq-hex', 10), ('2-gram-bin-strings', 8), ('2-gram-normal-freq-hex', 8), ('2-gram-char-freq-strings', 7), ('2-gram-bin-hex', 4), ('metadata', 4), ('1-gram-freq-strings', 3), ('import-funcs', 3), ('1-gram-freq-instructions', 2), ('2-gram-freq-opcode', 2), ('histogram', 2), ('overlay', 2), ('1-gram-normal-freq-hex', 1), ('2-gram-freq-reg', 1), ('strings', 1)]
+
+LGBM split
+pocet vybranych: 100
+[('2-gram-freq-instructions', 22), ('2-gram-freq-opcode', 14), ('2-gram-freq-hex', 13), ('1-gram-bin-strings', 8), ('sections', 6), ('2-gram-bin-strings', 5), ('2-gram-char-freq-strings', 5), ('metadata', 4), ('1-gram-freq-strings', 3), ('1-gram-freq-reg', 2), ('2-gram-freq-reg', 2), ('2-gram-normal-freq-hex', 2), ('histogram', 2), ('import-funcs', 2), ('import-libs', 2), ('overlay', 2), ('1-gram-freq-hex', 1), ('2-gram-bin-hex', 1), ('2-gram-freq-strings', 1), ('2-gram-normal-freq-opcode', 1), ('disassembled', 1), ('strings', 1)]
+
+SVC_L1
+pocet vybranych: 100
+[('2-gram-bin-strings', 26), ('2-gram-bin-hex', 16), ('2-gram-freq-instructions', 12), ('1-gram-bin-strings', 10), ('2-gram-freq-strings', 9), ('1-gram-freq-strings', 8), ('2-gram-freq-hex', 3), ('histogram', 3), ('1-gram-freq-reg', 2), ('2-gram-freq-opcode', 2), ('2-gram-normal-freq-hex', 2), ('import-funcs', 2), ('1-gram-normal-freq-hex', 1), ('2-gram-freq-reg', 1), ('2-gram-instructions', 1), ('disassembled', 1), ('sections', 1)]
+
+XGBoost gain
+pocet vybranych: 100
+[('2-gram-freq-hex', 19), ('2-gram-freq-instructions', 19), ('1-gram-bin-strings', 8), ('2-gram-freq-opcode', 8), ('sections', 8), ('2-gram-bin-strings', 7), ('import-funcs', 6), ('2-gram-bin-hex', 4), ('2-gram-char-freq-strings', 4), ('metadata', 4), ('1-gram-freq-reg', 2), ('1-gram-freq-strings', 2), ('disassembled', 2), ('histogram', 2), ('overlay', 2), ('1-gram-freq-hex', 1), ('2-gram-freq-reg', 1), ('import-libs', 1)]
+
+XGBoost split
+pocet vybranych: 100
+[('2-gram-freq-instructions', 16), ('2-gram-freq-hex', 13), ('2-gram-bin-hex', 11), ('1-gram-bin-strings', 10), ('sections', 9), ('2-gram-bin-strings', 8), ('1-gram-freq-instructions', 6), ('import-funcs', 4), ('1-gram-freq-reg', 3), ('1-gram-freq-strings', 3), ('2-gram-freq-opcode', 3), ('metadata', 3), ('1-gram-freq-hex', 2), ('2-gram-char-freq-strings', 2), ('disassembled', 2), ('overlay', 2), ('file-entropy', 1), ('histogram', 1), ('import-libs', 1)]
+

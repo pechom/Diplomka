@@ -1,0 +1,8 @@
+pocet atributov: 530396
+
+
+SVC L1
+100
+cas: 0:04:36.876522
+
+

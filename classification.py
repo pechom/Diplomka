@@ -396,6 +396,15 @@ def predictions():  # na predikovanom datasete - vsetky selekcie
             writer.writerow(result)
             data = np.loadtxt(standard_selected_dir + os.path.basename(file), delimiter=',', skiprows=1,
                               dtype=np.float64)
+            print("standard")
+            sel = VarianceThreshold()
+            try:
+                sel.fit_transform(data)
+                support = sel.get_support(True)
+                print("number of irrelevant features for " + os.path.basename(file)[:-4] + " is " +
+                      str(len(data[0]) - len(support)))
+            except ValueError:
+                print("empty")
             result = svc_predict(data, selector)
             writer.writerow(result)
         #     writer.writerow("-----------------")

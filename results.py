@@ -221,19 +221,19 @@ def predictions_results():
                     ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
                                     yticklabels=names)
                     ax.set(xlabel='predicted', ylabel='real')
-                    plt.savefig(plot_dir + selector[0] + " + LGBM" + '.png', bbox_inches='tight')
+                    plt.savefig(plot_dir + "LGBM_from_" + selector[0] + '.png', bbox_inches='tight')
                     plt.clf()
                     mat = confusion_matrix(labels, xgboost)
                     ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
                                     yticklabels=names)
                     ax.set(xlabel='predicted', ylabel='real')
-                    plt.savefig(plot_dir + selector[0] + " + XGBoost" + '.png', bbox_inches='tight')
+                    plt.savefig(plot_dir + "XGBoost_from_" + selector[0] + '.png', bbox_inches='tight')
                     plt.clf()
                     mat = confusion_matrix(labels, svc)
                     ax = sn.heatmap(mat, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels=names,
                                     yticklabels=names)
                     ax.set(xlabel='predicted', ylabel='real')
-                    plt.savefig(plot_dir + selector[0] + " + SVC" + '.png', bbox_inches='tight')
+                    plt.savefig(plot_dir + "SVC_from_" + selector[0] + '.png', bbox_inches='tight')
                     plt.clf()
                 else:
                     break

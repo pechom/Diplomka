@@ -1,0 +1,145 @@
+LGBM gain: 100
+XGBoost
+najlepsi priemer: 0.9908424
+index najlepsieho: 54
+najhorsi priemer: 0.9569309
+finalny priemer: 0.9908424
+cas: 0:00:02.454433
+
+
+LGBM
+najlepsi priemer: 0.9935946622185154
+index najlepsieho: 64
+najhorsi priemer: 0.9752877397831526
+finalny priemer: 0.9935946622185154
+cas: 0:00:05.640627
+
+
+------------------------------------------------------------
+
+
+LGBM split: 100
+XGBoost
+najlepsi priemer: 0.9899334
+index najlepsieho: 34
+najhorsi priemer: 0.9569558
+finalny priemer: 0.9890159
+cas: 0:00:02.531250
+
+
+LGBM
+najlepsi priemer: 0.9945037531276063
+index najlepsieho: 64
+najhorsi priemer: 0.9505254378648874
+finalny priemer: 0.9935946622185154
+cas: 0:00:05.235572
+
+
+------------------------------------------------------------
+
+
+SVC_L1: 100
+XGBoost
+najlepsi priemer: 0.9615346
+index najlepsieho: 88
+najhorsi priemer: 0.9377147
+finalny priemer: 0.9597081
+cas: 0:00:02.890625
+
+
+LGBM
+najlepsi priemer: 0.9725271059216013
+index najlepsieho: 64
+najhorsi priemer: 0.9276313594662219
+finalny priemer: 0.9725187656380316
+cas: 0:00:05.843749
+
+
+------------------------------------------------------------
+
+
+XGBoost gain: 100
+XGBoost
+najlepsi priemer: 0.9899251
+index najlepsieho: 23
+najhorsi priemer: 0.9606173
+finalny priemer: 0.9899251
+cas: 0:00:02.501199
+
+
+LGBM
+najlepsi priemer: 0.9954295246038365
+index najlepsieho: 69
+najhorsi priemer: 0.9697831526271893
+finalny priemer: 0.9954295246038365
+cas: 0:00:05.343750
+
+
+------------------------------------------------------------
+
+
+XGBoost split: 100
+XGBoost
+najlepsi priemer: 0.9899251
+index najlepsieho: 28
+najhorsi priemer: 0.9523352
+finalny priemer: 0.9899249999999999
+cas: 0:00:02.500001
+
+
+LGBM
+najlepsi priemer: 0.9935946622185154
+index najlepsieho: 81
+najhorsi priemer: 0.9697581317764804
+finalny priemer: 0.9935946622185154
+cas: 0:00:06.313748
+
+
+------------------------------------------------------------
+
+
+LGBM gain: 100
+linear SVC [liblinear]
+priemerny vysledok: 0.9578482068390326
+cas: 0:00:11.812497
+
+
+------------------------------------------------------------
+
+
+LGBM split: 100
+linear SVC [liblinear]
+priemerny vysledok: 0.9110675562969142
+cas: 0:00:12.548089
+
+
+------------------------------------------------------------
+
+
+SVC_L1: 100
+linear SVC [liblinear]
+priemerny vysledok: 0.9486572143452877
+cas: 0:00:06.890624
+
+
+------------------------------------------------------------
+
+
+XGBoost gain: 100
+linear SVC [liblinear]
+priemerny vysledok: 0.9505004170141785
+cas: 0:00:12.235577
+
+
+------------------------------------------------------------
+
+
+XGBoost split: 100
+linear SVC [liblinear]
+priemerny vysledok: 0.956930775646372
+cas: 0:00:13.674229
+
+
+------------------------------------------------------------
+
+

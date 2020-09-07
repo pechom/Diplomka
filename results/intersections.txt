@@ -1,0 +1,6 @@
+LGBM gain - velkost: 100, najlepsi prienik je XGBoost gain: 44
+LGBM split - velkost: 100, najlepsi prienik je LGBM gain: 31
+SVC_L1 - velkost: 100, najlepsi prienik je LGBM gain: 9
+SVC_L1 - velkost: 100, najlepsi prienik je XGBoost gain: 9
+XGBoost gain - velkost: 100, najlepsi prienik je XGBoost split: 63
+XGBoost split - velkost: 100, najlepsi prienik je XGBoost gain: 63
